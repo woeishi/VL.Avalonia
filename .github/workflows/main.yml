@@ -1,0 +1,39 @@
+# For more information see:
+# https://thegraybook.vvvv.org/reference/extending/publishing.html
+
+name: push_nuget
+
+# on push on main
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@master
+    
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.0
+
+    - name: Setup Nuget.exe
+      uses: nuget/setup-nuget@v1
+
+    - name: Publish VL Nuget
+      uses: vvvv/PublishVLNuget@1.0.29
+      with:
+        csproj: src\VL.NewLibrary.Template.csproj
+        nuspec: deployment\VL.NewLibrary.Template.nuspec
+
+        # Fill the Icon file
+        icon-src: https://foo.bar/nugeticon.png
+        icon-dst: ./nugeticon.png
+        
+        # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
+        nuget-key: ${{ secrets.NUGET_KEY }}
+

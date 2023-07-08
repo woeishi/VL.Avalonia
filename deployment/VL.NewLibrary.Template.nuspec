@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!-- For more info see: -->
+<!-- https://thegraybook.vvvv.org/reference/extending/publishing.html -->
+
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.NewLibrary.Template</id>
+    <!-- For more about versions see: https://thegraybook.vvvv.org/reference/extending/publishing.html#version -->
+    <version>0.0.1-alpha</version>
+    <title>VL.NewLibrary.Template</title>
+    <!-- Provide authors, owners and projectUrl --> 
+    <authors></authors>
+    <owners></owners>
+    <projectUrl></projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Provide summary and description -->
+    <summary></summary>
+    <description></description>
+    <tags>nuget</tags>
+	<license type="expression">MIT</license>
+	<icon>icon\nugeticon.png</icon>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" />
+	<file src="nugeticon.png" target="icon\" />
+  </files>
+</package>
