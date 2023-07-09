@@ -11,6 +11,5 @@ namespace VL.Avalonia
         {
             InitializeIfNeeded();
         }
-        
     }
 }

@@ -21,11 +21,21 @@ namespace Sandbox
             {
                 //desktop.MainWindow = new MainWindow();
                 this.Window = new Avalonia.Controls.Window();
+                var panel = new StackPanel();
+
                 var b = new Button();
                 b.Content = "haha";
-                this.Window.Content = b;
+                b.Click += (s, e) => {
+                    for (int i= 0; i < 10; i++)
+                    {
+                        var _b = new Button();
+                        _b.Content = "hoho " + i.ToString();
+                        panel.Children.Add(_b);
+                    }
+                };
+                panel.Children.Add(b);
+                this.Window.Content = panel;
                 desktop.MainWindow = this.Window;
-
             }
 
             base.OnFrameworkInitializationCompleted();
