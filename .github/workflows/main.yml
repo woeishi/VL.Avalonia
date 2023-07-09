@@ -3,13 +3,9 @@
 
 name: push_nuget
 
-# on push on main
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - README.md
+  release:
+    types: [published]
 
 jobs:
   build:
