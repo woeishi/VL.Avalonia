@@ -1,6 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Sandbox
 {
@@ -12,7 +14,7 @@ namespace Sandbox
         {
             //this.RequestedThemeVariant = Avalonia.Styling.ThemeVariant.Default;
             
-            this.Styles.Add(new Avalonia.Themes.Simple.SimpleTheme());
+            this.Styles.Add(new Avalonia.Themes.Fluent.FluentTheme());
             base.Initialize();
         }
         public override void OnFrameworkInitializationCompleted()
@@ -21,20 +23,27 @@ namespace Sandbox
             {
                 //desktop.MainWindow = new MainWindow();
                 this.Window = new Avalonia.Controls.Window();
-                var panel = new StackPanel();
-
+                
                 var b = new Button();
-                b.Content = "haha";
-                b.Click += (s, e) => {
-                    for (int i= 0; i < 10; i++)
+                var scheduler = TaskScheduler.FromCurrentSynchronizationContext();
+                Task.Run(() =>
+                {
+                    Thread.Sleep(5000);
+
+                }).ContinueWith((x) =>
+                {
+                    var panel = new StackPanel();
+                    for (int i = 0; i < 10; i++)
                     {
                         var _b = new Button();
                         _b.Content = "hoho " + i.ToString();
                         panel.Children.Add(_b);
                     }
-                };
-                panel.Children.Add(b);
-                this.Window.Content = panel;
+                    
+                    this.Window.Content = panel;
+                }, scheduler);
+               
+                //this.Window.Content = panel;
                 desktop.MainWindow = this.Window;
             }
 

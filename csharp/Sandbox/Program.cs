@@ -11,9 +11,16 @@ class Program
     [STAThread]
     public static void Main(string[] args)
     {
-        var result = BuildAvaloniaApp()
-        .StartWithClassicDesktopLifetime(args);
-        System.Diagnostics.Debug.WriteLine("here we are", result);
+        try
+        {
+            var result = BuildAvaloniaApp()
+.StartWithClassicDesktopLifetime(args);
+            
+        } catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
     }
 
     // Avalonia configuration, don't remove; also used by visual designer.
