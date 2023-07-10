@@ -28,12 +28,21 @@ namespace VL.Avalonia
         }
 
         public static void Run(AppBuilder builder, ShutdownMode shutdownMode)  {
+            System.Diagnostics.Debug.WriteLine("before "+Thread.CurrentThread.ManagedThreadId);
             var scheduler = TaskScheduler.FromCurrentSynchronizationContext();
-            Task.Factory.StartNew(() =>
+            //Task.Factory.StartNew(() =>
+            //{
+            //    System.Diagnostics.Debug.WriteLine("inside " + Thread.CurrentThread.ManagedThreadId);
+            //    builder.StartWithClassicDesktopLifetime(new string[] { }, shutdownMode);
+            //}, new CancellationToken(), TaskCreationOptions.None, scheduler);
+            Task.Run(() => { }).ContinueWith(
+            (x) =>
             {
+                System.Diagnostics.Debug.WriteLine("inside " + Thread.CurrentThread.ManagedThreadId);
                 builder.StartWithClassicDesktopLifetime(new string[] { }, shutdownMode);
-            }, new CancellationToken(), TaskCreationOptions.None, scheduler);
+            }, scheduler);
             System.Diagnostics.Debug.WriteLine("app started");
+            System.Diagnostics.Debug.WriteLine("after "+Thread.CurrentThread.ManagedThreadId);
             //if (builder != null)
             //{
             //    builder.Start(AppMain, new string[] { });
