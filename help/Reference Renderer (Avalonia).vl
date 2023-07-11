@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="KLvvGnqRUf4OSjhWpqfhxb" LanguageVersion="2023.5.2" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="FTLioCY3wxlQRxA5SUbFEz" LanguageVersion="2023.5.2" Version="0.128">
   <NugetDependency Id="D4JYSzidq2uLwvyy5vKkl3" Location="VL.CoreLib" Version="2023.5.2" />
   <Patch Id="PmItDuCR9ufOJZtTlztQEE">
-    <Canvas Id="U1upHu8O6jPNHTmQab5zW2" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="U1upHu8O6jPNHTmQab5zW2" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="U4iuD5f053gPvGoee0Nffn">
         <Canvas Id="GOBay6FOJY6OCzMdlhGahD" CanvasType="Group">
-          <Pad Id="EZEDVkLVmFyMdyJVgbjUS3" Comment="Add Controls" Bounds="240,120,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="EZEDVkLVmFyMdyJVgbjUS3" Comment="Add Controls" Bounds="249,122,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -138,14 +138,14 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="RendererB" />
             </p:NodeReference>
-            <Pin Id="DdP3eeKq7DMMkTJsJ5h1Y2" Name="Start" Kind="InputPin" />
-            <Pin Id="HaGzYbSwQiSOHdfkni6AmH" Name="Update" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="Ir71ajtAQW8O1OJvi9mrlo" Name="Start" Kind="InputPin" />
+            <Pin Id="HaGzYbSwQiSOHdfkni6AmH" Name="Update" Kind="InputPin" DefaultValue="False" />
             <Pin Id="MpxEMDROU0dN342qhvDmOC" Name="Content" Kind="InputPin" />
             <Pin Id="LUVVLM4r8J8OSjucZod5bm" Name="Apply Content" Kind="InputPin" />
             <Pin Id="TncosmYznzsNGND6UsuHTn" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="T53hPdZBChcMAVsiHj5OTM" Name="Log" Kind="OutputPin" />
             <Pin Id="EZBFSYBTTOiOHeHCNFL1Cy" Name="Error Message" Kind="OutputPin" />
             <Pin Id="Paglp6tuSZLLy6lwYWrzwW" Name="ContentString" Kind="OutputPin" />
-            <Pin Id="PUP2lxdX16qMuT5wIl8wjL" Name="Log" Kind="OutputPin" />
           </Node>
           <Pad Id="MBB5KVT7oUQP9w7TH2FQXg" Comment="Start" Bounds="161,771,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -157,7 +157,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="SDqmpaORpeHO8yYZTXSX4o" Comment="ContentString" Bounds="239,937,201,29" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="BsG9HvI8tbLNm3Ac5JM8oj" Comment="Log" Bounds="182,1012,659,37" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="MgkvjdaVGKoO1ajH1Qs9Dx" Comment="Error Message" Bounds="210,1020,140,15" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="LqIBHF6A6AeMnn2WtsXMOq" Name="Create" />
         <Patch Id="QazxRyQbflmPwcSy66jDaj" Name="Update" />
@@ -183,8 +183,8 @@
         <Link Id="NiRxtc6R2haMcTFqsdtyct" Ids="Paglp6tuSZLLy6lwYWrzwW,SDqmpaORpeHO8yYZTXSX4o" />
         <Link Id="FEse29PfjH5Nn69voGn6JZ" Ids="EZEDVkLVmFyMdyJVgbjUS3,LUVVLM4r8J8OSjucZod5bm" />
         <Link Id="LfJ2PgqDxuaNOOPZyrR7T1" Ids="Fk0rZIVm7KSLnPnDqPxsVK,MpxEMDROU0dN342qhvDmOC" />
-        <Link Id="L951wULCJraOjaABFEofbi" Ids="MBB5KVT7oUQP9w7TH2FQXg,DdP3eeKq7DMMkTJsJ5h1Y2" />
-        <Link Id="PnJp99WURRBON1R5pm15xa" Ids="PUP2lxdX16qMuT5wIl8wjL,BsG9HvI8tbLNm3Ac5JM8oj" />
+        <Link Id="HrvkxewCY3nMukb9XVCwqS" Ids="EZBFSYBTTOiOHeHCNFL1Cy,MgkvjdaVGKoO1ajH1Qs9Dx" />
+        <Link Id="OkgcLz8mzviORHwA3rQAbC" Ids="MBB5KVT7oUQP9w7TH2FQXg,Ir71ajtAQW8O1OJvi9mrlo" />
       </Patch>
     </Node>
   </Patch>
