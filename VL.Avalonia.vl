@@ -1462,7 +1462,7 @@
   <NugetDependency Id="J5M2B7GU2PoOGRvOTSuJVh" Location="Avalonia.Desktop" Version="11.0.0" />
   <NugetDependency Id="NptDo7NtObFPy1O7l9fQpY" Location="Avalonia.Themes.Fluent" Version="11.0.0" />
   <NugetDependency Id="TZIq848AV6nK96DROAjmpE" Location="Avalonia.Fonts.Inter" Version="11.0.0" />
-  <ProjectDependency Id="D3m8SGKqJ13Ps03j5O9Onl" Location="./csharp/VL.Avalonia/VL.Avalonia.csproj" />
+  <ProjectDependency Id="D3m8SGKqJ13Ps03j5O9Onl" Location="./src/VL.Avalonia.csproj" />
   <NugetDependency Id="LU9KqMkCRcNNQjEd6g6ESS" Location="Avalonia.Win32" Version="11.0.0" />
   <NugetDependency Id="QM0ifSOYx5UOJkomhVbg1s" Location="Avalonia.Skia" Version="11.0.0" />
   <PlatformDependency Id="T9bsvjSs0R0Pp5DvLreNdz" Location="System.Threading.Tasks" />
