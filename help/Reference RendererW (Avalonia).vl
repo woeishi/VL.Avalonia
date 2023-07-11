@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="LoHRLrYfcaoO7PwSq3hcUX" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="EpHZVGrsI9WLMSnA4lign4" Location="VL.CoreLib" Version="2023.5.2" />
+  <Patch Id="MTjLM7jqHVcNP7wN1hCB62">
+    <Canvas Id="LSNJbVNAdFoOUa10r3cUiu" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="E5udMePjJfCN8ILwIfp7ax">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="VUOpvhMyYCgMcQHye4KEu0">
+        <Canvas Id="M8vo5C7UtGMMhjD3KzQs9v" CanvasType="Group">
+          <Node Bounds="420,324,65,19" Id="D1gTTF5cZfOQCDytFRiH0H">
+            <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="VvZX5keilwCO51y5dkBqYW" Name="Start" Kind="InputPin" />
+            <Pin Id="PKJWkK9P8A7PzwesdyQ3f9" Name="CreateWindow" Kind="InputPin" />
+            <Pin Id="MG7F6xbrWwWPCanKN2jm8G" Name="Content" Kind="InputPin" />
+            <Pin Id="JiA9oDTDLP8Oin7egL1AfJ" Name="Apply Content" Kind="InputPin" />
+            <Pin Id="QtTUcDffEffPhqEAN4k0VT" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="GQlKTwrAN8jL0PB6tG5d9o" Name="Error Message" Kind="OutputPin" />
+            <Pin Id="TOne3JZdn3MLKLqlQhos7b" Name="Success" Kind="OutputPin" />
+            <Pin Id="DvWiGymJ3U7NvVIW1z3sUr" Name="ContentString" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JBUzmS1WVz0OPcN0fFG8Wt" Comment="Start" Bounds="328,218,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="KUryaAw3uDVNiCHNCHUuZF" Name="Create" />
+        <Patch Id="DqP6ojbTLSMP6P5msaUA2s" Name="Update" />
+        <ProcessDefinition Id="BLKP8zi29X3NyDl3ChX0x7">
+          <Fragment Id="NcK3ZmiaxJDOlCIbMwUAJq" Patch="KUryaAw3uDVNiCHNCHUuZF" Enabled="true" />
+          <Fragment Id="N849f9hvUHQL8qhFVT7Z3B" Patch="DqP6ojbTLSMP6P5msaUA2s" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="TumgSOotq4zOhrjguy3VtC" Ids="JBUzmS1WVz0OPcN0fFG8Wt,VvZX5keilwCO51y5dkBqYW" />
+      </Patch>
+    </Node>
+  </Patch>
+  <DocumentDependency Id="D8HUS91W3QILU0cgnVM3ly" Location="../VL.Avalonia.vl" />
+</Document>
