@@ -4,7 +4,7 @@ namespace VL.Avalonia
 {
     public static class AppBuilderExtensions
     {
-        public static void RunSetup(this AppBuilder appBuilder, Action<AppBuilder> setup)
+        public static AppBuilder RunSetup(this AppBuilder appBuilder, Action<AppBuilder> setup)
         {
             if (appBuilder != null && setup != null)
             {
@@ -20,10 +20,11 @@ namespace VL.Avalonia
                    setup.Invoke(appBuilder); 
                }
                , scheduler);
+                Console.WriteLine("Dispatched");
                 // something like this, but not blocking to await the setup
                 //completion.Task.Wait();
             }
-           
+            return appBuilder;
         }
 
         public static AppBuilder ConfigureDefault() => AppBuilder.Configure<Application>();
