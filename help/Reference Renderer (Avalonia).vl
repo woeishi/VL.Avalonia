@@ -139,11 +139,13 @@
               <Choice Kind="ProcessAppFlag" Name="RendererB" />
             </p:NodeReference>
             <Pin Id="DdP3eeKq7DMMkTJsJ5h1Y2" Name="Start" Kind="InputPin" />
-            <Pin Id="HaGzYbSwQiSOHdfkni6AmH" Name="Update" Kind="InputPin" />
+            <Pin Id="HaGzYbSwQiSOHdfkni6AmH" Name="Update" Kind="InputPin" DefaultValue="True" />
             <Pin Id="MpxEMDROU0dN342qhvDmOC" Name="Content" Kind="InputPin" />
             <Pin Id="LUVVLM4r8J8OSjucZod5bm" Name="Apply Content" Kind="InputPin" />
             <Pin Id="TncosmYznzsNGND6UsuHTn" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="EZBFSYBTTOiOHeHCNFL1Cy" Name="Error Message" Kind="OutputPin" />
             <Pin Id="Paglp6tuSZLLy6lwYWrzwW" Name="ContentString" Kind="OutputPin" />
+            <Pin Id="PUP2lxdX16qMuT5wIl8wjL" Name="Log" Kind="OutputPin" />
           </Node>
           <Pad Id="MBB5KVT7oUQP9w7TH2FQXg" Comment="Start" Bounds="161,771,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -155,6 +157,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="SDqmpaORpeHO8yYZTXSX4o" Comment="ContentString" Bounds="239,937,201,29" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="BsG9HvI8tbLNm3Ac5JM8oj" Comment="Log" Bounds="182,1012,659,37" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="LqIBHF6A6AeMnn2WtsXMOq" Name="Create" />
         <Patch Id="QazxRyQbflmPwcSy66jDaj" Name="Update" />
@@ -181,6 +184,7 @@
         <Link Id="FEse29PfjH5Nn69voGn6JZ" Ids="EZEDVkLVmFyMdyJVgbjUS3,LUVVLM4r8J8OSjucZod5bm" />
         <Link Id="LfJ2PgqDxuaNOOPZyrR7T1" Ids="Fk0rZIVm7KSLnPnDqPxsVK,MpxEMDROU0dN342qhvDmOC" />
         <Link Id="L951wULCJraOjaABFEofbi" Ids="MBB5KVT7oUQP9w7TH2FQXg,DdP3eeKq7DMMkTJsJ5h1Y2" />
+        <Link Id="PnJp99WURRBON1R5pm15xa" Ids="PUP2lxdX16qMuT5wIl8wjL,BsG9HvI8tbLNm3Ac5JM8oj" />
       </Patch>
     </Node>
   </Patch>
