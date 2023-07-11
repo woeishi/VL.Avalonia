@@ -19,21 +19,21 @@ namespace VL.Avalonia
 
         public override void Initialize()
         {
-            this.Styles.Add(new Fluent.FluentTheme());
+            //this.Styles.Add(new Fluent.FluentTheme());
             base.Initialize();
         }
         public override void OnFrameworkInitializationCompleted()
         {
             
-            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-            {
-                desktop.MainWindow = new Window();
-                System.Diagnostics.Debug.WriteLine("Avalonia window created");
+            //if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            //{
+            //    desktop.MainWindow = new Window();
+            //    System.Diagnostics.Debug.WriteLine("Avalonia window created");
 
-            } else
-            {
-                System.Diagnostics.Debug.WriteLine("no desktop lifetime found");
-            }
+            //} else
+            //{
+            //    System.Diagnostics.Debug.WriteLine("no desktop lifetime found");
+            //}
 
             base.OnFrameworkInitializationCompleted();
         }
