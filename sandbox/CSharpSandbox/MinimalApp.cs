@@ -55,7 +55,7 @@ namespace Sandbox
 
                 desktop.ShutdownRequested += Desktop_ShutdownRequested;
             }
-
+            
             base.OnFrameworkInitializationCompleted();
         }
 
