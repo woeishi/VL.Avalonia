@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="KLvvGnqRUf4OSjhWpqfhxb" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="D4JYSzidq2uLwvyy5vKkl3" Location="VL.CoreLib" Version="2023.5.2" />
+  <Patch Id="PmItDuCR9ufOJZtTlztQEE">
+    <Canvas Id="U1upHu8O6jPNHTmQab5zW2" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="T6BME7NpRL5NP97pNyOiwk">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="U4iuD5f053gPvGoee0Nffn">
+        <Canvas Id="GOBay6FOJY6OCzMdlhGahD" CanvasType="Group">
+          <Node Bounds="212,259,66,19" Id="UJr8q9B3XTcP4tKjVY6car">
+            <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SimpleTest" />
+            </p:NodeReference>
+            <Pin Id="PFVrygf3lzfPLviOAcGEGA" Name="Update" Kind="ApplyPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="LqIBHF6A6AeMnn2WtsXMOq" Name="Create" />
+        <Patch Id="QazxRyQbflmPwcSy66jDaj" Name="Update" />
+        <ProcessDefinition Id="Gz3S3Z1SPK7OtSNHkDwBy9">
+          <Fragment Id="IribH8HUBwUQQfb3TgfnB8" Patch="LqIBHF6A6AeMnn2WtsXMOq" Enabled="true" />
+          <Fragment Id="EtFm0Q8kTzILnW6gJFxCUd" Patch="QazxRyQbflmPwcSy66jDaj" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <DocumentDependency Id="ERmxcMZj9ouLC5HpzLEWAK" Location="../VL.Avalonia.vl" />
+  <NugetDependency Id="LtOnEoA3LmhM5u6uYbgelV" Location="Avalonia" Version="11.0.0" />
+</Document>
