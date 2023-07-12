@@ -139,12 +139,10 @@
               <Choice Kind="ProcessAppFlag" Name="RendererB" />
             </p:NodeReference>
             <Pin Id="Ir71ajtAQW8O1OJvi9mrlo" Name="Start" Kind="InputPin" />
-            <Pin Id="HaGzYbSwQiSOHdfkni6AmH" Name="Update" Kind="InputPin" DefaultValue="False" />
             <Pin Id="MpxEMDROU0dN342qhvDmOC" Name="Content" Kind="InputPin" />
             <Pin Id="LUVVLM4r8J8OSjucZod5bm" Name="Apply Content" Kind="InputPin" />
             <Pin Id="TncosmYznzsNGND6UsuHTn" Name="Output" Kind="StateOutputPin" />
             <Pin Id="T53hPdZBChcMAVsiHj5OTM" Name="Log" Kind="OutputPin" />
-            <Pin Id="EZBFSYBTTOiOHeHCNFL1Cy" Name="Error Message" Kind="OutputPin" />
             <Pin Id="Paglp6tuSZLLy6lwYWrzwW" Name="ContentString" Kind="OutputPin" />
           </Node>
           <Pad Id="MBB5KVT7oUQP9w7TH2FQXg" Comment="Start" Bounds="161,771,35,35" ShowValueBox="true" isIOBox="true" Value="False">
@@ -157,7 +155,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="SDqmpaORpeHO8yYZTXSX4o" Comment="ContentString" Bounds="239,937,201,29" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="MgkvjdaVGKoO1ajH1Qs9Dx" Comment="Error Message" Bounds="210,1020,140,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="ErYsicV1htvQDshOb2cXbz" Comment="Log" Bounds="199,995,280,61" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="LqIBHF6A6AeMnn2WtsXMOq" Name="Create" />
         <Patch Id="QazxRyQbflmPwcSy66jDaj" Name="Update" />
@@ -183,8 +181,8 @@
         <Link Id="NiRxtc6R2haMcTFqsdtyct" Ids="Paglp6tuSZLLy6lwYWrzwW,SDqmpaORpeHO8yYZTXSX4o" />
         <Link Id="FEse29PfjH5Nn69voGn6JZ" Ids="EZEDVkLVmFyMdyJVgbjUS3,LUVVLM4r8J8OSjucZod5bm" />
         <Link Id="LfJ2PgqDxuaNOOPZyrR7T1" Ids="Fk0rZIVm7KSLnPnDqPxsVK,MpxEMDROU0dN342qhvDmOC" />
-        <Link Id="HrvkxewCY3nMukb9XVCwqS" Ids="EZBFSYBTTOiOHeHCNFL1Cy,MgkvjdaVGKoO1ajH1Qs9Dx" />
         <Link Id="OkgcLz8mzviORHwA3rQAbC" Ids="MBB5KVT7oUQP9w7TH2FQXg,Ir71ajtAQW8O1OJvi9mrlo" />
+        <Link Id="T7U5dOMTWDONkyv7HBwd1K" Ids="T53hPdZBChcMAVsiHj5OTM,ErYsicV1htvQDshOb2cXbz" />
       </Patch>
     </Node>
   </Patch>
