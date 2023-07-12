@@ -2,6 +2,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Avalonia.Direct2D1;
 
 namespace Sandbox;
 
@@ -41,6 +42,8 @@ class Program
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<Application>() //not building any custom app, pure avalonia application
             .UsePlatformDetect()
+            //.UseWin32()
+            //.UseDirect2D1()
             .WithInterFont()
             .LogToTrace();
 }
