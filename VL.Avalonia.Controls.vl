@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="NQDwsx1Egj6NCO8F1Bm2UD" LanguageVersion="2023.5.3-0069-g910876198c" Version="0.128">
-  <NugetDependency Id="DvkN4c9chsuOI2IUdgIoq1" Location="VL.CoreLib" Version="2023.5.3-0069-g910876198c" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="NQDwsx1Egj6NCO8F1Bm2UD" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="DvkN4c9chsuOI2IUdgIoq1" Location="VL.CoreLib" Version="2023.5.2" />
   <Patch Id="Lu5fKp0YC1MOsBJdylSN8U">
     <Canvas Id="SP8Oine3dIYPl93dgTCL1F" DefaultCategory="Avalonia.Controls" CanvasType="FullCategory">
       <!--
@@ -2501,21 +2501,161 @@
     ************************ Create ************************
 
 -->
-            <Node Name="Create" Bounds="425,192,117,80" Id="C6pFEkW6Z3HLmFFNwGdKq6">
+            <Node Name="Create" Bounds="267,68,657,227" Id="C6pFEkW6Z3HLmFFNwGdKq6">
               <p:NodeReference>
                 <Choice Kind="OperationDefinition" Name="Operation" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
               <p:HideCategory p:Type="Boolean">false</p:HideCategory>
               <Patch Id="UdVrA6VcATBOrgs1YiVK3p">
-                <Node Bounds="442,220,46,26" AutoConnect="true" Id="MRWE8t9Pq5eMvL1x5T3slv">
+                <Node Bounds="279,111,46,26" AutoConnect="true" Id="MRWE8t9Pq5eMvL1x5T3slv">
                   <p:NodeReference LastCategoryFullName="Avalonia.Controls.Slider" LastDependency="Avalonia.Controls.dll">
                     <Choice Kind="OperationNode" Name="Create" />
                     <FullNameCategoryReference ID="Avalonia.Controls.Slider" />
                   </p:NodeReference>
                   <Pin Id="PmucC7vya3GPZ01ZQMZ01b" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Pin Id="Sub2aRTkBkcPRouz4AI7DC" Name="Output" Kind="OutputPin" />
+                <ControlPoint Id="OrV34m0sWqfPvFmNPX2rWB" Bounds="285,231" />
+                <Link Id="CnSdVSt4uMfLrSnsKHcpgz" Ids="PmucC7vya3GPZ01ZQMZ01b,OrV34m0sWqfPvFmNPX2rWB" />
+                <Link Id="HrR3qhJiPjyOA5WwIjDhlv" Ids="OrV34m0sWqfPvFmNPX2rWB,Uwh2VX5L0gYLs7rnQ159AD" IsHidden="true" />
+                <Pin Id="Uwh2VX5L0gYLs7rnQ159AD" Name="Output" Kind="OutputPin" Bounds="471,257" />
+                <Node Bounds="419,219,70,26" Id="RUmN496i7DuN6oBqInX8VD">
+                  <p:NodeReference LastCategoryFullName="Avalonia.AvaloniaObject" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="AvaloniaObject" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="Bind" />
+                    <PinReference Kind="InputPin" Name="Property">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Avalonia" LastDependency="Avalonia.Base.dll">
+                        <Choice Kind="TypeFlag" Name="AvaloniaProperty" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                    <PinReference Kind="InputPin" Name="Source">
+                      <p:DataTypeReference p:Type="TypeReference">
+                        <Choice Kind="TypeFlag" Name="IObservable`1" />
+                        <p:TypeArguments>
+                          <TypeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                            <Choice Kind="TypeFlag" Name="Object" />
+                          </TypeReference>
+                        </p:TypeArguments>
+                      </p:DataTypeReference>
+                    </PinReference>
+                    <PinReference Kind="InputPin" Name="Priority" />
+                  </p:NodeReference>
+                  <Pin Id="K1ckG4tMEiLPa0QUIOXDqq" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DrdAdzlZLwPO6cKvGt1jBg" Name="Property" Kind="InputPin" />
+                  <Pin Id="JLN5DGM46giMsjXhInL90H" Name="Source" Kind="InputPin" />
+                  <Pin Id="NEaAUGq2gvzNAvnyrJlXAR" Name="Priority" Kind="InputPin" />
+                  <Pin Id="StHZRDN5p63LZxob5EBQed" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="LAD89wRSQFPQQy2U2K2cd1" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Link Id="RDGboq9UCHYOF6iCAyXEvn" Ids="PmucC7vya3GPZ01ZQMZ01b,K1ckG4tMEiLPa0QUIOXDqq" />
+                <Node Bounds="363,142,79,19" Id="QqVrfBhecv6L6G9A5avYMU">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Controls.Primitives.RangeBase" LastDependency="Avalonia.Controls.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="RangeBase" />
+                    <Choice Kind="OperationCallFlag" Name="ValueProperty" />
+                  </p:NodeReference>
+                  <Pin Id="KdNSAKbaCO8LcBykCFwrXw" Name="Value Property" Kind="OutputPin" />
+                </Node>
+                <Link Id="JxNRW6L3S63LHTZM0AX7mi" Ids="KdNSAKbaCO8LcBykCFwrXw,DrdAdzlZLwPO6cKvGt1jBg" />
+                <Node Bounds="459,96,46,19" Id="R7xwfAqHKcqQYxKekC2aWB">
+                  <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="MutableInterfaceType" Name="Channel" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="N6ukQmzUxTUQAZXLGH7lAY" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="339,218,47,26" Id="JOxtB0SCkahN5IHELmivEW">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Controls.Control" LastDependency="Avalonia.Controls.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Control" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetTag" />
+                  </p:NodeReference>
+                  <Pin Id="GYV3vxEJRxIP5IDrcgrTd9" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="QD1nGNbaFQYN5qE4pweN4t" Name="Value" Kind="InputPin" />
+                  <Pin Id="K3FMqYKOLzUOKHy6iVQnRp" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Link Id="IPhkAhLtVocQAY96LwxJ0m" Ids="PmucC7vya3GPZ01ZQMZ01b,GYV3vxEJRxIP5IDrcgrTd9" />
+                <Link Id="GtZtabQZZ6FP3bmJBiShgJ" Ids="N6ukQmzUxTUQAZXLGH7lAY,JLN5DGM46giMsjXhInL90H" />
+                <Link Id="F3999xUM4QLQWWGiRjlByQ" Ids="N6ukQmzUxTUQAZXLGH7lAY,QD1nGNbaFQYN5qE4pweN4t" />
+                <Node Bounds="606,91,82,26" Id="G97oXzM26cnNm6vxo2yUKC">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Controls.Primitives.RangeBase" LastDependency="Avalonia.Controls.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="RangeBase" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="ValueChanged" />
+                  </p:NodeReference>
+                  <Pin Id="S52lmykoURhPDISpAK5VT2" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Fs145ZRZN0QK9qBoaQxe4r" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Link Id="IhgDjad2bbsMdn0gLPK93n" Ids="PmucC7vya3GPZ01ZQMZ01b,S52lmykoURhPDISpAK5VT2" />
+                <Link Id="P8BTPjJ46wWO8ShRvHXhUh" Ids="N6ukQmzUxTUQAZXLGH7lAY,IWQ09ak5OChPEbPYyqQdzY" />
+                <Node Bounds="606,136,306,139" Id="SkwYAjYwLOWOIcVDGfjCZN">
+                  <p:NodeReference LastCategoryFullName="Reactive.Observable" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                    <CategoryReference Kind="MutableInterfaceType" Name="Observable" />
+                    <Choice Kind="OperationCallFlag" Name="Do" />
+                  </p:NodeReference>
+                  <Pin Id="BsOchI7YXkJMezmOl2tDfa" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="L9m9gJdZPwBNqPBXriyIqH" Name="Output" Kind="StateOutputPin" />
+                  <Patch Id="DQ9UneouBRQLoB3FC2zrMQ" Name="On Next" ManuallySortedPins="true">
+                    <Pin Id="At7M49H7yOcOLBTV3H7WEA" Name="Input" Kind="InputPin" />
+                    <ControlPoint Id="SaJV3kENdRiNbAQC9IDv4p" Bounds="700,144" />
+                    <Node Bounds="618,213,55,26" Id="CL8Np2yDV5lNoqsGL95b2r">
+                      <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="MutableInterfaceType" Name="Channel" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="SetValue" />
+                      </p:NodeReference>
+                      <Pin Id="IWQ09ak5OChPEbPYyqQdzY" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="DVMP15BicZwMV95lioTt2m" Name="Value" Kind="InputPin" />
+                      <Pin Id="Razo90tfE8bLpoQIRstyNL" Name="Apply" Kind="InputPin" DefaultValue="True" />
+                      <Pin Id="MUufNUVXYETMNtZE8PUVHR" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="699,162,62,26" Id="Dpsx4cRinjrPqbistvnSk2">
+                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="ClassType" Name="EventPattern" />
+                        <Choice Kind="OperationCallFlag" Name="EventArgs" />
+                      </p:NodeReference>
+                      <Pin Id="BXtVAlHT5fqQTPScjQLilk" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="IIL5HgETIJTMLBnLUDzqzH" Name="Event Args" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="701,196,141,26" Id="BjkUJA54LUwP87eTq1sdoN">
+                      <p:NodeReference LastCategoryFullName="Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs" LastDependency="Avalonia.Controls.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="RangeBaseValueChangedEventArgs" />
+                        <Choice Kind="OperationCallFlag" Name="NewValue" />
+                      </p:NodeReference>
+                      <Pin Id="FyMBlgJxoL7MBdR1E1oYmM" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="BaKok3aNO4vQDPOol8Cgzi" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="JbnYTsfXlReLommyVw7v5O" Name="New Value" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="837,236,58,19" Id="PzbqMMY80zENG9RQcOpSHq">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="HardCast" />
+                      </p:NodeReference>
+                      <Pin Id="O2cfCTKzTiaN4VBA2zx3wu" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="MfadNcyuZlELDB9iV342tP" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="842,173,58,26" Id="B7yKfaNqYYUMwjokfToDlH">
+                      <p:NodeReference LastCategoryFullName="System.Console" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="WriteLine" />
+                      </p:NodeReference>
+                      <Pin Id="Es0W29U5zyIP5tcKN6BjC6" Name="Value" Kind="InputPin" />
+                      <Pin Id="Pm0K2BNouK3NwOHg5r5VE0" Name="Apply" Kind="InputPin" DefaultValue="True" />
+                    </Node>
+                  </Patch>
+                </Node>
+                <Link Id="JC8besXh5veMpNEeAdiEPk" Ids="At7M49H7yOcOLBTV3H7WEA,SaJV3kENdRiNbAQC9IDv4p" IsHidden="true" />
+                <Link Id="Fsloj2g5EpKO4yyRYcQLpe" Ids="Fs145ZRZN0QK9qBoaQxe4r,BsOchI7YXkJMezmOl2tDfa" />
+                <Link Id="FxqP7xlxF7DMJx7byEh2oi" Ids="IIL5HgETIJTMLBnLUDzqzH,FyMBlgJxoL7MBdR1E1oYmM" />
+                <Link Id="LiTnUYwpE5wOCKQuGDjnp8" Ids="SaJV3kENdRiNbAQC9IDv4p,BXtVAlHT5fqQTPScjQLilk" />
+                <Link Id="Ab3j19Dc0IXQB08E2MbnJQ" Ids="JbnYTsfXlReLommyVw7v5O,O2cfCTKzTiaN4VBA2zx3wu" />
+                <Link Id="CnfTclqMOQPQVujWA7djv1" Ids="MfadNcyuZlELDB9iV342tP,DVMP15BicZwMV95lioTt2m" />
+                <Link Id="LgKOv7G9poiPIjN2cpnS1T" Ids="JbnYTsfXlReLommyVw7v5O,Es0W29U5zyIP5tcKN6BjC6" />
               </Patch>
             </Node>
             <!--
@@ -2623,7 +2763,7 @@
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
               <p:HideCategory p:Type="Boolean">false</p:HideCategory>
-              <Patch Id="BWRH0srHcJ1M9DKnJgp0lr">
+              <Patch Id="BWRH0srHcJ1M9DKnJgp0lr" IsGeneric="true">
                 <Node Bounds="804,372,120,26" AutoConnect="true" Id="C4YkyRZYTkPPZU9dlDfOlK">
                   <p:NodeReference LastCategoryFullName="Avalonia.Controls.Slider" LastDependency="Avalonia.Controls.dll">
                     <Choice Kind="OperationNode" Name="SetIsDirectionReversed" />
