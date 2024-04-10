@@ -26,4 +26,28 @@ internal static class ControlsExtension
             dst.RemoveRange(i - 1, dst.Count - i);
         }
     }
+
+    internal static void SetItems(AvaloniaControls.ItemCollection dst, IReadOnlyCollection<object?> src)
+    {
+        int i = 0;
+        foreach (var item in src)
+        {
+            if (item != null)
+            {
+                var idx = dst.IndexOf(item);
+                if (idx == -1)
+                {
+                    dst.Add(item);
+                    idx = dst.Count - 1;
+                }
+                else if (idx != i)
+                    dst.Insert(idx, item);
+                i++;
+            }
+        }
+        for (var r = dst.Count-1;  r >= i; r--)
+        {
+            dst.RemoveAt(r);
+        }
+    }
 }
