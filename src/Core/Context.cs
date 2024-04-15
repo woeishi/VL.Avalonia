@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Threading;
 
 namespace VL.Avalonia;
 
@@ -28,31 +29,24 @@ public class Context:IDisposable
         {
             //appBuilder = AppBuilder.Configure<Application>().UseWin32().UseSkia();
             appBuilder = AppBuilder.Configure<Application>().UsePlatformDetect();
-        } 
+        }
         appBuilder.SetupWithLifetime(this.Lifetime);
-
+        
         Application = appBuilder.Instance;
 
         // HACK: 
-        // (empty) task gives vl(?) time to resume
-        // resuming on current thread starts avalonia on main thread
-        // without task, vl blocks
-        // without continuation on main thread, keyboard is not received...
+        // ILifetime.Start needs to be called on the UI thread
+        // it starts the avalonias mainloop / messagepump
+        // the call will block (it is usually used in the main function/entry point
+        // since that would block the vl runtime / mainloop, we have to somehow resume after starting avalonia
         var scheduler = TaskScheduler.FromCurrentSynchronizationContext();
-        Task.Run(() => { }).ContinueWith(
-            (x) =>
-            {
-                //System.Diagnostics.Debug.WriteLine("inside " + Thread.CurrentThread.ManagedThreadId);
-                if (this.Lifetime is ClassicDesktopStyleApplicationLifetime)
-                    (this.Lifetime as ClassicDesktopStyleApplicationLifetime)?.Start([]);
-            }, scheduler);
-        //Task.Run(() =>
-        //{
-        //    if (this.Lifetime is ClassicDesktopStyleApplicationLifetime)
-        //        (this.Lifetime as ClassicDesktopStyleApplicationLifetime)?.Start([]);
-        //});
-    }
+        Task.Factory.StartNew(() =>
+        {
+            if (this.Lifetime is ClassicDesktopStyleApplicationLifetime)
+                (this.Lifetime as ClassicDesktopStyleApplicationLifetime)?.Start([]);
 
+        }, new CancellationToken(), TaskCreationOptions.None, scheduler);
+    }
 
     public void Dispose()
     {
