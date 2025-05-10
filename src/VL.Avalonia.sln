@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33516.290
+VisualStudioVersion = 17.14.35906.104
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.Avalonia", "VL.Avalonia.csproj", "{1AEAF445-ACDE-412F-9239-3A39B767FDC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia", "VL.Avalonia\src\VL.Avalonia.csproj", "{88EF5DE4-FC95-52C7-F36D-F0366FF77315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia.Themes.Fluent", "VL.Avalonia.Themes.Fluent\src\VL.Avalonia.Themes.Fluent.csproj", "{B630A255-E49C-0009-119D-595F1DFCE1D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia.Controls", "VL.Avalonia.Controls\VL.Avalonia.Controls.csproj", "{E23764FF-55AC-462E-A63D-1BE560195674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1AEAF445-ACDE-412F-9239-3A39B767FDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AEAF445-ACDE-412F-9239-3A39B767FDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AEAF445-ACDE-412F-9239-3A39B767FDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AEAF445-ACDE-412F-9239-3A39B767FDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23764FF-55AC-462E-A63D-1BE560195674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23764FF-55AC-462E-A63D-1BE560195674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23764FF-55AC-462E-A63D-1BE560195674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23764FF-55AC-462E-A63D-1BE560195674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AD3F76BF-D94E-45CA-9705-F80B064AD3CD}
+		SolutionGuid = {F783E35F-94DD-4CC2-93B7-3DDBB3D9EBAA}
 	EndGlobalSection
 EndGlobal

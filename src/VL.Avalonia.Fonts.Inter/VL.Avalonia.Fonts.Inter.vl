@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="KZ4ZoQo1nNmP6vEpVTyBB0" LanguageVersion="2025.7.0-0340-g1b1e5767de" Version="0.128">
+  <NugetDependency Id="PjWqLMPpgLvLe3VxujaCAc" Location="VL.CoreLib" Version="2025.7.0-0340-g1b1e5767de" />
+  <Patch Id="VsB8HD5xVKlMsHIooFWksV">
+    <Canvas Id="QPMCHGvS5hBMEi8e9SUQ7L" DefaultCategory="Avalonia.Fonts" CanvasType="FullCategory">
+      <!--
+
+    ************************ WithInterFont ************************
+
+-->
+      <Node Name="WithInterFont" Bounds="653,384,114,80" Id="JenwGbxByaFPm8hgn6ds8t">
+        <p:NodeReference>
+          <Choice Kind="OperationDefinition" Name="Operation" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+        <Patch Id="Od1HeaGTEXeNXUURwVBQr2">
+          <Node Bounds="665,413,90,26" AutoConnect="true" Id="HyQ79ZEIJ8DNSQOMdzd4Q4">
+            <p:NodeReference LastCategoryFullName="Avalonia.AppBuilderExtension" LastDependency="Avalonia.Fonts.Inter.dll">
+              <Choice Kind="OperationNode" Name="WithInterFont" />
+              <FullNameCategoryReference ID="Avalonia.AppBuilderExtension" />
+            </p:NodeReference>
+            <Pin Id="PgKrp6czht0MnZgLhP0JZ4" Name="Input" Kind="StateInputPin" />
+            <Pin Id="GxKWJIOAQYfNk6YQSEiPoO" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pin Id="QiyhH6hwMjJPi5t01tOfZc" Name="Input" Kind="InputPin" />
+          <Pin Id="C1gH01Ff7M5OEieSCuZTEJ" Name="Output" Kind="OutputPin" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="RyMz55Vz6xnLvS2E0LScpn">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="R2bec4XCEw4MRkhy3cb08t">
+        <Canvas Id="BUPcwZPoVSJOPPCiJngafk" CanvasType="Group" />
+        <Patch Id="Sf2sBr4KIVJM24aYu8aLpD" Name="Create" />
+        <Patch Id="QTELfiGeOXVM5101XbPBUH" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="OtJK9TGBaPFP8eX5tYaH4i">
+          <Fragment Id="VbMWDGIgFTgLCPsNx0Zp3i" Patch="Sf2sBr4KIVJM24aYu8aLpD" Enabled="true" />
+          <Fragment Id="BS6JpmUxEKOLHvYMOruCgh" Patch="QTELfiGeOXVM5101XbPBUH" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="PNu7wHNhaWeQCAYkmeYOWC" Location="Avalonia.Fonts.Inter" Version="11.2.1" />
+</Document>
