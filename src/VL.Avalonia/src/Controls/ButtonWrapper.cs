@@ -29,3 +29,4 @@ public class ButtonWrapper
     [Fragment(IsHidden = true)]
     public object? Content => _button.Content;
 }
+
