@@ -71,9 +71,9 @@
                 <Pin Id="GccJqDjW4eKLhBEnHJBYYW" Name="Result" Kind="OutputPin" />
                 <ControlPoint Id="P0xk5BQoQyGQX17dfR0dFX" Bounds="644,306" />
                 <Node Bounds="642,113,79,19" Id="BmLyTE6bw71PSUSuPSG6ST">
-                  <p:NodeReference LastCategoryFullName="VL.Avalonia.AppBuilderExtensions" LastDependency="VL.Avalonia.dll">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.AppBuilderExtensions" LastDependency="VL.Avalonia.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="AppBuilderExtensions" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="AppBuilderExtensions" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="CreateDefault" />
                   </p:NodeReference>
                   <Pin Id="Fj7Q6Spq3k7M2WP0O9I1sh" Name="Result" Kind="OutputPin" />
@@ -90,9 +90,8 @@
                   <Pin Id="KAWeQcBVaEHMJ3UixmB3kR" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="642,255,179,19" Id="Ek5YHVFw97bN26QBkHA9gu">
-                  <p:NodeReference LastCategoryFullName="VL.Avalonia.AppBuilderExtensions" LastDependency="VL.Avalonia.dll">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.AppBuilderExtensions" LastDependency="VL.Avalonia.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <FullNameCategoryReference ID="VL.Avalonia.AppBuilderExtensions" />
                     <Choice Kind="OperationCallFlag" Name="StartClassicDesktopStyleApplication" />
                   </p:NodeReference>
                   <Pin Id="LqMk77wBXjbOCmRnsPKFNR" Name="Builder" Kind="InputPin" />
@@ -521,8 +520,7 @@
   </Patch>
   <NugetDependency Id="GMhn63HjG4qM0dU5jEmund" Location="Avalonia" Version="11.2.1" />
   <NugetDependency Id="UdwjGWusIBsL5mxUtYoCoN" Location="Avalonia.Desktop" Version="11.2.1" />
-  <PlatformDependency Id="L7nHBXTDUlLNSsmO0mmGVQ" Location="./lib/Debug/net8.0/VL.Avalonia.dll" />
+  <PlatformDependency Id="L7nHBXTDUlLNSsmO0mmGVQ" Location="./lib/Debug/net8.0/VL.Avalonia.dll" IsForward="true" />
   <DocumentDependency Id="CVDpPCeHNenL35CjutMoTq" Location="./VL.Avalonia.Controls.vl" IsForward="true" />
   <DocumentDependency Id="FUZXz3cutH3NVqpFsrSvxb" Location="./VL.Avalonia.Styling.vl" IsForward="true" />
-  <PlatformDependency Id="NpmlJelV146PlxqAfTUsY0" Location="./lib/Debug/net8.0/VL.Avalonia.Controls.dll" IsForward="true" />
 </Document>

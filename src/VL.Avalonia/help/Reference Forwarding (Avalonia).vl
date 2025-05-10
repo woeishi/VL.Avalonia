@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="KLvvGnqRUf4OSjhWpqfhxb" LanguageVersion="2024.6.0-0265-ga193ffb214" Version="0.128">
-  <NugetDependency Id="D4JYSzidq2uLwvyy5vKkl3" Location="VL.CoreLib" Version="2024.6.0-0265-ga193ffb214" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="KLvvGnqRUf4OSjhWpqfhxb" LanguageVersion="2025.7.0-0340-g1b1e5767de" Version="0.128">
+  <NugetDependency Id="D4JYSzidq2uLwvyy5vKkl3" Location="VL.CoreLib" Version="2025.7.0-0340-g1b1e5767de" />
   <Patch Id="PmItDuCR9ufOJZtTlztQEE">
     <Canvas Id="U1upHu8O6jPNHTmQab5zW2" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="U4iuD5f053gPvGoee0Nffn">
         <Canvas Id="GOBay6FOJY6OCzMdlhGahD" CanvasType="Group">
-          <Node Bounds="65,290,999,555" Id="IGP8PzDYvsUOTvJ9tpyhJb">
+          <Node Bounds="64,280,999,565" Id="IGP8PzDYvsUOTvJ9tpyhJb">
             <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl" OverloadStrategy="AllPinsThatAreNotCommon">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
@@ -24,7 +24,7 @@
               <PinReference Kind="InputPin" Name="Region" />
               <PinReference Kind="InputPin" Name="Update" />
             </p:NodeReference>
-            <ControlPoint Id="NJCkT3PZ1ByL1hbbVqMMkN" Bounds="77,296" Alignment="Top" />
+            <ControlPoint Id="NJCkT3PZ1ByL1hbbVqMMkN" Bounds="77,286" Alignment="Top" />
             <Pin Id="CkFJLveh5RRMvNvayaE3Kn" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Patch Id="KfoUNabkYy3MyE9t665T6l" ManuallySortedPins="true">
               <Patch Id="ORMGB8dc5PNM3FeIodbksd" Name="Create" ManuallySortedPins="true" />
@@ -40,6 +40,7 @@
                 <Pin Id="THArINiG7KaPEUby997KyQ" Name="ClickMode" Kind="InputPin" />
                 <Pin Id="UZ7EMpobSrSOLCkkbZR9bq" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="Ba8FJtMPIHNPSGR5j8fdAj" Name="Is Pressed" Kind="OutputPin" />
+                <Pin Id="LYR3qPNeJEyPvxQ9Jcnhvb" Name="Value" Kind="InputPin" />
               </Node>
               <Pad Id="HYiq4w7fOFcQVb3h3X5YTS" Comment="iob" Bounds="119,561,52,15" ShowValueBox="true" isIOBox="true" Value="Bang One">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -59,6 +60,7 @@
                 <Pin Id="VzRbcoQP33YPJDZf4DMMVA" Name="ClickMode" Kind="InputPin" DefaultValue="Press" />
                 <Pin Id="UsU3ZLfezIuO5n9xjL7iHT" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="Lzch2E2ErcZLh8TWiwXNF9" Name="Is Pressed" Kind="OutputPin" />
+                <Pin Id="LcORHVZ9iCBMJe59XKzVve" Name="Value" Kind="InputPin" />
               </Node>
               <Pad Id="EXOpEwDQTsrNCGx4fTDIwC" Comment="iob" Bounds="299,558,35,15" ShowValueBox="true" isIOBox="true" Value="Two">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -74,6 +76,7 @@
                 </p:NodeReference>
                 <Pin Id="JallewTawI1PGf6ou5e2eX" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="Ib6WOl18619NmHQEmbzadz" Name="Content" Kind="InputPin" />
+                <Pin Id="MGRYPId8KvLMz7j4BK1Zbn" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="DooUqBmKeaSOFc3zoanPLO" Name="Content" Kind="OutputPin" />
                 <Pin Id="ELJduOMMGvuOGuwgGosz8r" Name="Styles" Kind="OutputPin" />
               </Node>
@@ -218,7 +221,7 @@
                 <Pin Id="CwkEVIDCGcGNaYreYCcHzF" Name="Brush" Kind="InputPin" />
                 <Pin Id="AErtxZVNgRiOICXgrxtJKs" Name="Output" Kind="OutputPin" />
               </Node>
-              <Node Bounds="493,325,72,70" Id="O4NUAD2n1XTLqE1PbZNpTA">
+              <Node Bounds="493,300,72,70" Id="O4NUAD2n1XTLqE1PbZNpTA">
                 <p:NodeReference LastCategoryFullName="Avalonia.Styling.Style" LastDependency="VL.Avalonia.Styling.vl" OverloadStrategy="AllPinsThatAreNotCommon">
                   <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                   <CategoryReference Kind="ClassType" Name="Style" />
@@ -229,9 +232,9 @@
                 <Patch Id="JZdxNflour6NI6pj9BavXg" Name="Selector" ManuallySortedPins="true">
                   <Pin Id="TstfV7St8BJMZzo1gxYR12" Name="Input" Kind="InputPin" />
                   <Pin Id="TW8kRDIO8N9M4s51Poe4LJ" Name="Result" Kind="OutputPin" />
-                  <ControlPoint Id="AEdw2npw0oUPO92vScvKai" Bounds="508,336" />
-                  <ControlPoint Id="T09M2WtzbknMnd8Le88wWh" Bounds="507,388" />
-                  <Node Bounds="505,348,48,26" Id="GmF1RTeoKEnOeLvmPJxBXK">
+                  <ControlPoint Id="AEdw2npw0oUPO92vScvKai" Bounds="508,311" />
+                  <ControlPoint Id="T09M2WtzbknMnd8Le88wWh" Bounds="507,363" />
+                  <Node Bounds="505,323,48,26" Id="GmF1RTeoKEnOeLvmPJxBXK">
                     <p:NodeReference LastCategoryFullName="Avalonia.Styling.Selectors" LastDependency="Avalonia.Base.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Class" />
@@ -253,6 +256,7 @@
                 <Pin Id="FQsi7CX2uuvOP0D2bT5vIh" Name="Thickness" Kind="InputPin" />
                 <Pin Id="IgaXp58zMeRMFLsgnO3yW3" Name="Output" Kind="OutputPin" />
               </Node>
+              <Patch Id="S5yfXGpNDvwPfovXWSQFWg" Name="Dispose" />
             </Patch>
           </Node>
           <Node Bounds="75,267,90,19" Id="HBL6arAVHPYNhsS7llm8Dy">
@@ -417,7 +421,7 @@
     </Node>
   </Patch>
   <DocumentDependency Id="ERmxcMZj9ouLC5HpzLEWAK" Location="../VL.Avalonia.vl" />
-  <NugetDependency Id="LtOnEoA3LmhM5u6uYbgelV" Location="Avalonia" Version="11.0.0" />
+  <NugetDependency Id="LtOnEoA3LmhM5u6uYbgelV" Location="Avalonia" Version="11.2.1" />
   <DocumentDependency Id="Kf5M1RxVaSDQPXJicGuULt" Location="../VL.Avalonia.Controls.vl" />
   <DocumentDependency Id="HQrZWvo2nC4MTpgUGs0FI8" Location="../VL.Avalonia.Styling.vl" />
 </Document>

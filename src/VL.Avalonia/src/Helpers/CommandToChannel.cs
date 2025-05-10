@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using VL.Lib.Reactive;
 
-namespace VL.Avalonia.Controls.Helpers;
+namespace VL.Avalonia.Helpers;
 
 public class UnitChannelCommand : ICommand
 {

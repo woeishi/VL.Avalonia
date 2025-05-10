@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 using System.Reactive;
-using VL.Avalonia.Controls.Helpers;
+using VL.Avalonia.Helpers;
 using VL.Core.Import;
 using VL.Lib.Reactive;
 
@@ -21,9 +21,11 @@ public class ButtonWrapper
     public void SetCommand(IChannel<Unit> channel) =>
         _onClickCommand.CommandChannel = channel;
 
-
     public void SetClickMode(ClickMode mode) =>
         _button.ClickMode = mode;
 
     public Button Output => _button;
+
+    [Fragment(IsHidden = true)]
+    public object? Content => _button.Content;
 }
