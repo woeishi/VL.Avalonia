@@ -2,11 +2,11 @@
 
 namespace VL.Avalonia.Styles
 {
-    public record struct StyleOrientation<T>(IAvaloniaStyle<T>? Style, Orientation Orientation) where T : class, IAvaloniaStyle<T>
+    public record struct StyleOrientation(IAvaloniaStyle? Style, Orientation Orientation) : IAvaloniaStyle
     {
-        public void ApplyStyle(T owner)
+        public void ApplyStyle(object owner)
         {
-            var property = typeof(T).GetProperty("Orientation");
+            var property = owner.GetType().GetProperty("Orientation");
 
             if (property != null)
             {
@@ -19,9 +19,9 @@ namespace VL.Avalonia.Styles
 
     public static class Styles
     {
-        public static StyleOrientation<T> SetOrientation<T>(IAvaloniaStyle<T>? style, Orientation orientation) where T : class, IAvaloniaStyle<T>
+        public static IAvaloniaStyle SetOrientation(IAvaloniaStyle? style, Orientation orientation)
         {
-            return new StyleOrientation<T>(style, orientation);
+            return new StyleOrientation(style, orientation);
         }
     }
 }

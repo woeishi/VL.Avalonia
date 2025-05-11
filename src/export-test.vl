@@ -144,16 +144,6 @@
                   <CategoryReference Kind="Category" Name="Primitive" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="T0TetDqDbONNnrpI2ji2ol" Bounds="434,538">
-                <p:TypeAnnotation LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
-                  <Choice Kind="TypeFlag" Name="IAvaloniaStyle" />
-                  <p:TypeArguments>
-                    <TypeReference>
-                      <Choice Kind="TypeFlag" Name="StackPanel" />
-                    </TypeReference>
-                  </p:TypeArguments>
-                </p:TypeAnnotation>
-              </Pad>
               <Node Bounds="375,570,81,26" Id="TjoqTPcztjLNZusHhFzG9I">
                 <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles.StyleOrientation" LastDependency="VL.Avalonia.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -292,8 +282,8 @@
         <Link Id="G6tDkxN3zAAPicGnAChOlH" Ids="SwbH4NzRC4gO3ZHsQTPKyq,Hb4Dwt8EkRgL8xJoybLDQb" />
         <Link Id="OzARDrarXLZPAUl3CpQxfH" Ids="DUrjGHnfPrQNlRnqJnoBMT,R4SZAasprDmNQCJYQ924Op" />
         <Link Id="JA6Mic1HB2RMqgkoM2p5YN" Ids="JpU87QLfa7YPYb8u6terpx,PgMeMkgsQ5bMNBq8lEotvf" />
-        <Link Id="Ku1gkD6TxYOLxfQUKqW1Pd" Ids="TjHZJvryzSiQWugj11W2Rt,HRD5ICYm05VNreDi1BnDPO" />
         <Link Id="BQV1X8wiGWqPE3h6xgrjlM" Ids="BCNFpjcOwHkMh3SjKBlLIv,ICNFioPXy20M97fp7GrKN8" />
+        <Link Id="Tkxgej2tPIKNIoNvOQVDil" Ids="JpU87QLfa7YPYb8u6terpx,HRD5ICYm05VNreDi1BnDPO" />
       </Patch>
     </Node>
   </Patch>

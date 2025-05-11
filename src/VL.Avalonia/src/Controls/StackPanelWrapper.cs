@@ -13,15 +13,15 @@ public partial class StackPanelWrapper
     {
     }
 
-    private IAvaloniaStyle<StackPanel> _style;
-    public IAvaloniaStyle<StackPanel> Style
+    private IAvaloniaStyle? _style;
+    public IAvaloniaStyle? Style
     {
         set
         {
-            if (_style != value)
+            if (!_style?.Equals(value) ?? _style != value)
             {
                 _style = value;
-                _style.ApplyStyle(_stackPanel);
+                _style?.ApplyStyle(_stackPanel);
             }
         }
     }

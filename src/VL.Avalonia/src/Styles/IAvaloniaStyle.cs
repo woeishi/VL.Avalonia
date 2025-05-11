@@ -5,7 +5,7 @@
 /// Test helper interface to apply styles to controls.
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public interface IAvaloniaStyle<T> where T : class
+public interface IAvaloniaStyle
 {
-    void ApplyStyle(T owner);
+    void ApplyStyle(object owner);
 }
