@@ -1,27 +1,14 @@
-﻿using VL.Avalonia.Styles;
+﻿using Avalonia.Controls;
+using static VL.Avalonia.Styles;
 
 namespace VL.Avalonia.Controls;
 
-
 /// <summary>
-/// hmm might wrap style setter in abstract class?
+/// Abstract Control wrapper to process node<br/>
 /// </summary>
-/// <typeparam name="T"></typeparam>
-public class AbstractWrapperBase<T>
+/// <typeparam name="T">Control</typeparam>
+public abstract class AbstractWrapperBase<T> where T : Control
 {
-    private T _output;
-    public T Output { get => _output; }
-
-    private IAvaloniaStyle? _style;
-    public IAvaloniaStyle? Style
-    {
-        set
-        {
-            if (!_style?.Equals(value) ?? _style != value)
-            {
-                _style = value;
-                _style?.ApplyStyle(_output);
-            }
-        }
-    }
+    public abstract T Output { get; }
+    public abstract IAvaloniaStyle? Style { set; }
 }
