@@ -34,6 +34,12 @@ namespace VL.Skia.Avalonia
             Compositor = new Compositor(null, false);
         }
 
+
+        // That's something important throws without it
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/AvaloniaControl.cs#L130
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/GodotPlatform.cs#L48
+        public Compositor Compositor { get; set; }
+
         // TODO: DPI
         public double DesktopScaling => 1.0;
 
@@ -135,14 +141,14 @@ namespace VL.Skia.Avalonia
 
         public Action<WindowTransparencyLevel>? TransparencyLevelChanged { get; set; }
 
-        // That's not on Elias file
-        public Compositor Compositor { get; set; }
 
         public Action? Closed { get; set; }
         public Action? LostFocus { get; set; }
 
         public WindowTransparencyLevel TransparencyLevel { get; set; } = WindowTransparencyLevel.None;
-        public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels();
+
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/GodotTopLevelImpl.cs#L76
+        public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new(1.0, 1.0, 1.0);
 
         private ulong Timestamp => (ulong)_stopwatch.ElapsedMilliseconds;
 
@@ -178,6 +184,8 @@ namespace VL.Skia.Avalonia
         public Point PointToClient(PixelPoint point) => point.ToPoint(RenderScaling);
         public PixelPoint PointToScreen(Point point) => PixelPoint.FromPoint(point, RenderScaling);
 
+        // example from Godot
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/GodotTopLevelImpl.cs#L364
         public void SetCursor(ICursorImpl? cursor)
         {
             //
@@ -195,11 +203,22 @@ namespace VL.Skia.Avalonia
             InputRoot = inputRoot;
         }
 
+        // copy paste from here
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/GodotTopLevelImpl.cs#L376
         public void SetTransparencyLevelHint(IReadOnlyList<WindowTransparencyLevel> transparencyLevels)
         {
-            // throw new NotImplementedException();
+            foreach (var transparencyLevel in transparencyLevels)
+            {
+                if (transparencyLevel == WindowTransparencyLevel.Transparent || transparencyLevel == WindowTransparencyLevel.None)
+                {
+                    TransparencyLevel = transparencyLevel;
+                    return;
+                }
+            }
         }
 
+        // example from Godot
+        // https://github.com/MrJul/Estragonia/blob/0aa807421c9e52bc56128c69798ffc11093f0a61/src/JLeb.Estragonia/GodotTopLevelImpl.cs#L388
         public object? TryGetFeature(Type featureType)
         {
             // throws 
