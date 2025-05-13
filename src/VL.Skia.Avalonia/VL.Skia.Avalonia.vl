@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="DAbdY2VBofjNP6D9fOOHXZ" LanguageVersion="2025.7.0-0340-g1b1e5767de" Version="0.128">
+  <NugetDependency Id="Dhw3BfqJTbzMKsnlBCN39w" Location="VL.CoreLib" Version="2025.7.0-0340-g1b1e5767de" />
+  <Patch Id="Pe86ky9Ts0CMUWWrOifY9N">
+    <Canvas Id="QADecGkbqlBN7SqSuEZaHu" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="EGp0Lm5G0Q1L7AdRpW9zck">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="J2slBenJTLtL0HUG7a9ghW">
+        <Canvas Id="ANeWVf2gIBuQCAIYNKyUHe" CanvasType="Group">
+          <Node Bounds="240,320,145,19" Id="C0makqYXyk6POZsGDuk7KF">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Skia" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="RLmi0iSEArZN3Y29gvW9pw" Name="Bounds" Kind="InputPin" DefaultValue="426, 207, 507, 531" IsHidden="true" />
+            <Pin Id="Hgktn4FGdWZOCpd0Xex2HR" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
+            <Pin Id="H7ly5N1wfzGNhoVNQzvom1" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="M2mWEjWjbcqPcyD7uNeHdN" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RN87pxB8L23QHVbZHlq7zo" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HXwRxnXoI6KOpShzdKMTKa" Name="Input" Kind="InputPin" />
+            <Pin Id="EAMcVwIEMWcPlUwFoOV2Op" Name="Title" Kind="InputPin" />
+            <Pin Id="DiyTFmWikWMN9vaeDdTc67" Name="Color" Kind="InputPin" />
+            <Pin Id="TwF21R0MLt7L2Nm2bFOgiq" Name="Clear" Kind="InputPin" />
+            <Pin Id="LIEpwmd30bSPG5zmPYS5Mk" Name="Space" Kind="InputPin" />
+            <Pin Id="VLOvW1fUMeiM3tASQIMJhD" Name="Show Cursor" Kind="InputPin" />
+            <Pin Id="MDL3p6qGEBOMNE9mBSWnAX" Name="VSync" Kind="InputPin" />
+            <Pin Id="KiDpvMYWgJFP6tPGwgCgMM" Name="Commands" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KyFXhLWMyVGQdDT1CO1sYL" Name="Enable Keyboard Shortcuts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CTZ1tTreKY0McH2vDd079N" Name="Enabled" Kind="InputPin" />
+            <Pin Id="A8JFQ1EGBy5QX57J9kU1FH" Name="Form Bounds Notifications" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="CS8ek9PByFFMNS0xUo708E" Name="Form" Kind="OutputPin" />
+            <Pin Id="G5p5hCmwtNRNumAk1N8dUG" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="D6y7hwuVfPyOafQfExCfZm" Name="Render Time" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="240,180,79,19" Id="NHXpDjExxUMOPxxJdqCYuN">
+            <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Skia.Avalonia.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Avalonia" />
+              <Choice Kind="ProcessAppFlag" Name="AvaloniaLayer" />
+            </p:NodeReference>
+            <Pin Id="HfQ4AZ5zdg8MMDOGJ0P6Lx" Name="Content" Kind="InputPin" />
+            <Pin Id="EBI8gkGsrtzO9Zx80Bw7Z6" Name="Notification" Kind="InputPin" />
+            <Pin Id="FO8tjiI6XmGQRzmJDrHeUB" Name="Caller" Kind="InputPin" />
+            <Pin Id="PQbDVbpxJTeLn7gzZZrN2k" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Ff8giMMnV7hNMimBnvgCfK" Name="Result" Kind="OutputPin" />
+            <Pin Id="CO8QUimMiYoPy9MXlEMm0f" Name="Content" Kind="OutputPin" />
+            <Pin Id="TfC5VtipFJRN82fdxlBlOL" Name="Bounds" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="235,130,90,19" Id="PEU0yOQTdPJPv9uNonT7cp">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ButtonPrototype" />
+            </p:NodeReference>
+            <Pin Id="N9JUM6VlJqOMl3KvRJZ6EG" Name="Style" Kind="InputPin" />
+            <Pin Id="SB3dMxjB95EQc9kjqnMd22" Name="Content" Kind="InputPin" />
+            <Pin Id="KAXZX4rclXLNwza7N0VXAv" Name="Channel" Kind="InputPin" />
+            <Pin Id="Bg3nnuUCe6MLyTVrAxjBoN" Name="Mode" Kind="InputPin" />
+            <Pin Id="AsEN5pc0GzQMb6zEIUiXV5" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OYFu3YmWIoJMfNGAAGrHRJ" Comment="Bounds" Bounds="316,220,229,62" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="CyZcwvKnlZYLODvvBuXh90" Comment="" Bounds="266,230,35,35" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="JiTJTYmYaEKPP6qlwIU057" Name="Create" />
+        <Patch Id="NILg28dT62QOGpVm9oNWU8" Name="Update" />
+        <ProcessDefinition Id="JvdyjVpygnzNUKiHMXsytD">
+          <Fragment Id="Bu0w3uufcICMpY8dg7W7W3" Patch="JiTJTYmYaEKPP6qlwIU057" Enabled="true" />
+          <Fragment Id="PnazsQyNAMsQA1BS7DvWMo" Patch="NILg28dT62QOGpVm9oNWU8" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="IKgRFPsbtPiMNpuaUskD0y" Ids="PQbDVbpxJTeLn7gzZZrN2k,HXwRxnXoI6KOpShzdKMTKa" />
+        <Link Id="B7zozRqK9WNM5wNYoiW8sy" Ids="AsEN5pc0GzQMb6zEIUiXV5,HfQ4AZ5zdg8MMDOGJ0P6Lx" />
+        <Link Id="QeWlW4n8biUOHTGox3swrd" Ids="TfC5VtipFJRN82fdxlBlOL,OYFu3YmWIoJMfNGAAGrHRJ" />
+        <Link Id="Ai2MGB07tspNLT0tnNXI0o" Ids="Ff8giMMnV7hNMimBnvgCfK,CyZcwvKnlZYLODvvBuXh90" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="SivHOr1WQgCNBDCnXk9tf6" Location="Avalonia" Version="11.2.1" />
+  <NugetDependency Id="PrPw9sMHIghLc8F8ZOeqTp" Location="Avalonia.Desktop" Version="11.2.1" />
+  <NugetDependency Id="RKOUVTphEDULmjh1sqsFan" Location="Avalonia.Skia" Version="11.2.1" />
+  <NugetDependency Id="O6NVXQpic2FPlWUIsIQeuF" Location="Avalonia.Win32" Version="11.2.1" />
+  <PlatformDependency Id="VXiiMeiQ0TFQXLtaivr4YD" Location="./lib/Debug/net8.0-windows/VL.Skia.Avalonia.dll" />
+  <NugetDependency Id="HjGpW4hImxFOQWekAMtGB3" Location="VL.Skia" Version="2025.7.0-0340-g1b1e5767de" />
+  <DocumentDependency Id="KSRPtGtSVfwLdBvw3mpgk3" Location="../VL.Avalonia/VL.Avalonia.vl" />
+</Document>

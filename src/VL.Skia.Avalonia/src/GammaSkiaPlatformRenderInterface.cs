@@ -3,7 +3,6 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Media.TextFormatting;
 using Avalonia.Platform;
-using Avalonia.Skia;
 using Point = Avalonia.Point;
 
 namespace VL.Skia.Avalonia
@@ -28,17 +27,19 @@ namespace VL.Skia.Avalonia
         // https://github.com/AvaloniaUI/Avalonia/blob/aaf6fe9cb64316ce03f6134a166f918b60e8a399/src/Skia/Avalonia.Skia/PlatformRenderInterface.cs#L31
         public IPlatformRenderInterfaceContext CreateBackendContext(IPlatformGraphicsContext? graphicsContext)
         {
-            if (graphicsContext == null)
-                return new GammaSkiaBackendContext(null);
-            if (graphicsContext is ISkiaGpu skiaGpu)
-                return new GammaSkiaBackendContext(skiaGpu);
-            //if (graphicsContext is IGlContext gl)
-            //    return new GammaSkiaBackendContext(new GlSkiaGpu(gl, _maxResourceBytes));
-            //if (graphicsContext is IMetalDevice metal)
-            //    return new GammaSkiaBackendContext(new SkiaMetalGpu(metal, _maxResourceBytes));
-            //if (graphicsContext is IVulkanPlatformGraphicsContext vulkanContext)
-            //    return new GammaSkiaBackendContext(new VulkanSkiaGpu(vulkanContext, _maxResourceBytes));
-            throw new ArgumentException("Graphics context of type is not supported");
+            return new GammaSkiaBackendContext(null);
+
+            //if (graphicsContext == null)
+            //    return new GammaSkiaBackendContext(null);
+            //if (graphicsContext is ISkiaGpu skiaGpu)
+            //    return new GammaSkiaBackendContext(skiaGpu);
+            //// if (graphicsContext is IGlContext gl)
+            ////    return new GammaSkiaBackendContext(new GlSkiaGpu(gl, _maxResourceBytes));
+            ////if (graphicsContext is IMetalDevice metal)
+            ////    return new GammaSkiaBackendContext(new SkiaMetalGpu(metal, _maxResourceBytes));
+            ////if (graphicsContext is IVulkanPlatformGraphicsContext vulkanContext)
+            ////    return new GammaSkiaBackendContext(new VulkanSkiaGpu(vulkanContext, _maxResourceBytes));
+            //throw new ArgumentException("Graphics context of type is not supported");
         }
 
         public IGeometryImpl CreateCombinedGeometry(GeometryCombineMode combineMode, IGeometryImpl g1, IGeometryImpl g2) =>

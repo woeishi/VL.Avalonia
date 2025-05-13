@@ -1,44 +1,36 @@
 ﻿using Avalonia.Controls.Embedding;
 using Avalonia.Skia;
-using Stride.Core.Mathematics;
-using System;
 using VL.Core.Import;
 using VL.Lib.IO.Notifications;
-using VL.Skia;
+using RectangleF = Stride.Core.Mathematics.RectangleF;
 
-namespace VL.Avalonia.Host
+namespace VL.Skia.Avalonia
 {
-    [ProcessNode()]
-    public class AvaloniaLayer : ILayer, IDisposable
+    [ProcessNode(HasStateOutput = true, Name = "AvaloniaLayer")]
+    public sealed class AvaloniaLayer : ILayer, IDisposable
     {
-        private readonly RootElementImpl rootImpl;
+        private readonly AvaloniaRootImpl rootImpl;
         private readonly EmbeddableControlRoot controlRoot;
-
         public AvaloniaLayer()
         {
-            Initialization.InitAvalonia();
-            rootImpl = new RootElementImpl();
+            AvaloniaInitializer.Init();
+            rootImpl = new AvaloniaRootImpl();
             controlRoot = new EmbeddableControlRoot(rootImpl);
         }
-
         public object Content
         {
             get => controlRoot.Content;
             set => controlRoot.Content = value;
         }
-
         public void Dispose()
         {
             controlRoot.Dispose();
         }
-
         public RectangleF? Bounds => default;
-
         public bool Notify(INotification notification, CallerInfo caller)
         {
             return rootImpl.Notify(notification, caller);
         }
-
         public void Render(CallerInfo caller)
         {
             if (!controlRoot.IsInitialized)
@@ -46,8 +38,8 @@ namespace VL.Avalonia.Host
                 rootImpl.ClientSize = caller.ViewportBounds.ToAvaloniaRect().Size;
                 controlRoot.Prepare();
             }
-
             rootImpl.Render(caller);
         }
     }
+
 }
