@@ -1,174 +1,210 @@
-﻿//using Avalonia;
-//using Avalonia.Controls;
-//using Avalonia.Input;
-//using Avalonia.Input.Raw;
-//using Avalonia.Platform;
-//using Avalonia.Rendering;
-//using Avalonia.Skia;
-//using System.Diagnostics;
-//using VL.Lib.IO.Notifications;
-//using VL.Skia;
+﻿using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Input;
+using Avalonia.Input.Raw;
+using Avalonia.Platform;
+using Avalonia.Rendering;
+using Avalonia.Rendering.Composition;
+using Avalonia.Skia;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using VL.Lib.IO.Notifications;
+using VL.Skia;
 
-//namespace VL.Avalonia.Host;
+namespace VL.Avalonia.Host
+{
+    // source
+    // https://github.com/vvvv/VL.StandardLibs/blob/dev/azeno/avalonia/VL.AvaloniaUI/src/RootElementImpl.cs
+    sealed class RootElementImpl : ITopLevelImpl
+    {
+        private readonly Stopwatch _stopwatch = Stopwatch.StartNew();
 
-//sealed class RootElementImpl : ITopLevelImpl
-//{
-//    private readonly Stopwatch _st = Stopwatch.StartNew();
-//    private readonly List<CallerInfo> callerInfos = new List<CallerInfo>();
-//    private double scaling = 1;
-//    private Size clientSize;
-//    private RawInputModifiers modifiers;
 
-//    public RootElementImpl()
-//    {
-//        MouseDevice = new MouseDevice();
-//        KeyboardDevice = AvaloniaLocator.Current.GetService<IKeyboardDevice>();
-//    }
+        // https://github.com/AvaloniaUI/Avalonia/issues/11381
+        public IKeyboardDevice KeyboardDevice { get; }
+        public IMouseDevice MouseDevice { get; }
+        public IInputRoot InputRoot { get; set; }
 
-//    public Size ClientSize
-//    {
-//        internal get { return clientSize; }
-//        set
-//        {
-//            if (value != clientSize)
-//            {
-//                clientSize = value;
-//                Resized?.Invoke(value, PlatformResizeReason.Unspecified);
-//            }
-//        }
-//    }
+        public RootElementImpl()
+        {
+            MouseDevice = new MouseDevice();
+            //https://github.com/AvaloniaUI/Avalonia/blob/master/src/Windows/Avalonia.Win32/Input/WindowsKeyboardDevice.cs#L7
+            //KeyboardDevice = WindowsKeyboardDevice.Instance
+        }
 
-//    public Size? FrameSize => clientSize;
+        // TODO: DPI
+        public double DesktopScaling => 1.0;
 
-//    public double RenderScaling
-//    {
-//        get { return scaling; }
-//        set
-//        {
-//            scaling = value;
-//            ScalingChanged?.Invoke(value);
-//        }
-//    }
+        private double _renderScaling = 1;
+        /// <summary>
+        /// Render Scaling
+        /// </summary>
+        public double RenderScaling
+        {
+            get => _renderScaling;
+            set
+            {
+                if (_renderScaling != value)
+                {
+                    _renderScaling = value;
+                    ScalingChanged?.Invoke(value);
+                }
+            }
+        }
 
-//    public IEnumerable<object> Surfaces => callerInfos;
+        private Size _clientSize;
+        /// <summary>
+        /// Client Size
+        /// </summary>
+        public Size ClientSize
+        {
+            get => _clientSize;
+            set
+            {
+                if (_clientSize != value)
+                {
+                    _clientSize = value;
+                    Resized?.Invoke(value, WindowResizeReason.Unspecified);
+                }
+            }
+        }
 
-//    public Action<RawInputEventArgs> Input { get; set; }
-//    public Action<Rect> Paint { get; set; }
-//    public Action<Size, PlatformResizeReason> Resized { get; set; }
-//    public Action<double> ScalingChanged { get; set; }
 
-//    public Action<WindowTransparencyLevel> TransparencyLevelChanged { get; set; }
+        private readonly List<CallerInfo> _callerInfos = new List<CallerInfo>();
+        /// <summary>
+        /// Caller Info's
+        /// </summary>
+        public IEnumerable<object> Surfaces => _callerInfos;
 
-//    public Action Closed { get; set; }
-//    public Action LostFocus { get; set; }
+        public IPlatformHandle? Handle => throw new NotImplementedException();
 
-//    public IMouseDevice MouseDevice { get; }
 
-//    public IKeyboardDevice KeyboardDevice { get; }
+        public Action<RawInputEventArgs>? Input { get; set; }
 
-//    public IInputRoot InputRoot { get; set; }
+        private RawInputModifiers modifiers;
+        internal bool Notify(INotification notification, CallerInfo caller)
+        {
+            var e = default(RawInputEventArgs);
 
-//    private ulong Timestamp => (ulong)_st.ElapsedMilliseconds;
+            if (notification is KeyCodeNotification keyCode)
+            {
+                modifiers = keyCode.KeyData.ToModifier();
+            }
+            if (notification is MouseButtonNotification m)
+            {
+                if (m.Kind == MouseNotificationKind.MouseDown)
+                    modifiers |= m.Buttons.ToModifier();
+                else if (m.Kind == MouseNotificationKind.MouseUp)
+                    modifiers ^= m.Buttons.ToModifier();
+            }
 
-//    public WindowTransparencyLevel TransparencyLevel => WindowTransparencyLevel.None;
+            if (notification is KeyDownNotification keyDown)
+                Input?.Invoke(e = new RawKeyEventArgs(KeyboardDevice, Timestamp, InputRoot, RawKeyEventType.KeyDown, keyDown.KeyData.ToKey(), modifiers));
+            else if (notification is KeyUpNotification keyUp)
+                Input?.Invoke(e = new RawKeyEventArgs(KeyboardDevice, Timestamp, InputRoot, RawKeyEventType.KeyUp, keyUp.KeyData.ToKey(), modifiers));
+            else if (notification is KeyPressNotification keyPress && !char.IsControl(keyPress.KeyChar))
+                Input?.Invoke(e = new RawTextInputEventArgs(KeyboardDevice, Timestamp, InputRoot, keyPress.KeyChar.ToString()));
+            else if (notification is MouseDownNotification mouseDown)
+                Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, mouseDown.Buttons.ToEventType(false), mouseDown.Position.ToPoint(), modifiers));
+            else if (notification is MouseUpNotification mouseUp)
+                Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, mouseUp.Buttons.ToEventType(true), mouseUp.Position.ToPoint(), modifiers));
+            else if (notification is MouseMoveNotification mouseMove)
+                Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, RawPointerEventType.Move, mouseMove.Position.ToPoint(), modifiers));
+            else if (notification is MouseWheelNotification mouseWheel)
+                Input?.Invoke(e = new RawMouseWheelEventArgs(MouseDevice, Timestamp, InputRoot, mouseWheel.Position.ToPoint(), new Vector(mouseWheel.WheelDelta, 0), modifiers));
 
-//    public AcrylicPlatformCompensationLevels AcrylicCompensationLevels => throw new NotImplementedException();
+            if (e != null)
+                return e.Handled;
 
-//    public IPopupImpl CreatePopup()
-//    {
-//        return null;
-//    }
+            return false;
+        }
 
-//    public IRenderer CreateRenderer(IRenderRoot root)
-//    {
-//        return new SkiaImmediateRenderer(root);
-//    }
 
-//    public void Dispose()
-//    {
-//    }
+        public Action<Rect>? Paint { get; set; }
 
-//    public void Invalidate(Rect rect)
-//    {
-//    }
+        public Action<Size, WindowResizeReason>? Resized { get; set; }
 
-//    public Point PointToClient(PixelPoint point) => point.ToPoint(RenderScaling);
+        // Wonder is it DesktopScaling or RenderScaling
+        public Action<double>? ScalingChanged { get; set; }
 
-//    public PixelPoint PointToScreen(Point point) => PixelPoint.FromPoint(point, RenderScaling);
 
-//    public void SetCursor(ICursorImpl cursor)
-//    {
+        public Action<WindowTransparencyLevel>? TransparencyLevelChanged { get; set; }
 
-//    }
+        // That's not on Elias file
+        public Compositor Compositor { get; set; }
 
-//    public void SetInputRoot(IInputRoot inputRoot)
-//    {
-//        InputRoot = inputRoot;
-//    }
+        public Action? Closed { get; set; }
+        public Action? LostFocus { get; set; }
 
-//    public void SetTransparencyLevelHint(WindowTransparencyLevel transparencyLevel)
-//    {
-//        throw new NotImplementedException();
-//    }
+        public WindowTransparencyLevel TransparencyLevel { get; set; } = WindowTransparencyLevel.None;
+        public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels();
 
-//    internal bool Notify(INotification notification, CallerInfo caller)
-//    {
-//        var e = default(RawInputEventArgs);
+        private ulong Timestamp => (ulong)_stopwatch.ElapsedMilliseconds;
 
-//        if (notification is KeyCodeNotification keyCode)
-//        {
-//            modifiers = keyCode.KeyData.ToModifier();
-//        }
-//        if (notification is MouseButtonNotification m)
-//        {
-//            if (m.Kind == MouseNotificationKind.MouseDown)
-//                modifiers |= m.Buttons.ToModifier();
-//            else if (m.Kind == MouseNotificationKind.MouseUp)
-//                modifiers ^= m.Buttons.ToModifier();
-//        }
+        public IPopupImpl? CreatePopup()
+        {
+            return null;
+        }
 
-//        if (notification is KeyDownNotification keyDown)
-//            Input?.Invoke(e = new RawKeyEventArgs(KeyboardDevice, Timestamp, InputRoot, RawKeyEventType.KeyDown, keyDown.KeyData.ToKey(), modifiers));
-//        else if (notification is KeyUpNotification keyUp)
-//            Input?.Invoke(e = new RawKeyEventArgs(KeyboardDevice, Timestamp, InputRoot, RawKeyEventType.KeyUp, keyUp.KeyData.ToKey(), modifiers));
-//        else if (notification is KeyPressNotification keyPress && !char.IsControl(keyPress.KeyChar))
-//            Input?.Invoke(e = new RawTextInputEventArgs(KeyboardDevice, Timestamp, InputRoot, keyPress.KeyChar.ToString()));
-//        else if (notification is MouseDownNotification mouseDown)
-//            Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, mouseDown.Buttons.ToEventType(false), mouseDown.Position.ToPoint(), modifiers));
-//        else if (notification is MouseUpNotification mouseUp)
-//            Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, mouseUp.Buttons.ToEventType(true), mouseUp.Position.ToPoint(), modifiers));
-//        else if (notification is MouseMoveNotification mouseMove)
-//            Input?.Invoke(e = new RawPointerEventArgs(MouseDevice, Timestamp, InputRoot, RawPointerEventType.Move, mouseMove.Position.ToPoint(), modifiers));
-//        else if (notification is MouseWheelNotification mouseWheel)
-//            Input?.Invoke(e = new RawMouseWheelEventArgs(MouseDevice, Timestamp, InputRoot, mouseWheel.Position.ToPoint(), new Vector(mouseWheel.WheelDelta, 0), modifiers));
+        public IRenderer CreateRenderer(IRenderRoot root)
+        {
+            // TODO
+            return new SkiaImmediateRenderer(root);
+        }
 
-//        if (e != null)
-//            return e.Handled;
+        internal void Render(CallerInfo caller)
+        {
+            var bounds = caller.ViewportBounds.ToAvaloniaRect();
+            ClientSize = bounds.Size;
 
-//        return false;
-//    }
+            _callerInfos.Clear();
+            _callerInfos.Add(caller);
 
-//    internal void Render(CallerInfo caller)
-//    {
-//        var bounds = caller.ViewportBounds.ToAvaloniaRect();
-//        ClientSize = bounds.Size;
+            caller.Canvas.Save();
+            try
+            {
+                Paint?.Invoke(bounds);
+            }
+            finally
+            {
+                caller.Canvas.Restore();
+            }
+        }
 
-//        callerInfos.Clear();
-//        callerInfos.Add(caller);
+        public void Dispose()
+        {
+            // TODO
+        }
 
-//        caller.Canvas.Save();
-//        try
-//        {
-//            Paint?.Invoke(bounds);
-//        }
-//        finally
-//        {
-//            caller.Canvas.Restore();
-//        }
-//    }
+        public Point PointToClient(PixelPoint point) => point.ToPoint(RenderScaling);
+        public PixelPoint PointToScreen(Point point) => PixelPoint.FromPoint(point, RenderScaling);
 
-//    public object? TryGetFeature(Type featureType)
-//    {
-//        throw new NotImplementedException();
-//    }
-//}
+        public void SetCursor(ICursorImpl? cursor)
+        {
+
+        }
+
+        public void SetFrameThemeVariant(PlatformThemeVariant themeVariant)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        public void SetInputRoot(IInputRoot inputRoot)
+        {
+            InputRoot = inputRoot;
+        }
+
+        public void SetTransparencyLevelHint(IReadOnlyList<WindowTransparencyLevel> transparencyLevels)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object? TryGetFeature(Type featureType)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

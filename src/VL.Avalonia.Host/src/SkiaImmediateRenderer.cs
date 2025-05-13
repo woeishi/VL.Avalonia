@@ -1,167 +1,24 @@
 ﻿using Avalonia;
-using Avalonia.Logging;
 using Avalonia.Media;
-using Avalonia.Platform;
-using Avalonia.Rendering;
-using Avalonia.VisualTree;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace VL.AvaloniaUI
+namespace VL.Avalonia.Host
 {
     // Copy of ImmediateRenderer but fetching render target on each paint (we get triggered from downstream!)
-    class SkiaImmediateRenderer : RendererBase, IRenderer, IVisualBrushRenderer
+    class SkiaImmediateRenderer
     {
-        private readonly IVisual _root;
-        private readonly IRenderRoot? _renderRoot;
-        private bool _updateTransformedBounds = true;
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="SkiaImmediateRenderer"/> class.
+        /// Renders a visual to a drawing context.
         /// </summary>
-        /// <param name="root">The control to render.</param>
-        public SkiaImmediateRenderer(IVisual root)
+        /// <param name="visual">The visual.</param>
+        /// <param name="context">The drawing context.</param>
+        public static void Render(Visual visual, DrawingContext context)
         {
-            _root = root ?? throw new ArgumentNullException(nameof(root));
-            _renderRoot = root as IRenderRoot;
+            Render(context, visual, visual.Bounds);
         }
 
-        /// <inheritdoc/>
-        public bool DrawFps { get; set; }
-
-        /// <inheritdoc/>
-        public bool DrawDirtyRects { get; set; }
-
-        /// <inheritdoc/>
-        public event EventHandler<SceneInvalidatedEventArgs>? SceneInvalidated;
-
-        /// <inheritdoc/>
-        public void Paint(Rect rect)
-        {
-            using var _renderTarget = _renderRoot.CreateRenderTarget();
-
-            try
-            {
-                using (var context = new DrawingContext(_renderTarget.CreateDrawingContext(this)))
-                {
-                    context.PlatformImpl.Clear(Colors.Transparent);
-
-                    using (context.PushTransformContainer())
-                    {
-                        Render(context, _root, _root.Bounds);
-                    }
-
-                    if (DrawDirtyRects)
-                    {
-                        var color = (uint)new Random().Next(0xffffff) | 0x44000000;
-                        context.FillRectangle(
-                            new SolidColorBrush(color),
-                            rect);
-                    }
-
-                    if (DrawFps)
-                    {
-                        RenderFps(context.PlatformImpl, _root.Bounds, null);
-                    }
-                }
-            }
-            catch (RenderTargetCorruptedException ex)
-            {
-                Logger.TryGet(LogEventLevel.Information, LogArea.Animations)?.Log(this, "Render target was corrupted. Exception: {0}", ex);
-            }
-
-            SceneInvalidated?.Invoke(this, new SceneInvalidatedEventArgs(_renderRoot, rect));
-        }
-
-        /// <inheritdoc/>
-        public void Resized(Size size)
-        {
-        }
-
-        /// <inheritdoc/>
-        public void AddDirty(IVisual visual)
-        {
-            if (visual.Bounds != Rect.Empty)
-            {
-                var m = visual.TransformToVisual(_root);
-
-                if (m.HasValue)
-                {
-                    var bounds = new Rect(visual.Bounds.Size).TransformToAABB(m.Value);
-
-                    //use transformedbounds as previous render state of the visual bounds
-                    //so we can invalidate old and new bounds of a control in case it moved/shrinked
-                    if (visual.TransformedBounds.HasValue)
-                    {
-                        var trb = visual.TransformedBounds.Value;
-                        var trBounds = trb.Bounds.TransformToAABB(trb.Transform);
-
-                        if (trBounds != bounds)
-                        {
-                            _renderRoot?.Invalidate(trBounds);
-                        }
-                    }
-
-                    _renderRoot?.Invalidate(bounds);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Ends the operation of the renderer.
-        /// </summary>
-        public void Dispose()
-        {
-        }
-
-        /// <inheritdoc/>
-        public IEnumerable<IVisual> HitTest(Point p, IVisual root, Func<IVisual, bool> filter)
-        {
-            return HitTest(root, p, filter);
-        }
-
-        public IVisual? HitTestFirst(Point p, IVisual root, Func<IVisual, bool> filter)
-        {
-            return HitTest(root, p, filter).FirstOrDefault();
-        }
-
-        /// <inheritdoc/>
-        public void RecalculateChildren(IVisual visual) => AddDirty(visual);
-
-        /// <inheritdoc/>
-        public void Start()
-        {
-        }
-
-        /// <inheritdoc/>
-        public void Stop()
-        {
-        }
-
-        /// <inheritdoc/>
-        Size IVisualBrushRenderer.GetRenderTargetSize(IVisualBrush brush)
-        {
-            (brush.Visual as IVisualBrushInitialize)?.EnsureInitialized();
-            return brush.Visual?.Bounds.Size ?? Size.Empty;
-        }
-
-        /// <inheritdoc/>
-        void IVisualBrushRenderer.RenderVisualBrush(IDrawingContextImpl context, IVisualBrush brush)
-        {
-            var visual = brush.Visual;
-            Render(new DrawingContext(context), visual, visual.Bounds);
-        }
-
-        private static void ClearTransformedBounds(IVisual visual)
-        {
-            foreach (var e in visual.GetSelfAndVisualDescendants())
-            {
-                visual.TransformedBounds = null;
-            }
-        }
-
-        private static Rect GetTransformedBounds(IVisual visual)
+        private static Rect GetTransformedBounds(Visual visual)
         {
             if (visual.RenderTransform == null)
             {
@@ -176,123 +33,84 @@ namespace VL.AvaloniaUI
             }
         }
 
-        private static IEnumerable<IVisual> HitTest(
-           IVisual visual,
-           Point p,
-           Func<IVisual, bool>? filter)
+
+        public static void Render(DrawingContext context, Visual visual, Rect clipRect)
         {
-            _ = visual ?? throw new ArgumentNullException(nameof(visual));
-
-            if (filter?.Invoke(visual) != false)
+            using (visual.RenderOptions != default ? context.PushRenderOptions(visual.RenderOptions) : (DrawingContext.PushedState?)null)
             {
-                bool containsPoint;
+                var opacity = visual.Opacity;
+                var clipToBounds = visual.ClipToBounds;
+                var bounds = new Rect(visual.Bounds.Size);
 
-                if (visual is ICustomSimpleHitTest custom)
+                if (visual.IsVisible && opacity > 0)
                 {
-                    containsPoint = custom.HitTest(p);
-                }
-                else
-                {
-                    containsPoint = visual.TransformedBounds?.Contains(p) == true;
-                }
+                    var m = Matrix.CreateTranslation(visual.Bounds.Position);
 
-                if ((containsPoint || !visual.ClipToBounds) && visual.VisualChildren.Count > 0)
-                {
-                    foreach (var child in visual.VisualChildren.SortByZIndex())
+                    var renderTransform = Matrix.Identity;
+
+                    // this should be calculated BEFORE renderTransform
+                    if (visual.HasMirrorTransform)
                     {
-                        foreach (var result in HitTest(child, p, filter))
-                        {
-                            yield return result;
-                        }
+                        var mirrorMatrix = new Matrix(-1.0, 0.0, 0.0, 1.0, visual.Bounds.Width, 0);
+                        renderTransform *= mirrorMatrix;
                     }
-                }
 
-                if (containsPoint)
-                {
-                    yield return visual;
-                }
-            }
-        }
-
-        private void Render(DrawingContext context, IVisual visual, Rect clipRect)
-        {
-            var opacity = visual.Opacity;
-            var clipToBounds = visual.ClipToBounds;
-            var bounds = new Rect(visual.Bounds.Size);
-
-            if (visual.IsVisible && opacity > 0)
-            {
-                var m = Matrix.CreateTranslation(visual.Bounds.Position);
-
-                var renderTransform = Matrix.Identity;
-
-                if (visual.RenderTransform != null)
-                {
-                    var origin = visual.RenderTransformOrigin.ToPixels(new Size(visual.Bounds.Width, visual.Bounds.Height));
-                    var offset = Matrix.CreateTranslation(origin);
-                    renderTransform = (-offset) * visual.RenderTransform.Value * (offset);
-                }
-
-                m = renderTransform * m;
-
-                if (clipToBounds)
-                {
                     if (visual.RenderTransform != null)
                     {
-                        clipRect = new Rect(visual.Bounds.Size);
+                        var origin = visual.RenderTransformOrigin.ToPixels(new Size(visual.Bounds.Width, visual.Bounds.Height));
+                        var offset = Matrix.CreateTranslation(origin);
+                        var finalTransform = (-offset) * visual.RenderTransform.Value * (offset);
+                        renderTransform *= finalTransform;
                     }
-                    else
-                    {
-                        clipRect = clipRect.Intersect(new Rect(visual.Bounds.Size));
-                    }
-                }
 
-                using (context.PushPostTransform(m))
-                using (context.PushOpacity(opacity))
-                using (clipToBounds
+                    m = renderTransform * m;
+
+                    if (clipToBounds)
+                    {
+                        if (visual.RenderTransform != null)
+                        {
+                            clipRect = new Rect(visual.Bounds.Size);
+                        }
+                        else
+                        {
+                            clipRect = clipRect.Intersect(new Rect(visual.Bounds.Size));
+                        }
+                    }
+
+                    using (context.PushTransform(m))
+                    using (context.PushOpacity(opacity))
+                    using (clipToBounds
 #pragma warning disable CS0618 // Type or member is obsolete
-                    ? visual is IVisualWithRoundRectClip roundClipVisual
-                        ? context.PushClip(new RoundedRect(bounds, roundClipVisual.ClipToBoundsRadius))
-                        : context.PushClip(bounds)
-                    : default(DrawingContext.PushedState))
+                        ? visual is IVisualWithRoundRectClip roundClipVisual
+                            ? context.PushClip(new RoundedRect(bounds, roundClipVisual.ClipToBoundsRadius))
+                            : context.PushClip(bounds)
+                        : default)
 #pragma warning restore CS0618 // Type or member is obsolete
 
-                using (visual.Clip != null ? context.PushGeometryClip(visual.Clip) : default(DrawingContext.PushedState))
-                using (visual.OpacityMask != null ? context.PushOpacityMask(visual.OpacityMask, bounds) : default(DrawingContext.PushedState))
-                using (context.PushTransformContainer())
-                {
-                    visual.Render(context);
-
-#pragma warning disable 0618
-                    var transformed =
-                        new TransformedBounds(bounds, new Rect(), context.CurrentContainerTransform);
-#pragma warning restore 0618
-
-                    if (_updateTransformedBounds)
-                        visual.TransformedBounds = transformed;
-
-                    foreach (var child in visual.VisualChildren.OrderBy(x => x, ZIndexComparer.Instance))
+                    using (visual.Clip != null ? context.PushGeometryClip(visual.Clip) : default)
+                    using (visual.OpacityMask != null ? context.PushOpacityMask(visual.OpacityMask, bounds) : default)
+                    using (context.PushTransform(Matrix.Identity))
                     {
-                        var childBounds = GetTransformedBounds(child);
+                        visual.Render(context);
 
-                        if (!child.ClipToBounds || clipRect.Intersects(childBounds))
+                        var childrenEnumerable = visual.HasNonUniformZIndexChildren
+                            ? visual.VisualChildren.OrderBy(x => x, ZIndexComparer.Instance)
+                            : (IEnumerable<Visual>)visual.VisualChildren;
+
+                        foreach (var child in childrenEnumerable)
                         {
-                            var childClipRect = child.RenderTransform == null
-                                ? clipRect.Translate(-childBounds.Position)
-                                : clipRect;
-                            Render(context, child, childClipRect);
-                        }
-                        else if (_updateTransformedBounds)
-                        {
-                            ClearTransformedBounds(child);
+                            var childBounds = GetTransformedBounds(child);
+
+                            if (!child.ClipToBounds || clipRect.Intersects(childBounds))
+                            {
+                                var childClipRect = child.RenderTransform == null
+                                    ? clipRect.Translate(-childBounds.Position)
+                                    : clipRect;
+                                Render(context, child, childClipRect);
+                            }
                         }
                     }
                 }
-            }
-
-            if (!visual.IsVisible && _updateTransformedBounds)
-            {
-                ClearTransformedBounds(visual);
             }
         }
     }

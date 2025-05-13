@@ -10,11 +10,11 @@ namespace VL.Avalonia.Host
 {
     static class Utils
     {
-        public static AppBuilder UseCustomSkia<T>(this AppBuilder builder)
+        public static AppBuilder UseCustomSkia(this AppBuilder builder)
         {
             return builder
-                // { CustomGpuFactory = () => new SkiaGpu() }
                 // obsolete
+                // { CustomGpuFactory = () => new SkiaGpu() }
                 .With(new SkiaOptions())
                 .UseSkia()
                 .AfterPlatformServicesSetup(_ =>
