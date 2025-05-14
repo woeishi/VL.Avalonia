@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
+using VL.Avalonia.Attributes;
 using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
@@ -8,51 +9,35 @@ using static VL.Avalonia.Styles;
 namespace VL.Avalonia.Controls;
 
 [ProcessNode(Name = "SliderPrototype")]
-public partial class SliderWrapper : AbstractWrapperBase<Slider>
+public partial class SliderWrapper
 {
+    [ImplementOutput<Slider>]
     private readonly Slider _output = new Slider();
-    public override Slider Output => _output;
 
-    private IChannel<float>? _valueChannel;
-    public void SetValueChannel(IChannel<float>? valueChannel)
+    //[ImplementChannel<RangeBase>("ValueChannel")]
+    private IChannel<double>? _valueChannel;
+    public void SetValueChannel(IChannel<double>? valueChannel)
     {
         if (_valueChannel != valueChannel)
         {
             _valueChannel = valueChannel;
-            _valueChannel?.Subscribe((x) => _output.Value = x);
+            _valueChannel?.Subscribe((x) =>
+            {
+                _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
+            });
 
             _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
         }
     }
-    private IChannel<float>? ValueChannel => _valueChannel;
+    [Fragment(IsHidden = true)]
+    public IChannel<double>? ValueChannel => _valueChannel;
 
-    private Optional<float> _minimum;
-    public void SetMinimum(Optional<float> minimum)
-    {
-        if (minimum != _minimum)
-        {
-            _minimum = minimum;
+    [ImplementOptional<RangeBase>("MinimumProperty")]
+    private Optional<double> _minimum;
 
-            if (_minimum.HasValue)
-            {
-                _output.SetValue(RangeBase.MinimumProperty, (double)_minimum.Value);
-            }
-        }
-    }
+    [ImplementOptional<RangeBase>("MaximumProperty")]
+    private Optional<double> _maximum;
 
-    private Optional<float> _maximum;
-    public void SetMaximum(Optional<float> maximum)
-    {
-        if (maximum != _maximum)
-        {
-            _maximum = maximum;
-
-            if (_maximum.HasValue)
-            {
-                _output.SetValue(RangeBase.MaximumProperty, (double)_maximum.Value);
-            }
-        }
-    }
 
 
     [Fragment(IsHidden = true)]
@@ -71,7 +56,7 @@ public partial class SliderWrapper : AbstractWrapperBase<Slider>
     }
 
     private IAvaloniaStyle? _style;
-    public override IAvaloniaStyle? Style
+    public IAvaloniaStyle? Style
     {
         set
         {
@@ -81,7 +66,7 @@ public partial class SliderWrapper : AbstractWrapperBase<Slider>
                 //_output.ApplyStyling();
 
                 _style = value;
-                _style?.ApplyStyle(Output);
+                _style?.ApplyStyle(_output);
             }
         }
     }
