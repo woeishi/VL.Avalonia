@@ -1,4 +1,6 @@
 ﻿using Avalonia;
+using Avalonia.Logging;
+using Avalonia.Themes.Fluent;
 using VL.Core.CompilerServices;
 using Application = Avalonia.Application;
 
@@ -10,12 +12,30 @@ namespace VL.Skia.Avalonia
     {
         public static Application Instance;
         public static void Init() => Instance ??=
-            AppBuilderExtensions
-            .CreateDefault()
-            .UseWin32()
+            AppBuilder.Configure<App>()
             .UseGammaSkia()
-            .LogToTrace()
+            .LogToTrace(LogEventLevel.Verbose)
             .SetupWithLifetime(new GammaSkiaWinFormsLifetime())
             .Instance;
+
+        sealed class App : Application
+        {
+            public override void Initialize()
+            {
+                //Styles.Add(new Avalonia.Themes.Default.DefaultTheme());
+                Styles.Add(new FluentTheme());
+                base.Initialize();
+            }
+
+            public override void RegisterServices()
+            {
+                base.RegisterServices();
+            }
+
+            public override void OnFrameworkInitializationCompleted()
+            {
+                base.OnFrameworkInitializationCompleted();
+            }
+        }
     }
 }

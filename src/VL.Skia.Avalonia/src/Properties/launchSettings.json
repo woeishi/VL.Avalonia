@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "VL.Skia.Avalonia": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_6.7\\vvvv.exe",
+      "commandLineArgs": "--package-repositories C:\\Users\\elias\\source\\repos\\VL.Avalonia\\src --editable-packages *Avalonia*"
+    }
+  }
+}

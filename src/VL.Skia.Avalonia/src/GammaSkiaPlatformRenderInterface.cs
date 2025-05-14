@@ -13,7 +13,7 @@ namespace VL.Skia.Avalonia
 
         public GammaSkiaPlatformRenderInterface()
         {
-            _platformRenderInterface = AvaloniaLocator.Current.GetService<IPlatformRenderInterface>();
+            _platformRenderInterface = AvaloniaLocator.Current.GetRequiredService<IPlatformRenderInterface>();
         }
 
         public bool SupportsIndividualRoundRects => _platformRenderInterface.SupportsIndividualRoundRects;
@@ -27,19 +27,7 @@ namespace VL.Skia.Avalonia
         // https://github.com/AvaloniaUI/Avalonia/blob/aaf6fe9cb64316ce03f6134a166f918b60e8a399/src/Skia/Avalonia.Skia/PlatformRenderInterface.cs#L31
         public IPlatformRenderInterfaceContext CreateBackendContext(IPlatformGraphicsContext? graphicsContext)
         {
-            return new GammaSkiaBackendContext(null);
-
-            //if (graphicsContext == null)
-            //    return new GammaSkiaBackendContext(null);
-            //if (graphicsContext is ISkiaGpu skiaGpu)
-            //    return new GammaSkiaBackendContext(skiaGpu);
-            //// if (graphicsContext is IGlContext gl)
-            ////    return new GammaSkiaBackendContext(new GlSkiaGpu(gl, _maxResourceBytes));
-            ////if (graphicsContext is IMetalDevice metal)
-            ////    return new GammaSkiaBackendContext(new SkiaMetalGpu(metal, _maxResourceBytes));
-            ////if (graphicsContext is IVulkanPlatformGraphicsContext vulkanContext)
-            ////    return new GammaSkiaBackendContext(new VulkanSkiaGpu(vulkanContext, _maxResourceBytes));
-            //throw new ArgumentException("Graphics context of type is not supported");
+            return new GammaSkiaBackendContext();
         }
 
         public IGeometryImpl CreateCombinedGeometry(GeometryCombineMode combineMode, IGeometryImpl g1, IGeometryImpl g2) =>

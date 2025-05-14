@@ -1,8 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Platform;
-using Avalonia.Skia;
-
-using Helpers = Avalonia.Skia.Helpers;
+using Avalonia.Skia.Helpers;
 
 namespace VL.Skia.Avalonia
 {
@@ -10,34 +8,22 @@ namespace VL.Skia.Avalonia
     // https://github.com/AvaloniaUI/Avalonia/blob/master/src/Skia/Avalonia.Skia/Gpu/SkiaGpuRenderTarget.cs#L8
     sealed class GammaSkiaRenderTarget : IRenderTarget
     {
-        private readonly CallerInfo _callerInfo;
+        private readonly CallerInfo callerInfo;
 
         public GammaSkiaRenderTarget(CallerInfo callerInfo)
         {
-            _callerInfo = callerInfo;
+            this.callerInfo = callerInfo;
         }
 
-        public bool IsCorrupted => false;
-
-        public IDrawingContextImpl CreateDrawingContext(PixelSize expectedPixelSize,
-        out RenderTargetDrawingContextProperties properties) =>
-        CreateDrawingContextCore(expectedPixelSize, false, out properties);
+        public bool IsCorrupted { get; }
 
         public IDrawingContextImpl CreateDrawingContext(bool useScaledDrawing)
-            => CreateDrawingContextCore(null, useScaledDrawing, out _);
-
-        IDrawingContextImpl CreateDrawingContextCore(PixelSize? expectedPixelSize,
-            bool useScaledDrawing,
-            out RenderTargetDrawingContextProperties properties)
         {
-            properties = default;
-
-            return Helpers.DrawingContextHelper.WrapSkiaCanvas(_callerInfo.Canvas, SkiaPlatform.DefaultDpi);
+            return DrawingContextHelper.WrapSkiaCanvas(callerInfo.Canvas, new Vector(96, 96));
         }
 
         public void Dispose()
         {
-
         }
     }
 }

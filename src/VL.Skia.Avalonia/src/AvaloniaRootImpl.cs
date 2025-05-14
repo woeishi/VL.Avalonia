@@ -24,14 +24,13 @@ namespace VL.Skia.Avalonia
         public IMouseDevice MouseDevice { get; }
         public IInputRoot InputRoot { get; set; }
 
-        public AvaloniaRootImpl()
+        public AvaloniaRootImpl(Compositor compositor)
         {
             MouseDevice = new MouseDevice();
             //https://github.com/AvaloniaUI/Avalonia/blob/master/src/Windows/Avalonia.Win32/Input/WindowsKeyboardDevice.cs#L7
             //KeyboardDevice = WindowsKeyboardDevice.Instance
 
-            // Will crash without that line
-            Compositor = new Compositor(null, false);
+            Compositor = compositor;
         }
 
 
