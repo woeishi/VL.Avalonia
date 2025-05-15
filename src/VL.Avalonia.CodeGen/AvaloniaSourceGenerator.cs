@@ -19,6 +19,7 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
     private static readonly List<IAttributeHandler> AttributeHandlers = new()
     {
         new OutputAttributeHandler(),
+        //new ChannelAttributeHandler(),
         new OptionalAttributeHandler(),
     };
 

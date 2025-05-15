@@ -14,23 +14,23 @@ public partial class SliderWrapper
     [ImplementOutput<Slider>]
     private readonly Slider _output = new Slider();
 
-    //[ImplementChannel<RangeBase>("ValueChannel")]
+    [ImplementChannel<RangeBase>("ValueProperty")]
     private IChannel<double>? _valueChannel;
-    public void SetValueChannel(IChannel<double>? valueChannel)
-    {
-        if (_valueChannel != valueChannel)
-        {
-            _valueChannel = valueChannel;
-            _valueChannel?.Subscribe((x) =>
-            {
-                _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
-            });
+    //public void SetValueChannel(IChannel<double>? valueChannel)
+    //{
+    //    if (_valueChannel != valueChannel)
+    //    {
+    //        _valueChannel = valueChannel;
+    //        _valueChannel?.Subscribe((x) =>
+    //        {
+    //            _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
+    //        });
 
-            _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
-        }
-    }
-    [Fragment(IsHidden = true)]
-    public IChannel<double>? ValueChannel => _valueChannel;
+    //        _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
+    //    }
+    //}
+    //[Fragment(IsHidden = true)]
+    //public IChannel<double>? ValueChannel => _valueChannel;
 
     [ImplementOptional<RangeBase>("MinimumProperty")]
     private Optional<double> _minimum;
@@ -51,8 +51,8 @@ public partial class SliderWrapper
     {
         SetupVLDefaults();
 
-        _output.ValueChanged += (s, a) =>
-            ValueChannel?.OnNext((float)a.NewValue);
+        //_output.ValueChanged += (s, a) =>
+        //    ValueChannel?.OnNext((float)a.NewValue);
     }
 
     private IAvaloniaStyle? _style;
