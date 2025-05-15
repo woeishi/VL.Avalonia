@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="DAbdY2VBofjNP6D9fOOHXZ" LanguageVersion="2024.6.7" Version="0.128">
-  <NugetDependency Id="Dhw3BfqJTbzMKsnlBCN39w" Location="VL.CoreLib" Version="2024.6.7" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="DAbdY2VBofjNP6D9fOOHXZ" LanguageVersion="2025.7.0-0340-g1b1e5767de" Version="0.128">
+  <NugetDependency Id="Dhw3BfqJTbzMKsnlBCN39w" Location="VL.CoreLib" Version="2025.7.0-0340-g1b1e5767de" />
   <Patch Id="Pe86ky9Ts0CMUWWrOifY9N">
-    <Canvas Id="QADecGkbqlBN7SqSuEZaHu" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="QADecGkbqlBN7SqSuEZaHu" DefaultCategory="Avalonia" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -14,118 +14,21 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="J2slBenJTLtL0HUG7a9ghW">
-        <Canvas Id="ANeWVf2gIBuQCAIYNKyUHe" CanvasType="Group">
-          <Node Bounds="240,320,145,19" Id="C0makqYXyk6POZsGDuk7KF">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Skia" NeedsToBeDirectParent="true" />
-              <Choice Kind="ProcessAppFlag" Name="Renderer" />
-            </p:NodeReference>
-            <Pin Id="RLmi0iSEArZN3Y29gvW9pw" Name="Bounds" Kind="InputPin" DefaultValue="1432, 145, 506, 530" IsHidden="true" />
-            <Pin Id="Hgktn4FGdWZOCpd0Xex2HR" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
-            <Pin Id="H7ly5N1wfzGNhoVNQzvom1" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
-            <Pin Id="M2mWEjWjbcqPcyD7uNeHdN" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="RN87pxB8L23QHVbZHlq7zo" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
-            <Pin Id="HXwRxnXoI6KOpShzdKMTKa" Name="Input" Kind="InputPin" />
-            <Pin Id="DiyTFmWikWMN9vaeDdTc67" Name="Color" Kind="InputPin" DefaultValue="1, 0, 0, 1" />
-            <Pin Id="TwF21R0MLt7L2Nm2bFOgiq" Name="Clear" Kind="InputPin" />
-            <Pin Id="LIEpwmd30bSPG5zmPYS5Mk" Name="Space" Kind="InputPin" />
-            <Pin Id="VLOvW1fUMeiM3tASQIMJhD" Name="Show Cursor" Kind="InputPin" />
-            <Pin Id="MDL3p6qGEBOMNE9mBSWnAX" Name="VSync" Kind="InputPin" />
-            <Pin Id="KiDpvMYWgJFP6tPGwgCgMM" Name="Commands" Kind="InputPin" IsHidden="true" />
-            <Pin Id="KyFXhLWMyVGQdDT1CO1sYL" Name="Enable Keyboard Shortcuts" Kind="InputPin" IsHidden="true" />
-            <Pin Id="CTZ1tTreKY0McH2vDd079N" Name="Enabled" Kind="InputPin" />
-            <Pin Id="A8JFQ1EGBy5QX57J9kU1FH" Name="Form Bounds Notifications" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="CS8ek9PByFFMNS0xUo708E" Name="Form" Kind="OutputPin" />
-            <Pin Id="G5p5hCmwtNRNumAk1N8dUG" Name="ClientBounds" Kind="OutputPin" />
-            <Pin Id="D6y7hwuVfPyOafQfExCfZm" Name="Render Time" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="239,262,79,19" Id="NHXpDjExxUMOPxxJdqCYuN">
-            <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Skia.Avalonia.dll">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Avalonia" />
-              <Choice Kind="ProcessAppFlag" Name="AvaloniaLayer" />
-            </p:NodeReference>
-            <Pin Id="HfQ4AZ5zdg8MMDOGJ0P6Lx" Name="Content" Kind="InputPin" />
-            <Pin Id="PQbDVbpxJTeLn7gzZZrN2k" Name="Output" Kind="StateOutputPin" />
-          </Node>
-          <Node Bounds="236,229,90,19" Id="PEU0yOQTdPJPv9uNonT7cp">
-            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ButtonPrototype" />
-            </p:NodeReference>
-            <Pin Id="N9JUM6VlJqOMl3KvRJZ6EG" Name="Style" Kind="InputPin" />
-            <Pin Id="SB3dMxjB95EQc9kjqnMd22" Name="Content" Kind="InputPin" />
-            <Pin Id="KAXZX4rclXLNwza7N0VXAv" Name="Channel" Kind="InputPin" />
-            <Pin Id="Bg3nnuUCe6MLyTVrAxjBoN" Name="Mode" Kind="InputPin" />
-            <Pin Id="AsEN5pc0GzQMb6zEIUiXV5" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Pad Id="QkMR8WitzIZLnZspr5b72l" Comment="Content" Bounds="289,71,35,15" ShowValueBox="true" isIOBox="true" Value="text">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="ImmutableTypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="331,163,53,19" Id="P4J38IGS8ENNw7QVSteF9D">
-            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Channel" />
-            </p:NodeReference>
-            <Pin Id="HEqwnv8XeYcN7UkElNL5Lj" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="FhJ2AhWQ7XKOzCBMWWNOSd" Name="Initial Value" Kind="InputPin" IsHidden="true" />
-            <Pin Id="PBdWd54K0lyLWdf84hdhKI" Name="Value" Kind="InputPin" />
-            <Pin Id="B1LSZmmkSyrMIbqjdd2q9d" Name="Output" Kind="OutputPin" />
-            <Pin Id="TcJIj2fpcqCPkTVpx4xrM8" Name="Value" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="505,346,109,138" Id="NdBx2yxfG7TNnhgz3SmHfw">
-            <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ForEach (Channel)" />
-            </p:NodeReference>
-            <Pin Id="SV3uhpLXO94LLhBayFzST7" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VwP1sGCVqBqNSBiaKkVHbM" Name="At Least Run Once" Kind="InputPin" />
-            <Patch Id="GioDnT5Hz2qPcFDucFFmpJ" ManuallySortedPins="true">
-              <Patch Id="Ca3x1WSrPV0P4D9qGuuNjq" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="PJevxD8agSWQAJZUa1cNzM" Name="Update" ParticipatingElements="SGIEHOiPdyILFVVInzeYEo" ManuallySortedPins="true" />
-              <Patch Id="L69AAZxHM3LPATXswKr7Mk" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="517,391,85,19" Id="POpZinmPXH5NLAviGeshdm">
-                <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="Counter" />
-                </p:NodeReference>
-                <Pin Id="Kk8H94u9adjK9cjgoV06nY" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                <Pin Id="QqKJqCNQ9eEQZflBLavBg6" Name="Increment" Kind="InputPin" />
-                <Pin Id="UfKCL6hfK36PsEQuorJBCo" Name="Default" Kind="InputPin" />
-                <Pin Id="OIQicg1C0uMOVApvSGpLIO" Name="Up" Kind="ApplyPin" DefaultValue="True" />
-                <Pin Id="LtdpUcHWVAzQNWNKdbSUAR" Name="Down" Kind="ApplyPin" />
-                <Pin Id="Unj74CsWjOPMetN15fOVHU" Name="Reset" Kind="ApplyPin" />
-                <Pin Id="CLSIqstVprYOW2Lbt5FpxP" Name="Value" Kind="OutputPin" />
-              </Node>
-              <Pad Id="V2S4UCoomLJO79LDIc1Kwt" Comment="" Bounds="542,457,35,15" ShowValueBox="true" isIOBox="true" />
-            </Patch>
-            <Pin Id="HYzRkR6v3LzOghtjaVB5yZ" Name="Force Push" Kind="InputPin" IsHidden="true" />
-            <ControlPoint Id="OLvGjQy8yOZN3Rdw26od6Y" Bounds="537,352" Alignment="Top" />
-          </Node>
-        </Canvas>
+        <Canvas Id="ANeWVf2gIBuQCAIYNKyUHe" CanvasType="Group" />
         <Patch Id="JiTJTYmYaEKPP6qlwIU057" Name="Create" />
         <Patch Id="NILg28dT62QOGpVm9oNWU8" Name="Update" />
         <ProcessDefinition Id="JvdyjVpygnzNUKiHMXsytD">
           <Fragment Id="Bu0w3uufcICMpY8dg7W7W3" Patch="JiTJTYmYaEKPP6qlwIU057" Enabled="true" />
           <Fragment Id="PnazsQyNAMsQA1BS7DvWMo" Patch="NILg28dT62QOGpVm9oNWU8" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="IKgRFPsbtPiMNpuaUskD0y" Ids="PQbDVbpxJTeLn7gzZZrN2k,HXwRxnXoI6KOpShzdKMTKa" />
-        <Link Id="Vjn6XDKCisjMuqrnOiy4zp" Ids="QkMR8WitzIZLnZspr5b72l,SB3dMxjB95EQc9kjqnMd22" />
-        <Link Id="LqM6vRdIkvgLynJKxG84Cy" Ids="AsEN5pc0GzQMb6zEIUiXV5,HfQ4AZ5zdg8MMDOGJ0P6Lx" />
-        <Link Id="BmLxcVnOp4yNxFyDszNyPr" Ids="B1LSZmmkSyrMIbqjdd2q9d,KAXZX4rclXLNwza7N0VXAv" />
-        <Link Id="RyetDwP7796PD40VAP8Xf6" Ids="B1LSZmmkSyrMIbqjdd2q9d,OLvGjQy8yOZN3Rdw26od6Y" />
-        <Link Id="SGIEHOiPdyILFVVInzeYEo" Ids="CLSIqstVprYOW2Lbt5FpxP,V2S4UCoomLJO79LDIc1Kwt" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="SivHOr1WQgCNBDCnXk9tf6" Location="Avalonia" Version="11.2.1" />
   <NugetDependency Id="PrPw9sMHIghLc8F8ZOeqTp" Location="Avalonia.Desktop" Version="11.2.1" />
   <NugetDependency Id="RKOUVTphEDULmjh1sqsFan" Location="Avalonia.Skia" Version="11.2.1" />
-  <NugetDependency Id="O6NVXQpic2FPlWUIsIQeuF" Location="Avalonia.Win32" Version="11.2.1" />
-  <PlatformDependency Id="VXiiMeiQ0TFQXLtaivr4YD" Location="./lib/Debug/net8.0-windows/VL.Skia.Avalonia.dll" />
-  <NugetDependency Id="HjGpW4hImxFOQWekAMtGB3" Location="VL.Skia" Version="2024.6.7" />
-  <DocumentDependency Id="KSRPtGtSVfwLdBvw3mpgk3" Location="../VL.Avalonia/VL.Avalonia.vl" />
+  <PlatformDependency Id="VXiiMeiQ0TFQXLtaivr4YD" Location="./lib/Debug/net8.0-windows/VL.Skia.Avalonia.dll" IsForward="true" />
+  <NugetDependency Id="HjGpW4hImxFOQWekAMtGB3" Location="VL.Skia" Version="2025.7.0-0340-g1b1e5767de" />
+  <NugetDependency Id="CmXXWTvxhsRP37CAxcZK5Z" Location="Avalonia.Win32" Version="11.2.1" />
+  <NugetDependency Id="QLxIyVtU7iUPAOloDiT5t5" Location="Avalonia.Fonts.Inter" Version="11.2.1" />
 </Document>

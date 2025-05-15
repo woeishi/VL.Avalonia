@@ -5,17 +5,17 @@
     <Canvas Id="CIBeY8mgrPbNMIuQGrUXB6" DefaultCategory="Avalonia.Themes.Fluent" CanvasType="FullCategory">
       <!--
 
-    ************************ UseThemeFluent ************************
+    ************************ UseThemeFluent (Internal) ************************
 
 -->
-      <Node Name="UseThemeFluent" Bounds="276,244,118,80" Id="OGZTyUfqXPoO4GUyuIiE12">
+      <Node Name="UseThemeFluent (Internal)" Bounds="266,240,118,80" Id="OGZTyUfqXPoO4GUyuIiE12">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" Name="Operation" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
         <p:HideCategory p:Type="Boolean">false</p:HideCategory>
         <Patch Id="DlKf97TjBYCMSgMcpT4sPj">
-          <Node Bounds="288,273,94,26" AutoConnect="true" Id="MXcJSXpPcTIP1ss0NexMU6">
+          <Node Bounds="278,269,94,26" AutoConnect="true" Id="MXcJSXpPcTIP1ss0NexMU6">
             <p:NodeReference LastCategoryFullName="VL.Avalonia.Themes.AppBuilderExtensions" LastDependency="VL.Avalonia.Themes.Fluent.dll">
               <Choice Kind="OperationNode" Name="UseThemeFluent" />
               <FullNameCategoryReference ID="VL.Avalonia.Themes.AppBuilderExtensions" />
@@ -27,6 +27,30 @@
           <Pin Id="S5YrNoab9kQLFMIt8vOyCf" Name="Input" Kind="InputPin" />
           <Pin Id="SCNzUpBRoDJQOcGK3RDz6A" Name="Configure Theme" Kind="InputPin" />
           <Pin Id="C3YW4qXSUmiQJYeOoy43ki" Name="Output" Kind="OutputPin" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ UseThemeFluent ************************
+
+-->
+      <Node Name="UseThemeFluent" Bounds="463,240,119,80" Id="U05ZMuzJa6yNtEKepFRMxD">
+        <p:NodeReference>
+          <Choice Kind="OperationDefinition" Name="Operation" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+        <Patch Id="PGKujrzuT9XQPnz6OqJodu">
+          <Node Bounds="475,269,95,26" AutoConnect="true" Id="KVLDHL2jzeKOuvnrNTU0ny">
+            <p:NodeReference LastCategoryFullName="VL.Avalonia.Themes.ApplicationExtensions" LastDependency="VL.Avalonia.Themes.Fluent.dll">
+              <Choice Kind="OperationNode" Name="UseThemeFluent" />
+              <FullNameCategoryReference ID="VL.Avalonia.Themes.ApplicationExtensions" />
+            </p:NodeReference>
+            <Pin Id="HyP1JKALsKLO5jq0G5OX1F" Name="Input" Kind="StateInputPin" />
+            <Pin Id="NeM0VMFJv44Lu3ojtwxxXC" Name="Configure Theme" Kind="InputPin" />
+          </Node>
+          <Pin Id="KeiNHDo2RNvMYoROV386Rx" Name="Input" Kind="InputPin" />
+          <Pin Id="NNcuLgkCc9kNLivxRaFcFV" Name="Configure Theme" Kind="InputPin" />
         </Patch>
       </Node>
     </Canvas>

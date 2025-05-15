@@ -1,6 +1,5 @@
 ﻿using Avalonia;
 using Avalonia.Logging;
-using Avalonia.Themes.Fluent;
 using VL.Core.CompilerServices;
 using Application = Avalonia.Application;
 
@@ -10,10 +9,13 @@ namespace VL.Skia.Avalonia
 {
     public sealed class AvaloniaInitializer : AssemblyInitializer<AvaloniaInitializer>
     {
+        // There is already static Application.Current.Instance
+        // in Avalonia, might it's better to use it?
         public static Application Instance;
         public static void Init() => Instance ??=
             AppBuilder.Configure<App>()
             .UseGammaSkia()
+            .UseGammaSkiaDefaults()
             .LogToTrace(LogEventLevel.Verbose)
             .SetupWithLifetime(new GammaSkiaWinFormsLifetime())
             .Instance;
@@ -22,8 +24,6 @@ namespace VL.Skia.Avalonia
         {
             public override void Initialize()
             {
-                //Styles.Add(new Avalonia.Themes.Default.DefaultTheme());
-                Styles.Add(new FluentTheme());
                 base.Initialize();
             }
 

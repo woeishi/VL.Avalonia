@@ -4,7 +4,6 @@ using Avalonia.Rendering;
 using Avalonia.Rendering.Composition;
 using Avalonia.Themes.Fluent;
 using Avalonia.Threading;
-using Application = Avalonia.Application;
 
 namespace VL.Skia.Avalonia;
 
@@ -35,4 +34,9 @@ public static class AppBuilderExtensions
             AvaloniaLocator.CurrentMutable.Bind<IPlatformRenderInterface>()
                 .ToConstant(renderInterface);
         });
+
+    public static AppBuilder UseGammaSkiaDefaults(this AppBuilder appBuilder) =>
+        appBuilder
+        .WithInterFont()
+        .AfterSetup((_) => appBuilder?.Instance?.Styles.Add(new FluentTheme()));
 }
