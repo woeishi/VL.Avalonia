@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="DAbdY2VBofjNP6D9fOOHXZ" LanguageVersion="2025.7.0-0340-g1b1e5767de" Version="0.128">
+  <NugetDependency Id="Dhw3BfqJTbzMKsnlBCN39w" Location="VL.CoreLib" Version="2025.7.0-0340-g1b1e5767de" />
+  <Patch Id="Pe86ky9Ts0CMUWWrOifY9N">
+    <Canvas Id="QADecGkbqlBN7SqSuEZaHu" DefaultCategory="Avalonia" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="EGp0Lm5G0Q1L7AdRpW9zck">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="J2slBenJTLtL0HUG7a9ghW">
+        <Canvas Id="ANeWVf2gIBuQCAIYNKyUHe" CanvasType="Group" />
+        <Patch Id="JiTJTYmYaEKPP6qlwIU057" Name="Create" />
+        <Patch Id="NILg28dT62QOGpVm9oNWU8" Name="Update" />
+        <ProcessDefinition Id="JvdyjVpygnzNUKiHMXsytD">
+          <Fragment Id="Bu0w3uufcICMpY8dg7W7W3" Patch="JiTJTYmYaEKPP6qlwIU057" Enabled="true" />
+          <Fragment Id="PnazsQyNAMsQA1BS7DvWMo" Patch="NILg28dT62QOGpVm9oNWU8" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="SivHOr1WQgCNBDCnXk9tf6" Location="Avalonia" Version="11.2.1" />
+  <NugetDependency Id="PrPw9sMHIghLc8F8ZOeqTp" Location="Avalonia.Desktop" Version="11.2.1" />
+  <NugetDependency Id="RKOUVTphEDULmjh1sqsFan" Location="Avalonia.Skia" Version="11.2.1" />
+  <PlatformDependency Id="VXiiMeiQ0TFQXLtaivr4YD" Location="./lib/Debug/net8.0-windows/VL.Skia.Avalonia.dll" IsForward="true" />
+  <NugetDependency Id="HjGpW4hImxFOQWekAMtGB3" Location="VL.Skia" Version="2025.7.0-0340-g1b1e5767de" />
+  <NugetDependency Id="CmXXWTvxhsRP37CAxcZK5Z" Location="Avalonia.Win32" Version="11.2.1" />
+  <NugetDependency Id="QLxIyVtU7iUPAOloDiT5t5" Location="Avalonia.Fonts.Inter" Version="11.2.1" />
+</Document>

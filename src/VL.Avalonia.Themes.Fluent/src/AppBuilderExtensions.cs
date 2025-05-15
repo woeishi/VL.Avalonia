@@ -16,3 +16,13 @@ public static class AppBuilderExtensions
         return builder;
     }
 }
+
+public static class ApplicationExtensions
+{
+    public static void UseThemeFluent(this Application app, Action<FluentTheme>? configureTheme)
+    {
+        var theme = new FluentTheme();
+        configureTheme?.Invoke(theme);
+        app.Styles.Add(theme);
+    }
+}
