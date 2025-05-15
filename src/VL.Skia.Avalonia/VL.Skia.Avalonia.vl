@@ -31,4 +31,5 @@
   <NugetDependency Id="HjGpW4hImxFOQWekAMtGB3" Location="VL.Skia" Version="2025.7.0-0340-g1b1e5767de" />
   <NugetDependency Id="CmXXWTvxhsRP37CAxcZK5Z" Location="Avalonia.Win32" Version="11.2.1" />
   <NugetDependency Id="QLxIyVtU7iUPAOloDiT5t5" Location="Avalonia.Fonts.Inter" Version="11.2.1" />
+  <NugetDependency Id="UU2abXMm0tpMxF3XxtkGeK" Location="Avalonia.Themes.Fluent" Version="11.2.1" />
 </Document>
