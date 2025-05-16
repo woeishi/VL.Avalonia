@@ -17,30 +17,53 @@ public partial class SliderWrapper
     [ImplementStyle]
     private Optional<IAvaloniaStyle> _style;
 
-    [ImplementChannel<RangeBase>("ValueProperty")]
-    private IChannel<double>? _valueChannel;
-    //public void SetValueChannel(IChannel<double>? valueChannel)
+    // Wonder how to Observable to channel
+    //private IChannel<float>? _valueChannel;
+    //public IChannel<float>? ValueChannel
+    //{
+    //    private get => _valueChannel;
+    //    set
+    //    {
+    //        if (_valueChannel != value)
+    //        {
+    //            value = _valueChannel;
+
+    //            if (value != null)
+    //            {
+    //                _output.Bind(Slider.ValueProperty, );
+    //            }
+
+    //        }
+    //    }
+    //}
+
+    // First approach
+    //private IChannel<float>? _valueChannel;
+    //public void SetValueChannel(IChannel<float>? valueChannel)
     //{
     //    if (_valueChannel != valueChannel)
     //    {
     //        _valueChannel = valueChannel;
     //        _valueChannel?.Subscribe((x) =>
     //        {
-    //            _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
+    //            _output.SetValue(Slider.ValueProperty, _valueChannel?.Value ?? 0);
     //        });
 
-    //        _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
+    //        _output.SetValue(Slider.ValueProperty, _valueChannel?.Value ?? 0);
     //    }
     //}
-    //[Fragment(IsHidden = true)]
-    //public IChannel<double>? ValueChannel => _valueChannel;
+    //private IChannel<float>? ValueChannel => _valueChannel;
 
-    //[ImplementOptional<RangeBase>("MinimumProperty")]
-    //private Optional<double> _minimum;
 
-    //[ImplementOptional<RangeBase>("MaximumProperty")]
-    //private Optional<double> _maximum;
+    public IChannel<float>? ValueChannel { private get; set; }
+    ChannelFlange<float> _valueFlange = new ChannelFlange<float>(0.0f);
 
+
+    [ImplementOptional<Slider>(nameof(Slider.MinimumProperty))]
+    private Optional<float> _minimum;
+
+    [ImplementOptional<Slider>(nameof(Slider.MaximumProperty))]
+    private Optional<float> _maximum;
 
 
     [Fragment(IsHidden = true)]
@@ -54,9 +77,13 @@ public partial class SliderWrapper
     {
         SetupVLDefaults();
 
+        _output.ValueChanged += (s, a) =>
+        {
+            _valueFlange.Value = (float)a.NewValue;
+            _valueFlange.Update(ValueChannel);
 
-        //_output.ValueChanged += (s, a) =>
-        //    ValueChannel?.OnNext((float)a.NewValue);
+            _output.UpdateLayout();
+            // ValueChannel?.OnNext((float)a.NewValue);
+        };
     }
-
 }
