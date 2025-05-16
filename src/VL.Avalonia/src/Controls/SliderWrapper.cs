@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
+using VL.Avalonia.Attributes;
 using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
@@ -8,51 +9,61 @@ using static VL.Avalonia.Styles;
 namespace VL.Avalonia.Controls;
 
 [ProcessNode(Name = "SliderPrototype")]
-public partial class SliderWrapper : AbstractWrapperBase<Slider>
+public partial class SliderWrapper
 {
+    [ImplementOutput]
     private readonly Slider _output = new Slider();
-    public override Slider Output => _output;
 
-    private IChannel<float>? _valueChannel;
-    public void SetValueChannel(IChannel<float>? valueChannel)
-    {
-        if (_valueChannel != valueChannel)
-        {
-            _valueChannel = valueChannel;
-            _valueChannel?.Subscribe((x) => _output.Value = x);
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
 
-            _output.SetValue(RangeBase.ValueProperty, _valueChannel?.Value ?? 0);
-        }
-    }
-    private IChannel<float>? ValueChannel => _valueChannel;
+    // Wonder how to Observable to channel
+    //private IChannel<float>? _valueChannel;
+    //public IChannel<float>? ValueChannel
+    //{
+    //    private get => _valueChannel;
+    //    set
+    //    {
+    //        if (_valueChannel != value)
+    //        {
+    //            value = _valueChannel;
 
+    //            if (value != null)
+    //            {
+    //                _output.Bind(Slider.ValueProperty, );
+    //            }
+
+    //        }
+    //    }
+    //}
+
+    // First approach
+    //private IChannel<float>? _valueChannel;
+    //public void SetValueChannel(IChannel<float>? valueChannel)
+    //{
+    //    if (_valueChannel != valueChannel)
+    //    {
+    //        _valueChannel = valueChannel;
+    //        _valueChannel?.Subscribe((x) =>
+    //        {
+    //            _output.SetValue(Slider.ValueProperty, _valueChannel?.Value ?? 0);
+    //        });
+
+    //        _output.SetValue(Slider.ValueProperty, _valueChannel?.Value ?? 0);
+    //    }
+    //}
+    //private IChannel<float>? ValueChannel => _valueChannel;
+
+
+    public IChannel<float>? ValueChannel { private get; set; }
+    ChannelFlange<float> _valueFlange = new ChannelFlange<float>(0.0f);
+
+
+    [ImplementOptional<Slider>(nameof(Slider.MinimumProperty))]
     private Optional<float> _minimum;
-    public void SetMinimum(Optional<float> minimum)
-    {
-        if (minimum != _minimum)
-        {
-            _minimum = minimum;
 
-            if (_minimum.HasValue)
-            {
-                _output.SetValue(RangeBase.MinimumProperty, (double)_minimum.Value);
-            }
-        }
-    }
-
+    [ImplementOptional<Slider>(nameof(Slider.MaximumProperty))]
     private Optional<float> _maximum;
-    public void SetMaximum(Optional<float> maximum)
-    {
-        if (maximum != _maximum)
-        {
-            _maximum = maximum;
-
-            if (_maximum.HasValue)
-            {
-                _output.SetValue(RangeBase.MaximumProperty, (double)_maximum.Value);
-            }
-        }
-    }
 
 
     [Fragment(IsHidden = true)]
@@ -67,22 +78,12 @@ public partial class SliderWrapper : AbstractWrapperBase<Slider>
         SetupVLDefaults();
 
         _output.ValueChanged += (s, a) =>
-            ValueChannel?.OnNext((float)a.NewValue);
-    }
-
-    private IAvaloniaStyle? _style;
-    public override IAvaloniaStyle? Style
-    {
-        set
         {
-            if (!_style?.Equals(value) ?? _style != value)
-            {
-                // Need to test ResetStyle
-                //_output.ApplyStyling();
+            _valueFlange.Value = (float)a.NewValue;
+            _valueFlange.Update(ValueChannel);
 
-                _style = value;
-                _style?.ApplyStyle(Output);
-            }
-        }
+            _output.UpdateLayout();
+            // ValueChannel?.OnNext((float)a.NewValue);
+        };
     }
 }
