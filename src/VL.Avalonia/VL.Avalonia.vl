@@ -8,7 +8,7 @@
     ************************ SolidColorBrush ************************
 
 -->
-      <Node Name="SolidColorBrush" Bounds="191,430" Id="BFRb4Ck0XAFN4RoDoyTfOP">
+      <Node Name="SolidColorBrush" Bounds="410,410" Id="BFRb4Ck0XAFN4RoDoyTfOP">
         <p:NodeReference>
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -28,7 +28,7 @@
     ************************ Color ************************
 
 -->
-      <Node Name="Color" Bounds="372,420" Id="IZHUQBVAN9XMoBMpcEXDap">
+      <Node Name="Color" Bounds="410,320" Id="IZHUQBVAN9XMoBMpcEXDap">
         <p:NodeReference>
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -48,7 +48,7 @@
     ************************ Colors ************************
 
 -->
-      <Node Name="Colors" Bounds="321,543" Id="AYhknu2911mPWFdyD1zwI5">
+      <Node Name="Colors" Bounds="410,360" Id="AYhknu2911mPWFdyD1zwI5">
         <p:NodeReference>
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -61,6 +61,26 @@
         <Patch Id="CzuPc1j2bGCLK1gwSJOLA2">
           <Canvas Id="JssxxkDraLdNMqYRSHbnwb" BordersChecked="false" CanvasType="Group" />
           <ProcessDefinition Id="ULN1bH0k5cjQGr07JmE8QD" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Brushes ************************
+
+-->
+      <Node Name="Brushes" Bounds="515,360" Id="H3RT77jFoPeN15uOxVCAn0">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+          <Choice Kind="TypeFlag" Name="Brushes" />
+          <FullNameCategoryReference ID="Avalonia.Media" />
+          <AssemblyReference ID="Avalonia.Base.dll" />
+        </p:TypeAnnotation>
+        <Patch Id="NkPIZGOP1S1OR2KLobO9id">
+          <Canvas Id="KyhR4FProyaQJHEU4lfbDM" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="PYNORyJbqgjOmullTaSNPY" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
