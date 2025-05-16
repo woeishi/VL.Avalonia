@@ -1,51 +1,47 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Layout;
+using VL.Avalonia.Attributes;
+using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Collections;
 using static VL.Avalonia.Styles;
 
 namespace VL.Avalonia.Controls;
 
-[ProcessNode(Name = "StackPanelPrototype")]
-public partial class StackPanelWrapper : AbstractWrapperBase<StackPanel>
-{
-    private readonly StackPanel _output = new StackPanel();
-    public StackPanelWrapper()
-    {
-    }
+// https://docs.avaloniaui.net/docs/reference/controls/stackpanel
+// http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/
 
+[ProcessNode(Name = "StackPanel (Spectral)")]
+public partial class StackPanelSpectralWrapper
+{
+    [ImplementOutput]
+    private readonly StackPanel _output = new StackPanel();
+
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
+
+    [ImplementChildren]
     private Spread<Control> _children;
 
-    public override StackPanel Output => _output;
+    [ImplementOptional<StackPanel>(nameof(StackPanel.OrientationProperty))]
+    private Optional<Orientation> _orientation;
 
-    public void SetChildren(Spread<Control> children)
-    {
-        if (_children != children)
-        {
-            _children = children;
-            _output.Children.Clear();
-            foreach (var child in _children)
-            {
-                if (child is Control control)
-                {
-                    _output.Children.Add(control);
-                }
-            }
-        }
-    }
+    [ImplementOptional<StackPanel>(nameof(StackPanel.SpacingProperty))]
+    private Optional<int> _spacing;
+}
 
-    private IAvaloniaStyle? _style;
-    public override IAvaloniaStyle? Style
-    {
-        set
-        {
-            if (!_style?.Equals(value) ?? _style != value)
-            {
-                // Need to test ResetStyle
-                //_output.ApplyStyling();
+[ProcessNode(Name = "StackPanel")]
+public partial class StackPanelWrapper
+{
+    [ImplementOutput]
+    private readonly StackPanel _output = new StackPanel();
 
-                _style = value;
-                _style?.ApplyStyle(Output);
-            }
-        }
-    }
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
+
+    [ImplementChildren(true)]
+    private Spread<Control> _children;
+
+    [ImplementOptional<StackPanel>(nameof(StackPanel.SpacingProperty))]
+    private Optional<int> _spacing;
 }

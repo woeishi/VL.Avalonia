@@ -8,9 +8,15 @@
 internal sealed class ImplementOptional<T> : Attribute
 {
     public string PropertyPath { get; }
-
+    public Type? ConverterType { get; }
     public ImplementOptional(string propertyPath)
     {
         PropertyPath = propertyPath;
+    }
+
+    public ImplementOptional(string propertyPath, Type converterType)
+    {
+        PropertyPath = propertyPath;
+        ConverterType = converterType;
     }
 }

@@ -11,8 +11,11 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "SliderPrototype")]
 public partial class SliderWrapper
 {
-    [ImplementOutput<Slider>]
+    [ImplementOutput]
     private readonly Slider _output = new Slider();
+
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
 
     [ImplementChannel<RangeBase>("ValueProperty")]
     private IChannel<double>? _valueChannel;
@@ -32,11 +35,11 @@ public partial class SliderWrapper
     //[Fragment(IsHidden = true)]
     //public IChannel<double>? ValueChannel => _valueChannel;
 
-    [ImplementOptional<RangeBase>("MinimumProperty")]
-    private Optional<double> _minimum;
+    //[ImplementOptional<RangeBase>("MinimumProperty")]
+    //private Optional<double> _minimum;
 
-    [ImplementOptional<RangeBase>("MaximumProperty")]
-    private Optional<double> _maximum;
+    //[ImplementOptional<RangeBase>("MaximumProperty")]
+    //private Optional<double> _maximum;
 
 
 
@@ -51,23 +54,9 @@ public partial class SliderWrapper
     {
         SetupVLDefaults();
 
+
         //_output.ValueChanged += (s, a) =>
         //    ValueChannel?.OnNext((float)a.NewValue);
     }
 
-    private IAvaloniaStyle? _style;
-    public IAvaloniaStyle? Style
-    {
-        set
-        {
-            if (!_style?.Equals(value) ?? _style != value)
-            {
-                // Need to test ResetStyle
-                //_output.ApplyStyling();
-
-                _style = value;
-                _style?.ApplyStyle(_output);
-            }
-        }
-    }
 }

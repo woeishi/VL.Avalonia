@@ -29,23 +29,37 @@ namespace VL.Avalonia
         }
 
 
-        public record struct StyleBackground(IAvaloniaStyle? Style, IBrush? brush) : IAvaloniaStyle
+        public record struct StyleBackground(IAvaloniaStyle? Style, IBrush? Brush) : IAvaloniaStyle
         {
             public void ApplyStyle(object owner)
             {
-                owner.GetType().GetProperty("Background")?.SetValue(owner, brush);
+                owner.GetType().GetProperty("Background")?.SetValue(owner, Brush);
 
                 Style?.ApplyStyle(owner);
             }
         }
+
+        public record struct StyleSpacing(IAvaloniaStyle? Style, double Spacing) : IAvaloniaStyle
+        {
+            public void ApplyStyle(object owner)
+            {
+                owner.GetType().GetProperty("Spacing")?.SetValue(owner, Spacing);
+
+                Style?.ApplyStyle(owner);
+            }
+        }
+
         #endregion
 
         #region StyleNodes
-        public static IAvaloniaStyle SetOrientation(IAvaloniaStyle? style, Orientation orientation) =>
+        public static StyleOrientation SetOrientation(IAvaloniaStyle? style, Orientation orientation) =>
             new StyleOrientation(style, orientation);
 
-        public static IAvaloniaStyle SetBackground(IAvaloniaStyle? style, IBrush? brush) =>
+        public static StyleBackground SetBackground(IAvaloniaStyle? style, IBrush? brush) =>
             new StyleBackground(style, brush);
+        public static StyleSpacing SetSpacing(IAvaloniaStyle? style, double spacing) =>
+             new StyleSpacing(style, spacing);
+
         #endregion
     }
 }

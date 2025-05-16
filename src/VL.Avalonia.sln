@@ -5,9 +5,9 @@ VisualStudioVersion = 17.14.35906.104
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia", "VL.Avalonia\src\VL.Avalonia.csproj", "{88EF5DE4-FC95-52C7-F36D-F0366FF77315}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia.Themes.Fluent", "VL.Avalonia.Themes.Fluent\src\VL.Avalonia.Themes.Fluent.csproj", "{B630A255-E49C-0009-119D-595F1DFCE1D5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Avalonia.CodeGen", "VL.Avalonia.CodeGen\VL.Avalonia.CodeGen.csproj", "{48081AAB-3B6B-44A4-B4AD-DE90523C8ACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Skia.Avalonia", "VL.Skia.Avalonia\src\VL.Skia.Avalonia.csproj", "{5B50B7BC-269C-97DB-D3EF-53706591E9D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88EF5DE4-FC95-52C7-F36D-F0366FF77315}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B630A255-E49C-0009-119D-595F1DFCE1D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48081AAB-3B6B-44A4-B4AD-DE90523C8ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48081AAB-3B6B-44A4-B4AD-DE90523C8ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48081AAB-3B6B-44A4-B4AD-DE90523C8ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48081AAB-3B6B-44A4-B4AD-DE90523C8ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B50B7BC-269C-97DB-D3EF-53706591E9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B50B7BC-269C-97DB-D3EF-53706591E9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B50B7BC-269C-97DB-D3EF-53706591E9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B50B7BC-269C-97DB-D3EF-53706591E9D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,6 +10,8 @@ using VL.Avalonia.CodeGen.ClassHandlers;
 
 namespace VL.Avalonia.CodeGen;
 
+// https://github.com/dotnet/roslyn/issues/63780
+
 [Generator(LanguageNames.CSharp)]
 public class AvaloniaSourceGenerator : IIncrementalGenerator
 {
@@ -19,7 +21,9 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
     private static readonly List<IAttributeHandler> AttributeHandlers = new()
     {
         new OutputAttributeHandler(),
-        //new ChannelAttributeHandler(),
+        new StyleAttributeHandler(),
+        new ContentAttributeHandler(),
+        new ChildrenAttributeHandler(),
         new OptionalAttributeHandler(),
     };
 

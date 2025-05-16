@@ -1,5 +1,4 @@
 ﻿using Microsoft.CodeAnalysis;
-using System.Linq;
 
 namespace VL.Avalonia.CodeGen.AttributeHandlers
 {
@@ -10,13 +9,13 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
         public string? GenerateMethod(AttributeData attr, IFieldSymbol fieldSymbol, string fieldName)
         {
-            // This is T!
-            var tArg = attr.AttributeClass.TypeArguments.FirstOrDefault()
-                .ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+            var fieldType = fieldSymbol.Type.Name;
 
-            return $@"
-        public {tArg} Output => {fieldName};
+            var template =
+$@"
+    public {fieldType} Output => {fieldName};
 ";
+            return template;
         }
     }
 }
