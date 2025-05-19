@@ -24,6 +24,7 @@ public static class AppBuilderExtensions
 
             var platformGraphics = new GammaPlatformGraphics();
             AvaloniaLocator.CurrentMutable
+                .Bind<IDispatcherImpl>().ToConstant(new GammaDispatcherImpl(Thread.CurrentThread))
                 .Bind<IPlatformGraphics>().ToConstant(platformGraphics)
                 .Bind<IRenderTimer>().ToConstant(GammaRenderTimer.Instance)
                 .Bind<Compositor>().ToConstant(new Compositor(platformGraphics, useUiThreadForSynchronousCommits: true));

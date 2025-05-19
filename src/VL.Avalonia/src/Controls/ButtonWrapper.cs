@@ -18,13 +18,39 @@ public partial class ButtonWrapper
     [ImplementStyle]
     private Optional<IAvaloniaStyle> _style;
 
-    [ImplementContent]
+    //[ImplementContent]
+    //private Optional<object?> _content;
+
     private Optional<object?> _content;
+    [Fragment(Order = -2)]
+    public void SetContent(Optional<object?> content)
+    {
+        if (_content != content)
+        {
+            {
+                _content = content;
+
+                if (content.HasValue)
+                {
+                    // Should trigger PropertyChanged
+                    _output.SetValue(Button.ContentProperty, _content.Value);
+                }
+
+            }
+        }
+    }
 
 
     public ButtonWrapper()
     {
         _output.Command = _onClickCommand;
+
+
+        _output.PropertyChanged += (s, a) =>
+        {
+            // if this called when content on button set it works
+            Console.WriteLine($"Property changed: {a.ToString()}");
+        };
     }
 
     private UnitChannelCommand _onClickCommand = new UnitChannelCommand();
