@@ -1,5 +1,8 @@
-﻿using Avalonia.Controls;
+﻿using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Templates;
+using System.Reactive.Linq;
 using VL.Avalonia.Attributes;
 using VL.Core;
 using VL.Core.Import;
@@ -7,96 +10,140 @@ using VL.Lib.Collections;
 using VL.Lib.Reactive;
 using static VL.Avalonia.Styles;
 
-namespace VL.Avalonia.Controls
+
+namespace VL.Avalonia.Controls;
+
+/// <summary>
+/// ListBox node, using <see href="https://docs.avaloniaui.net/docs/reference/controls/listbox">ListBox</see>.
+/// </summary>
+/// <typeparam name="T"></typeparam>
+[ProcessNode(Name = "ListBox")]
+public partial class ListBoxWrapper<T>
 {
-    [ProcessNode(Name = "ListBox")]
-    public partial class ListBoxWrapper<T>
+    [ImplementOutput]
+    private readonly ListBox _output = new ListBox();
+
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
+
+    private Spread<T?> _items;
+    private IChannel<Spread<T?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<T?>>();
+    [Fragment(Order = -1)]
+    public void SetItems(Spread<T?> items)
     {
-        [ImplementOutput]
-        private readonly ListBox _output = new ListBox();
-
-        [ImplementStyle]
-        private Optional<IAvaloniaStyle> _style;
-
-        private Spread<T?> _items;
-        private IChannel<Spread<T?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<T?>>();
-
-        [Fragment(Order = -1)]
-        public void SetItems(Spread<T?> items)
+        if (_items != items)
         {
-            if (_items != items)
-            {
-                _items = items;
-                _itemsChannel.OnNext(items);
-            }
+            _items = items;
+            _itemsChannel.OnNext(items);
         }
+    }
 
-        private Optional<IDataTemplate> _itemTemplate;
-        public void SetDataTemplate(Optional<IDataTemplate> itemTemplate)
+    private Optional<IDataTemplate> _itemTemplate;
+    public void SetDataTemplate(Optional<IDataTemplate> itemTemplate)
+    {
+        if (_itemTemplate != itemTemplate)
         {
-            if (_itemTemplate != itemTemplate)
-            {
-                _itemTemplate = itemTemplate;
-                _output.SetValue(ListBox.ItemTemplateProperty, itemTemplate.Value);
-            }
-        }
-
-
-
-
-        public ListBoxWrapper()
-        {
-            _output.Bind(ListBox.ItemsSourceProperty, _itemsChannel);
-
-
+            _itemTemplate = itemTemplate;
+            _output.SetValue(ListBox.ItemTemplateProperty, itemTemplate.Value);
         }
     }
 
 
     /// <summary>
-    /// First attempt, using regular <see href="https://docs.avaloniaui.net/docs/concepts/templates/implement-idatatemplate">IDataTemplate</see>
+    /// Two way binding
     /// </summary>
-    [ProcessNode(Name = "DataTemplate", HasStateOutput = true)]
-    public partial class DataTemplateWrapper : IDataTemplate
+    Optional<IChannel<int>> _selectedIndexChannel;
+    public void SetSelectedIndexChannel(Optional<IChannel<int>> selectedIndexChannel)
     {
-        private Func<object?, Control?>? _template;
-        public void SetTemplate(Func<object?, Control?>? template)
+        if (_selectedIndexChannel != selectedIndexChannel)
         {
-            // NEEDS CACHING
-            if (template != _template)
+            _selectedIndexChannel = selectedIndexChannel;
+            if (_selectedIndexChannel.HasValue && _selectedIndexChannel.Value != null)
             {
-                _template = template;
+                _output.Bind(ListBox.SelectedIndexProperty, _selectedIndexChannel.Value);
+                _output.GetObservable(ListBox.SelectedIndexProperty)
+                    .Subscribe(value => _selectedIndexChannel.Value.OnNext(value));
             }
-        }
-
-        [Fragment(IsHidden = true)]
-        public Control? Build(object? param) => _template?.Invoke(param);
-
-        [Fragment(IsHidden = true)]
-        public bool Match(object? data)
-        {
-            return data is not null;
         }
     }
 
-    /// <summary>
-    /// Attempt using <see href="https://docs.avaloniaui.net/docs/concepts/templates/creating-data-templates-in-code">FuncDataTemplate</see>
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    [ProcessNode(Name = "FuncDataTemplate")]
-    public partial class DataTemplateWrapper<T>
+    Optional<IChannel<T>> _selectedItemChannel;
+    public void SetSelectedItemChannel(Optional<IChannel<T>> selectedItemChannel)
     {
-        [ImplementOutput]
-        private FuncDataTemplate<T> _output;
-
-        private Func<T, bool> _match = (T value) => value is T;
-
-        // Not sure how to implement this, not on create
-        // so it's cached internally. Likely the only
-        // way is custom region...
-        public DataTemplateWrapper(Func<T, Control> build)
+        if (_selectedItemChannel != selectedItemChannel)
         {
-            _output = new FuncDataTemplate<T>(_match, build);
+            _selectedItemChannel = selectedItemChannel;
+            if (_selectedItemChannel.HasValue && _selectedItemChannel.Value != null)
+            {
+                _output.Bind(ListBox.SelectedItemProperty, (IObservable<object?>)_selectedItemChannel.Value);
+                _output.GetObservable(ListBox.SelectedItemProperty)
+                    .Subscribe(value => _selectedItemChannel.Value.OnNext((T?)value));
+            }
         }
+    }
+
+
+    // TODO: Figure out how to implement this, currently not working
+    // Seems deserves MultiSelectListBox
+    //Optional<IChannel<IList<T>?>> _selectedItemsChannel;
+    //public void SetSelectedItemsChannel(Optional<IChannel<IList<T>?>> selectedItemsChannel)
+    //{
+    //    if (_selectedItemsChannel != selectedItemsChannel)
+    //    {
+    //        _selectedItemsChannel = selectedItemsChannel;
+    //        if (_selectedItemsChannel.HasValue && _selectedItemsChannel.Value != null)
+    //        {
+    //            _output.Bind(ListBox.SelectedItemsProperty, _selectedItemsChannel.Value);
+    //            _output.GetObservable(ListBox.SelectedItemsProperty)
+    //                .Subscribe(value =>
+    //                {
+    //                    if (value is List<T> list)
+    //                    {
+    //                        _selectedItemsChannel.Value.OnNext(list.ToSpread());
+    //                    }
+    //                });
+    //        }
+    //    }
+    //}
+
+    // TODO: Selection 
+    // An ISelectionModel object with various methods to track
+    // multiple selected items. This is is optimized for a large items collection.
+
+
+
+    [ImplementOptional<ListBox>(nameof(ListBox.SelectionModeProperty))]
+    private Optional<SelectionMode> _selectionMode;
+
+
+
+
+    private Optional<ScrollBarVisibility> _horizontalScrollbarVisibility;
+    public void SetHorizontalScrollbarVisibility(Optional<ScrollBarVisibility> horizontalScrollbarVisibility)
+    {
+        if (_horizontalScrollbarVisibility != horizontalScrollbarVisibility)
+        {
+            _horizontalScrollbarVisibility = horizontalScrollbarVisibility;
+            ScrollViewer.SetHorizontalScrollBarVisibility(_output, _horizontalScrollbarVisibility.Value);
+        }
+    }
+
+    private Optional<ScrollBarVisibility> _verticalScrollbarVisibility;
+    public void SetVerticalScrollbarVisibility(Optional<ScrollBarVisibility> verticalScrollbarVisibility)
+    {
+        if (_verticalScrollbarVisibility != verticalScrollbarVisibility)
+        {
+            _verticalScrollbarVisibility = verticalScrollbarVisibility;
+            ScrollViewer.SetVerticalScrollBarVisibility(_output, _verticalScrollbarVisibility.Value);
+        }
+    }
+
+    public ListBoxWrapper()
+    {
+        _output.Bind(ListBox.ItemsSourceProperty, _itemsChannel);
     }
 }
+
+
+
+
