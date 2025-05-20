@@ -15,6 +15,7 @@ namespace VL.Avalonia.Controls;
 
 /// <summary>
 /// ListBox node, using <see href="https://docs.avaloniaui.net/docs/reference/controls/listbox">ListBox</see>.
+/// WNING: Multiselect not  implemented yet.
 /// </summary>
 /// <typeparam name="T"></typeparam>
 [ProcessNode(Name = "ListBox")]
@@ -75,7 +76,7 @@ public partial class ListBoxWrapper<T>
             _selectedItemChannel = selectedItemChannel;
             if (_selectedItemChannel.HasValue && _selectedItemChannel.Value != null)
             {
-                _output.Bind(ListBox.SelectedItemProperty, (IObservable<object?>)_selectedItemChannel.Value);
+                _output.Bind(ListBox.SelectedItemProperty, _selectedItemChannel.Value as IObservable<object?>);
                 _output.GetObservable(ListBox.SelectedItemProperty)
                     .Subscribe(value => _selectedItemChannel.Value.OnNext((T?)value));
             }
@@ -117,7 +118,7 @@ public partial class ListBoxWrapper<T>
 
 
 
-
+    // TODO: Seems it's better to have attached properties this a separate node
     private Optional<ScrollBarVisibility> _horizontalScrollbarVisibility;
     public void SetHorizontalScrollbarVisibility(Optional<ScrollBarVisibility> horizontalScrollbarVisibility)
     {

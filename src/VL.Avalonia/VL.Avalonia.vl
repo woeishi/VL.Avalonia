@@ -3,87 +3,7 @@
   <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
   <Patch Id="CsQ26EoGhvMOM4U1aQide6">
     <Canvas Id="IhgCT0sDhkhMddI2tTRHCe" DefaultCategory="Avalonia" CanvasType="FullCategory">
-      <!--
-
-    ************************ SolidColorBrush ************************
-
--->
-      <Node Name="SolidColorBrush" Bounds="410,410" Id="BFRb4Ck0XAFN4RoDoyTfOP">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
-          <Choice Kind="TypeFlag" Name="SolidColorBrush" />
-          <FullNameCategoryReference ID="Avalonia.Media" />
-          <AssemblyReference ID="Avalonia.Base.dll" />
-        </p:TypeAnnotation>
-        <Patch Id="Anb2zaGRBH0MhiU20ZeCbe">
-          <Canvas Id="UqS9kMRZAxfPXdJ5f9je2W" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="BLqNFa2RbveOi6yLPwneLc" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ Color ************************
-
--->
-      <Node Name="Color" Bounds="410,320" Id="IZHUQBVAN9XMoBMpcEXDap">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
-          <Choice Kind="TypeFlag" Name="Color" />
-          <FullNameCategoryReference ID="Avalonia.Media" />
-          <AssemblyReference ID="Avalonia.Base.dll" />
-        </p:TypeAnnotation>
-        <Patch Id="JCRI00yTGEuPCCDKcrzBQt">
-          <Canvas Id="IuNwIjinptzNZXziVaEnx5" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="EIhZEkIUWY7Oh7w0UWkKdE" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ Colors ************************
-
--->
-      <Node Name="Colors" Bounds="410,360" Id="AYhknu2911mPWFdyD1zwI5">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
-          <Choice Kind="TypeFlag" Name="Colors" />
-          <FullNameCategoryReference ID="Avalonia.Media" />
-          <AssemblyReference ID="Avalonia.Base.dll" />
-        </p:TypeAnnotation>
-        <Patch Id="CzuPc1j2bGCLK1gwSJOLA2">
-          <Canvas Id="JssxxkDraLdNMqYRSHbnwb" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="ULN1bH0k5cjQGr07JmE8QD" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ Brushes ************************
-
--->
-      <Node Name="Brushes" Bounds="515,360" Id="H3RT77jFoPeN15uOxVCAn0">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
-          <Choice Kind="TypeFlag" Name="Brushes" />
-          <FullNameCategoryReference ID="Avalonia.Media" />
-          <AssemblyReference ID="Avalonia.Base.dll" />
-        </p:TypeAnnotation>
-        <Patch Id="NkPIZGOP1S1OR2KLobO9id">
-          <Canvas Id="KyhR4FProyaQJHEU4lfbDM" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="PYNORyJbqgjOmullTaSNPY" IsHidden="true" />
-        </Patch>
-      </Node>
-      <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls.Enums" Position="604,230">
+      <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls" Position="604,230">
         <!--
 
     ************************ AutoCompleteFilterMode ************************
@@ -742,6 +662,88 @@
           <Patch Id="QMGQCh0DUm0OqcMF7rOjI7">
             <Canvas Id="EfG8QGd6pJuM79aiYSLWRa" BordersChecked="false" CanvasType="Group" />
             <ProcessDefinition Id="RTpqQPcv75jQatDcG3bD57" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="CVjowx6tSguPby3ZNI2eIW" Name="Media" Position="419,240">
+        <!--
+
+    ************************ SolidColorBrush ************************
+
+-->
+        <Node Name="SolidColorBrush" Bounds="208,290" Id="B1KoMsk1mOvMt7y0iq1bX2">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="SolidColorBrush" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MiTfYPrzwkVOdzMqHllILD">
+            <Canvas Id="Lseb1Wa24vVOMB0NsrigUH" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="BYjzS7g64XMMa0oDyllwQX" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Color ************************
+
+-->
+        <Node Name="Color" Bounds="208,200" Id="BZA3DpdVuiLN5OI7dq0YLP">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Color" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="PcDG90CBysDPiyT0OBCxrs">
+            <Canvas Id="C5zjoU3JxedPqTbvXJxp3X" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="H5d1eCgurV3MVdgsik0db5" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Colors ************************
+
+-->
+        <Node Name="Colors" Bounds="208,240" Id="KMLpjWSuz7FOLxkcMQCdzw">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Colors" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="KzY6s4qMhziLA2C4hoiKq5">
+            <Canvas Id="QqtHzbJxJuYPtr2tJ60j3j" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="AZFUyjADDyaPkd2Clhq9jE" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Brushes ************************
+
+-->
+        <Node Name="Brushes" Bounds="313,240" Id="MHSdbEbIwNqNIgrixYzMZ8">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Brushes" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Jm8z0BRUp01ORXciL4DFUK">
+            <Canvas Id="InmJdqFwkF5PjIgzCjoXoE" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GipZDBfLMeZQaAiPYFcIRP" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>

@@ -9,7 +9,7 @@ using static VL.Avalonia.Styles;
 
 namespace VL.Avalonia.Controls;
 
-[ProcessNode(Name = "ButtonPrototype")]
+[ProcessNode(Name = "Button")]
 public partial class ButtonWrapper
 {
     [ImplementOutput]
