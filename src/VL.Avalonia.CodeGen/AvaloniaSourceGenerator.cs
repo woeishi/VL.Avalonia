@@ -40,7 +40,7 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
 #if DEBUG
         if (!Debugger.IsAttached)
         {
-            //Debugger.Launch();
+            // Debugger.Launch();
         }
 #endif 
         var attributesSyntaxProvider = context.SyntaxProvider.CreateSyntaxProvider(

@@ -10,16 +10,18 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
         public string? GenerateMethod(AttributeData attr, IFieldSymbol fieldSymbol, string fieldName)
         {
-            var argDec = "Spread<Control> children";
+            var argDec = "Spread<Control>? children";
 
-            var isPinGroup = (bool)attr.ConstructorArguments.FirstOrDefault().Value == true;
+            var isPinGroup = attr.NamedArguments.Where(x => x.Key == "IsPinGroup").FirstOrDefault().Value.Value as bool? ?? false;
 
             var args = isPinGroup ? $"[Pin(PinGroupKind = Model.PinGroupKind.Collection, PinGroupDefaultCount = 1)] {argDec}" : $"{argDec}";
+            var modifier = isPinGroup ? "override" : "virtual";
+
 
             var template =
 $@"
     [Fragment(Order = -2)]
-    public void SetChildren({args})
+    public {modifier} void SetChildren({args})
     {{
         if (_children != children)
         {{
