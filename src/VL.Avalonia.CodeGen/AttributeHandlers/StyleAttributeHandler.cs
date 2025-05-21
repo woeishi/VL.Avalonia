@@ -11,7 +11,7 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
         {
             var template =
 $@"
-    [Fragment(Order = -1)]
+    [Fragment(Order = -3)]
     public Optional<IAvaloniaStyle> Style
     {{
         private get => _style;

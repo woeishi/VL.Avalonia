@@ -20,7 +20,7 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
             var template =
 $@"
-    [Fragment(Order = -2)]
+    [Fragment(Order = -5)]
     public {modifier} void SetChildren({args})
     {{
         if (_children != children)
