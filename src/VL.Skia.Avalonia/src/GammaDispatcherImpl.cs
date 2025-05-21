@@ -1,5 +1,4 @@
 ﻿using Avalonia.Threading;
-using VL.Core;
 using VL.Lib.Animation;
 using SysTimer = System.Threading.Timer;
 
@@ -7,22 +6,16 @@ namespace VL.Skia.Avalonia
 {
     internal class GammaDispatcherImpl : IDispatcherImpl
     {
-        private readonly IClock _clock = AppHost.Current.Services.GetService(typeof(IClock)) as IClock;
-
+        private readonly IClock _clock;
+        private readonly SynchronizationContext _synchronizationContext;
         private readonly Thread _mainThread;
+
         private readonly SysTimer _timer;
         private readonly SendOrPostCallback _invokeSignaled; // cached delegate
         private readonly SendOrPostCallback _invokeTimer;  // cached delegate
 
-        public long Now
-        {
-            get
-            {
-                // TODO: DO IT PROPERLY
-                var now = (long)_clock.Time.Seconds * 1000; // (long)Time.GetTicksMsec();
-                return now;
-            }
-        }
+        // TODO: Is there a better way to get the current milliseconds?
+        public long Now => (long)_clock.Time.Seconds * 1000;
 
         public bool CurrentThreadIsLoopThread
             => _mainThread == Thread.CurrentThread;
@@ -31,9 +24,12 @@ namespace VL.Skia.Avalonia
 
         public event Action? Timer;
 
-        public GammaDispatcherImpl(Thread mainThread)
+        public GammaDispatcherImpl(Thread mainThread, IClock clock, SynchronizationContext synchronizationContext)
         {
             _mainThread = mainThread;
+            _clock = clock;
+            _synchronizationContext = synchronizationContext;
+
             _invokeSignaled = InvokeSignaled;
             _invokeTimer = InvokeTimer;
             _timer = new(OnTimerTick, this, Timeout.Infinite, Timeout.Infinite);
@@ -48,47 +44,12 @@ namespace VL.Skia.Avalonia
             _timer.Change(interval, Timeout.Infinite);
         }
 
-        //  => GdDispatcher.SynchronizationContext.Post(_invokeTimer, null);
         private void OnTimerTick(object? state)
-        {
-            try
-            {
-                AppHost.Current.SynchronizationContext.Post(_invokeTimer, null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        //  => GdDispatcher.SynchronizationContext.Post(_invokeSignaled, this);
-        public void Signal()
-        {
-            // THIS NEEDS REWORK
-            // written by copilot
-            // source: https://github.com/MrJul/Estragonia/blob/main/src/JLeb.Estragonia/GodotDispatcherImpl.cs
-            try
-            {
-                Console.WriteLine("Signal called");
+            => _synchronizationContext.Post(_invokeTimer, null);
 
 
-                var syncContext = AppHost.Current?.SynchronizationContext;
-                if (syncContext == null)
-                {
-                    Console.WriteLine("Warning: SynchronizationContext is null");
-                    Signaled?.Invoke();
-                    return;
-                }
-
-                syncContext.Post(_invokeSignaled, this);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in Signal: {ex.Message}");
-
-                try { Signaled?.Invoke(); } catch { }
-            }
-        }
+        public void Signal() =>
+            _synchronizationContext.Post(_invokeSignaled, null);
 
         private void InvokeSignaled(object? state)
             => Signaled?.Invoke();
