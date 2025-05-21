@@ -18,28 +18,8 @@ public partial class ButtonWrapper
     [ImplementStyle]
     private Optional<IAvaloniaStyle> _style;
 
-    //[ImplementContent]
-    //private Optional<object?> _content;
-
+    [ImplementContent]
     private Optional<object?> _content;
-    [Fragment(Order = -2)]
-    public void SetContent(Optional<object?> content)
-    {
-        if (_content != content)
-        {
-            {
-                _content = content;
-
-                if (content.HasValue)
-                {
-                    // Should trigger PropertyChanged
-                    _output.SetValue(Button.ContentProperty, _content.Value);
-                }
-
-            }
-        }
-    }
-
 
     public ButtonWrapper()
     {
@@ -60,6 +40,7 @@ public partial class ButtonWrapper
 
     public void SetClickMode(ClickMode mode) =>
         _output.ClickMode = mode;
-
 }
+
+
 

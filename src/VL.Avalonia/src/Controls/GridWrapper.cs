@@ -8,18 +8,27 @@ using static VL.Avalonia.Styles;
 namespace VL.Avalonia.Controls;
 
 [ProcessNode(Name = "Grid")]
-public partial class GridWrapper
+public partial class GridWrapper : GridSpectralWrapper
+{
+    [ImplementChildren(IsPinGroup = true)]
+    protected Spread<Control> _children = Spread<Control>.Empty;
+
+    public GridWrapper() : base() { }
+}
+
+[ProcessNode(Name = "Grid (Spectral)")]
+public partial class GridSpectralWrapper
 {
     [ImplementOutput]
-    private readonly Grid _output = new Grid();
+    protected readonly Grid _output = new Grid();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
 
     [ImplementChildren]
-    private Spread<Control> _children;
+    protected Spread<Control> _children = Spread<Control>.Empty;
 
-    private Spread<ColumnDefinition?> _columnDefinitions = Spread<ColumnDefinition?>.Empty;
+    protected Spread<ColumnDefinition?> _columnDefinitions = Spread<ColumnDefinition?>.Empty;
     public void SetColumnDefinitions(Spread<ColumnDefinition?> columnDefinitions)
     {
         if (_columnDefinitions != columnDefinitions)
@@ -38,7 +47,7 @@ public partial class GridWrapper
         }
     }
 
-    private Spread<RowDefinition?> _rowDefinitions = Spread<RowDefinition?>.Empty;
+    protected Spread<RowDefinition?> _rowDefinitions = Spread<RowDefinition?>.Empty;
     public void SetRowDefinitions(Spread<RowDefinition?> rowDefinitions)
     {
         if (_rowDefinitions != rowDefinitions)

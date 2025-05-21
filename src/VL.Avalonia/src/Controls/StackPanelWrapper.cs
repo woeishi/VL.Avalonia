@@ -15,33 +15,26 @@ namespace VL.Avalonia.Controls;
 public partial class StackPanelSpectralWrapper
 {
     [ImplementOutput]
-    private readonly StackPanel _output = new StackPanel();
+    protected readonly StackPanel _output = new StackPanel();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
 
     [ImplementChildren]
-    private Spread<Control> _children;
+    protected Spread<Control>? _children;
 
     [ImplementOptional<StackPanel>(nameof(StackPanel.OrientationProperty))]
-    private Optional<Orientation> _orientation;
+    protected Optional<Orientation> _orientation;
 
     [ImplementOptional<StackPanel>(nameof(StackPanel.SpacingProperty))]
-    private Optional<int> _spacing;
+    protected Optional<int> _spacing;
 }
 
 [ProcessNode(Name = "StackPanel")]
-public partial class StackPanelWrapper
+public partial class StackPanelWrapper : StackPanelSpectralWrapper
 {
-    [ImplementOutput]
-    private readonly StackPanel _output = new StackPanel();
+    public StackPanelWrapper() : base() { }
 
-    [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
-
-    [ImplementChildren(true)]
-    private Spread<Control> _children;
-
-    [ImplementOptional<StackPanel>(nameof(StackPanel.SpacingProperty))]
-    private Optional<int> _spacing;
+    [ImplementChildren(IsPinGroup = true)]
+    protected Spread<Control>? _children;
 }

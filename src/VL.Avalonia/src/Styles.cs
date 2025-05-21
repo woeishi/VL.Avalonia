@@ -49,16 +49,37 @@ namespace VL.Avalonia
             }
         }
 
+        public record struct StyleHorizontalAlignment(IAvaloniaStyle? Style, HorizontalAlignment Alignment) : IAvaloniaStyle
+        {
+            public void ApplyStyle(object owner)
+            {
+                owner.GetType().GetProperty("HorizontalAlignment")?.SetValue(owner, Alignment);
+                Style?.ApplyStyle(owner);
+            }
+        }
+
+        public record struct StyleVerticalAlignment(IAvaloniaStyle? Style, VerticalAlignment Alignment) : IAvaloniaStyle
+        {
+            public void ApplyStyle(object owner)
+            {
+                owner.GetType().GetProperty("VerticalAlignment")?.SetValue(owner, Alignment);
+                Style?.ApplyStyle(owner);
+            }
+        }
+
         #endregion
 
         #region StyleNodes
         public static StyleOrientation SetOrientation(IAvaloniaStyle? style, Orientation orientation) =>
             new StyleOrientation(style, orientation);
-
         public static StyleBackground SetBackground(IAvaloniaStyle? style, IBrush? brush) =>
             new StyleBackground(style, brush);
         public static StyleSpacing SetSpacing(IAvaloniaStyle? style, double spacing) =>
              new StyleSpacing(style, spacing);
+        public static StyleHorizontalAlignment SetHorizontalAlignment(IAvaloniaStyle? style, HorizontalAlignment alignment) =>
+            new StyleHorizontalAlignment(style, alignment);
+        public static StyleVerticalAlignment SetVerticalAlignment(IAvaloniaStyle? style, VerticalAlignment alignment) =>
+            new StyleVerticalAlignment(style, alignment);
 
         #endregion
     }
