@@ -67,6 +67,24 @@ namespace VL.Avalonia
             }
         }
 
+        public record struct StyleWidth(IAvaloniaStyle? Style, double Width) : IAvaloniaStyle
+        {
+            public void ApplyStyle(object owner)
+            {
+                owner.GetType().GetProperty("Width")?.SetValue(owner, Width);
+                Style?.ApplyStyle(owner);
+            }
+        }
+
+        public record struct StyleHeight(IAvaloniaStyle? Style, double Height) : IAvaloniaStyle
+        {
+            public void ApplyStyle(object owner)
+            {
+                owner.GetType().GetProperty("Height")?.SetValue(owner, Height);
+                Style?.ApplyStyle(owner);
+            }
+        }
+
         #endregion
 
         #region StyleNodes
@@ -80,6 +98,10 @@ namespace VL.Avalonia
             new StyleHorizontalAlignment(style, alignment);
         public static StyleVerticalAlignment SetVerticalAlignment(IAvaloniaStyle? style, VerticalAlignment alignment) =>
             new StyleVerticalAlignment(style, alignment);
+        public static StyleWidth SetWidth(IAvaloniaStyle? style, double width) =>
+            new StyleWidth(style, width);
+        public static StyleHeight SetHeight(IAvaloniaStyle? style, double height) =>
+            new StyleHeight(style, height);
 
         #endregion
     }
