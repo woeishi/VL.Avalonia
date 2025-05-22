@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.0-0351-gb3f6445d75" Version="0.128">
+  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
+  <Patch Id="CsQ26EoGhvMOM4U1aQide6">
+    <Canvas Id="IhgCT0sDhkhMddI2tTRHCe" DefaultCategory="Avalonia" CanvasType="FullCategory">
+      <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls" Position="604,230">
+        <!--
+
+    ************************ AutoCompleteFilterMode ************************
+
+-->
+        <Node Name="AutoCompleteFilterMode" Bounds="164,110" Id="HQi40DR4b9gMVvWweO0CTA">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="AutoCompleteFilterMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="FQfu1Ule2ibPxx5O276rxt">
+            <Canvas Id="J7O6i5T2n07M2Mo1WjMWFk" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="POMQz57ZGj0P6uZeJ6vJnn" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ CalendarDatePickerFormat ************************
+
+-->
+        <Node Name="CalendarDatePickerFormat" Bounds="444,110" Id="PZiueitdnnZMNzqCAg0RIn">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="CalendarDatePickerFormat" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Ffj2SvrDlSmMGkh92REy2f">
+            <Canvas Id="NqJGoewtORcMtfihwcaEe1" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="L90JsvFOMGrPyzaGFgWFSG" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ CalendarMode ************************
+
+-->
+        <Node Name="CalendarMode" Bounds="724,110" Id="MbWUID7xXdcMv8wm2ZpXSw">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="CalendarMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="QvTZvLTQauoNV1Copqg9h8">
+            <Canvas Id="UXruJCRGrC9LxZ9Qw24qte" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="TDr8cvGNxWRPOYmnEH7Ewt" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ CalendarSelectionMode ************************
+
+-->
+        <Node Name="CalendarSelectionMode" Bounds="1004,110" Id="B7FLmP8Bv4iQMFOSWv2LLP">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="CalendarSelectionMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="OHOAHuPNgFCMlNgugzQ9IF">
+            <Canvas Id="ORPmSNDHzK0OcWqsKZUQeX" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="OiAnmuboHziLniz2VRtTcd" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ClickMode ************************
+
+-->
+        <Node Name="ClickMode" Bounds="1284,110" Id="RaRDz0muH3xNSEI9Beo7Td">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="ClickMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="I9V45WPbd2vOJXyrAi7mzu">
+            <Canvas Id="Hz4xjGanqwfMnuoAy5q9yb" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GUDYvO2RdcsNyd7xE0n9Vo" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Dock ************************
+
+-->
+        <Node Name="Dock" Bounds="164,160" Id="S0OiJK4yu4TOIQerEoW6Rf">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="Dock" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="KlBj7HaZgz3PofVHttQOTa">
+            <Canvas Id="PgxaPWUj7ZhMYU3cF108lk" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="G0iVVxvbMFvO4zd95AdB0A" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ExpandDirection ************************
+
+-->
+        <Node Name="ExpandDirection" Bounds="444,160" Id="Sh6yjkEd6HSLUkjGxI1m8I">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="ExpandDirection" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="AwzxOjwqrNsPAfsKxi3vE5">
+            <Canvas Id="Ru1vPZ187oXLWNeNGBW0Ju" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="MxuIy2981X4QBpm2Of81k5" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FlyoutShowMode ************************
+
+-->
+        <Node Name="FlyoutShowMode" Bounds="724,160" Id="Rewdq50712SPzX1lOanyRM">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="FlyoutShowMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Jsjti3YU2OSNGGLnCeu2sT">
+            <Canvas Id="VVN36vRqH27PupXuHxmfvS" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="QanoSSeTkl6PUfEEgtgou6" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GridResizeBehavior ************************
+
+-->
+        <Node Name="GridResizeBehavior" Bounds="1004,160" Id="Jjrec4zlb5DQTfaX3wy2gF">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="GridResizeBehavior" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="RFry3JN2uPzQEBS4dVWSzj">
+            <Canvas Id="F1ZSg9G9SIxM2ec50zMuTi" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="LpaejFxXETnLKIlSrboCED" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GridResizeDirection ************************
+
+-->
+        <Node Name="GridResizeDirection" Bounds="1284,160" Id="N6dYbAfpG4yOUmjGI5spny">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="GridResizeDirection" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="BlCYurl6iQ6LFImAelZRRw">
+            <Canvas Id="HkpK6jAJ7W1NkZrUX4aYPs" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="LvLGlJODw0DNmEjofVN5XY" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GridUnitType ************************
+
+-->
+        <Node Name="GridUnitType" Bounds="164,210" Id="Gc17Utq5ixoPzpM4mPv7oi">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="GridUnitType" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="VcHxEHVn0oSPB1wQt8UfkU">
+            <Canvas Id="BoYoVKSf2iLOSDeTHGxjbA" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="HIL9TOhE85cMOyI5ErrgTJ" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Location ************************
+
+-->
+        <Node Name="Location" Bounds="444,210" Id="GqpVFFhb512NM7DmHG44Cm">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="Location" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="J2mYZ9cmMQGLTtIrfiayoe">
+            <Canvas Id="K4CUEze3b2GNYLUEOOmzSb" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GYi3GImK6R0L2Z1MQXnfGt" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ MenuItemToggleType ************************
+
+-->
+        <Node Name="MenuItemToggleType" Bounds="724,210" Id="HAmRNBJqhknOl2ynFqUjYn">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="MenuItemToggleType" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="C3DcVQ75K90QP7sAu3lwwV">
+            <Canvas Id="UZOLlxPgkAsPULMHhzWClC" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="DN1OWTt2bvyM9CQyeouz3h" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ NativeMenuItemToggleType ************************
+
+-->
+        <Node Name="NativeMenuItemToggleType" Bounds="1004,210" Id="RQyWI4GokrpQcNLrpNEA9T">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="NativeMenuItemToggleType" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="SwGjgLAV5UXLtZ8qvnRH5V">
+            <Canvas Id="P4rAnpdGHYZNN4vnuUYoxZ" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="O5VoqM2ahE9QbiaQw0vB1H" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ PlacementMode ************************
+
+-->
+        <Node Name="PlacementMode" Bounds="1284,210" Id="HTiObiaS5YAP4bxTo01NOh">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="PlacementMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Cyw4L2vKiRGOAfIVZeNQhe">
+            <Canvas Id="SOR8RSKO2udQCurC7yoPUG" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="BdVQQbBi8XhLMi0OeQZQU9" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ PlatformInhibitionType ************************
+
+-->
+        <Node Name="PlatformInhibitionType" Bounds="164,260" Id="Om3jaFamNJOOEhbsBkHYtD">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="PlatformInhibitionType" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="SSHQtyWBbSmPEOABi1lWna">
+            <Canvas Id="L6HDZTbLVuXO2kyeUPfzzN" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="KWgq7i1fI7JLTXw5pK688c" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ RefreshVisualizerOrientation ************************
+
+-->
+        <Node Name="RefreshVisualizerOrientation" Bounds="444,260" Id="PghoVZKy4yUPrAGh7sSEU5">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="RefreshVisualizerOrientation" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="RAYyOMBC07tLmn9iJ7Zwuz">
+            <Canvas Id="B8yKg7ilFv7Nd3OsC9HmxD" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="Ffvw4TEz7IgMOvXeNujPYt" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ RefreshVisualizerState ************************
+
+-->
+        <Node Name="RefreshVisualizerState" Bounds="724,260" Id="Cckjklke5hxLzOhgBj0Jw9">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="RefreshVisualizerState" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="IWCsKE6IADnOqQRPtsXeLj">
+            <Canvas Id="VdVolbbnHDXLmX6w5W5lDi" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="DVqgl8FtzooL8bQdIaLPbZ" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SelectionMode ************************
+
+-->
+        <Node Name="SelectionMode" Bounds="1004,260" Id="K4n3PpaCiEVNxEo7ajTMKB">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="SelectionMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="BCVaIrqAbfbOX6sI8IlbOy">
+            <Canvas Id="H1TWJ3yRaMCNbZs7WLMrEi" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GyRQajynLMoLz2qpcwjQR3" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ShutdownMode ************************
+
+-->
+        <Node Name="ShutdownMode" Bounds="1284,260" Id="J5tUMzmulRNOkpFoEtVPts">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="ShutdownMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="OoFOrOW1SeAQShmL2lA1pn">
+            <Canvas Id="I0MAdCezfSsPNM62QiM59m" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="NlisJNmlLVmPGkBIA8ifQg" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SizeToContent ************************
+
+-->
+        <Node Name="SizeToContent" Bounds="164,310" Id="QnzVMdj3c3xOp7eV6X8xtd">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="SizeToContent" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="VnI5lKPyRAlQBR3YDPYzKa">
+            <Canvas Id="J7sldZ22uFRM6ZRoL5QwHv" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="IamzYkxdMH8QT7oRB1scxW" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SpinDirection ************************
+
+-->
+        <Node Name="SpinDirection" Bounds="444,310" Id="LqTpj9dwbUSL1C9KR5Q8r6">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="SpinDirection" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="VR4sxGGPkaLPCPucRJybAX">
+            <Canvas Id="U9xMWkRwo19NtYooul9BWN" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="OjxSmtbhFTPMTYR6sDRQBG" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SplitViewDisplayMode ************************
+
+-->
+        <Node Name="SplitViewDisplayMode" Bounds="724,310" Id="HIJi8egAqy9QRcX3OOq2d3">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="SplitViewDisplayMode" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="DpsUao5WzM1MNSfe0JQ4QP">
+            <Canvas Id="D2FrupNrw6lMlT35XJkEPL" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GRiQjOZfNrNNm6X9UV75B3" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SplitViewPanePlacement ************************
+
+-->
+        <Node Name="SplitViewPanePlacement" Bounds="1004,310" Id="Qg3uUYpkSjcOfWta4KCqiv">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="SplitViewPanePlacement" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="GlVGGu52E4NLJa3LNYOSGg">
+            <Canvas Id="RM5z1bNTuxZMKbrsbDGh8v" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="TpjijKvNxe1OxkRRUujEuG" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TickBarPlacement ************************
+
+-->
+        <Node Name="TickBarPlacement" Bounds="1284,310" Id="RbPKhzRIyT2MfDTpoZQTyK">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="TickBarPlacement" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="KIa8XYqdsAeLTufrxLnExs">
+            <Canvas Id="Uq1JZaL2HwGPO4udgpfvNV" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="IXCw1d1Tly5P8At7CSFqvs" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TickPlacement ************************
+
+-->
+        <Node Name="TickPlacement" Bounds="164,360" Id="NLX6xaXfPS1NMBmlmIw0yE">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="TickPlacement" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="RK7nAQdLZMKORMZFUCtm3C">
+            <Canvas Id="CajtrCE4s6ROCwKRyDAg4R" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="UOSR16a74RAOSxAUgL9a6R" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ValidSpinDirections ************************
+
+-->
+        <Node Name="ValidSpinDirections" Bounds="444,360" Id="MroIVc9LOPvPKRBfwyKVAW">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="ValidSpinDirections" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="L93NNhJBYgDMPZDxmeie27">
+            <Canvas Id="O526mNWL9itNmhLnexVwwW" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="PeYG7I3y7HFNsH4BletFKD" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowCloseReason ************************
+
+-->
+        <Node Name="WindowCloseReason" Bounds="724,360" Id="PghCRci6hLFNQmQxx75NMU">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowCloseReason" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="T3728GZ2bgBPQnJFh38dPZ">
+            <Canvas Id="BS1FRwwqt6YOYkQ20oxKKr" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="BdwoB2NiYK5LiumROEJOPg" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowClosingBehavior ************************
+
+-->
+        <Node Name="WindowClosingBehavior" Bounds="1004,360" Id="Fc1eorjqUF9QSJhAXrw5Fx">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowClosingBehavior" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="L7ZHfTQfcxRLyo7MG3ozut">
+            <Canvas Id="Ow70OkbxdC3QcjZCLKtEc7" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="FFmtT98WMmwP3Vdwl5Gw5C" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowEdge ************************
+
+-->
+        <Node Name="WindowEdge" Bounds="1284,360" Id="MWo4IhHnx7mL8s5ZAN2ojD">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowEdge" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="AB7bokgRQOrLmHatGcKl3l">
+            <Canvas Id="BNi6kGOgVcNNrp1rXprztv" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="PvibMe1p4GnOGyJ7LDbk8e" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowResizeReason ************************
+
+-->
+        <Node Name="WindowResizeReason" Bounds="164,410" Id="BoLTjsmfF6BOBlDulvanZ1">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowResizeReason" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="D2eFOal8zJeL3F3HJeqFo8">
+            <Canvas Id="DSKhY1JNUUePx54PoVVkFF" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="Q63muRh5edgNFuLMfEN9wt" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowStartupLocation ************************
+
+-->
+        <Node Name="WindowStartupLocation" Bounds="444,410" Id="AWq7b8tlfzMPpxa4dde5so">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowStartupLocation" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="J2ldFHP6vKZOZWyqiZF8PF">
+            <Canvas Id="FbfzABSqCtmPnZ3HDdAnpI" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="HfXUuDFo1FVPMWuLOCU0nr" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WindowState ************************
+
+-->
+        <Node Name="WindowState" Bounds="724,410" Id="D7l39qHCVtyO6TwwfVPelC">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Controls" LastDependency="Avalonia.Controls.dll">
+            <Choice Kind="TypeFlag" Name="WindowState" />
+            <FullNameCategoryReference ID="Avalonia.Controls" />
+            <AssemblyReference ID="Avalonia.Controls.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="QMGQCh0DUm0OqcMF7rOjI7">
+            <Canvas Id="EfG8QGd6pJuM79aiYSLWRa" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="RTpqQPcv75jQatDcG3bD57" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="CVjowx6tSguPby3ZNI2eIW" Name="Media" Position="419,240">
+        <!--
+
+    ************************ SolidColorBrush ************************
+
+-->
+        <Node Name="SolidColorBrush" Bounds="208,290" Id="B1KoMsk1mOvMt7y0iq1bX2">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="SolidColorBrush" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MiTfYPrzwkVOdzMqHllILD">
+            <Canvas Id="Lseb1Wa24vVOMB0NsrigUH" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="BYjzS7g64XMMa0oDyllwQX" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Color ************************
+
+-->
+        <Node Name="Color" Bounds="208,200" Id="BZA3DpdVuiLN5OI7dq0YLP">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Color" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="PcDG90CBysDPiyT0OBCxrs">
+            <Canvas Id="C5zjoU3JxedPqTbvXJxp3X" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="H5d1eCgurV3MVdgsik0db5" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Colors ************************
+
+-->
+        <Node Name="Colors" Bounds="208,240" Id="KMLpjWSuz7FOLxkcMQCdzw">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Colors" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="KzY6s4qMhziLA2C4hoiKq5">
+            <Canvas Id="QqtHzbJxJuYPtr2tJ60j3j" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="AZFUyjADDyaPkd2Clhq9jE" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Brushes ************************
+
+-->
+        <Node Name="Brushes" Bounds="313,240" Id="MHSdbEbIwNqNIgrixYzMZ8">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Brushes" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Jm8z0BRUp01ORXciL4DFUK">
+            <Canvas Id="InmJdqFwkF5PjIgzCjoXoE" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GipZDBfLMeZQaAiPYFcIRP" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="LIMfVEadyW1LLVW5BRV2j3">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Vnb9bcrQbckMHeD25siOCD">
+        <Canvas Id="SgsFnJYRVQBM89G3PDk9sZ" CanvasType="Group" />
+        <Patch Id="H7Ps7JD3xWZL2uMmFt6NSF" Name="Create" />
+        <Patch Id="LEU3RV7WJAHOMyXtsasTpP" Name="Update" />
+        <ProcessDefinition Id="QLcQBP07Q66PAHfWccruTO">
+          <Fragment Id="UanT91uNZ67MaOSTKAREoh" Patch="H7Ps7JD3xWZL2uMmFt6NSF" Enabled="true" />
+          <Fragment Id="KWj5qGl7CbDMsFQidLPb1a" Patch="LEU3RV7WJAHOMyXtsasTpP" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GMhn63HjG4qM0dU5jEmund" Location="Avalonia" Version="11.2.1" />
+  <NugetDependency Id="UdwjGWusIBsL5mxUtYoCoN" Location="Avalonia.Desktop" Version="11.2.1" />
+  <PlatformDependency Id="L7nHBXTDUlLNSsmO0mmGVQ" Location="./lib/Debug/net8.0/VL.Avalonia.dll" IsForward="true" />
+  <DocumentDependency Id="FUZXz3cutH3NVqpFsrSvxb" Location="./VL.Avalonia.Styling.vl" IsForward="true" />
+</Document>
