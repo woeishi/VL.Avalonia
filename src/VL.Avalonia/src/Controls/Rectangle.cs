@@ -22,7 +22,7 @@ public partial class RectangleWrapper
         if (_fill != fill)
         {
             _fill = fill;
-            _output.Fill = fill.Value;
+            _output.SetValue(Rectangle.FillProperty, fill.Value);
         }
     }
 }

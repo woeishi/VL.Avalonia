@@ -11,7 +11,7 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
         {
             var template =
 $@"
-    [Fragment(Order = -2)]
+    [Fragment(Order = -5)]
     public void SetContent(Optional<object?> content)
     {{
         if (_content != content)
@@ -19,10 +19,6 @@ $@"
             _content = content;
             _output.Content = _content.HasValue ? _content.Value : null;
 
-            // WARNING: 
-            // NEXT LINE IS 
-            // BUG IN HOSTING
-            _output.UpdateLayout();
         }}
     }}
 ";

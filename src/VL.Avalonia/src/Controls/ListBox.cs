@@ -15,7 +15,7 @@ namespace VL.Avalonia.Controls;
 
 /// <summary>
 /// ListBox node, using <see href="https://docs.avaloniaui.net/docs/reference/controls/listbox">ListBox</see>.
-/// WNING: Multiselect not  implemented yet.
+/// WARNING: Multiselect not  implemented yet.
 /// </summary>
 /// <typeparam name="T"></typeparam>
 [ProcessNode(Name = "ListBox")]
