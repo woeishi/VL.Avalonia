@@ -1,14 +1,12 @@
-﻿using Avalonia;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using System.Reactive;
-using System.Reactive.Linq;
 using VL.Avalonia.Attributes;
+using VL.Avalonia.Helpers;
 using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Collections;
 using VL.Lib.Reactive;
-using VL.Model;
 using static VL.Avalonia.Styles;
 
 namespace VL.Avalonia.Controls;
@@ -30,22 +28,7 @@ public partial class MenuSpectralWrapper
         if (_items != items)
         {
             _items = items;
-            _itemsChannel.OnNext(_items);
-        }
-    }
-
-    protected Optional<IChannel<Unit>> _commandChannel;
-    public void SetCommandChannel([Pin(Visibility = PinVisibility.Optional)] Optional<IChannel<Unit>> commandChannel)
-    {
-        if (_commandChannel != commandChannel)
-        {
-            _commandChannel = commandChannel;
-            if (_commandChannel.HasValue)
-            {
-                _output.Bind(MenuItem.CommandProperty, _commandChannel.Value as IObservable<object?>);
-                _output.GetObservable(MenuItem.CommandProperty)
-                    .Subscribe(value => _commandChannel.Value.OnNext(new Unit()));
-            }
+            _itemsChannel.OnNext(items);
         }
     }
 
@@ -63,6 +46,9 @@ public partial class MenuSpectralWrapper
     {
         _output.Bind(Menu.ItemsSourceProperty, _itemsChannel);
     }
+
+    [ImplementIsEnabled<Menu>]
+    protected Optional<bool> _isEnabled;
 }
 
 [ProcessNode(Name = "Menu")]
@@ -91,22 +77,24 @@ public partial class MenuItemSpectralWrapper
         if (_items != items)
         {
             _items = items;
-            _itemsChannel.OnNext(_items);
+            _itemsChannel.OnNext(items);
         }
     }
 
+    protected ChannelCommand<Unit> _command = new((s, a) => new Unit());
     protected Optional<IChannel<Unit>> _commandChannel;
     public void SetCommandChannel(Optional<IChannel<Unit>> commandChannel)
     {
         if (_commandChannel != commandChannel)
         {
             _commandChannel = commandChannel;
+            _output.Command = _command;
+
             if (_commandChannel.HasValue)
             {
-                _output.Bind(MenuItem.CommandProperty, (IObservable<object?>)_commandChannel.Value);
-                _output.GetObservable(MenuItem.CommandProperty)
-                    .Subscribe(value => _commandChannel.Value.OnNext(new Unit()));
+                _command.Channel = commandChannel.Value;
             }
+
         }
     }
 
@@ -130,9 +118,6 @@ public partial class MenuItemSpectralWrapper
         }
     }
 
-
-
-
     protected Optional<IDataTemplate> _itemTemplate;
     [Fragment(IsHidden = true)]
     public void SetDataTemplate([Pin(Visibility = Model.PinVisibility.Optional)] Optional<IDataTemplate> itemTemplate)
@@ -148,6 +133,10 @@ public partial class MenuItemSpectralWrapper
     {
         _output.Bind(MenuItem.ItemsSourceProperty, _itemsChannel);
     }
+
+    [ImplementIsEnabled<MenuItem>]
+    protected Optional<bool> _isEnabled;
+
 }
 
 [ProcessNode(Name = "MenuItem")]

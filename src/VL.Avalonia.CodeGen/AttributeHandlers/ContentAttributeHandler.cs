@@ -19,10 +19,6 @@ $@"
             _content = content;
             _output.Content = _content.HasValue ? _content.Value : null;
 
-            // WARNING: 
-            // NEXT LINE IS 
-            // BUG IN HOSTING
-            _output.UpdateLayout();
         }}
     }}
 ";
