@@ -1,6 +1,8 @@
 ﻿using Avalonia.Controls;
 using VL.Avalonia.Attributes;
+using VL.Core;
 using VL.Core.Import;
+using static VL.Avalonia.Styles;
 
 namespace VL.Avalonia.Controls;
 
@@ -12,4 +14,7 @@ public partial class SeparatorWrapper
 {
     [ImplementOutput]
     private Separator _output = new Separator();
+
+    [ImplementStyle]
+    private Optional<IAvaloniaStyle> _style;
 }
