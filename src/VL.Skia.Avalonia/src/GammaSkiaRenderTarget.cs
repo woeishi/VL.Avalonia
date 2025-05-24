@@ -1,6 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Platform;
 using Avalonia.Skia.Helpers;
+using SkiaSharp;
+using System.Runtime.CompilerServices;
 
 namespace VL.Skia.Avalonia
 {
@@ -15,7 +17,16 @@ namespace VL.Skia.Avalonia
             this.callerInfo = callerInfo;
         }
 
-        public bool IsCorrupted { get; }
+        public bool IsCorrupted
+        {
+            get
+            {
+                return IsDiposed(callerInfo.Canvas);
+
+                [UnsafeAccessor(UnsafeAccessorKind.Method, Name = "get_IsDisposed")]
+                static extern bool IsDiposed(SKNativeObject obj);
+            }
+        }
 
         public IDrawingContextImpl CreateDrawingContext(bool useScaledDrawing)
         {
