@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G6QQf3geatIOKNgbn0y1lB" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="SmJxWs4RtIqODGQE11ePQh" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
   <NugetDependency Id="VgH6qsmFRcKPn1TU4MUtNp" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
   <Patch Id="ByJYRoNuXytMKx0VmtiA8Z">
     <Canvas Id="OSq9MxHF0ssO5kOcXxGsU2" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
@@ -356,15 +356,6 @@
             <Pin Id="ByNufKfp4d8O8rfs7vvwNo" Name="Height" Kind="InputPin" />
             <Pin Id="EXun3MCIlZMLWaNo5BzRze" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="Q7vPqA4hsIrNuNveYnUdYH" Comment="Height" Bounds="666,421,35,15" ShowValueBox="true" isIOBox="true" Value="32">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Float64" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:precision p:Type="Int32">2</p:precision>
-              <p:stepsize p:Type="Single">1</p:stepsize>
-            </p:ValueBoxSettings>
-          </Pad>
           <Node Bounds="1097,460,55,19" Id="JX0r0PtE2loN3XZdzNguCd">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -392,30 +383,14 @@
               <Choice Kind="ImmutableTypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="998,460,60,19" Id="PuMj9pwW9ipQFPdGAuiyhx">
-            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Styles" NeedsToBeDirectParent="true">
-                <p:OuterCategoryReference Kind="Category" Name="Avalonia" NeedsToBeDirectParent="true" />
-              </CategoryReference>
-              <Choice Kind="OperationCallFlag" Name="SetHeight" />
-            </p:NodeReference>
-            <Pin Id="Vm8lHLWp6zGLva6wfqjWyi" Name="Style" Kind="InputPin" />
-            <Pin Id="SBBBIikiF47LwwezJsLl3x" Name="Height" Kind="InputPin" />
-            <Pin Id="QLkfYiTuwOdPbGlUQBGLyS" Name="Result" Kind="OutputPin" />
-          </Node>
-          <Pad Id="V0OV9u4Hd8HLeXh8JHLlRz" Comment="Height" Bounds="1005,421,35,15" ShowValueBox="true" isIOBox="true" Value="0">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Float64" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:precision p:Type="Int32">2</p:precision>
-              <p:stepsize p:Type="Single">1</p:stepsize>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="TFkG4M6FRY3N0554LIy0oK" Comment="Spacing" Bounds="1964,540,35,15" ShowValueBox="true" isIOBox="true" Value="12">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Og8Te6FYrRpQVBXSKBqxMp" Comment="Height" Bounds="683,450,35,15" ShowValueBox="true" isIOBox="true" Value="32">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
         </Canvas>
@@ -464,15 +439,14 @@
         <Link Id="UJXwqBrgxWkNaEhxDFtnYX" Ids="IUeRZ1lpzFfLbukY3Xgkwo,LkjbsrCzHreMFTnUj7pZOx" />
         <Link Id="I85CP8fGdLqPShXOEACvNA" Ids="LanNcpDopJlNNLNCu0uPlw,DjKyK0NSX0bOiTC14ckEfk" />
         <Link Id="QICOS3egbJwQKIPU69HWHA" Ids="PmLXFbaZ2h6MlFuCDpQ3Is,PV2N0R56mS0N95IA6n84Gv" />
-        <Link Id="JwxrWjfytGjPq9Nxb0Wcr9" Ids="Q7vPqA4hsIrNuNveYnUdYH,ByNufKfp4d8O8rfs7vvwNo" />
         <Link Id="PmTmXsebsNmMUdNNM0CaIq" Ids="HiBIC469AIaMuWiwxqQFk8,R127vGDjndLQOittZVG5me" />
         <Link Id="LigCq51YKVfMl3Ww5LmK38" Ids="N21FofJ3ITON9ep4RCgm5X,IekF6W2OFMeOu6kqYlB91v" />
-        <Link Id="M5h67Nlao1qLMYrRS2aAwT" Ids="V0OV9u4Hd8HLeXh8JHLlRz,SBBBIikiF47LwwezJsLl3x" />
         <Link Id="V0EwV5BvNWGOneyroxMwnN" Ids="FwuWsQxbnB6LtS4yy8hnWi,SNmSiyQyBjdM3XW7w7yI5q" />
         <Link Id="Arv7W1WEBXQOxR4NJjAHkf" Ids="MlAEn4O0BJYN11nIQcTND7,VCRq0g1SqcZOm1AoMY57pO" />
         <Link Id="MwszdSzMDMIPT0RgNQNFs8" Ids="TFkG4M6FRY3N0554LIy0oK,MAdMzqxbJq8L3Nb7NskJs3" />
         <Link Id="QpxwtUGUNnjN7eQvlZJUdl" Ids="EXun3MCIlZMLWaNo5BzRze,RzZoiJVJ5YuP5PVbR3KwZw" />
         <Link Id="Gxn2JcLwBmeK9fwepXTGS9" Ids="EXun3MCIlZMLWaNo5BzRze,DiGhnC59y5PPeFDyG7Nj3E" />
+        <Link Id="CB7rofP4wkHMQ18IDPH0cN" Ids="Og8Te6FYrRpQVBXSKBqxMp,ByNufKfp4d8O8rfs7vvwNo" />
       </Patch>
     </Node>
   </Patch>

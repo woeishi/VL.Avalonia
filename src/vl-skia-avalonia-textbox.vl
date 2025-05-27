@@ -15,12 +15,12 @@
       </p:NodeReference>
       <Patch Id="Cy1oXODJXg8PGXszlF4ybn">
         <Canvas Id="Eot7mkqid0qOb5xMkgaEHF" CanvasType="Group">
-          <Node Bounds="173,1111,165,19" Id="OWakTky1M7bOvqq5FIb9Mz">
+          <Node Bounds="178,1321,165,19" Id="OWakTky1M7bOvqq5FIb9Mz">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Tm6S3xdi7MTL3QnB1IJ4iX" Name="Bounds" Kind="InputPin" DefaultValue="-2409, 200, 812, 839" IsHidden="true" />
+            <Pin Id="Tm6S3xdi7MTL3QnB1IJ4iX" Name="Bounds" Kind="InputPin" DefaultValue="-2409, 200, 936, 839" IsHidden="true" />
             <Pin Id="LWpad0IR1sTLNn6CDwdcj2" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="UalAAbZuONxQT1LrGhKsCw" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="FCf5qQu2kvfLYc02HoWcmf" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -40,7 +40,7 @@
             <Pin Id="OcfgBISSIWCQLpWmfHtajE" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="ICtEcPl5cRXPUmgRGeojjQ" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="173,1060,79,19" Id="PSp6hoDO03gQLt97D6UGH3">
+          <Node Bounds="178,1270,79,19" Id="PSp6hoDO03gQLt97D6UGH3">
             <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Skia.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="AvaloniaLayer" />
@@ -50,7 +50,7 @@
             <Pin Id="QjtQxuKLqoqNGEZoZ6V0cH" Name="Requested Theme Variant" Kind="InputPin" />
             <Pin Id="AMW710yJpKcOa26nPDla80" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="173,940,145,19" Id="TVl9RV5YjwmLsXVypSuXSt">
+          <Node Bounds="178,1150,145,19" Id="TVl9RV5YjwmLsXVypSuXSt">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StackPanel" />
@@ -79,7 +79,7 @@
             <Pin Id="UbhRQPqBLcYNnoxLYHGeXC" Name="Text Alignment" Kind="InputPin" DefaultValue="Left" />
             <Pin Id="VD4ssMuGwJrK9Z9287dUyP" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="224,1020,69,19" Id="THwQJB6Wc9DQavYvQlWyG5">
+          <Node Bounds="229,1230,69,19" Id="THwQJB6Wc9DQavYvQlWyG5">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Themes.Variants" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="DarkTheme" />
@@ -136,7 +136,7 @@
             <Pin Id="G9edoLijoSfOltDUo9aVAk" Name="Line Height" Kind="InputPin" DefaultValue="12" />
             <Pin Id="As2QWL05EnxMYxRHDFah4C" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="AQOW84IqFAGQa2LUA6DvMc" Comment="Line Height" Bounds="538,720,35,15" ShowValueBox="true" isIOBox="true" Value="17">
+          <Pad Id="AQOW84IqFAGQa2LUA6DvMc" Comment="Line Height" Bounds="538,720,35,15" ShowValueBox="true" isIOBox="true" Value="23">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -197,7 +197,7 @@
             <Pin Id="VM4bOIyjoGqOR9yD9Qc3aF" Name="Text" Kind="InputPin" DefaultValue="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&#xD;&#xA;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&#xD;&#xA;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&#xD;&#xA;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&#xD;&#xA;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&#xD;&#xA;proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
             <Pin Id="QN2X2sQwkC5OgpucvTHAP2" Name="Font Family" Kind="InputPin" />
             <Pin Id="VPxnrtsLZUIOBP9aaqwdF7" Name="Font Size" Kind="InputPin" />
-            <Pin Id="RFWo3HMsU0lM4XsVXtsRsI" Name="Font Style" Kind="InputPin" DefaultValue="Normal" />
+            <Pin Id="RFWo3HMsU0lM4XsVXtsRsI" Name="Font Style" Kind="InputPin" DefaultValue="Italic" />
             <Pin Id="UoqMpCCDjHIPEDlc69bxKl" Name="Font Weight" Kind="InputPin" />
             <Pin Id="N9tyoFFN82BQMZwpcWjMHN" Name="Text Alignment" Kind="InputPin" />
             <Pin Id="MXVx2bgFBX8NfVJBIcS0mo" Name="Output" Kind="OutputPin" />
@@ -235,7 +235,7 @@
             <Pin Id="Oq9OMl7PGO2MxuhusZ7W6j" Name="Text Alignment" Kind="InputPin" DefaultValue="Right" />
             <Pin Id="C02wrxhj01PMtVTCxxT3ty" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1041,909,84,19" Id="IW0sJEKKW1MLGExZsanh2d">
+          <Node Bounds="1056,719,84,19" Id="IW0sJEKKW1MLGExZsanh2d">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="Styles" NeedsToBeDirectParent="true">
@@ -247,7 +247,7 @@
             <Pin Id="V0gQy8eWvNuOb21gM5axpG" Name="Line Spacing" Kind="InputPin" />
             <Pin Id="Pb30oYmISDfMUPBHpMUxMR" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="Cxz3WF5VVr7LGSfjXhnXEP" Comment="Line Spacing" Bounds="1122,888,35,15" ShowValueBox="true" isIOBox="true" Value="22">
+          <Pad Id="Cxz3WF5VVr7LGSfjXhnXEP" Comment="Line Spacing" Bounds="1137,698,35,15" ShowValueBox="true" isIOBox="true" Value="22">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -256,7 +256,7 @@
               <p:stepsize p:Type="Single">1</p:stepsize>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1007,1110,125,19" Id="Cf5yNYusAreQImV13uxP5W">
+          <Node Bounds="1022,920,125,19" Id="Cf5yNYusAreQImV13uxP5W">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TextBlock" />
@@ -265,12 +265,12 @@
             <Pin Id="MJkwNuOdmNMM3sAEkJsXCm" Name="Text" Kind="InputPin" DefaultValue="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
             <Pin Id="H2GLqMcZYF5LEEc6yYqbnU" Name="Font Family" Kind="InputPin" />
             <Pin Id="ISCGUHh5ZrMLJ0aNwu05OA" Name="Font Size" Kind="InputPin" />
-            <Pin Id="Nknfb0UExK7LbIQ0boXj1P" Name="Font Style" Kind="InputPin" DefaultValue="Normal" />
+            <Pin Id="Nknfb0UExK7LbIQ0boXj1P" Name="Font Style" Kind="InputPin" DefaultValue="Italic" />
             <Pin Id="HjWiQen52KUO9eBorkwogN" Name="Font Weight" Kind="InputPin" />
             <Pin Id="TfIJ8KumKmBNOaKDPAuL5Y" Name="Text Alignment" Kind="InputPin" />
             <Pin Id="B1ScHOI3qgcOFvpo1TJaOy" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="Ad3rmjtBNG0OQDMc7nMtgG" Bounds="1140,924,203,19" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Non reactive for some reason">
+          <Pad Id="Ad3rmjtBNG0OQDMc7nMtgG" Bounds="1155,734,203,19" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Non reactive for some reason">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -279,7 +279,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1099,810,73,19" Id="QeF3H97M374N51nED7SGdY">
+          <Node Bounds="1114,620,73,19" Id="QeF3H97M374N51nED7SGdY">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="Styles" NeedsToBeDirectParent="true">
@@ -291,7 +291,7 @@
             <Pin Id="Sfi30acINJfORkjSH3A4aB" Name="Max Lines" Kind="InputPin" DefaultValue="4" />
             <Pin Id="L5ISjKMTwkiPjHnrnmCC8z" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1212,720,97,19" Id="D13XhCn37EnPe6FXSkXtFA">
+          <Node Bounds="1227,530,97,19" Id="D13XhCn37EnPe6FXSkXtFA">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="Styles" NeedsToBeDirectParent="true">
@@ -303,7 +303,7 @@
             <Pin Id="GG9PRGhNkY5PDDkLeh2Uu2" Name="Text Alignment" Kind="InputPin" DefaultValue="Right" />
             <Pin Id="Q8GjFv2tt0iNMda7C2pHAz" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1037,1030,94,19" Id="NnR25fwHf8XOR6sIbaene9">
+          <Node Bounds="1052,840,94,19" Id="NnR25fwHf8XOR6sIbaene9">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="Styles" NeedsToBeDirectParent="true">
@@ -397,7 +397,6 @@
         <Link Id="KvQc9L6qFELLpxP9XAEa07" Ids="AEHanIniqzjPwT0s9jlFwS,Rjf5LCJS8aNOhv47vI7CKA" />
         <Link Id="SmgJieWQKQdMVsVnMcoZP1" Ids="MnELBus24WHLrfEwjqxnSL,Ap6ea19GsVAN2ZY8AOSpIh" />
         <Link Id="GJCjHAPY0ELNZo0ySxDNr1" Ids="N01Nb8kOZeRQXFovdc9eme,Vbhfxcv0rY3QF0idne7dsG" />
-        <Link Id="LSiTeC8HeveMtKOtRKkQvg" Ids="OukeuNWTrDyL00B9UZavIp,FM53HCILJUqNcvr02Ja2Pk" />
       </Patch>
     </Node>
   </Patch>

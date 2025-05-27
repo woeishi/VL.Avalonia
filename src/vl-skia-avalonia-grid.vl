@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="JJrPR27hcI9QHTrBCmODt6" LanguageVersion="2025.7.0-0351-gb3f6445d75" Version="0.128">
-  <NugetDependency Id="Ot7vXDEqh1dN0UsIHsH4U7" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="JJrPR27hcI9QHTrBCmODt6" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
+  <NugetDependency Id="Ot7vXDEqh1dN0UsIHsH4U7" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
   <Patch Id="LPQUwJLLlOYLXskhc7Jdh3">
     <Canvas Id="IHBvRxhWlXkM79FL00Nths" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -92,7 +92,7 @@
                   <p:OuterCategoryReference Kind="Category" Name="Avalonia" NeedsToBeDirectParent="true" />
                 </p:OuterCategoryReference>
               </CategoryReference>
-              <Choice Kind="ProcessAppFlag" Name="Grid" />
+              <Choice Kind="ProcessAppFlag" Name="Grid (Spectral)" />
             </p:NodeReference>
             <Pin Id="Rt7EgnJjwUVMcfb4l3wYdX" Name="Children" Kind="InputPin" />
             <Pin Id="T0ONOXEnYsfLIqcsa61xMm" Name="Style" Kind="InputPin" />
@@ -168,9 +168,10 @@
             </p:NodeReference>
             <Pin Id="DgnJU1hWWK8Nm0HjlFkPlG" Name="Content" Kind="InputPin" />
             <Pin Id="E3oFHeQMbsYQBjWoRqlq84" Name="Style" Kind="InputPin" />
-            <Pin Id="NkerTPuXazALpk4DGEFc04" Name="Channel" Kind="InputPin" />
-            <Pin Id="Dteer0m1Eh9LOQVBks2JLh" Name="Mode" Kind="InputPin" />
             <Pin Id="PlTZab5NOulNXKrc3N08FE" Name="Output" Kind="OutputPin" />
+            <Pin Id="Dz2BGSXcNDJO9rxVAh6iWu" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="VsXaBNBKtyaOSuKciPgSjc" Name="Click Mode" Kind="InputPin" />
+            <Pin Id="L92ALDi1PJLNndSXcPzHZq" Name="Is Enabled" Kind="InputPin" />
           </Node>
           <Pad Id="N2QQr01rkasPuLgAl2mCPk" Comment="Content" Bounds="23,210,35,15" ShowValueBox="true" isIOBox="true" Value="sup">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -320,5 +321,5 @@
   </Patch>
   <DocumentDependency Id="Fh1j8VdlALUMY5MK3d0ALL" Location="./VL.Avalonia/VL.Avalonia.vl" />
   <DocumentDependency Id="NUfDrozBb7kM5fsqv20MvE" Location="./VL.Skia.Avalonia/VL.Skia.Avalonia.vl" />
-  <NugetDependency Id="K4zkoqpX8wdMMxxmzuITi1" Location="VL.Skia" Version="2025.7.0-0351-gb3f6445d75" />
+  <NugetDependency Id="K4zkoqpX8wdMMxxmzuITi1" Location="VL.Skia" Version="2025.7.0-0357-gd997588cb6" />
 </Document>

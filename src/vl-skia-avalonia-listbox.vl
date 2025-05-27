@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="LuSanJLz6bZQZfZ0nHza9m" LanguageVersion="2025.7.0-0351-gb3f6445d75" Version="0.128">
-  <NugetDependency Id="Ot7vXDEqh1dN0UsIHsH4U7" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="LuSanJLz6bZQZfZ0nHza9m" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
+  <NugetDependency Id="Ot7vXDEqh1dN0UsIHsH4U7" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
   <Patch Id="LPQUwJLLlOYLXskhc7Jdh3">
     <Canvas Id="IHBvRxhWlXkM79FL00Nths" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -225,9 +225,10 @@
                 </p:NodeReference>
                 <Pin Id="Gg7IDt7t8QSNKcPPKA3IfE" Name="Content" Kind="InputPin" />
                 <Pin Id="CUjZf1VOytaLNjV1TFdudZ" Name="Style" Kind="InputPin" />
-                <Pin Id="A3Isdxx4KPRMiwBE0cupej" Name="Channel" Kind="InputPin" />
-                <Pin Id="L9ccR6geynBPapGONqdzNd" Name="Mode" Kind="InputPin" />
                 <Pin Id="LfmZxBDQii4LAR4sOhPjq8" Name="Output" Kind="OutputPin" />
+                <Pin Id="U6fP1nmzSidPTJ24YGBd77" Name="Command Channel" Kind="InputPin" />
+                <Pin Id="GmVWo1gRYESMJ31ePdssBe" Name="Click Mode" Kind="InputPin" />
+                <Pin Id="V6NvaPbRRbxQSiH8mTLGM2" Name="Is Enabled" Kind="InputPin" />
               </Node>
             </Patch>
           </Node>
@@ -307,9 +308,10 @@
                     </p:NodeReference>
                     <Pin Id="N8u4t29vSExMaMQH9HUQXO" Name="Content" Kind="InputPin" />
                     <Pin Id="SrDg2IOGMclNXbouLl5eLu" Name="Style" Kind="InputPin" />
-                    <Pin Id="KyKRkIaCDh0MQ0YGT6wJmt" Name="Channel" Kind="InputPin" />
-                    <Pin Id="Fzugt64wWctPwn3ROqp3Pm" Name="Mode" Kind="InputPin" />
                     <Pin Id="H34RG9H8pXiLI1jKgwZkoL" Name="Output" Kind="OutputPin" />
+                    <Pin Id="QoTBkOVZRTfMNGm9YuwsRl" Name="Command Channel" Kind="InputPin" />
+                    <Pin Id="DJOFnsN3FN4LdSpvirQYCH" Name="Click Mode" Kind="InputPin" />
+                    <Pin Id="R0xbvCZ6ig8PvHiKE5JWzW" Name="Is Enabled" Kind="InputPin" />
                   </Node>
                 </Patch>
               </Node>
@@ -434,6 +436,7 @@
               <Choice Kind="TypeFlag" Name="ScrollBarVisibility" />
             </p:TypeAnnotation>
           </Pad>
+          <Pad Id="Co9mqlBMhZsNjGfeiNjWvM" Comment="" Bounds="717,941,35,15" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="E4nQOcIT0zvOYgkhprkSgE" Name="Create" />
         <Patch Id="Gt5OjD78KcqMMXj2SHrzkR" Name="Update" />
@@ -493,10 +496,11 @@
         <Link Id="JMG4Jc1Vk27NGXtBuStzX6" Ids="SCHiL1D5auzM3KS6Y1wAC3,DVSAgqDhck2LAE4tY1Nz6H" />
         <Link Id="OPa7nVGLTBYLOqLijMid8T" Ids="Jx0qopzmBmqLTVupyLPqCq,N8u4t29vSExMaMQH9HUQXO" />
         <Link Id="JgpjJaeGUPlLdyOSiPiroK" Ids="H34RG9H8pXiLI1jKgwZkoL,HaXYxxT5hNbNCxGZRFkkML" />
+        <Link Id="Gr91DaxUA5QL3oFXLjAXj3" Ids="UzNn8CUP3mwNaGAlHkCzoG,Co9mqlBMhZsNjGfeiNjWvM" />
       </Patch>
     </Node>
   </Patch>
   <DocumentDependency Id="Fh1j8VdlALUMY5MK3d0ALL" Location="./VL.Avalonia/VL.Avalonia.vl" />
   <DocumentDependency Id="NUfDrozBb7kM5fsqv20MvE" Location="./VL.Skia.Avalonia/VL.Skia.Avalonia.vl" />
-  <NugetDependency Id="K4zkoqpX8wdMMxxmzuITi1" Location="VL.Skia" Version="2025.7.0-0351-gb3f6445d75" />
+  <NugetDependency Id="K4zkoqpX8wdMMxxmzuITi1" Location="VL.Skia" Version="2025.7.0-0357-gd997588cb6" />
 </Document>
