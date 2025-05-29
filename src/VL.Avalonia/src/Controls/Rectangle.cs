@@ -11,12 +11,15 @@ namespace VL.Avalonia.Controls;
 public partial class RectangleWrapper
 {
     [ImplementOutput]
-    private Rectangle _output = new Rectangle();
+    protected Rectangle _output = new Rectangle();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
 
-    private Optional<IBrush> _fill;
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
+    protected Optional<IBrush> _fill;
     public void SetFill(Optional<IBrush> fill)
     {
         if (_fill != fill)

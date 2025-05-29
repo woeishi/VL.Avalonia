@@ -17,6 +17,9 @@ public partial class SliderWrapper
     [ImplementStyle]
     private Optional<IAvaloniaStyle> _style;
 
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
     // Wonder how to Observable to channel
     //private IChannel<float>? _valueChannel;
     //public IChannel<float>? ValueChannel

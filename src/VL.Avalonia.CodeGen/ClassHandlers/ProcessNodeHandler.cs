@@ -29,6 +29,9 @@ public class ProcessNodeHandler : IClassHandler
             sb.AppendLine(usingStatement.ToString());
         }
 
+        // prolly need to be checked if defined..
+        sb.AppendLine("using VL.Avalonia.Helpers;");
+
         var usingSection = sb.ToString().Trim();
 
         // 2. Namespace logic

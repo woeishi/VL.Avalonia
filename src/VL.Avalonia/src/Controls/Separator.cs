@@ -13,8 +13,11 @@ namespace VL.Avalonia.Controls;
 public partial class SeparatorWrapper
 {
     [ImplementOutput]
-    private Separator _output = new Separator();
+    protected Separator _output = new Separator();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
+
+    [ImplementClasses]
+    protected Optional<string> _classes;
 }

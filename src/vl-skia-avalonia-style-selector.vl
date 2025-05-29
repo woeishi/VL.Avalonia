@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="G6QQf3geatIOKNgbn0y1lB" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
+  <NugetDependency Id="VgH6qsmFRcKPn1TU4MUtNp" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
+  <Patch Id="ByJYRoNuXytMKx0VmtiA8Z">
+    <Canvas Id="OSq9MxHF0ssO5kOcXxGsU2" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="SxebWPGj0dDPZmajlJuMVI">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Cy1oXODJXg8PGXszlF4ybn">
+        <Canvas Id="Eot7mkqid0qOb5xMkgaEHF" CanvasType="Group">
+          <Node Bounds="174,1050,165,19" Id="OWakTky1M7bOvqq5FIb9Mz">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="Tm6S3xdi7MTL3QnB1IJ4iX" Name="Bounds" Kind="InputPin" DefaultValue="-786, 484, 1007, 839" IsHidden="true" />
+            <Pin Id="LWpad0IR1sTLNn6CDwdcj2" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UalAAbZuONxQT1LrGhKsCw" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FCf5qQu2kvfLYc02HoWcmf" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DO1o4DuTNdrOSx2gBwDP7M" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KZZgWkli1uXOTkuC1kmcIT" Name="Input" Kind="InputPin" />
+            <Pin Id="Phl0syqifnJLlMDB3oeBGI" Name="Title" Kind="InputPin" />
+            <Pin Id="ChCWx1tnreYOI5jt1kAEOj" Name="Color" Kind="InputPin" />
+            <Pin Id="HlQ1NdqGemPOW7b5W6Utwm" Name="Clear" Kind="InputPin" />
+            <Pin Id="OUrmiwZYO0kNtM81uzaQ2i" Name="Space" Kind="InputPin" />
+            <Pin Id="Va2XDxvAWUFN1MJmgG1v5K" Name="Show Cursor" Kind="InputPin" />
+            <Pin Id="IPQFOlTso3mOkxykqEkQjP" Name="VSync" Kind="InputPin" />
+            <Pin Id="MFKegt3RvFLMcJsRJPKifa" Name="Commands" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KsFdZXu5oHFQBg0cUI4OLX" Name="Enable Keyboard Shortcuts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FbrByCDzoqdMjEivwzlJJj" Name="Enabled" Kind="InputPin" />
+            <Pin Id="VvzUafoJjggLAszdn4D6fo" Name="Form Bounds Notifications" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="AA1jsaZBhQUMvXTZWZiccx" Name="Form" Kind="OutputPin" />
+            <Pin Id="OcfgBISSIWCQLpWmfHtajE" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="ICtEcPl5cRXPUmgRGeojjQ" Name="Render Time" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="174,879,63,19" Id="L7exugm9DgENYyeb5vAeeT">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="DockPanel" />
+            </p:NodeReference>
+            <Pin Id="Nb1XkwILgdfLgfyHX14To3" Name="Children" Kind="InputPin" />
+            <Pin Id="OrDfCpErwseP41JhRNrNZA" Name="Children 2" Kind="InputPin" />
+            <Pin Id="T1UOSDnwNhKPHV73sBz5zB" Name="Style" Kind="InputPin" />
+            <Pin Id="SIU0ZN2PcFfLkeBeDazxhz" Name="Output" Kind="OutputPin" />
+            <Pin Id="VuPpv5oEXSLPzyjgEaLjAi" Name="Classes" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="174,999,79,19" Id="PSp6hoDO03gQLt97D6UGH3">
+            <p:NodeReference LastCategoryFullName="Avalonia" LastDependency="VL.Skia.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="AvaloniaLayer" />
+            </p:NodeReference>
+            <Pin Id="MDBg6IRinE4MQq1ADnI5pj" Name="On Setup Application" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Ik1nsbnoRj2LSClzzeQFeq" Name="Content" Kind="InputPin" />
+            <Pin Id="QjtQxuKLqoqNGEZoZ6V0cH" Name="Requested Theme Variant" Kind="InputPin" />
+            <Pin Id="AMW710yJpKcOa26nPDla80" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="248,939,69,19" Id="QztrJfQuE49LWL5AShwfHU">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Themes.Variants" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="DarkTheme" />
+            </p:NodeReference>
+            <Pin Id="Asj5NtRdNb8QY8lyTyMPuv" Name="Dark Theme" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="287,820,65,19" Id="I8rjXEFoZZDPOEGZrGecnR">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Controls" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="Avalonia" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Avalonia" NeedsToBeDirectParent="true" />
+                </p:OuterCategoryReference>
+              </CategoryReference>
+              <Choice Kind="ProcessAppFlag" Name="Grid" />
+            </p:NodeReference>
+            <Pin Id="GzFFVlrgvbrOj7IhzAwzfG" Name="Children" Kind="InputPin" />
+            <Pin Id="CYe6WZNRj6NLlY3oXpIFBO" Name="Style" Kind="InputPin" />
+            <Pin Id="C78uo9e0eA3OgHhKjlCSO2" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="SD4eAEBQSQWQN1lyFyJnKs" Name="Column Definitions" Kind="InputPin" />
+            <Pin Id="IBWASuMW18dM5gSSh5vRjZ" Name="Row Definitions" Kind="InputPin" />
+            <Pin Id="PgIEJyiB4mjOQV9AT11yDC" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="174,820,77,19" Id="A7xBX9VvpM8NRWO7BLQnUZ">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="DockProperty" />
+            </p:NodeReference>
+            <Pin Id="FKjewmrsOe6Ps4jUvb2nqP" Name="Input" Kind="InputPin" />
+            <Pin Id="MBdsUdCFpVuNdEEpoB2m6Y" Name="Dock" Kind="InputPin" DefaultValue="Top" />
+            <Pin Id="SA5FVYbRvK6LRhHhWSu52s" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="183,289,205,19" Id="BYFsGj0p1J1PJ7Sf9RLhkc">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="RvILDvpPwdCPEsgiOhrVWi" Name="Items" Kind="InputPin" />
+            <Pin Id="M71gxJoa5CWNdgpH7Cldqg" Name="Items 2" Kind="InputPin" />
+            <Pin Id="IWUBahZP8u7N2wpGw2GMx2" Name="Items 3" Kind="InputPin" />
+            <Pin Id="TaCk4z5WX7aOC6MOsIpgWB" Name="Items 4" Kind="InputPin" />
+            <Pin Id="Ah7XPV4rNunPiUqXv7Apzw" Name="Items 5" Kind="InputPin" />
+            <Pin Id="Nqgs5jQrgViOr07NoalxcA" Name="Style" Kind="InputPin" />
+            <Pin Id="H9EJskDsNudQVnOqVKnLxa" Name="Classes" Kind="InputPin" />
+            <Pin Id="UC6RT55gqpJPwLXlZrmzgg" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="DZBZgtgdXtPPYuq4fmj8M7" Name="Header" Kind="InputPin" />
+            <Pin Id="DoykL8rHr9kP6Xt1imKjt9" Name="Output" Kind="OutputPin" />
+            <Pin Id="UhpJzzjjdHvN4plnuVaVY6" Name="Icon" Kind="InputPin" />
+            <Pin Id="OKumJqhSl6hNKAGdaWXLuY" Name="Is Enabled" Kind="InputPin" DefaultValue="True" />
+          </Node>
+          <Pad Id="HmBMNF4QbFCNJ9arVzZsUz" Comment="Header" Bounds="406,250,35,15" ShowValueBox="true" isIOBox="true" Value="File">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="F01KuszNjpFNcU0aXXvnHK" Comment="Header" Bounds="592,290,35,15" ShowValueBox="true" isIOBox="true" Value="Edit">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="-26,90,125,19" Id="N33pNxyff5zNfGnAeKguR9">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="RfhAnIA4TtZPIiYjZ8ZYdl" Name="Items" Kind="InputPin" />
+            <Pin Id="NO8LZOfXtmoNoy3e9epY9e" Name="Style" Kind="InputPin" />
+            <Pin Id="QVhqq3v0bk0LC6Ux6spGeI" Name="Classes" Kind="InputPin" />
+            <Pin Id="IKfflBZ9nJ5Lgu6DToZOUn" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="PaF9QubQuwDL6XAfMdjbbt" Name="Header" Kind="InputPin" />
+            <Pin Id="FiDvCGp3Ah4QZr6896Hg52" Name="Output" Kind="OutputPin" />
+            <Pin Id="NyNNt3Lgi6dOHiqP0DJ7Z9" Name="Icon" Kind="InputPin" />
+            <Pin Id="TdoYIBu6LyVOYjO1baulG6" Name="Is Enabled" Kind="InputPin" DefaultValue="True" />
+          </Node>
+          <Pad Id="LAR5whC7PBrNVO7pPnKaNG" Comment="Header" Bounds="36,-159,35,15" ShowValueBox="true" isIOBox="true" Value="Open">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="149,90,125,19" Id="RDI5UPhAgQ7LuH4GywSbhP">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="Np9ugkvyS6MPgQvcfqfd8s" Name="Items" Kind="InputPin" />
+            <Pin Id="P6Gi9pz745jLgz2IIv8fkZ" Name="Style" Kind="InputPin" />
+            <Pin Id="CkWUtSH0JFkOGqAJOXQUvH" Name="Classes" Kind="InputPin" />
+            <Pin Id="JjIskT8WugfPDwFuUBOSvS" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="AYWRn6F0TFSQRop01XM3oK" Name="Header" Kind="InputPin" />
+            <Pin Id="L1d69Wyi21DNts8PK8AvFe" Name="Output" Kind="OutputPin" />
+            <Pin Id="Hjn7GCfHWB5NQs1CLO20oe" Name="Icon" Kind="InputPin" />
+            <Pin Id="BpKVDB9wmFJMI3T4vjUm86" Name="Is Enabled" Kind="InputPin" DefaultValue="True" />
+          </Node>
+          <Pad Id="Egy0pChLLafMbzCOBZbwZL" Comment="Header" Bounds="211,50,35,15" ShowValueBox="true" isIOBox="true" Value="Save">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="348,80,105,19" Id="J1CVHuveH4VO6r3BvVFGVi">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="U62pwn6GhLNQcOe7gGAv4O" Name="Items" Kind="InputPin" />
+            <Pin Id="SZAHCTbuw4bPIhKepkLnWy" Name="Style" Kind="InputPin" />
+            <Pin Id="MjlRI9noCyQNZuNIZxUPl6" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DLvLUKiluBbL4QUTXifHPR" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="BRCY80kA2j9NMyqPm3nMe8" Name="Header" Kind="InputPin" />
+            <Pin Id="NEn6jJjimIHLPnNVdf56s0" Name="Output" Kind="OutputPin" />
+            <Pin Id="MjtGtnvHOtVO8Tv815JfJE" Name="Icon" Kind="InputPin" />
+            <Pin Id="RvvCMb3BC2gMa9Lr6vVKAo" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="Javfd60LrE6PHinYrf6T7e" Comment="Header" Bounds="410,40,35,15" ShowValueBox="true" isIOBox="true" Value="Save As...">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="523,260,45,19" Id="FcxvMY07lLkM7cpTyIKaSF">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Cons" />
+            </p:NodeReference>
+            <Pin Id="Eu3BjjtbYEcNoONEWUVScE" Name="Input" Kind="InputPin" />
+            <Pin Id="OPHda9lLly7Lcmf4gbpfMy" Name="Input 2" Kind="InputPin" />
+            <Pin Id="NjoXbBb6RUvNBmn8rVwcDG" Name="Result" Kind="OutputPin" />
+            <Pin Id="OqNutmp1crDMNPSp5WFRGk" Name="Input 3" Kind="InputPin" />
+          </Node>
+          <Node Bounds="523,160,105,19" Id="BmF6tOz9n5ZPiBplutLs5b">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="EMmW2kypnHeLsL6U4LVvJ5" Name="Items" Kind="InputPin" />
+            <Pin Id="OlqhX7cmTWzNjIy0YxWURN" Name="Style" Kind="InputPin" />
+            <Pin Id="HwByfU4NGPyOgQCiYFTcUf" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RX6RCTekRTJL47pAZmAuMp" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="T08J8FHckNoOsLcDnLp1L8" Name="Header" Kind="InputPin" />
+            <Pin Id="OxSkdCq1ksaOv44ljwiwUY" Name="Output" Kind="OutputPin" />
+            <Pin Id="TvSrTDV9hB3POE2BhERXGu" Name="Icon" Kind="InputPin" />
+            <Pin Id="M6uw9TAy32OPormIY7xUqB" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="GdifkOs5IBtNweQNkccOMy" Comment="Header" Bounds="585,120,35,15" ShowValueBox="true" isIOBox="true" Value="Copy">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="566,200,105,19" Id="NlPEc1tLVZULjWBFzuGVoV">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="RPBBign3SeHOF3kEQqQiG9" Name="Items" Kind="InputPin" />
+            <Pin Id="JHeeiJb5BtPPP3o8IJd1IU" Name="Style" Kind="InputPin" />
+            <Pin Id="PgFaybSCUgDOBVrBhtB7Ij" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Re0HqaqnJ5rOvEgjET5T0T" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="I9m7Bf85UMxMiZPVipIbmP" Name="Header" Kind="InputPin" />
+            <Pin Id="H1A4G5fyQFNOPcB7eU8WhF" Name="Output" Kind="OutputPin" />
+            <Pin Id="EPmKxDiIqYKQG7JvEAgzN1" Name="Icon" Kind="InputPin" />
+            <Pin Id="KJ7BcWL9ETQPvmTX60cdWk" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="GYB9pTrLgIaNXfIEgGI9y5" Comment="Header" Bounds="628,160,35,15" ShowValueBox="true" isIOBox="true" Value="Paste">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="601,230,105,19" Id="HCdcpwym7EsOpC5C83UvwF">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="OhGwrXOqsNFOuxEKOfILgC" Name="Items" Kind="InputPin" />
+            <Pin Id="FKIIlJpAvsvMTWSk2d3p7S" Name="Style" Kind="InputPin" />
+            <Pin Id="BZ09RZYJeIMMR1ssdH9UE8" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="D0viFI9XFsuP2esof54ngy" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="JdgBZBf57GjMYLzdgdnnAj" Name="Header" Kind="InputPin" />
+            <Pin Id="GmmLmQfUP4vNki5W5uChUT" Name="Output" Kind="OutputPin" />
+            <Pin Id="LGfgJEbMojiMlmBatOcaRP" Name="Icon" Kind="InputPin" />
+            <Pin Id="KoiRaYXTbIQMayXj8Z57jf" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="Q29WDj8y5X6NlV3JbMb0yi" Comment="Header" Bounds="663,190,35,15" ShowValueBox="true" isIOBox="true" Value="Undo">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="174,750,65,19" Id="PUuNcMe6i4mMTIV8hVZFcs">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Menu" />
+            </p:NodeReference>
+            <Pin Id="BecDwfriZjqM4Qqb1VAZQA" Name="Items" Kind="InputPin" />
+            <Pin Id="Ei1hU2KPLE8QIjaO8M14Ng" Name="Items 2" Kind="InputPin" />
+            <Pin Id="S9eVbXLLK7cMiT9qcR8xhE" Name="Style" Kind="InputPin" />
+            <Pin Id="M1UhfGz4f5MPzectupv4pd" Name="Output" Kind="OutputPin" />
+            <Pin Id="HTEKsBWx9bQOR9OjK3X6ky" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CNpKqhiiJXhNjI0TTPZxaT" Name="Item Template" Kind="InputPin" IsHidden="true" />
+            <Pin Id="D0t6Hj7xEwINfhfKTuB4Ol" Name="Is Enabled" Kind="InputPin" DefaultValue="True" />
+          </Node>
+          <Node Bounds="523,310,105,19" Id="TyJ72rYRkp1LT8vwBf7k6s">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem (Spectral)" />
+            </p:NodeReference>
+            <Pin Id="LkXuPUDmB57OrD0ZsoUaOR" Name="Items" Kind="InputPin" />
+            <Pin Id="EvPLJWHzOZqPjvonauvUBp" Name="Style" Kind="InputPin" />
+            <Pin Id="VQWfjaYCwAXLjqOpwMa8kU" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Eyhog1pQgBfLkMbJ87uy1C" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="IUwJcFLSu8LOkEqXvohh67" Name="Header" Kind="InputPin" />
+            <Pin Id="SAluliWAXOkQAudbfcRFXS" Name="Icon" Kind="InputPin" />
+            <Pin Id="J1pGP3R8nGqLsb7UO2YfE9" Name="Output" Kind="OutputPin" />
+            <Pin Id="TykjmFjPOtKNRLEQdVfbGk" Name="Is Enabled" Kind="InputPin" DefaultValue="False" />
+          </Node>
+          <Node Bounds="307,180,60,19" Id="Pi4tC3YV7BiMZqAvqEpiuy">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Separator" />
+            </p:NodeReference>
+            <Pin Id="Oo245roouixNbPmxXhF7De" Name="Output" Kind="OutputPin" />
+            <Pin Id="JGPHH6sRGUaPfG7Giwqjg8" Name="Style" Kind="InputPin" />
+            <Pin Id="V5WWtatzjKWLAwDKkSauFc" Name="Classes" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="523,40,145,19" Id="PheirB0GdM5OfdBtU9ZbOT">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="UoxfJCdLlbuP07tbROEb1c" Name="Items" Kind="InputPin" />
+            <Pin Id="SwMNsVwWmvlNQibPmVUcdr" Name="Items 2" Kind="InputPin" />
+            <Pin Id="G88AMa8SsXbLwL0sGNYtt0" Name="Items 3" Kind="InputPin" />
+            <Pin Id="KzRBgWIUdqPNmGnNtCBP88" Name="Style" Kind="InputPin" />
+            <Pin Id="UN3SUWrnjAFNqkHmYQzRqr" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DtM4BnYbJtwPAelcsV0EYf" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="ELlO0dmwsaJOYi6pU65twj" Name="Header" Kind="InputPin" />
+            <Pin Id="JfyMlJGa80JMwfvbBtML0o" Name="Output" Kind="OutputPin" />
+            <Pin Id="TJDQqKXQYTkLa29XAlvJKa" Name="Icon" Kind="InputPin" />
+            <Pin Id="CCs5J3Jr8yeLETAGd4cPAd" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="SxTeYLeSVlTPKGvy3dfMRt" Comment="Header" Bounds="585,10,66,15" ShowValueBox="true" isIOBox="true" Value="Advanced">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="500,-140,105,19" Id="F1NjDHx9qpiLxdoGeKi4kt">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="RWls4dGVpKhO93po3TFCc3" Name="Items" Kind="InputPin" />
+            <Pin Id="Pt1mrXt5DRwQFuTgcP2pBG" Name="Style" Kind="InputPin" />
+            <Pin Id="RxiZZ18dpXYNKYYf1zU6dj" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PL2AKd7m9o9NVd69YQTxoy" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="B5wZw7qAiIMQE5U7weohil" Name="Header" Kind="InputPin" />
+            <Pin Id="RU16fWPmroyPLmJxQqyabH" Name="Output" Kind="OutputPin" />
+            <Pin Id="UX0IaEdf5zvM8mDadLMwRr" Name="Icon" Kind="InputPin" />
+            <Pin Id="HwSwZ4j28GiPq0PIlkTD8V" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Node Bounds="545,-70,105,19" Id="MoZhMmEWZrnPTzzj1JtxSv">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MenuItem" />
+            </p:NodeReference>
+            <Pin Id="R67CpaLC4PrLtPld0a9b3d" Name="Items" Kind="InputPin" />
+            <Pin Id="AMEisf4hHniP3PtcuvxQm4" Name="Style" Kind="InputPin" />
+            <Pin Id="Hbx9Jpz4pCZNI1a1GX6NBs" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JVipQyHtymKOmLI1H3fmCA" Name="Command Channel" Kind="InputPin" />
+            <Pin Id="FHjI8sN5Re1P2vZol9fOgS" Name="Header" Kind="InputPin" />
+            <Pin Id="QnGYlf0dywsN12dyVuVvqa" Name="Output" Kind="OutputPin" />
+            <Pin Id="EeOcOrLuxM8NuafNyDYN9m" Name="Icon" Kind="InputPin" />
+            <Pin Id="OPzNSucuICjPBo2Mp68Bf4" Name="Is Enabled" Kind="InputPin" />
+          </Node>
+          <Pad Id="UItIGCzZ8XbLTwlManwLst" Comment="Header" Bounds="607,-110,35,15" ShowValueBox="true" isIOBox="true" Value="Duper">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="531,-20,60,19" Id="PPty66X4EeGPnw2keEX5FA">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Separator" />
+            </p:NodeReference>
+            <Pin Id="URvX4Z2lEfXNonf7y4La52" Name="Output" Kind="OutputPin" />
+            <Pin Id="LzfLkuGSFv9NaoYLtift0U" Name="Style" Kind="InputPin" />
+            <Pin Id="SBog397WZTpMSiusTdpsSP" Name="Classes" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="HbMRRwF44dVPl2BSdDrAf3" Comment="Header" Bounds="567,-239,35,15" ShowValueBox="true" isIOBox="true" Value="Super">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="G0du9RVHbr7OOmSLqrRvB1" Comment="On Data" Bounds="318,-130,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="14,-120,53,19" Id="RFEeX4uistgOLKmhnmuaV1">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Channel" />
+            </p:NodeReference>
+            <Pin Id="HfmvyinldHTN2la53e39N4" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OqgN4qXuYn8OYXND3Q9jwC" Name="Initial Value" Kind="InputPin" IsHidden="true" />
+            <Pin Id="I2nOQbcT1n6M9Lt4SlYsAf" Name="Value" Kind="InputPin" />
+            <Pin Id="NnPMPdjXZRnOozDnoMiamQ" Name="Output" Kind="OutputPin" />
+            <Pin Id="RkgrqtgniOsO2OwlYYlaGC" Name="Value" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="-100,-90,82,95" Id="TdN0QRxDnkfLdbLdqriY9F">
+            <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ForEach (Channel)" />
+            </p:NodeReference>
+            <Pin Id="MjD5OylQZV2N0IRTxPn9GA" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="D9cxTVlGPRnMtCA0Dk70Cu" Name="At Least Run Once" Kind="InputPin" DefaultValue="False" />
+            <Patch Id="J0XbYBe4QjUQVOjudQ5QaT" ManuallySortedPins="true">
+              <Patch Id="BrCkpJj4YaGMCo2LIeuiwh" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="OSCKYsI2r3BM6OTCLaCG3m" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="IzCc0wiqt42LEZzIkAhyxe" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="-88,-41,58,26" Id="Vl3yozeHHHxQLqdyro5BOf">
+                <p:NodeReference LastCategoryFullName="System.Console" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="WriteLine" />
+                </p:NodeReference>
+                <Pin Id="BMd7G0R19eoMZKKtQUFWJr" Name="Value" Kind="InputPin" />
+                <Pin Id="AdoIadpq3eLN4m4baIYIVd" Name="Apply" Kind="InputPin" DefaultValue="True" />
+              </Node>
+            </Patch>
+            <Pin Id="PhwLa2OQGbALs7j7EQwa2S" Name="Force Push" Kind="InputPin" IsHidden="true" />
+            <ControlPoint Id="VwdWzu1Z1UNN6slCQ4VM7J" Bounds="-39,-84" Alignment="Top" />
+          </Node>
+          <Pad Id="RHEHMdrtZoTPqppOFCKw6q" Comment="Is Enabled" Bounds="42,11,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Jvem7oOZ338Ln42LaT3Igl" Comment="Classes" Bounds="196,10,35,15" ShowValueBox="true" isIOBox="true" Value="Red">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="507,689,48,26" Id="SCVUbfphLsELDZU89n03wt">
+            <p:NodeReference LastCategoryFullName="Avalonia.Styling.Selectors" LastDependency="Avalonia.Base.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Avalonia.Styling.Selectors" />
+              <Choice Kind="OperationCallFlag" Name="Class" />
+            </p:NodeReference>
+            <Pin Id="UFR3QT46y8lPtkcXCRA7f3" Name="Input" Kind="StateInputPin" />
+            <Pin Id="NVhS2J47726MhLuhg9zvWP" Name="Name" Kind="InputPin" DefaultValue="Red" />
+            <Pin Id="QFnWGvb6TKVPM61sx0I2NZ" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="C8JzrbsQA2MPqg35nQ1hrq" Comment="Classes" Bounds="16,70,35,15" ShowValueBox="true" isIOBox="true" Value="Green">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="655,649,33,19" Id="IX14RHnHlt6P1012T7NYvi">
+            <p:NodeReference LastCategoryFullName="Avalonia.Media.Brushes" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Brushes" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Red" />
+            </p:NodeReference>
+            <Pin Id="JKVXC3nfuIMN9eKfNmyPD3" Name="Red" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="576,689,84,19" Id="GB8rx0GPIUvP4bivwPLj3j">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="SetBackground" />
+            </p:NodeReference>
+            <Pin Id="GxzKvTR2gUrPawZ3jDPfCe" Name="Style" Kind="InputPin" />
+            <Pin Id="K8gxYMalZzNLZUblotB2wq" Name="Brush" Kind="InputPin" />
+            <Pin Id="AWniFEwjr1lNiJyZuUBnUI" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="507,739,74,19" Id="IyhxOk1tVreOVRyG40fz8T">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styling" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="StyleSelector" />
+            </p:NodeReference>
+            <Pin Id="F67UcedPyxRMfyDeRmJYsI" Name="Selector" Kind="InputPin" />
+            <Pin Id="Vw7tdtqYL6XMKfitXeIuYN" Name="Input" Kind="InputPin" />
+            <Pin Id="D5r0rK5kQZKQESbQ6UyEiV" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="LmS5xev5KpDNfqFRdWJVhJ" Name="Selector Style" Kind="InputPin" />
+          </Node>
+          <Node Bounds="541,629,74,19" Id="LAFRtk7svxhQcP07Wazs9c">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styling" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="StyleSelector (String)" />
+            </p:NodeReference>
+            <Pin Id="VUvT071rBZdLJiwsIXCIe2" Name="Input" Kind="InputPin" />
+            <Pin Id="HMJZOs28Zs1NpAzYHHleoW" Name="Selector Style" Kind="InputPin" />
+            <Pin Id="P17RnEi3zNwM4tNwfHeqWO" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="JfRFY0FkC2BNwyPzpnMtey" Name="Selector String" Kind="InputPin" />
+          </Node>
+          <Pad Id="VYNtt9ttkZaLKNFa8S1eX3" Comment="Selector String" Bounds="612,609,74,15" ShowValueBox="true" isIOBox="true" Value=".Green">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="575,548,83,19" Id="HkYFG1gQxr5NNjUIVoq3ac">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Avalonia.Avalonia.Styles" />
+              <Choice Kind="OperationCallFlag" Name="SetForeground" />
+            </p:NodeReference>
+            <Pin Id="IFel5pfYnULPn0FUlK3d97" Name="Style" Kind="InputPin" />
+            <Pin Id="Qa39S2QIunXOeDd4RE0sTd" Name="Brush" Kind="InputPin" />
+            <Pin Id="O7RNCm4JSGXLt0DNze9sXF" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="653,509,40,19" Id="I6wxRM47vbdLrjYqeSpO12">
+            <p:NodeReference LastCategoryFullName="Avalonia.Media.Brushes" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Avalonia.Media.Brushes" />
+              <Choice Kind="OperationCallFlag" Name="Aqua" />
+            </p:NodeReference>
+            <Pin Id="TSVQSppzTO6LOuFj9eJmRo" Name="Aqua" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="525,499,74,19" Id="Qyhc6Lx6di2OXmL3VoxPYm">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styling" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="StyleSelector (String)" />
+            </p:NodeReference>
+            <Pin Id="ClSfIauoYQgNCzWxn66Cch" Name="Input" Kind="InputPin" />
+            <Pin Id="KVheL55ROemQO4ar9JjX4f" Name="Selector Style" Kind="InputPin" />
+            <Pin Id="GZAgQVzEU8BLPjElKikVBn" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="TVcGkgNgIeTM1E64LOdF9Z" Name="Selector String" Kind="InputPin" />
+          </Node>
+          <Pad Id="KPg0O9etkmlMFcUv3WQPTb" Comment="Selector String" Bounds="596,479,74,15" ShowValueBox="true" isIOBox="true" Value=":nth-child(5)">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="631,429,83,19" Id="UfkVK0QIuy4NMSxRb4VIV1">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Styles" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Avalonia.Avalonia.Styles" />
+              <Choice Kind="OperationCallFlag" Name="SetForeground" />
+            </p:NodeReference>
+            <Pin Id="KH4FzQX9RmNLtdzJqbtXcr" Name="Style" Kind="InputPin" />
+            <Pin Id="Orp8fHoIZscOElAUfZFmij" Name="Brush" Kind="InputPin" />
+            <Pin Id="GyfSae4K6SUQKFGVNHqaZH" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="709,390,45,19" Id="TMeBK0WdqjwNOSMf9UkvMd">
+            <p:NodeReference LastCategoryFullName="Avalonia.Media.Brushes" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Avalonia.Media.Brushes" />
+              <Choice Kind="OperationCallFlag" Name="Purple" />
+            </p:NodeReference>
+            <Pin Id="Cl2gzeCZ6lNPpPdvef3Q2k" Name="Purple" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FdF8vCJEIFCN6CB0HKf3YO" Comment="Classes" Bounds="337,251,35,15" ShowValueBox="true" isIOBox="true" Value="Red">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="H4LLKQetYKJPteQer7IZo4" Name="Create" />
+        <Patch Id="G0hsID6mOUpP3xBmynQFFI" Name="Update" />
+        <ProcessDefinition Id="K0EHPVSYAucPdxP43JgttI">
+          <Fragment Id="H58oKhCVHNvLZyBK7XuLQa" Patch="H4LLKQetYKJPteQer7IZo4" Enabled="true" />
+          <Fragment Id="CESBNLrVIoJLt2B3FTGSeD" Patch="G0hsID6mOUpP3xBmynQFFI" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="GPCz1Mqez8COYJwSHPKy1f" Ids="Asj5NtRdNb8QY8lyTyMPuv,QjtQxuKLqoqNGEZoZ6V0cH" />
+        <Link Id="DYqjxJDqVi5LHJRjOUeU7r" Ids="AMW710yJpKcOa26nPDla80,KZZgWkli1uXOTkuC1kmcIT" />
+        <Link Id="CYifMQEPjrRN25lzsK023U" Ids="SIU0ZN2PcFfLkeBeDazxhz,Ik1nsbnoRj2LSClzzeQFeq" />
+        <Link Id="EPW2Iwp47vrLiZzX7S3Pk4" Ids="PgIEJyiB4mjOQV9AT11yDC,OrDfCpErwseP41JhRNrNZA" />
+        <Link Id="PvI8UeGNQwuPtTNkVX4qpC" Ids="SA5FVYbRvK6LRhHhWSu52s,Nb1XkwILgdfLgfyHX14To3" />
+        <Link Id="LaeVNrNmTtWPr3C9E4nBkv" Ids="HmBMNF4QbFCNJ9arVzZsUz,DZBZgtgdXtPPYuq4fmj8M7" />
+        <Link Id="E3T8irKKiysPCLFhFIVPKw" Ids="LAR5whC7PBrNVO7pPnKaNG,PaF9QubQuwDL6XAfMdjbbt" />
+        <Link Id="QDnxviSsjpOMX4GZPQwxwS" Ids="Egy0pChLLafMbzCOBZbwZL,AYWRn6F0TFSQRop01XM3oK" />
+        <Link Id="JWxXCQGAIocLjOXeVk2DL3" Ids="Javfd60LrE6PHinYrf6T7e,BRCY80kA2j9NMyqPm3nMe8" />
+        <Link Id="JtoNFpylEr1LPJSxTaUrof" Ids="GdifkOs5IBtNweQNkccOMy,T08J8FHckNoOsLcDnLp1L8" />
+        <Link Id="B1Wy373dpTeNUW99yz1W8m" Ids="GYB9pTrLgIaNXfIEgGI9y5,I9m7Bf85UMxMiZPVipIbmP" />
+        <Link Id="SQNDWpuP9IiLt2h6JZDYlw" Ids="Q29WDj8y5X6NlV3JbMb0yi,JdgBZBf57GjMYLzdgdnnAj" />
+        <Link Id="PtAKQKps0vnLXGjHS0Qo2L" Ids="OxSkdCq1ksaOv44ljwiwUY,Eu3BjjtbYEcNoONEWUVScE" />
+        <Link Id="UfysP7BGk7qPY2Cyy0eprv" Ids="H1A4G5fyQFNOPcB7eU8WhF,OPHda9lLly7Lcmf4gbpfMy" />
+        <Link Id="KL72oNf4ReqNT10GefKlj4" Ids="GmmLmQfUP4vNki5W5uChUT,OqNutmp1crDMNPSp5WFRGk" />
+        <Link Id="Ss6lxXbGtdpLw7XJp0fCPV" Ids="DoykL8rHr9kP6Xt1imKjt9,BecDwfriZjqM4Qqb1VAZQA" />
+        <Link Id="MFayOhDCutoO4IBtkj21is" Ids="NjoXbBb6RUvNBmn8rVwcDG,LkXuPUDmB57OrD0ZsoUaOR" />
+        <Link Id="OXQ1MbC3nVNLbPYTnEhgpp" Ids="M1UhfGz4f5MPzectupv4pd,FKjewmrsOe6Ps4jUvb2nqP" />
+        <Link Id="HN5R8NZBCP2OEBANfrrxD2" Ids="F01KuszNjpFNcU0aXXvnHK,IUwJcFLSu8LOkEqXvohh67" />
+        <Link Id="BqxNC7DCVdwNyE6GlNE0y2" Ids="FiDvCGp3Ah4QZr6896Hg52,RvILDvpPwdCPEsgiOhrVWi" />
+        <Link Id="F7v2VnYLSKRMJlHdGb2lvV" Ids="L1d69Wyi21DNts8PK8AvFe,M71gxJoa5CWNdgpH7Cldqg" />
+        <Link Id="DvMGylmr1jNPevL1kandwf" Ids="NEn6jJjimIHLPnNVdf56s0,IWUBahZP8u7N2wpGw2GMx2" />
+        <Link Id="IKpiAU0CSeFMOAS9bgloB7" Ids="Oo245roouixNbPmxXhF7De,TaCk4z5WX7aOC6MOsIpgWB" />
+        <Link Id="FxzvzSjw30oPJZ5u0MxFRZ" Ids="SxTeYLeSVlTPKGvy3dfMRt,ELlO0dmwsaJOYi6pU65twj" />
+        <Link Id="UwVfPyM7RheLY6RZSggSHx" Ids="JfyMlJGa80JMwfvbBtML0o,Ah7XPV4rNunPiUqXv7Apzw" />
+        <Link Id="PEEflkTeh7ALbiZR183Lgu" Ids="UItIGCzZ8XbLTwlManwLst,FHjI8sN5Re1P2vZol9fOgS" />
+        <Link Id="CBYsLDDNYPiP9Mqtwqcu25" Ids="RU16fWPmroyPLmJxQqyabH,UoxfJCdLlbuP07tbROEb1c" />
+        <Link Id="QnYOWMQEUpjOejlrqSHfp9" Ids="QnGYlf0dywsN12dyVuVvqa,G88AMa8SsXbLwL0sGNYtt0" />
+        <Link Id="L4m3UxJ1CMMPL4nAYcULkN" Ids="URvX4Z2lEfXNonf7y4La52,SwMNsVwWmvlNQibPmVUcdr" />
+        <Link Id="GGpjQnc6l6TMcijPmXJQiD" Ids="HbMRRwF44dVPl2BSdDrAf3,B5wZw7qAiIMQE5U7weohil" />
+        <Link Id="Sc1ZWIU8a3mO7puz2vT05J" Ids="NnPMPdjXZRnOozDnoMiamQ,VwdWzu1Z1UNN6slCQ4VM7J" />
+        <Link Id="HIuKJZk2n1mQBRSXBXtEog" Ids="NnPMPdjXZRnOozDnoMiamQ,IKfflBZ9nJ5Lgu6DToZOUn" />
+        <Link Id="L59KcKjp7oEPWywYQuoOvi" Ids="RHEHMdrtZoTPqppOFCKw6q,TdoYIBu6LyVOYjO1baulG6" />
+        <Link Id="SALdIPvJxydMQhuoOtsXIj" Ids="LAR5whC7PBrNVO7pPnKaNG,BMd7G0R19eoMZKKtQUFWJr" />
+        <Link Id="OWOprMSJolXPM1UDQmSwbK" Ids="J1pGP3R8nGqLsb7UO2YfE9,Ei1hU2KPLE8QIjaO8M14Ng" />
+        <Link Id="PYMCaOakR9BQbYUs7hHs0b" Ids="C8JzrbsQA2MPqg35nQ1hrq,QVhqq3v0bk0LC6Ux6spGeI" />
+        <Link Id="CEXwghskAsbLHVSVlGZnKl" Ids="QFnWGvb6TKVPM61sx0I2NZ,F67UcedPyxRMfyDeRmJYsI" />
+        <Link Id="PbJn2hu7b9oLri74ai2wJn" Ids="JKVXC3nfuIMN9eKfNmyPD3,K8gxYMalZzNLZUblotB2wq" />
+        <Link Id="THr3PmwtaX4MSrBONtsFPv" Ids="AWniFEwjr1lNiJyZuUBnUI,LmS5xev5KpDNfqFRdWJVhJ" />
+        <Link Id="LV50o6SQlaOMHWj9s6T76p" Ids="P17RnEi3zNwM4tNwfHeqWO,Vw7tdtqYL6XMKfitXeIuYN" />
+        <Link Id="UaWGYvLVhGjNkYAO5lLgzL" Ids="VYNtt9ttkZaLKNFa8S1eX3,JfRFY0FkC2BNwyPzpnMtey" />
+        <Link Id="B5FBaxuv1VSOYYS578O9Z6" Ids="TSVQSppzTO6LOuFj9eJmRo,Qa39S2QIunXOeDd4RE0sTd" />
+        <Link Id="R9aY7PljZkWOV5G5nGh03K" Ids="O7RNCm4JSGXLt0DNze9sXF,HMJZOs28Zs1NpAzYHHleoW" />
+        <Link Id="G0yk3q3ZyFaMpJcf3nPsen" Ids="Jvem7oOZ338Ln42LaT3Igl,CkWUtSH0JFkOGqAJOXQUvH" />
+        <Link Id="TyipEC07R3MLEOdUxwy1Zi" Ids="D5r0rK5kQZKQESbQ6UyEiV,S9eVbXLLK7cMiT9qcR8xhE" />
+        <Link Id="VD3Se8YCtEkPwctEmpSa9Z" Ids="KPg0O9etkmlMFcUv3WQPTb,TVcGkgNgIeTM1E64LOdF9Z" />
+        <Link Id="OmNWzpjJUnAOoSoZMzEiCV" Ids="GZAgQVzEU8BLPjElKikVBn,VUvT071rBZdLJiwsIXCIe2" />
+        <Link Id="DhGMPM9ZVLJMEoVJvxdHs1" Ids="Cl2gzeCZ6lNPpPdvef3Q2k,Orp8fHoIZscOElAUfZFmij" />
+        <Link Id="SUPXEYeRlozQbbobR32dOP" Ids="GyfSae4K6SUQKFGVNHqaZH,KVheL55ROemQO4ar9JjX4f" />
+      </Patch>
+    </Node>
+  </Patch>
+  <DocumentDependency Id="UYtwosupZDPPxvnpQY9JAV" Location="./VL.Skia.Avalonia/VL.Skia.Avalonia.vl" />
+  <DocumentDependency Id="Aou9ZwDalv1Opm4a5F4O1G" Location="./VL.Avalonia/VL.Avalonia.vl" />
+  <NugetDependency Id="HF5XBGKJyIxO2f8Jk3IKOc" Location="VL.Skia" Version="2025.7.0-0357-gd997588cb6" />
+  <NugetDependency Id="LcmyMepseN7MnTGpqqcC2I" Location="Avalonia" Version="11.2.1" />
+</Document>

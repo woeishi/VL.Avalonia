@@ -12,26 +12,15 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
             var template =
 $@"
     [Fragment(Order = -3)]
-    public Optional<IAvaloniaStyle> Style
+    public void SetStyle(Optional<IAvaloniaStyle> style)
     {{
-        private get => _style;
-        set
+        if (_style != style)
         {{
-            if (_style != value)
-            {{
-                _style = value;
-
-                if (value.HasValue)
-                {{
-                    value.Value.ApplyStyle(_output);
-                }}
-
-                _output.ApplyStyling();
-            }}
+            _style = style;
+            _output.TryUpdateStyles(style.Value);
         }}
     }}
 ";
-
             return template;
         }
     }

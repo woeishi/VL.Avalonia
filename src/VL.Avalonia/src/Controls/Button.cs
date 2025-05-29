@@ -1,4 +1,5 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Styling;
 using System.Reactive;
 using VL.Avalonia.Attributes;
 using VL.Avalonia.Helpers;
@@ -16,13 +17,26 @@ namespace VL.Avalonia.Controls;
 public partial class ButtonWrapper
 {
     [ImplementOutput]
-    private readonly Button _output = new Button();
+    protected readonly Button _output = new Button();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
+
+    [ImplementClasses]
+    protected Optional<string> _classes;
 
     [ImplementContent]
-    private Optional<object?> _content;
+    protected Optional<object?> _content;
+
+    protected Optional<Style> _styleProto;
+    public void SetStyleProto(Optional<Style> styleProto)
+    {
+        if (_styleProto != styleProto)
+        {
+            _styleProto = styleProto;
+            _output.Styles.Add(styleProto.Value);
+        }
+    }
 
     protected ChannelCommand<Unit> _command = new((s, a) => new Unit());
     protected Optional<IChannel<Unit>> _commandChannel;
@@ -40,7 +54,7 @@ public partial class ButtonWrapper
         }
     }
 
-    private Optional<ClickMode> _clickMode;
+    protected Optional<ClickMode> _clickMode;
     public void SetClickMode(Optional<ClickMode> clickMode)
     {
         if (_clickMode != clickMode)
@@ -53,6 +67,3 @@ public partial class ButtonWrapper
     [ImplementIsEnabled<Button>]
     protected Optional<bool> _isEnabled;
 }
-
-
-

@@ -22,13 +22,16 @@ namespace VL.Avalonia.Controls;
 public partial class ListBoxWrapper<T>
 {
     [ImplementOutput]
-    private readonly ListBox _output = new ListBox();
+    protected readonly ListBox _output = new ListBox();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
 
-    private Spread<T?> _items;
-    private IChannel<Spread<T?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<T?>>();
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
+    protected Spread<T?> _items;
+    protected IChannel<Spread<T?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<T?>>();
     [Fragment(Order = -1)]
     public void SetItems(Spread<T?> items)
     {
@@ -39,7 +42,7 @@ public partial class ListBoxWrapper<T>
         }
     }
 
-    private Optional<IDataTemplate> _itemTemplate;
+    protected Optional<IDataTemplate> _itemTemplate;
     public void SetDataTemplate(Optional<IDataTemplate> itemTemplate)
     {
         if (_itemTemplate != itemTemplate)
@@ -53,7 +56,7 @@ public partial class ListBoxWrapper<T>
     /// <summary>
     /// Two way binding
     /// </summary>
-    Optional<IChannel<int>> _selectedIndexChannel;
+    protected Optional<IChannel<int>> _selectedIndexChannel;
     public void SetSelectedIndexChannel(Optional<IChannel<int>> selectedIndexChannel)
     {
         if (_selectedIndexChannel != selectedIndexChannel)
@@ -68,7 +71,7 @@ public partial class ListBoxWrapper<T>
         }
     }
 
-    Optional<IChannel<T>> _selectedItemChannel;
+    protected Optional<IChannel<T>> _selectedItemChannel;
     public void SetSelectedItemChannel(Optional<IChannel<T>> selectedItemChannel)
     {
         if (_selectedItemChannel != selectedItemChannel)

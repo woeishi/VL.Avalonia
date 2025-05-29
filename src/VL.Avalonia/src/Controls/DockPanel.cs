@@ -18,6 +18,9 @@ public partial class DockPanelSpectralWrapper
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
 
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
     [ImplementChildren]
     protected Spread<Control>? _children;
 }
