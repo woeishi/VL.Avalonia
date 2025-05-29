@@ -22,6 +22,7 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
     {
         new OutputAttributeHandler(),
         new StyleAttributeHandler(),
+        new ClassesAttributeHandler(),
         new ContentAttributeHandler(),
         new ChildrenAttributeHandler(),
         new OptionalAttributeHandler(),

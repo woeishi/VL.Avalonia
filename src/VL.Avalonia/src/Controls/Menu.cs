@@ -20,6 +20,9 @@ public partial class MenuSpectralWrapper
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
 
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
     protected IChannel<Spread<object?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<object?>>();
     protected Spread<object?> _items = Spread<object?>.Empty;
     [Fragment(Order = -5)]
@@ -32,7 +35,7 @@ public partial class MenuSpectralWrapper
         }
     }
 
-    private Optional<IDataTemplate> _itemTemplate;
+    protected Optional<IDataTemplate> _itemTemplate;
     public void SetDataTemplate([Pin(Visibility = Model.PinVisibility.Optional)] Optional<IDataTemplate> itemTemplate)
     {
         if (_itemTemplate != itemTemplate)
@@ -68,6 +71,9 @@ public partial class MenuItemSpectralWrapper
 
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
+
+    [ImplementClasses]
+    protected Optional<string> _classes;
 
     protected IChannel<Spread<object?>> _itemsChannel = ChannelHelpers.CreateChannelOfType<Spread<object?>>();
     protected Spread<object?> _items = Spread<object?>.Empty;

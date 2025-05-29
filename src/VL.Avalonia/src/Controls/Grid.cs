@@ -25,6 +25,9 @@ public partial class GridSpectralWrapper
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
 
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
     [ImplementChildren]
     protected Spread<Control> _children = Spread<Control>.Empty;
 

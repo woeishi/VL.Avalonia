@@ -16,6 +16,9 @@ public partial class SplitViewWrapper
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
 
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
     [ImplementContent]
     private Optional<object?> _content;
 

@@ -11,12 +11,15 @@ namespace VL.Avalonia.Controls;
 public partial class PathIconWrapper
 {
     [ImplementOutput]
-    private PathIcon _output = new PathIcon();
+    protected PathIcon _output = new PathIcon();
 
     [ImplementStyle]
-    private Optional<IAvaloniaStyle> _style;
+    protected Optional<IAvaloniaStyle> _style;
 
-    private Optional<Geometry> _data;
+    [ImplementClasses]
+    protected Optional<string> _classes;
+
+    protected Optional<Geometry> _data;
     [Fragment(Order = -5)]
     public void SetData(Optional<Geometry> data)
     {
