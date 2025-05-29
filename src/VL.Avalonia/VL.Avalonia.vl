@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.0-0351-gb3f6445d75" Version="0.128">
-  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
+  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
   <Patch Id="CsQ26EoGhvMOM4U1aQide6">
     <Canvas Id="IhgCT0sDhkhMddI2tTRHCe" DefaultCategory="Avalonia" CanvasType="FullCategory">
       <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls" Position="604,230">
@@ -744,6 +744,206 @@
           <Patch Id="Jm8z0BRUp01ORXciL4DFUK">
             <Canvas Id="InmJdqFwkF5PjIgzCjoXoE" BordersChecked="false" CanvasType="Group" />
             <ProcessDefinition Id="GipZDBfLMeZQaAiPYFcIRP" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FontSimulations ************************
+
+-->
+        <Node Name="FontSimulations" Bounds="222,378" Id="RnucChiNsShQatikHQvbIW">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="FontSimulations" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Qi3YxtHB3N2NhG2EE2oNlI">
+            <Canvas Id="BDJanrFvSTmOIJXej9Pvun" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="OTyymhym2Q8NQevFXMYqYT" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FontStretch ************************
+
+-->
+        <Node Name="FontStretch" Bounds="502,378" Id="F781cZm5dP3OdplC53PMrz">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="FontStretch" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="RSIj69nlq5nQcVH0I6xw5m">
+            <Canvas Id="UUWcasZTPx5LXz6dcodkaW" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="PLsX56QlsFCPq8gtxoVQjy" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FontStyle ************************
+
+-->
+        <Node Name="FontStyle" Bounds="222,428" Id="N7C8dL3NiP9NHAoFeErkuB">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="FontStyle" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="DZLm86QxdbLQPbQZLSJlzc">
+            <Canvas Id="RJtxc9snD1AMScm6je7jx8" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="AbwMFIEAi66M9G62D2q6M2" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FontWeight ************************
+
+-->
+        <Node Name="FontWeight" Bounds="502,428" Id="AdTopQuBdbrQO1LPlQdDzu">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="FontWeight" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="OCb3UwFpfVqOJAJ4b5qi2w">
+            <Canvas Id="Kf78d7RWdjdPIWBRtP94oO" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="BLidylmQ4yNLxApbS4JmGU" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Stretch ************************
+
+-->
+        <Node Name="Stretch" Bounds="215,509" Id="B9UKljdDnMnLrR0DOkC9gk">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Stretch" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="CZQoD2gFAB3ObDLUAmBNhw">
+            <Canvas Id="JqqmsZeu3IoMVBTQO7TeWM" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="GGhBY4FnyoyLKUm9kKl7Hj" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ StretchDirection ************************
+
+-->
+        <Node Name="StretchDirection" Bounds="495,509" Id="Rso6cVonnxiLbzoeELKl5o">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="StretchDirection" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="NDhm7MW3MAyOZoxdpx7ZUX">
+            <Canvas Id="EFuBPKoEwuKPvDN406rQz3" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="I6p9PGCKzVbNYNlzzju7c0" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SweepDirection ************************
+
+-->
+        <Node Name="SweepDirection" Bounds="215,559" Id="QdS7pD0vuq6OYWLdeq3w66">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="SweepDirection" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Gokpi4L8eMcPap50ywR5Mb">
+            <Canvas Id="FSps0ui0qcQO4HvSRoKhsY" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="LmLvabFBrkDNzhcSD9WIPw" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TextAlignment ************************
+
+-->
+        <Node Name="TextAlignment" Bounds="495,559" Id="S0AqCDRPcM8QQ4KUiBAttl">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="TextAlignment" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="Qv1ZDEiGXJSLlfLWJwtICw">
+            <Canvas Id="DtWj6CBhU6iMfQUKBXVvPo" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="PgbK2iqTpN8OCxKYJOkVjI" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TextDecorations ************************
+
+-->
+        <Node Name="TextDecorations" Bounds="215,670" Id="CWNdyBBgFyvOqNMmqiq0eB">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="TextDecorations" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MCv2AyFzkeBLas7v4lda46">
+            <Canvas Id="EBS8CCfRtMKLwwxjjMOWVF" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="J8IDc19MxFBMeUsXcI4VUQ" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TextWrapping ************************
+
+-->
+        <Node Name="TextWrapping" Bounds="502,610" Id="SRkYqFxCCu2LhLMj5mQKe4">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="TextWrapping" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="ETcAJVcuGyjNII4T90po9X">
+            <Canvas Id="G3gk867JF12Pjj5u0Y9fVj" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="D59Bz5MS4EdPfBPXFIPBdS" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>

@@ -378,6 +378,7 @@
             </p:NodeReference>
             <Pin Id="FVMN7zV1Hn2MN4Vja7Mi75" Name="Content" Kind="InputPin" />
             <Pin Id="EEpnYUbi2PuLuCxR3K2Wq8" Name="Style" Kind="InputPin" />
+            <Pin Id="Dmk6B3ehpetPinzeCSiHjk" Name="Classes" Kind="InputPin" IsHidden="true" />
             <Pin Id="M1TCxVcyXRENdG3m8dCxyM" Name="Style Proto" Kind="InputPin" />
             <Pin Id="HXnfnqWXp1pMZnUKHG7zUE" Name="Command Channel" Kind="InputPin" />
             <Pin Id="Kz81OTWoNNnOvDzQyKLKxc" Name="Click Mode" Kind="InputPin" />
