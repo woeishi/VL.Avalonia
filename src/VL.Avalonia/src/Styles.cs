@@ -2,8 +2,11 @@
 using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Styling;
+using Stride.Core.Mathematics;
 using VL.Avalonia.Helpers;
 using VL.Lib.Collections;
+
+using Color = Avalonia.Media.Color;
 
 namespace VL.Avalonia
 {
@@ -18,6 +21,7 @@ namespace VL.Avalonia
         #endregion
 
         #region Style Implementations
+
 
         public record struct StyleSelector(IAvaloniaStyle? Style, Selector? Selector, IAvaloniaStyle? SelectorStyle) : IAvaloniaStyle
         {
@@ -438,6 +442,138 @@ namespace VL.Avalonia
         //    }
         //}
 
+        #endregion
+
+        #region Border Styles
+        public record struct StyleBorderBrush(IAvaloniaStyle? Style, IBrush? Brush) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "BorderBrush", Brush);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+        public static StyleBorderBrush SetBorderBrush(IAvaloniaStyle? style, IBrush? brush) =>
+            new StyleBorderBrush(style, brush);
+
+        public record struct StyleBorderThickness(IAvaloniaStyle? Style, Thickness Thickness) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "BorderThickness", Thickness);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+
+        public static StyleBorderThickness SetBorderThickness(IAvaloniaStyle? style, Thickness thickness) =>
+            new StyleBorderThickness(style, thickness);
+
+        public static StyleBorderThickness SetBorderThickness(IAvaloniaStyle? style, float thickness) =>
+            new StyleBorderThickness(style, new Thickness(thickness));
+
+        public static StyleBorderThickness SetBorderThickness(IAvaloniaStyle? style, float left, float top, float right, float bottom) =>
+            new StyleBorderThickness(style, new Thickness(left, top, right, bottom));
+
+        public static StyleBorderThickness SetBorderThickness(IAvaloniaStyle? style, float horizontal, float vertical) =>
+            new StyleBorderThickness(style, new Thickness(horizontal, vertical));
+
+        public record struct StyleCornerRadius(IAvaloniaStyle? Style, CornerRadius CornerRadius) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "CornerRadius", CornerRadius);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+
+        public static StyleCornerRadius SetCornerRadius(IAvaloniaStyle? style, CornerRadius cornerRadius) =>
+            new StyleCornerRadius(style, cornerRadius);
+
+        public static StyleCornerRadius SetCornerRadius(IAvaloniaStyle? style, float cornerRadius) =>
+            new StyleCornerRadius(style, new CornerRadius(cornerRadius));
+
+        public static StyleCornerRadius SetCornerRadius(IAvaloniaStyle? style, float topLeft, float topRight, float bottomRight, float bottomLeft) =>
+            new StyleCornerRadius(style, new CornerRadius(topLeft, topRight, bottomRight, bottomLeft));
+
+        public static StyleCornerRadius SetCornerRadius(IAvaloniaStyle? style, float top, float bottom) =>
+            new StyleCornerRadius(style, new CornerRadius(top, bottom));
+        #endregion
+
+        #region Box Shadows
+        public record struct StyleBoxShadows(IAvaloniaStyle? Style, BoxShadows BoxShadows) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "BoxShadow", BoxShadows);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+
+        public static StyleBoxShadows SetBoxShadows(IAvaloniaStyle? style, BoxShadows boxShadows) =>
+            new StyleBoxShadows(style, boxShadows);
+
+        public static StyleBoxShadows SetBoxShadows(IAvaloniaStyle? style, BoxShadow boxShadow) =>
+            new StyleBoxShadows(style, new BoxShadows(boxShadow));
+
+        public static StyleBoxShadows SetBoxShadows(IAvaloniaStyle? style, Vector2 Offset, float Blur, float Spread, Color Color, bool IsInSet) =>
+            new StyleBoxShadows(style, new BoxShadows(new BoxShadow() { OffsetX = Offset.X, OffsetY = Offset.Y, Blur = Blur, Spread = Spread, Color = Color, IsInset = IsInSet }));
+
+        public static StyleBoxShadows SetBoxShadows(IAvaloniaStyle? style, Spread<BoxShadow> boxShadows)
+        {
+            var first = boxShadows.FirstOrDefault();
+            var rest = boxShadows.Skip(1).ToArray();
+            return new StyleBoxShadows(style, new BoxShadows(first, rest));
+        }
+        #endregion
+
+        #region Padding
+        public record struct StylePadding(IAvaloniaStyle? Style, Thickness Padding) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "Padding", Padding);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+
+        public static StylePadding SetPadding(IAvaloniaStyle? style, Thickness padding) =>
+            new StylePadding(style, padding);
+        public static StylePadding SetPadding(IAvaloniaStyle? style, float padding) =>
+            new StylePadding(style, new Thickness(padding));
+        public static StylePadding SetPadding(IAvaloniaStyle? style, float left, float top, float right, float bottom) =>
+            new StylePadding(style, new Thickness(left, top, right, bottom));
+        public static StylePadding SetPadding(IAvaloniaStyle? style, float horizontal, float vertical) =>
+            new StylePadding(style, new Thickness(horizontal, vertical));
+
+        #endregion
+
+        #region Margin
+        public record struct StyleMargin(IAvaloniaStyle? Style, Thickness Margin) : IAvaloniaStyle
+        {
+            public Style BuildStyle(StyledElement owner, Style style)
+            {
+                style.TryAddSetter(owner, "Margin", Margin);
+                Style?.BuildStyle(owner, style);
+                return style;
+            }
+        }
+
+        public static StyleMargin SetMargin(IAvaloniaStyle? style, Thickness margin) =>
+            new StyleMargin(style, margin);
+
+        public static StyleMargin SetMargin(IAvaloniaStyle? style, float margin) =>
+            new StyleMargin(style, new Thickness(margin));
+
+        public static StyleMargin SetMargin(IAvaloniaStyle? style, float left, float top, float right, float bottom) =>
+            new StyleMargin(style, new Thickness(left, top, right, bottom));
+
+        public static StyleMargin SetMargin(IAvaloniaStyle? style, float horizontal, float vertical) =>
+            new StyleMargin(style, new Thickness(horizontal, vertical));
         #endregion
 
         #endregion

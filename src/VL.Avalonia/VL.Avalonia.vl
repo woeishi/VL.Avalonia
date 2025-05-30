@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.0-0357-gd997588cb6" Version="0.128">
-  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0357-gd997588cb6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.0-0359-gbbb0444d86" Version="0.128">
+  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.0-0359-gbbb0444d86" />
   <Patch Id="CsQ26EoGhvMOM4U1aQide6">
     <Canvas Id="IhgCT0sDhkhMddI2tTRHCe" DefaultCategory="Avalonia" CanvasType="FullCategory">
       <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls" Position="604,230">
@@ -946,7 +946,2219 @@
             <ProcessDefinition Id="D59Bz5MS4EdPfBPXFIPBdS" IsHidden="true" />
           </Patch>
         </Node>
+        <!--
+
+    ************************ BoxShadows ************************
+
+-->
+        <Node Name="BoxShadows" Bounds="823,338" Id="NKTrnMZMQIrNEFXsSmfY4c">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="BoxShadows" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+          <Patch Id="PWEAuU4Y0C5O18ygRJ0VS6">
+            <Canvas Id="EDqgDbRxBN6Lju3nyzhagu" CanvasType="Group">
+              <!--
+
+    ************************ = ************************
+
+-->
+              <Node Name="=" Bounds="1340,87,128,82" Id="FDELo8d2pCEOrwds8Hl4Nk">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="KNT1pWt72F7P9JSWSN6vXK">
+                  <Node Bounds="1368,119,25,19" AutoConnect="true" Id="CJMKdNqk5RsOABzKFiNfzv">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="=" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="CiyY7DUWc1OLSdw1s1b4Ex" Name="Input" Kind="InputPin" />
+                    <Pin Id="PRucbIzni53MqG9lTKpgNN" Name="Input 2" Kind="InputPin" />
+                    <Pin Id="Oh6uNb9fmQaPiySIt7DxRn" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="MNNxhetYUchNXMBhDhm5Kl" Name="Input" Kind="InputPin" />
+                  <Pin Id="FOkdNWJWSdaL7Mij2IVhvj" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="RddZ8y6JcBJOr9IYzAZEVH" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ != ************************
+
+-->
+              <Node Name="!=" Bounds="1341,237,126,82" Id="SrnImG8FaW7OK4DyPiKbf6">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="ABTpbBoXowdOoWzWqnpxpi">
+                  <Node Bounds="1368,269,27,19" AutoConnect="true" Id="TrSd86jXvDhO9TsDywSE3c">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="!=" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="VmHlxWUy7fiQNwrho3q18K" Name="Input" Kind="InputPin" />
+                    <Pin Id="VWCkn8AWKvnOVAgCSS07xk" Name="Input 2" Kind="InputPin" />
+                    <Pin Id="EtH8GJ2P5llMm0P3UgXUQs" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="LNAua4qnDFaM5CElZEqBJr" Name="Input" Kind="InputPin" />
+                  <Pin Id="L4acB25DeT9MTamtj1yxg2" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="ILbKF2YxCwrNBJkgHTHjj2" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Parse ************************
+
+-->
+              <Node Name="Parse" Bounds="1348,387,120,82" Id="JpGeHgQ6m4pNblrRvwcLMe">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="OmTxfgPTpIcN29D6qKXUDL">
+                  <Node Bounds="1368,419,41,19" AutoConnect="true" Id="TRHpuhsDmp9MMg6LJg4P4g">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Parse" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="D4vyR6jQsURLO6QHLHCUSd" Name="S" Kind="InputPin" />
+                    <Pin Id="I4gq5f5aMQaNQvKaoOzn9G" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="LxO15Y5wetTOraIrggCTzv" Name="S" Kind="InputPin" />
+                  <Pin Id="KhNXgZLZKLxLQLszj3k8lW" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Count ************************
+
+-->
+              <Node Name="Count" Bounds="1364,510,112,80" Id="B0WRcnEzmFxPCnrtD8NcGo">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="H3DFq7LvqTqPbpIbcehicr">
+                  <Node Bounds="1376,539,61,26" AutoConnect="true" Id="KNUvtaO5mQ5OaArjne1p6P">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Count" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="GOXNqTDcfkpPVODiNFAdhf" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="BrvHLIfwJ7rPHfXaxk7eak" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="Pc633JBf3ybMjcSoVMIETI" Name="Count" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="Oo8tHP8gwBjPKfPTzWNyoZ" Name="Input" Kind="InputPin" />
+                  <Pin Id="Ba12RbBCU2ILs0nHMYCyqE" Name="Count" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ HasInsetShadows ************************
+
+-->
+              <Node Name="HasInsetShadows" Bounds="1364,660,119,80" Id="JpeU9eu7LOpMmLbCVtf38T">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="OVbpw8z7j3RPV6CaO6mKDv">
+                  <Node Bounds="1376,689,95,26" AutoConnect="true" Id="FvGPqpXWBjmLzKQhh68Vgq">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="HasInsetShadows" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="TAyItQjBXSvMc9HFdavKpz" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="GSuxYm1sng4MBvRWO3478A" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="DxhqBnz6B33NSDUQsTKOTp" Name="Has Inset Shadows" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="GTTElHGuILzQMONmb70oAt" Name="Input" Kind="InputPin" />
+                  <Pin Id="KnHKvf1jJAOMXPKCG15HQw" Name="Has Inset Shadows" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ GetItem ************************
+
+-->
+              <Node Name="GetItem" Bounds="1364,810,112,80" Id="RLgFHofASojQdHIXlLiojU">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="UVk9alm10WJMBFPDpqEk3D">
+                  <Node Bounds="1376,839,61,26" AutoConnect="true" Id="ReQJG7dyzCmMQGN2m3bTJY">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="GetItem" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="PMtlTZvoEm5Nq88K4Luvjo" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Q6cKOwzDYR4LQWdnOU1Ib3" Name="C" Kind="InputPin" />
+                    <Pin Id="ISYXu7eGhvKPDUgeDWGfCj" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="Vv2u0tKnMJbNag7dn09t10" Name="Item" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="RtoVAX96tpJQMaQIaYJlVp" Name="Input" Kind="InputPin" />
+                  <Pin Id="N2pro0Y3D3gOyVanZ83BSu" Name="C" Kind="InputPin" />
+                  <Pin Id="U6Tjt52RT70Nllr9fGVB0D" Name="Item" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ BoxShadows ************************
+
+-->
+              <Node Name="BoxShadows" Bounds="418,420,85,124" Id="N4x6qxF8NFOOKlpVlwTlwx">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" />
+                </p:NodeReference>
+                <Patch Id="SMYiXEPe4hwLtXqa8n9P9X">
+                  <Node Bounds="430,477,61,26" Id="DZVMPPqfIXUNl9cRrIUOUp">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Create" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="CbjOAutxFbfLonF0ECWc3Y" Name="Shadow" Kind="InputPin" />
+                    <Pin Id="VDS1WstgQwVMDCn9pwyxkm" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <ControlPoint Id="EPIjD6QY0ydOGawx5Uu3xw" Bounds="432,448" />
+                  <Link Id="Spkces1yAnULnn6Np8Oui9" Ids="EPIjD6QY0ydOGawx5Uu3xw,CbjOAutxFbfLonF0ECWc3Y" />
+                  <Pin Id="UuLsWyuK4fWNVI2Fm1m1M4" Name="Shadow" Kind="InputPin" />
+                  <Link Id="Deq0Lxr0eZROFX3OSfapCV" Ids="UuLsWyuK4fWNVI2Fm1m1M4,EPIjD6QY0ydOGawx5Uu3xw" IsHidden="true" />
+                  <ControlPoint Id="CD9mMxJ8D8kLcjhyfjViZX" Bounds="432,527" />
+                  <Link Id="Ah9z8AnBQyLLOnyeEN2c5I" Ids="VDS1WstgQwVMDCn9pwyxkm,CD9mMxJ8D8kLcjhyfjViZX" />
+                  <Pin Id="GrC7gdePiOOM85gYK6fxdN" Name="Output" Kind="OutputPin" />
+                  <Link Id="QQCz77zQxIJO4mNqkBoJ9N" Ids="CD9mMxJ8D8kLcjhyfjViZX,GrC7gdePiOOM85gYK6fxdN" IsHidden="true" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ BoxShadows (Spectral) ************************
+
+-->
+              <Node Name="BoxShadows (Spectral)" Bounds="590,413,164,181" Id="Tk4QRk4fSPcMf8i4JS0wJF">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" />
+                </p:NodeReference>
+                <Patch Id="H3phwq8LfdkP2t7CA2nc3B">
+                  <ControlPoint Id="AIesuxCKnaxNEba2QUXRTu" Bounds="604,431" />
+                  <Pin Id="Ozve4N6yjyxQN2vXfkdwFQ" Name="Shadows" Kind="InputPin">
+                    <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Spread" />
+                      <p:TypeArguments>
+                        <TypeReference>
+                          <Choice Kind="TypeFlag" Name="BoxShadow" />
+                        </TypeReference>
+                      </p:TypeArguments>
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Link Id="LtIXaZgwVvxMBD4O5Uo2WX" Ids="Ozve4N6yjyxQN2vXfkdwFQ,AIesuxCKnaxNEba2QUXRTu" IsHidden="true" />
+                  <ControlPoint Id="CPgoONh4262Nuk0bGYWV17" Bounds="605,577" />
+                  <Pin Id="HIdrdd5zm8VNpvGmyYfzdq" Name="Output" Kind="OutputPin" />
+                  <Link Id="C23AXKFK95DQQ8gDwMtIvE" Ids="CPgoONh4262Nuk0bGYWV17,HIdrdd5zm8VNpvGmyYfzdq" IsHidden="true" />
+                  <Node Bounds="603,540,61,26" Id="LkANyxKp9U9L4G9L6wZQKW">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="Create" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                      <PinReference Kind="InputPin" Name="First" />
+                    </p:NodeReference>
+                    <Pin Id="N4b4iqsygRyO4Oq2zftxzl" Name="First" Kind="InputPin" />
+                    <Pin Id="PQcQkQAHapiLnYpjQtSYFS" Name="Rest" Kind="InputPin" />
+                    <Pin Id="UAhLXRRCVcPN5O5XdRiIU1" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Link Id="K2aOav3cKYjQMgSVi9mfwK" Ids="UAhLXRRCVcPN5O5XdRiIU1,CPgoONh4262Nuk0bGYWV17" />
+                  <Link Id="DzzUJS6BcRlQUmTV7dtzRo" Ids="AIesuxCKnaxNEba2QUXRTu,MHHxvBnUpDAQDoCIlspVRB" />
+                  <Node Bounds="602,450,56,26" Id="SXPG9oqLhBELnt6YmQwEWu">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Collections.Spread" />
+                      <Choice Kind="OperationCallFlag" Name="SplitFirst" />
+                    </p:NodeReference>
+                    <Pin Id="MHHxvBnUpDAQDoCIlspVRB" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="J9qV1Eqf2GaOt6CgWyLciu" Name="Default Value" Kind="InputPin" />
+                    <Pin Id="FS7DYMSByedNZoxo0qBY7V" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="N6Zu1F0HFCNO0NPviPCqms" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="DhYxlhQgGbCPhHkb5wmYgz" Ids="N6Zu1F0HFCNO0NPviPCqms,N4b4iqsygRyO4Oq2zftxzl" />
+                  <Node Bounds="659,500,83,26" Id="UWkfmN8R7kQP9Eg8Irk4LG">
+                    <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Collections.Mutable.MutableArray" />
+                      <Choice Kind="OperationCallFlag" Name="FromSequence" />
+                    </p:NodeReference>
+                    <Pin Id="Pn7uBop4G6bMkyVxBE4u8F" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="CspKw9NrUlmNGOBMDHyU9C" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="JvNir0ix6e9L3PKEmIfGve" Ids="CspKw9NrUlmNGOBMDHyU9C,PQcQkQAHapiLnYpjQtSYFS" />
+                  <Link Id="LC5ooxTCBVsMbYTUq1UUL2" Ids="FS7DYMSByedNZoxo0qBY7V,Pn7uBop4G6bMkyVxBE4u8F" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ BoxShadows ************************
+
+-->
+              <Node Name="BoxShadows" Bounds="251,420,109,127" Id="AoSzLVXFIZvLQSRfBP9vqd">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" />
+                </p:NodeReference>
+                <Patch Id="OyTlHNniSg7OwIYe5jonht">
+                  <Node Bounds="263,480,61,26" Id="K1jNlINiuhYPssT7xtfiRy">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Create" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                    </p:NodeReference>
+                    <Pin Id="Nq1PwPe268NMVEjzIzYBZi" Name="Shadow" Kind="InputPin" />
+                    <Pin Id="OareGKcH1XaLajb3JRjSey" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <ControlPoint Id="TvRBHUvkyctNbxdYd5YXKi" Bounds="265,530" />
+                  <Link Id="BRRbhIhCSqXPpgYNPiuZUQ" Ids="OareGKcH1XaLajb3JRjSey,TvRBHUvkyctNbxdYd5YXKi" />
+                  <Pin Id="MJvlTfZwFoPP1ElIFoakbL" Name="Offset" Kind="InputPin" />
+                  <Pin Id="MbeDWJCtBPCPlsQhVPJFSM" Name="Value" Kind="InputPin" />
+                  <Pin Id="NaXWZMklI7IPkmGCE3Bjyr" Name="Blur" Kind="InputPin" />
+                  <Pin Id="L9UcrAxf9CGQPwv4Q5ydCh" Name="Spread" Kind="InputPin" />
+                  <Pin Id="Qp5fcwuOI6rNbOAsalT8db" Name="Color" Kind="InputPin" />
+                  <Pin Id="IDPE1Cu8cLmOCQtZBIPTQL" Name="IsInset" Kind="InputPin" />
+                  <Pin Id="Cs5VDHTjAwoLA1jnkzft6J" Name="Output" Kind="OutputPin" />
+                  <Link Id="M5tNh5oQAK5MHpuuZEX9nD" Ids="TvRBHUvkyctNbxdYd5YXKi,Cs5VDHTjAwoLA1jnkzft6J" IsHidden="true" />
+                  <Node Bounds="263,443,85,19" AutoConnect="true" Id="V0jIvJ9jW8XMim05ZCMwDe">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="VL.Avalonia.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="BoxShadow" />
+                      <Choice Kind="OperationCallFlag" Name="BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="T8uupF8TdALQJsXU5SI3NC" Name="Offset" Kind="InputPin" />
+                    <Pin Id="AUqgIz728XiNOfBA9HrG5F" Name="Blur" Kind="InputPin" />
+                    <Pin Id="QDxPF1Z9ipHP2TF1MuXQms" Name="Spread" Kind="InputPin" />
+                    <Pin Id="S20pc92015HN9CTP7O5mYM" Name="Color" Kind="InputPin" />
+                    <Pin Id="KGNBBZPZlpDPP2iXJJKaIE" Name="IsInset" Kind="InputPin" />
+                    <Pin Id="IrsA9u6O8CsQJstt8jp126" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Link Id="MxRB0r0nv7ePxzW9nhbsBd" Ids="IrsA9u6O8CsQJstt8jp126,Nq1PwPe268NMVEjzIzYBZi" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ BoxShadows ************************
+
+-->
+              <Node Name="BoxShadows" Bounds="814,423,164,181" Id="VnZmjRlMpZFNh3K5AGlbsC">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" />
+                </p:NodeReference>
+                <Patch Id="KV2qL04wXsCMW8zGyNpVz9">
+                  <ControlPoint Id="Jgu3NENkNRFM6HXCoSI1DM" Bounds="828,441" />
+                  <Pin Id="Ii7HCN3fzTIQXHOaUAuJCi" Name="Shadow" Kind="InputPin" IsPinGroup="true" PinGroupDefaultCount="1">
+                    <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Spread" />
+                      <p:TypeArguments>
+                        <TypeReference>
+                          <Choice Kind="TypeFlag" Name="BoxShadow" />
+                        </TypeReference>
+                      </p:TypeArguments>
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Link Id="PFuicOedXwZPydYfUMXuNv" Ids="Ii7HCN3fzTIQXHOaUAuJCi,Jgu3NENkNRFM6HXCoSI1DM" IsHidden="true" />
+                  <ControlPoint Id="FNCFk7EPd9nK9mR1ugplM9" Bounds="829,587" />
+                  <Pin Id="FvDAo9wcvpkPZTmZ4542ly" Name="Output" Kind="OutputPin" />
+                  <Link Id="O39Bc7nHdWqL6ayySTrozn" Ids="FNCFk7EPd9nK9mR1ugplM9,FvDAo9wcvpkPZTmZ4542ly" IsHidden="true" />
+                  <Node Bounds="827,550,61,26" Id="SmeLeluglrPOcvt8MkHsbS">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadows" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="Create" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadows" />
+                      <PinReference Kind="InputPin" Name="First" />
+                    </p:NodeReference>
+                    <Pin Id="PlTq6jlSkP2Po2FtbinOrN" Name="First" Kind="InputPin" />
+                    <Pin Id="Dos61fUBDbXLHtWAexs8nN" Name="Rest" Kind="InputPin" />
+                    <Pin Id="K3i56cgpCQlPwRvhH2fSyo" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Link Id="QjwEjKbTy9gP7GUg7dVnO5" Ids="K3i56cgpCQlPwRvhH2fSyo,FNCFk7EPd9nK9mR1ugplM9" />
+                  <Link Id="I4mocTjiyPZNOhoANgmp1c" Ids="Jgu3NENkNRFM6HXCoSI1DM,HfEo31XCR78MgweVTMDb7h" />
+                  <Node Bounds="826,460,56,26" Id="MSJYa4BiYWbN2Sx9S86Rdu">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Collections.Spread" />
+                      <Choice Kind="OperationCallFlag" Name="SplitFirst" />
+                    </p:NodeReference>
+                    <Pin Id="HfEo31XCR78MgweVTMDb7h" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="QOzel1SVbkJPeqS0b4IeDW" Name="Default Value" Kind="InputPin" />
+                    <Pin Id="FqQyAOjJ32zL8glPAnWgMH" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="REvTl7m0ffxO6BNsGIzmFf" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="FaFDgTPD2alQX2LUAaoh2H" Ids="REvTl7m0ffxO6BNsGIzmFf,PlTq6jlSkP2Po2FtbinOrN" />
+                  <Node Bounds="883,510,83,26" Id="NpaNuz6oCyqLkaSwujiqOQ">
+                    <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Collections.Mutable.MutableArray" />
+                      <Choice Kind="OperationCallFlag" Name="FromSequence" />
+                    </p:NodeReference>
+                    <Pin Id="DInchdAJ4xxOmW7tMiDAN1" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="CFcGB68bL6tNtdDbuH80vy" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="V18BYE0uv84LBZr8Sdahoe" Ids="CFcGB68bL6tNtdDbuH80vy,Dos61fUBDbXLHtWAexs8nN" />
+                  <Link Id="CMx04mUTjPqMecvy2NwvdQ" Ids="FqQyAOjJ32zL8glPAnWgMH,DInchdAJ4xxOmW7tMiDAN1" />
+                </Patch>
+              </Node>
+            </Canvas>
+            <ProcessDefinition Id="S4qk3cJ3FQ6NN0PJHxL50K" IsHidden="true">
+              <Fragment Id="Jn3B62mzL6PN9P2sAlYf6o" Patch="JpGeHgQ6m4pNblrRvwcLMe" />
+              <Fragment Id="FjsvY0TVemWPHDDI5EWB1o" Patch="B0WRcnEzmFxPCnrtD8NcGo" />
+              <Fragment Id="ScQqfRQV93EOWWgMZhDPug" Patch="JpeU9eu7LOpMmLbCVtf38T" />
+              <Fragment Id="LWHCPYom3WPLPbwxD0eex7" Patch="RLgFHofASojQdHIXlLiojU" />
+              <Fragment Id="JGLs1rYMR52NbffzNItZ6b" Patch="FDELo8d2pCEOrwds8Hl4Nk" />
+              <Fragment Id="AxAslwrzvqJOyn8mxEBRaN" Patch="N4x6qxF8NFOOKlpVlwTlwx" />
+              <Fragment Id="MdfKCWh12RuMPDGtDwfYoK" Patch="Tk4QRk4fSPcMf8i4JS0wJF" />
+              <Fragment Id="Dt7JGDCwU4vMrF9WeZfQ5i" Patch="AoSzLVXFIZvLQSRfBP9vqd" />
+              <Fragment Id="Dwjfzj1WTScLb4ehJ0a0Ap" Patch="SrnImG8FaW7OK4DyPiKbf6" />
+              <Fragment Id="KnKt6pG3WrBL9sXxHIRBJx" Patch="VnZmjRlMpZFNh3K5AGlbsC" />
+            </ProcessDefinition>
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ BoxShadow ************************
+
+-->
+        <Node Name="BoxShadow" Bounds="823,220" Id="VJgi8tTeZufMse2TE6D9Rw">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Media" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="BoxShadow" />
+            <FullNameCategoryReference ID="Avalonia.Media" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+          <Patch Id="P6FWeq4yRX8PrvayrEMMNq">
+            <Canvas Id="DmMBjZ0VGalMSBRmA08BKn" CanvasType="Group">
+              <!--
+
+    ************************ = ************************
+
+-->
+              <Node Name="=" Bounds="1472,124,128,82" Id="KIH9oH4ZlR8MxmIoHhl0wq">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="KdpVMo3DoHeMYPDJb3n2LY">
+                  <Node Bounds="1500,156,25,19" AutoConnect="true" Id="UFOUWzDd4MTP5NyIctDy2o">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="=" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="BRbq7h8ya6KP799Uq0jmAW" Name="Input" Kind="InputPin" />
+                    <Pin Id="Vd1uFzCIHajLE0pUYLUZDH" Name="Input 2" Kind="InputPin" />
+                    <Pin Id="RCaK3Rz6A2zNrWfYyYoLtL" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="KlYT78MSF2vNrjafPjipmt" Name="Input" Kind="InputPin" />
+                  <Pin Id="QRvDodIhiirNrqg8Mv5vFk" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="I3nhBKyZAvUMnjEDnImTIe" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ != ************************
+
+-->
+              <Node Name="!=" Bounds="1473,274,126,82" Id="GELODRnH6WtOfY0flF99Aw">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="Rge0Cy6BdISM6PS5X3UaRl">
+                  <Node Bounds="1500,306,27,19" AutoConnect="true" Id="SSCGfpea14uPDfqRtZnuwV">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="!=" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="A8mnFBRtS4sQStBWDo8Uz2" Name="Input" Kind="InputPin" />
+                    <Pin Id="SdY2G9q2UE2L1RmZXL9Y0j" Name="Input 2" Kind="InputPin" />
+                    <Pin Id="Q6TZkVxieD3Mnu9G8XFCgg" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="VAXyOPzqFf0MdgIoG5oHt1" Name="Input" Kind="InputPin" />
+                  <Pin Id="Lz033z4cYm3O5bI0ZUVwFp" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="IKJQGigSuP3LAN3Ez08szC" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Parse ************************
+
+-->
+              <Node Name="Parse" Bounds="1480,424,120,82" Id="UuKpEzHGuZdNAaxfZ9ynBg">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="T2AzfxhZCcUNByOdBWHfi3">
+                  <Node Bounds="1500,456,41,19" AutoConnect="true" Id="IbBaKwRah51MrwrsH8TnYp">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Parse" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="Qe3o52zNharLluDxyjejot" Name="S" Kind="InputPin" />
+                    <Pin Id="IJKyTRKPY2FPdLPe5oF0nv" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="EpgMbWoU7e4Lc42hq7JgQV" Name="S" Kind="InputPin" />
+                  <Pin Id="UwxsbKB6GOOOUDAO5MhVur" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Blur ************************
+
+-->
+              <Node Name="Blur" Bounds="1487,617,112,80" Id="PxyMpR190tEQBKEshXOHke">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="OIDhWXUUNRwPy47rO1cfjE">
+                  <Node Bounds="1499,646,57,26" AutoConnect="true" Id="PbzWQADdRLNPZffSDlqm1P">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Blur" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="EJHL86RguqMMQI3Wj6VK26" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="QYLKyEIWuDMM1vwXIq3rwp" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="FEhkBLos7eXLyD7kVjuyC7" Name="Blur" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="Mn918nU0HUaN1D9XgztNmp" Name="Input" Kind="InputPin" />
+                  <Pin Id="FETWnZkUcv2QLWArBWhISU" Name="Blur" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetBlur ************************
+
+-->
+              <Node Name="SetBlur" Bounds="1767,622,114,74" Id="AsQtObQku6KMRZ1ixqagtJ">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="J3MeK8bL7xtM9HXgGmac1x">
+                  <Node Bounds="1779,646,57,26" AutoConnect="true" Id="FmukeG5ZALWPQbKPCOVMg9">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetBlur" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="UMo8t3hX9fTLsF0gCDYWv8" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="OXlV23Ud1QcLrSddmw5n9F" Name="Value" Kind="InputPin" />
+                    <Pin Id="Ap2gyKKDw40LUUjr84qQWn" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="J6Kt9wNIlWQQG42MxEFHVL" Name="Input" Kind="InputPin" />
+                  <Pin Id="AMDyxlAQzaMNNFa6WnlJ3B" Name="Value" Kind="InputPin">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Pin Id="PBmIqYimYKHMyXcFfziTR4" Name="Output" Kind="OutputPin" />
+                  <ControlPoint Id="Frd0aTCnaw1OmymkpQaYJP" Bounds="1833,640" />
+                  <Link Id="CCYsQIamcSILfB0UsqktMc" Ids="Frd0aTCnaw1OmymkpQaYJP,OXlV23Ud1QcLrSddmw5n9F" />
+                  <Link Id="ONMftjxPl8wLwmiNGGvhsI" Ids="AMDyxlAQzaMNNFa6WnlJ3B,Frd0aTCnaw1OmymkpQaYJP" IsHidden="true" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Color ************************
+
+-->
+              <Node Name="Color" Bounds="2035,570,88,114" Id="F9Dq7dmWQ2pQSBP4oMvPrd">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="NC3Ap9Y9qq0OUB80bCsUKw">
+                  <Pin Id="TH0l0Gppn0TLzMVGOwo3Am" Name="Input" Kind="InputPin" />
+                  <Node Bounds="2047,627,64,26" AutoConnect="true" Id="OvifZuhfzq7PQBvYZYzw04">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.Color" LastDependency="VL.Avalonia.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Avalonia.Media.Color" />
+                      <Choice Kind="OperationCallFlag" Name="FromColor" />
+                    </p:NodeReference>
+                    <Pin Id="TpaN1hLlNo0PjJxLIRplvP" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="HnjSbJE2OkrNLzvrzyok9B" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="SQDPIRsAKINOqiqlDGICnY" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetColor ************************
+
+-->
+              <Node Name="SetColor" Bounds="1487,732,129,110" Id="G9h5sX5XNO3PZnbWEsggat">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="UOZmEjqemFiNeN6hfI7Js8">
+                  <Node Bounds="1499,796,57,26" AutoConnect="true" Id="BeR0kHUhE1ML5L7gAfDyJe">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetColor" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="Gmb8WRBqqfAO8Fe1oi3dBY" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SaR1SDyDG36PBoONS6AQdp" Name="Value" Kind="InputPin" />
+                    <Pin Id="IsI8ziAWSRWNksBmOwuv7g" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="Vd9QEM0TClpMvyGLK1J0vD" Name="Input" Kind="InputPin" />
+                  <Pin Id="O1XoP4zhzCVOdScjDUI6wI" Name="Output" Kind="OutputPin" />
+                  <Node Bounds="1551,760,53,26" AutoConnect="true" Id="U6PHJjy4XI2OWO4wVdZZ8D">
+                    <p:NodeReference LastCategoryFullName="Color.RGBA" LastDependency="VL.Avalonia.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="Color.RGBA" />
+                      <Choice Kind="OperationCallFlag" Name="ToColor" />
+                    </p:NodeReference>
+                    <Pin Id="EldkXI7zPqOPPOcmUHjx2X" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="E4RiHQNmYzqNpN8BRfoj0w" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="LiBmRZZMfvhLlt6KgFZu8U" Ids="E4RiHQNmYzqNpN8BRfoj0w,SaR1SDyDG36PBoONS6AQdp" />
+                  <ControlPoint Id="Orig3hbkPggNtAjmV13Bx2" Bounds="1553,750" />
+                  <Link Id="PE6oOpRELDVLpeK4Z06Hpp" Ids="Orig3hbkPggNtAjmV13Bx2,EldkXI7zPqOPPOcmUHjx2X" />
+                  <Pin Id="Sm4xIUbOweLPRNjlH2FDaE" Name="Value" Kind="InputPin" />
+                  <Link Id="DxLgqH5jCRNOaScO2c4Kv7" Ids="Sm4xIUbOweLPRNjlH2FDaE,Orig3hbkPggNtAjmV13Bx2" IsHidden="true" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ IsInset ************************
+
+-->
+              <Node Name="IsInset" Bounds="1767,767,112,80" Id="KgozM7VfFXxLjVFeAUREXR">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="UGPoWWoXptyNU4Dgo6b5SH">
+                  <Node Bounds="1779,796,57,26" AutoConnect="true" Id="SqWx0ewUL5pMm27b8xEkdN">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="IsInset" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="CIIxBBgSBFDN6xu4QtN4hN" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="VrBzy4m9JLCL9SvMZ2RgwI" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="JywjR7nzD1zQKqYAB8FxUV" Name="Is Inset" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="QukfoRzaQRuN5VY7opt0ev" Name="Input" Kind="InputPin" />
+                  <Pin Id="URJJgIC2hsxOKyZe1n9zWV" Name="Is Inset" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetIsInset ************************
+
+-->
+              <Node Name="SetIsInset" Bounds="2047,767,112,80" Id="FdzsB6B9V5CNVUqCbKbtd7">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="Vxm5MYVmfdrPHbvRdsvZ3F">
+                  <Node Bounds="2059,796,60,26" AutoConnect="true" Id="LDbdnnHgASVOTcSIp5Ib5U">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetIsInset" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="GM1F9jXvjmqNSbXdXpcIrl" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="GBmShAsv5DoNhjI7sJThAT" Name="Value" Kind="InputPin" />
+                    <Pin Id="JPtZMmfCzxDQMEKW4gQD3z" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="CHMMrk92LDBQCVHBdrbYj1" Name="Input" Kind="InputPin" />
+                  <Pin Id="IXp2GGyFfljN7BPA2lQZ0g" Name="Value" Kind="InputPin" />
+                  <Pin Id="MwTrWDnzFHHLF45RK3Mduc" Name="Output" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ OffsetX ************************
+
+-->
+              <Node Name="OffsetX" Bounds="1487,917,112,80" Id="OjqBza3p5h7OnWE3MJeAor">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="AVt9kN1Ox0zMBAQ23opap6">
+                  <Node Bounds="1499,946,57,26" AutoConnect="true" Id="Bv7G1Y5MuheO1wHDl04sP7">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="OffsetX" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="VdiuYnrHf2YLemLfpZoDjr" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="JNhHdGoJLs2MuVqTSEQ7Qw" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="TbdDeeg3vUkQXoEgIUDuiB" Name="Offset X" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="SiMDYIZBt37OqUaEmumaca" Name="Input" Kind="InputPin" />
+                  <Pin Id="McZgoLuw7BZP8yaX0x42qI" Name="Offset X" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetOffsetX ************************
+
+-->
+              <Node Name="SetOffsetX" Bounds="1767,917,112,80" Id="Pjt5lEoaiLhM3GtvFLy5om">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="T6qSQclNtluOMxan2XpZcu">
+                  <Node Bounds="1779,946,64,26" AutoConnect="true" Id="HATXWBPcYtWPYhcwzBqD0Y">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetOffsetX" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="P5rnvw7fjgJMOh1PHgnFPP" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="MW6JGAUHOUuOs4lPfUJyQo" Name="Value" Kind="InputPin" />
+                    <Pin Id="UbtCOcy1Se8QCgeugybp6L" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="VpTukoBTh2wQdQDsqJIfza" Name="Input" Kind="InputPin" />
+                  <Pin Id="Tth5jWDDXeXNyxf4KidWJB" Name="Value" Kind="InputPin" />
+                  <Pin Id="S8geXQ257MVMAB29XfyZ3t" Name="Output" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ OffsetY ************************
+
+-->
+              <Node Name="OffsetY" Bounds="2047,917,112,80" Id="IBMSj4eEn6dLmCtjbA0Hdg">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="AfPAS6B4EK9LgX6WLGC66r">
+                  <Node Bounds="2059,946,57,26" AutoConnect="true" Id="JHfiBsulROuL6S0u9SOAos">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="OffsetY" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="O78Q9Y3gjUzQYPl4A7AejD" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="OrYdFOVpnTEOzdeucmnMv8" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="HUleVmzHLTQLxmneAy1ceZ" Name="Offset Y" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="IXGgmCCalNFLs1hAHvdrm0" Name="Input" Kind="InputPin" />
+                  <Pin Id="GVZAmRVy7qJMNlZFUx16QC" Name="Offset Y" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetOffsetY ************************
+
+-->
+              <Node Name="SetOffsetY" Bounds="1487,1067,112,80" Id="Sc9Yk8eoEMqP0UbuyfQn0N">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="N8ZEUOLH0HJPJ0dpXnB4gq">
+                  <Node Bounds="1499,1096,64,26" AutoConnect="true" Id="S1gAkrpu3G5OsOjRENdVqE">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetOffsetY" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="FcuONfMuHCBPTWALTNJXni" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SWiJEMQrkMlPXzHzTV4uF1" Name="Value" Kind="InputPin" />
+                    <Pin Id="Ef6K5sCvDDWMzfvEbPtS3H" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="I5ZxEcquaG3On5qBoeHfZE" Name="Input" Kind="InputPin" />
+                  <Pin Id="ErZ1PNq1hI5NbRu2PrhDpE" Name="Value" Kind="InputPin" />
+                  <Pin Id="NttoOKIes0uO4qcjd7XopA" Name="Output" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Spread ************************
+
+-->
+              <Node Name="Spread" Bounds="1767,1067,112,80" Id="T4zxjBE55gKNS7PemcPgLi">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="MuT1WP8zfe8PXKa6cchkS0">
+                  <Node Bounds="1779,1096,57,26" AutoConnect="true" Id="HQ90jnqy5eqPIbBG2tO6XL">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="Spread" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="UhpamNrmu2fPRVU0oG55TU" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="BVzNj7fGA0MN9u8ajqfFld" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="S3VptmkkfnyPKYyUfCnhoy" Name="Spread" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="USybQ1AdVtSMHcURlDkNDx" Name="Input" Kind="InputPin" />
+                  <Pin Id="VkdaLPvAms1N4ERaOvw3Bw" Name="Spread" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ SetSpread ************************
+
+-->
+              <Node Name="SetSpread" Bounds="2047,1067,112,80" Id="Mf6RqqnZ6tTMmHWpiOJ6ya">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="KmmTeYO49qOQSfOPXMcD6P">
+                  <Node Bounds="2059,1096,61,26" AutoConnect="true" Id="BGRzu6F3TK2ONbfVhZY0bn">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetSpread" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="Rq7gtNtDjSNPfbqtzxOBsh" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="E3JuQ9TdXRhPGeoB73aN8V" Name="Value" Kind="InputPin" />
+                    <Pin Id="JI59mSDGPurNVHhoM5Rchm" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="JhSmLhEdPEfN2vxfl64g57" Name="Input" Kind="InputPin" />
+                  <Pin Id="NE8z7RETkcoOJgGgB5Z6S6" Name="Value" Kind="InputPin" />
+                  <Pin Id="DULkUdno5P3LsRUYUkWXrh" Name="Output" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Equals ************************
+
+-->
+              <Node Name="Equals" Bounds="1489,1240,112,80" Id="EWvg4HhxoMeQIpMn4Ka4BR">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="SFbK66xT9bZLpIRj5jQfOC">
+                  <Node Bounds="1501,1269,57,26" AutoConnect="true" Id="L0YMuOqCda8ORKSwLjdb8s">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="Equals" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                      <PinReference Kind="InputPin" Name="Input" />
+                      <PinReference Kind="InputPin" Name="Other" ParameterModifier="in" />
+                    </p:NodeReference>
+                    <Pin Id="PonxH91Mo2KOIvokDBLfKg" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="HJKxRZFSYreOjohR85OPGZ" Name="Other" Kind="InputPin" />
+                    <Pin Id="LuuI1WYDb5nPVzWNVlW8dl" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="AesI4udPFwAN6DEbRflwYq" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="FqS1vL8YTtxMKs82YgL8QE" Name="Input" Kind="InputPin" />
+                  <Pin Id="Iq2Hg4nPPS8QFgDsMQHWmX" Name="Other" Kind="InputPin" />
+                  <Pin Id="SyZS9vC2oovQLg06e5NVj0" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ Equals ************************
+
+-->
+              <Node Name="Equals" Bounds="1769,1240,112,80" Id="OwrAAG48OVSNNaqL3rCPFc">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="LPHqIp2U249Pka2mG68v9I">
+                  <Node Bounds="1781,1269,57,26" AutoConnect="true" Id="D6gAZt9zyfkLmHHVGrlLwl">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="Equals" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                      <PinReference Kind="InputPin" Name="Input" />
+                      <PinReference Kind="InputPin" Name="Obj" />
+                    </p:NodeReference>
+                    <Pin Id="O2WZtaIRWCCP5Y6La3tSQo" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="BvchhKMpLRGO6bcik3cxqG" Name="Obj" Kind="InputPin" />
+                    <Pin Id="Ope6KBCPYYMM2bMrjXq2Fp" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="PQB5yI95oXLOITPtF8AJp2" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="OMHgwgPuTe3OSoMgMJhe7R" Name="Input" Kind="InputPin" />
+                  <Pin Id="IckoWzRMxPTN8SNt7BA0oO" Name="Obj" Kind="InputPin" />
+                  <Pin Id="FUwFEMRO7LXOAkGphv4zw8" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ ToString ************************
+
+-->
+              <Node Name="ToString" Bounds="1489,1390,112,80" Id="FXiVgoUjkAJMLHcZLws48V">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="Hv1kSCSbuc9Or5i3zioTqj">
+                  <Node Bounds="1501,1419,57,26" AutoConnect="true" Id="QaVdE6ktD6RPjHpt0Okwg9">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="ToString" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="HxzznFDWxWRPOTCAMQ5AfE" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="VIbOdcVgMlXMywXzPcjl1I" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="AzAwn0dvbykLWdvKsZ4Xjf" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="DfP1zakqunpNgKHf5TG87U" Name="Input" Kind="InputPin" />
+                  <Pin Id="GlXIg6e4mDQM04wwheI8FM" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ TransformBounds ************************
+
+-->
+              <Node Name="TransformBounds" Bounds="1769,1390,121,80" Id="KYM0ENAKENAOAdng1xnvbO">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="P4rYCWVPVR5NpP7znvESe1">
+                  <Node Bounds="1781,1419,97,26" AutoConnect="true" Id="AcbWIPuVv6uMY4NBnGtTEC">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="TransformBounds" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="DBkOCxL2RbhOJ34IRkNnET" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="PitfOuLAXlFPsmfSGCEP90" Name="Rect" Kind="InputPin" />
+                    <Pin Id="BhjT8VZi3IZNCSs4WvRInL" Name="Output" Kind="OutputPin" IsHidden="true" />
+                    <Pin Id="AEhtmtp5L1ZN2tnxOPiV6t" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="PuhpRn4c5HtOF4QY6rTdni" Name="Input" Kind="InputPin" />
+                  <Pin Id="NXXtYmzD0n0LQshyOlnDdx" Name="Rect" Kind="InputPin" />
+                  <Pin Id="JHT0w03P9caMaiE2U2hW66" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ BoxShadow ************************
+
+-->
+              <Node Name="BoxShadow" Bounds="891,482,333,414" Id="JGvJ6FbUMTVMWx360DDyBT">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" />
+                </p:NodeReference>
+                <Patch Id="CmxiNDTW1ZGOPciGLdbVij">
+                  <Node Bounds="906,600,64,26" Id="O7AY8MDyuisM1hrdLUpV3z">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="VL.Avalonia.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="BoxShadow" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="SetOffsetX" />
+                    </p:NodeReference>
+                    <Pin Id="EO7oMCvfkEDLAnfrJvSKQm" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Re2Lw0GP9OJPCtLc1GuoRO" Name="Value" Kind="InputPin" />
+                    <Pin Id="RJLTjXFjmZPNyDoHx6TxCD" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Node Bounds="906,650,64,26" Id="OQh6Tz6NipzLxwE6rGfGFw">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="VL.Avalonia.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="BoxShadow" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="SetOffsetY" />
+                    </p:NodeReference>
+                    <Pin Id="Jsz56ejBgmmLD0w5N7vS2j" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="RI3rqI4wGAtLlbSMoypu3F" Name="Value" Kind="InputPin" />
+                    <Pin Id="NpqnKmupbIZNdVrtBYz5D0" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Link Id="FSVxcED5WOjM77lmGhZWOh" Ids="RJLTjXFjmZPNyDoHx6TxCD,Jsz56ejBgmmLD0w5N7vS2j" />
+                  <Node Bounds="903,540,44,26" Id="HoaYkRoLgThQOkMXL4obKQ">
+                    <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4043309057" Name="Vector2" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="X" />
+                    </p:NodeReference>
+                    <Pin Id="AcPJBFGdbRrMWglYXK2cLm" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Cu3fcdBDwwTNgHRDL3XNWD" Name="X" Kind="OutputPin" />
+                  </Node>
+                  <ControlPoint Id="Tepj68Jt1kNMuu6WWs7ZQ8" Bounds="905,500" />
+                  <Link Id="Da4PGvEaCoGM2ItUjPJXHq" Ids="Tepj68Jt1kNMuu6WWs7ZQ8,AcPJBFGdbRrMWglYXK2cLm" />
+                  <Pin Id="OPNefxHOtQaOEOK5TdQEw5" Name="Offset" Kind="InputPin" DefaultValue="3, 3" />
+                  <Link Id="VW45qmZ2iXUOhfkc8yVkKX" Ids="OPNefxHOtQaOEOK5TdQEw5,Tepj68Jt1kNMuu6WWs7ZQ8" IsHidden="true" />
+                  <Link Id="PvvX6hQaR1bLErMoHmUUIm" Ids="Cu3fcdBDwwTNgHRDL3XNWD,Re2Lw0GP9OJPCtLc1GuoRO" />
+                  <Link Id="UrtFfC3lK9SO0yZmyjQ7Rn" Ids="Tepj68Jt1kNMuu6WWs7ZQ8,QfDAx2iAAn5OdGl6SjkYLQ" />
+                  <Node Bounds="958,540,44,26" Id="D70A1SaBDXUNUZGpHsebtf">
+                    <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="2D.Vector2" />
+                      <Choice Kind="OperationCallFlag" Name="Y" />
+                    </p:NodeReference>
+                    <Pin Id="QfDAx2iAAn5OdGl6SjkYLQ" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Hx1t0rtI34kNuivQHZktNa" Name="Y" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="CouT7S86FVwMCAhDP8VzIp" Ids="Hx1t0rtI34kNuivQHZktNa,RI3rqI4wGAtLlbSMoypu3F" />
+                  <Node Bounds="906,700,57,26" AutoConnect="true" Id="PEPG4JxhAmuQKFf15uAUQe">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetBlur" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="MjPbiiy9yrgPcPhpg96pLz" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="AgiGlpa4onwPTRAlwPQN6K" Name="Value" Kind="InputPin" />
+                    <Pin Id="N274ROmY6mGNRS6yy3L264" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="QAOaWNba24hLk4ih4pIW7V" Ids="OJ044cmVhfRMEM8I4J2TXs,L9WleYhwvpLNd4wImO9S4I" />
+                  <Pin Id="IVQt2z5DGx0MvD2lUKb5JM" Name="Blur" Kind="InputPin" DefaultValue="6">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Link Id="R5iPy333w4fLYMuGUAg4zD" Ids="NpqnKmupbIZNdVrtBYz5D0,MjPbiiy9yrgPcPhpg96pLz" />
+                  <ControlPoint Id="PEDAZfz0gorQb40VqXydq8" Bounds="1029,521" />
+                  <Link Id="AX5EKi6nmQlNMeZF5kXfKk" Ids="PEDAZfz0gorQb40VqXydq8,AgiGlpa4onwPTRAlwPQN6K" />
+                  <Link Id="DyixhNhBTHdLaRCyVuz1jO" Ids="IVQt2z5DGx0MvD2lUKb5JM,PEDAZfz0gorQb40VqXydq8" IsHidden="true" />
+                  <Node Bounds="906,750,61,26" AutoConnect="true" Id="Qz7FfOcyEzuOGUtybi6wyp">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetSpread" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="BUzLoFbAcBDPFTmeMiLiwu" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="JkU32zIM0kBNFM0cnmz6Ji" Name="Value" Kind="InputPin" />
+                    <Pin Id="OJ044cmVhfRMEM8I4J2TXs" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="MaYOLhC6W1qPEihbTxo1bR" Name="Spread" Kind="InputPin" DefaultValue="4">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Link Id="RgS2TCG3Z4tPWR3uxsKgKe" Ids="N274ROmY6mGNRS6yy3L264,BUzLoFbAcBDPFTmeMiLiwu" />
+                  <ControlPoint Id="AAkxLCySiyYPsAuonKOYRa" Bounds="1070,521" />
+                  <Link Id="DqNnaviT7oCLerO88hTGEw" Ids="AAkxLCySiyYPsAuonKOYRa,JkU32zIM0kBNFM0cnmz6Ji" />
+                  <Link Id="MDJUMtkM82BNT6bh1gusyT" Ids="MaYOLhC6W1qPEihbTxo1bR,AAkxLCySiyYPsAuonKOYRa" IsHidden="true" />
+                  <Node Bounds="909,850,60,26" AutoConnect="true" Id="V7i9Tbg30qeMagFo8QtGAZ">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetIsInset" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="RpR14fo5ZGYP9xFOlcRZ9v" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Stc9UhaZA17NFu1zjsQj0X" Name="Value" Kind="InputPin" />
+                    <Pin Id="B7g8KA7tyLOPmfu6gtzpyW" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="Iwo9qzD4r79NwYFqp8CF7E" Name="Color" Kind="InputPin" />
+                  <ControlPoint Id="H0viQ84HwDIPyu6M2wcJRj" Bounds="1120,521" />
+                  <Link Id="EOj1DM3kIASNGDSWykR2QH" Ids="Iwo9qzD4r79NwYFqp8CF7E,H0viQ84HwDIPyu6M2wcJRj" IsHidden="true" />
+                  <Pin Id="CJJs3UReGHjNa2Rfi8gtjb" Name="IsInset" Kind="InputPin" Visibility="Optional" />
+                  <ControlPoint Id="BEoLgIagYsjLRgNr3kBnRX" Bounds="1171,521" />
+                  <Link Id="FqEXNgAdPmFPrrRzsoV1Tt" Ids="BEoLgIagYsjLRgNr3kBnRX,Stc9UhaZA17NFu1zjsQj0X" />
+                  <Link Id="QXnouvteKnzMppOxh4iiy0" Ids="CJJs3UReGHjNa2Rfi8gtjb,BEoLgIagYsjLRgNr3kBnRX" IsHidden="true" />
+                  <Node Bounds="909,800,57,26" AutoConnect="true" Id="PiCQkUt2GGbQKw2ewTZar5">
+                    <p:NodeReference LastCategoryFullName="Avalonia.Media.BoxShadow" LastDependency="Avalonia.Base.dll">
+                      <Choice Kind="OperationNode" Name="SetColor" />
+                      <FullNameCategoryReference ID="Avalonia.Media.BoxShadow" />
+                    </p:NodeReference>
+                    <Pin Id="L9WleYhwvpLNd4wImO9S4I" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="DfXckgoM5d8QVDb6PDGkDm" Name="Value" Kind="InputPin" />
+                    <Pin Id="NolsPbzGeahP4EdmxgIRty" Name="Output" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="N0TalETfCNiOHhsZBJbMgd" Ids="NolsPbzGeahP4EdmxgIRty,RpR14fo5ZGYP9xFOlcRZ9v" />
+                  <Pin Id="N6nvJgnonsZO2k5NAjVSVJ" Name="Output" Kind="OutputPin" />
+                  <Link Id="U5hwDO7dLRuPaKmuXqbhCI" Ids="H0viQ84HwDIPyu6M2wcJRj,DfXckgoM5d8QVDb6PDGkDm" />
+                </Patch>
+              </Node>
+            </Canvas>
+            <ProcessDefinition Id="DKeG1AfiQH9QQueHtSJXJT" IsHidden="true">
+              <Fragment Id="Kbi30eTuXOEOdvwAe28w64" Patch="KIH9oH4ZlR8MxmIoHhl0wq" />
+              <Fragment Id="KtWnmb5MJqmNcgv3ZpCsk9" Patch="GELODRnH6WtOfY0flF99Aw" />
+              <Fragment Id="TdeyKLeNiAoO7ssw3l4UQI" Patch="UuKpEzHGuZdNAaxfZ9ynBg" />
+              <Fragment Id="IFlkYl0yrviMQmFKAsvAL7" Patch="PxyMpR190tEQBKEshXOHke" />
+              <Fragment Id="APUOHspZkTSNw6oaeCrMRv" Patch="AsQtObQku6KMRZ1ixqagtJ" />
+              <Fragment Id="BEkBeHJ8ub3N2wFWzh8MGQ" Patch="F9Dq7dmWQ2pQSBP4oMvPrd" />
+              <Fragment Id="ADOcQPietBDMtxbyTbrsOz" Patch="G9h5sX5XNO3PZnbWEsggat" />
+              <Fragment Id="VZHoI89Lk0rOOO29AiyQfd" Patch="KgozM7VfFXxLjVFeAUREXR" />
+              <Fragment Id="Al2eneeusuBOPGb7miSVD2" Patch="FdzsB6B9V5CNVUqCbKbtd7" />
+              <Fragment Id="N4frQr9zBtCPO7ulcA7UEw" Patch="OjqBza3p5h7OnWE3MJeAor" />
+              <Fragment Id="PPV5ZueyhWiPpoyzmQkKue" Patch="Pjt5lEoaiLhM3GtvFLy5om" />
+              <Fragment Id="CkVKBSOy8MaN0UA2m0YZfq" Patch="IBMSj4eEn6dLmCtjbA0Hdg" />
+              <Fragment Id="LtUPU1W2Cj6MIRGQJBtB9x" Patch="Sc9Yk8eoEMqP0UbuyfQn0N" />
+              <Fragment Id="UtPxWJp8APVLv5at3lS2xd" Patch="T4zxjBE55gKNS7PemcPgLi" />
+              <Fragment Id="COksu1BLhdmNDps16NZ0no" Patch="Mf6RqqnZ6tTMmHWpiOJ6ya" />
+              <Fragment Id="GpToKRQ7SzWMpvbfXUPzIo" Patch="EWvg4HhxoMeQIpMn4Ka4BR" />
+              <Fragment Id="PZ5ZF6k6Cy7NNobAzLFB1s" Patch="OwrAAG48OVSNNaqL3rCPFc" />
+              <Fragment Id="Rs2tocfsjp9MI9ttztbFOL" Patch="FXiVgoUjkAJMLHcZLws48V" />
+              <Fragment Id="Fl8FRXQgwTLL9yhj0lz7fI" Patch="KYM0ENAKENAOAdng1xnvbO" />
+              <Fragment Id="CjWePWgXiOVLrFNPdHRn2y" Patch="JGvJ6FbUMTVMWx360DDyBT" />
+            </ProcessDefinition>
+          </Patch>
+        </Node>
       </Canvas>
+      <!--
+
+    ************************ Thickness ************************
+
+-->
+      <Node Name="Thickness" Bounds="453,366" Id="R4og5xLXDl1Ow83Prk8qVe">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Avalonia" LastDependency="Avalonia.Base.dll">
+          <Choice Kind="TypeFlag" Name="Thickness" />
+          <FullNameCategoryReference ID="Avalonia" />
+          <AssemblyReference ID="Avalonia.Base.dll" />
+        </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+        <Patch Id="Qk6MVfiCxEdOdB5khjOmHm">
+          <Canvas Id="Lw6WzbcWpyTOa4e9iAJTv7" CanvasType="Group">
+            <!--
+
+    ************************ + ************************
+
+-->
+            <Node Name="+" Bounds="930,160,128,82" Id="Ial9nWXLROGNIBEa01LdRV">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="HlSmrTE03SQL7RcPtLMG8o">
+                <Node Bounds="958,192,25,19" AutoConnect="true" Id="QqJaH5MCwiCPxnQhpcLxKa">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="+" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Avalonia" LastDependency="VL.Avalonia.vl">
+                        <Choice Kind="TypeFlag" Name="Thickness" />
+                        <FullNameCategoryReference ID="Avalonia" />
+                        <AssemblyReference ID="Avalonia.Base.dll" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="MvFoTLzAklxOEDFUQSBPjp" Name="Input" Kind="InputPin" />
+                  <Pin Id="PSGvOwaKlirL2zfCFnI5AT" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="CIuGeHqD8VUMlfiLstvGKe" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="QSyJmmflIM5OgeNvPzOcN2" Name="Input" Kind="InputPin" />
+                <Pin Id="KMzKmTTr3BzND1XJahEVgt" Name="Input 2" Kind="InputPin" />
+                <Pin Id="JfW8IzcSncYLY31KvcMpev" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ + ************************
+
+-->
+            <Node Name="+" Bounds="1210,160,128,82" Id="P1V2yoCbSiDPya3boWIFhv">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="CXRZPhJWuW0MnbXbToUiJT">
+                <Node Bounds="1238,192,25,19" AutoConnect="true" Id="HDVwQSEjPRAQETKeBYAbTX">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="+" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Avalonia" LastDependency="Avalonia.Base.dll">
+                        <Choice Kind="TypeFlag" Name="Size" />
+                        <FullNameCategoryReference ID="Avalonia" />
+                        <AssemblyReference ID="Avalonia.Base.dll" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="VVGFmwuaQg3OB4X2AS56T0" Name="Input" Kind="InputPin" />
+                  <Pin Id="JyY5UqEWyPVOtBQPUOD6Jo" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="Q2LZoY6xcuWL65CDQ9NQzx" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Dzfxr68MIPeQUBqBtjmznC" Name="Input" Kind="InputPin" />
+                <Pin Id="QzltC40alBDMKjr3qyRY1V" Name="Input 2" Kind="InputPin" />
+                <Pin Id="TWf0m1JuigBPB7xWVu9VQU" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ = ************************
+
+-->
+            <Node Name="=" Bounds="930,310,128,82" Id="OVsgCKnIfzDLtZiJjzEUNa">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="BTANnBsmxHjQGm4VJg4MXc">
+                <Node Bounds="958,342,25,19" AutoConnect="true" Id="JOM4mKGP5dvNYLGChyA2x2">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="=" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="Vu96z4Ott3EMiG5jgdP7qE" Name="Input" Kind="InputPin" />
+                  <Pin Id="FOUUhMOjiuVNT29Hz72qt8" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="MXq3TZbUZbkLeMrHokz95J" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="NeBODxPUhLvNi0jta8aOWZ" Name="Input" Kind="InputPin" />
+                <Pin Id="GjvaEQ2PTdGNK5Aq2oMmd5" Name="Input 2" Kind="InputPin" />
+                <Pin Id="HtKGVvUj5HkOpKZuPJX9Md" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ != ************************
+
+-->
+            <Node Name="!=" Bounds="1211,310,126,82" Id="CVzxQ8SfcPPP7NRqDTJP2A">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="HZ7K5MS7KhZLZPboTIdtri">
+                <Node Bounds="1238,342,27,19" AutoConnect="true" Id="IufLArzEX0gLmXS3EE1ruz">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="!=" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="IGnTPbQEr1DNJXP0QbbndR" Name="Input" Kind="InputPin" />
+                  <Pin Id="AGubSRBAbUNOKufRuqUL2n" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="GopeRfFsG5ZL6r7fj4YLrF" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="FS14q57Ob2kNxii9nyN2Cp" Name="Input" Kind="InputPin" />
+                <Pin Id="Jqy7A7cYEllLV90AZgHx9p" Name="Input 2" Kind="InputPin" />
+                <Pin Id="FMaOgqZeQflMsy00U7cK0r" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ * ************************
+
+-->
+            <Node Name="*" Bounds="930,460,128,82" Id="FGNGmzCec39Mwr1LcrB6Jk">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="CcMUP9y3jdnOO99t62Zfya">
+                <Node Bounds="958,492,25,19" AutoConnect="true" Id="JI6qm2btnfeNSdJrYS7IM5">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="*" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="MRYfORhzHojMwoTvUmKeQd" Name="Input" Kind="InputPin" />
+                  <Pin Id="DS06Eawd5CSMHDWNL7dkHK" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="KjaVHBTyKBbPA7pfOORhn6" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="OGYln2PQhLnOEezw4kKK4q" Name="Input" Kind="InputPin" />
+                <Pin Id="E83KeMtp11PMuhk01xK1Su" Name="Input 2" Kind="InputPin" />
+                <Pin Id="DpkoxNDR9AOQS9jRWCRoEB" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ - ************************
+
+-->
+            <Node Name="-" Bounds="1210,460,128,82" Id="GcTUxWGlaqCPIYHK2Aaral">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="KZ80ObUMTEGPNmlcPqGNpX">
+                <Node Bounds="1238,492,25,19" AutoConnect="true" Id="RmKvorDEFhKNbIylolPgxD">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="-" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Avalonia" LastDependency="VL.Avalonia.vl">
+                        <Choice Kind="TypeFlag" Name="Thickness" />
+                        <FullNameCategoryReference ID="Avalonia" />
+                        <AssemblyReference ID="Avalonia.Base.dll" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="UpnFOi4GA6oL9qfBpqxKnj" Name="Input" Kind="InputPin" />
+                  <Pin Id="KCDiIKtZYhkOuYB55shNNo" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="V4LMQfatgm5OrIUjhZW6gf" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="JaxJA9BMKGWOZcsuphMBgi" Name="Input" Kind="InputPin" />
+                <Pin Id="TGVyHyZiZDqOjeiUb87Fu0" Name="Input 2" Kind="InputPin" />
+                <Pin Id="Q5sLou89fmEPcarSbthyqm" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ - ************************
+
+-->
+            <Node Name="-" Bounds="930,610,128,82" Id="O71fl6yIJgCMl8tbF3Pyak">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="S6lCp3kJN85OYydZroXLw8">
+                <Node Bounds="958,642,25,19" AutoConnect="true" Id="Cq2FlnTYSsBMBdhCMc89Ei">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="-" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Avalonia" LastDependency="Avalonia.Base.dll">
+                        <Choice Kind="TypeFlag" Name="Size" />
+                        <FullNameCategoryReference ID="Avalonia" />
+                        <AssemblyReference ID="Avalonia.Base.dll" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="KICYm2RTiW6LCzaHGtTzIa" Name="Input" Kind="InputPin" />
+                  <Pin Id="CSFpc7t8jTUMPf0QrCGqrB" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="KMDVFP3oDEzPvKaHol1IjF" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="J4yTo7KKRCRPGieAvg49t7" Name="Input" Kind="InputPin" />
+                <Pin Id="J0WFjpIVi9IMyQ13nDDoKh" Name="Input 2" Kind="InputPin" />
+                <Pin Id="VzrjAnLCQDSPH38sFVH3sE" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Parse ************************
+
+-->
+            <Node Name="Parse" Bounds="1218,610,120,82" Id="NRBSKAJugRENsiBas4BFZs">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="SFrR94YJVYxPBp7bIJL85e">
+                <Node Bounds="1238,642,41,19" AutoConnect="true" Id="TeeRNcGRdb3LiAwCnoBs25">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Parse" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="QKRKHZco3JbMYzSS4KKWBP" Name="S" Kind="InputPin" />
+                  <Pin Id="NAkxDqSbYO2QBjvvtTOfSk" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="FejPc6aaaLjO6elXJce0kE" Name="S" Kind="InputPin" />
+                <Pin Id="IZo8QJnE5qKLYcuPdvMGUR" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Bottom ************************
+
+-->
+            <Node Name="Bottom" Bounds="399,650,114,80" Id="JGkNjg92QK7LMehWPbSmjY">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="HfHcI1IdmLNMSHRxglZO2s">
+                <Node Bounds="413,679,52,26" AutoConnect="true" Id="TnLQYDMtojuMFo2RJk9ExB">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Bottom" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="NHSdecTz2BhMpwh25fWkkk" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="RixY7bAtmwTLEVmXGBJ5ew" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="Ia32yvAeldELKBwNRyOLrY" Name="Bottom" Kind="OutputPin" />
+                </Node>
+                <Pin Id="CZ9M7eFiHgxPGzDxDRxfYv" Name="Input" Kind="InputPin" />
+                <Pin Id="UIyIddv7YyTOwdS6DZVxvN" Name="Bottom" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ IsUniform ************************
+
+-->
+            <Node Name="IsUniform" Bounds="681,650,112,80" Id="HC5DJNnB2giQU1Lg8824kM">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="NLKaWVq9WuzPA8uUFSBRoi">
+                <Node Bounds="693,679,61,26" AutoConnect="true" Id="TZ9lwiI9XdPOeDixxjkjkR">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="IsUniform" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="GNtIzo6hwVcOhSMwJ0a4BS" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="VtKX71EURHUOqEeVu7iR8T" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="ItrKNaWbcFSM9kHiRA2rMh" Name="Is Uniform" Kind="OutputPin" />
+                </Node>
+                <Pin Id="AcbVaeXoPCdOKYAUXu1JvR" Name="Input" Kind="InputPin" />
+                <Pin Id="EGCnbPMNl5qOcaRLgjxxjm" Name="Is Uniform" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Left ************************
+
+-->
+            <Node Name="Left" Bounds="399,800,114,80" Id="H6ASt4xSC3uO0ckRLbWI7K">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="SOMTl8KqrMnMmrTDqR4H9E">
+                <Node Bounds="413,829,52,26" AutoConnect="true" Id="E9l8JTlg6l3Pqc0WK1Mk3B">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Left" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="BWa4YrLRB3sNuFBX0OSI2m" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="KOOIxwBoYxAN6fXU7tCkTm" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="FIfrfeXXR9FLZbwLKAQ42p" Name="Left" Kind="OutputPin" />
+                </Node>
+                <Pin Id="SnIo2qFAlIsQAAXJS6SUmt" Name="Input" Kind="InputPin" />
+                <Pin Id="JH9ehSfYbblN8C153H8Mug" Name="Left" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Right ************************
+
+-->
+            <Node Name="Right" Bounds="679,800,114,80" Id="TOaorsUjUfHNnmXwdDb8qW">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="EwuZ0GGbF9nNUaZQsJ6zTU">
+                <Node Bounds="693,829,52,26" AutoConnect="true" Id="J1p5C51XEThOgUvrmvv0TY">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Right" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="CAxU9gJB9z3Ny2fLATVqR5" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Hk0GZnUyYorMCFG1mxd4re" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="JAFKSZeuI7ILiN7ywnuMWR" Name="Right" Kind="OutputPin" />
+                </Node>
+                <Pin Id="DkHrGvUwBaRPqE6PRx4dr5" Name="Input" Kind="InputPin" />
+                <Pin Id="QdyLzXTKn3UQaK0DA3086S" Name="Right" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Top ************************
+
+-->
+            <Node Name="Top" Bounds="399,950,114,80" Id="SSLoNv098K5QAnIJ5Ey3J3">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="IfDWna034SCMJ8Wue496Il">
+                <Node Bounds="413,979,52,26" AutoConnect="true" Id="BtUC7FJkJrrPMEnMpOc5n6">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Top" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="CrAHg7YYLVeLnDYapVVqjW" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="KaoU3cmP76hL3jfOoYx3fE" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="PEcrfrUbtqnNPAWBLgQNSv" Name="Top" Kind="OutputPin" />
+                </Node>
+                <Pin Id="O5m7KivixUQQK7KkH9yN2g" Name="Input" Kind="InputPin" />
+                <Pin Id="SoteVdX9X40OXw7h3706xh" Name="Top" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Deconstruct ************************
+
+-->
+            <Node Name="Deconstruct" Bounds="1190,790,112,80" Id="HpzKONUyHjiNGgjvebvB6V">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="DKUe1hoAedsMNyjOTypyHm">
+                <Node Bounds="1202,819,71,26" AutoConnect="true" Id="TWH3kmqm7yXMPSGYH8GjMe">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Deconstruct" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="Bz7qzNHuA2QM5a8tg9LtEw" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="JHE8Gi0eycjQTHPicTuguD" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="MWSFz4GOJtNQQqrae1GmJ3" Name="Left" Kind="OutputPin" />
+                  <Pin Id="IYFJ0joFol5QJNWtfKLT3Y" Name="Top" Kind="OutputPin" />
+                  <Pin Id="DYFYohD0bOJPbAOcrdrbuk" Name="Right" Kind="OutputPin" />
+                  <Pin Id="GWtolyupo14NQnLJnPw4h4" Name="Bottom" Kind="OutputPin" />
+                </Node>
+                <Pin Id="SHSiE3XU2zrPpmwrOqQsQU" Name="Input" Kind="InputPin" />
+                <Pin Id="K7qwKAlL097LnHlAIdHYlr" Name="Left" Kind="OutputPin" />
+                <Pin Id="B6kSOvaHxnOPIJMCvL7QBr" Name="Top" Kind="OutputPin" />
+                <Pin Id="HAjkGzXnvyTLuyeMrck3Ds" Name="Right" Kind="OutputPin" />
+                <Pin Id="UosylPn8H6zOeBA5SondCS" Name="Bottom" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Equals ************************
+
+-->
+            <Node Name="Equals" Bounds="939,794,114,80" Id="KbIwp0PBAO0P5DsSpL1ZSY">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Esmb89qFBYZQEQNBIouVkZ">
+                <Node Bounds="953,823,52,26" AutoConnect="true" Id="QlsmrHrdykiL1LIe7cCOcC">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="Equals" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input" />
+                    <PinReference Kind="InputPin" Name="Other" />
+                  </p:NodeReference>
+                  <Pin Id="IJjbWci5n5IMi2H5Zk4zih" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="AK2w6JadPtLQAFNppk89Zi" Name="Other" Kind="InputPin" />
+                  <Pin Id="CsYDDMVYL04Oy3ZGtaj3kF" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="A1udFr75FUQPTf6Gn9bl8H" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="CC6FA8CWrhoQJ7ve7iZew5" Name="Input" Kind="InputPin" />
+                <Pin Id="DZ1R90ksN9qLHIxft6cIRe" Name="Other" Kind="InputPin" />
+                <Pin Id="LSZ11CE9UlqOk039da584R" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Equals ************************
+
+-->
+            <Node Name="Equals" Bounds="1188,940,114,80" Id="F3v4ly0EMxbLHa30u4dD2h">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="MqJJemQL87tNk6tTF90IDd">
+                <Node Bounds="1202,969,52,26" AutoConnect="true" Id="AT1oMbf6ghQMNBWma5H7bX">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="Equals" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                    <PinReference Kind="InputPin" Name="Input" />
+                    <PinReference Kind="InputPin" Name="Obj" />
+                  </p:NodeReference>
+                  <Pin Id="Cc9M6P7vJyqQW3u6X8jbbZ" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="FTvcTNCcW8PPUroSAYg1Uw" Name="Obj" Kind="InputPin" />
+                  <Pin Id="Mn1wECad49lNaSX8OaL9fb" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="DWQhuOTCfOBLbvuviRrgBj" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="RhAsPOP2FYeLZFysl2mwK2" Name="Input" Kind="InputPin" />
+                <Pin Id="AT14mIRvd8wNqSSKvqMmj0" Name="Obj" Kind="InputPin" />
+                <Pin Id="TmFo5j8ZSyOM1j3R88hlNk" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ToString ************************
+
+-->
+            <Node Name="ToString" Bounds="1189,1090,112,80" Id="AiIs4dbh9ypQX8TojAoTmW">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="QUrxFtypBiLPkV2Mryi91Q">
+                <Node Bounds="1202,1119,55,26" AutoConnect="true" Id="HTgH1YhlPmoODJIVDcVaTI">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="ToString" />
+                    <FullNameCategoryReference ID="Avalonia.Thickness" />
+                  </p:NodeReference>
+                  <Pin Id="Jawu5jaGTTUN3ntm7y4YFN" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Fe4Rr0W4YSsM3qesHtIpni" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="FyKp7xoFGLLQEWZ6MO75lN" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Iovxq3bNRO2Mi81r2Zy5ft" Name="Input" Kind="InputPin" />
+                <Pin Id="I6ppo3hEoMqL5TpHjUosNc" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Thickness (Uniform) ************************
+
+-->
+            <Node Name="Thickness (Uniform)" Bounds="348,192,108,125" Id="Eqeh9b93zlKM2c1TbhX2Sb">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="OtQzqP2OPxYQGRqZJnJTTZ">
+                <Node Bounds="360,240,52,26" Id="UZmodeNo0irOfoFgu2WVaW">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Avalonia" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Thickness" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Uniform Length" />
+                  </p:NodeReference>
+                  <Pin Id="SIwCE3HkFsUOOPDmNMVCbh" Name="Uniform Length" Kind="InputPin" />
+                  <Pin Id="TMP2IuKg0GfPDGOJ8Xsu4m" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <ControlPoint Id="DAsiZRYxeTZMUNG77kmxzM" Bounds="362,210" />
+                <Link Id="JU1DiZN0zFzPFMVHBQK0lw" Ids="DAsiZRYxeTZMUNG77kmxzM,SIwCE3HkFsUOOPDmNMVCbh" />
+                <Pin Id="HtSQcpFz2svPc7QHEvwhdV" Name="Uniform Length" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="RdRBW2EEgejObKSf8IEzLi" Ids="HtSQcpFz2svPc7QHEvwhdV,DAsiZRYxeTZMUNG77kmxzM" IsHidden="true" />
+                <ControlPoint Id="UGI6cQINyafOBoIapyd2b3" Bounds="362,300" />
+                <Link Id="D0YhSyrtOtjLdzxUBvSrAm" Ids="TMP2IuKg0GfPDGOJ8Xsu4m,UGI6cQINyafOBoIapyd2b3" />
+                <Pin Id="G2AHxDzOSklLZPZvTndTnc" Name="Output" Kind="OutputPin" />
+                <Link Id="LIDDMrPutMTLCtOuIW1Mqv" Ids="UGI6cQINyafOBoIapyd2b3,G2AHxDzOSklLZPZvTndTnc" IsHidden="true" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Thickness (Horizontal Vertical) ************************
+
+-->
+            <Node Name="Thickness (Horizontal Vertical)" Bounds="536,193,118,122" Id="HTdWeBzRNtpO2tWuOCclCo">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="MBqekqqW9PHMGVMPTGmf3O">
+                <ControlPoint Id="JhLNXE0amvWQLVaP4n1vBC" Bounds="550,298" />
+                <Pin Id="DwcavgTynqhMyvNAIMJ9fy" Name="Output" Kind="OutputPin" />
+                <Link Id="DktXGiOF81EPPndgEG0ebv" Ids="JhLNXE0amvWQLVaP4n1vBC,DwcavgTynqhMyvNAIMJ9fy" IsHidden="true" />
+                <Node Bounds="548,250,52,26" Id="OJzjKgk5DoWP2doIHgbXWE">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Thickness" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Horizontal" />
+                    <PinReference Kind="InputPin" Name="Vertical" />
+                  </p:NodeReference>
+                  <Pin Id="Qe0zXYvakzFL0kLr7o7UaV" Name="Horizontal" Kind="InputPin" />
+                  <Pin Id="BQ843KZEMVXOYszrjaZOCO" Name="Vertical" Kind="InputPin" />
+                  <Pin Id="CJlKPWe47iGPVRXUpRbTUN" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Link Id="Pm0nnc06wWLOQs79z9LHGW" Ids="CJlKPWe47iGPVRXUpRbTUN,JhLNXE0amvWQLVaP4n1vBC" />
+                <ControlPoint Id="V7QrDHYyaW1PwvGNvh7Y8x" Bounds="550,211" />
+                <Link Id="JPuUXyszZ2sMCnGripm6Hp" Ids="V7QrDHYyaW1PwvGNvh7Y8x,Qe0zXYvakzFL0kLr7o7UaV" />
+                <Pin Id="L8yq9IjcyMPP512DYH0iyJ" Name="Horizontal" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="QBMBZaruGOQNA8ryFSRaiX" Ids="L8yq9IjcyMPP512DYH0iyJ,V7QrDHYyaW1PwvGNvh7Y8x" IsHidden="true" />
+                <ControlPoint Id="AVbHDCk0EvwNsakUMVyvor" Bounds="597,230" />
+                <Link Id="EZTUg53aUKPOvzOinsMg9J" Ids="AVbHDCk0EvwNsakUMVyvor,BQ843KZEMVXOYszrjaZOCO" />
+                <Pin Id="FUrs0a9m2hTMsQv0jnrqOT" Name="Vertical" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="IyoFiSCDNysOaiCW2hvl39" Ids="FUrs0a9m2hTMsQv0jnrqOT,AVbHDCk0EvwNsakUMVyvor" IsHidden="true" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Thickness ************************
+
+-->
+            <Node Name="Thickness" Bounds="359,392,130,125" Id="DJpzfYcyMwHPVuFIV0UGxv">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="McZeQhIZR3XLyJpC4YPIUA">
+                <ControlPoint Id="Rh8oRX3Sy2vPAD2hldesFc" Bounds="373,500" />
+                <Pin Id="MPCw6C0sA6ZQBcFzWOeyY6" Name="Output" Kind="OutputPin" />
+                <Link Id="N057jUO2NlrNIzQAeaenYE" Ids="Rh8oRX3Sy2vPAD2hldesFc,MPCw6C0sA6ZQBcFzWOeyY6" IsHidden="true" />
+                <Node Bounds="371,441,65,26" Id="I3le1DiI58ULRrJbXyvIMt">
+                  <p:NodeReference LastCategoryFullName="Avalonia.Thickness" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Avalonia" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Thickness" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Left" />
+                    <PinReference Kind="InputPin" Name="Top" />
+                    <PinReference Kind="InputPin" Name="Right" />
+                    <PinReference Kind="InputPin" Name="Bottom" />
+                  </p:NodeReference>
+                  <Pin Id="UmLeASnREnlQKCmsNgtOse" Name="Left" Kind="InputPin" />
+                  <Pin Id="RKMDasdugYTOo8vr2KxiES" Name="Top" Kind="InputPin" />
+                  <Pin Id="BG3tXZJFxQUONqAiRG8Wp1" Name="Right" Kind="InputPin" />
+                  <Pin Id="D8tvFKMLQ2MLBGxF5ddHsx" Name="Bottom" Kind="InputPin" />
+                  <Pin Id="Ik4JRo6OH6vM0hh7FZpHAc" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <ControlPoint Id="VmsI71ioEZvOFZeqIQpqfW" Bounds="373,410" />
+                <Link Id="DwmaDKmCnovPbrAfVaEzkY" Ids="VmsI71ioEZvOFZeqIQpqfW,UmLeASnREnlQKCmsNgtOse" />
+                <Pin Id="SfvlyXTSGeqOTbUizfgH9V" Name="Left" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="Tsx1GH5CViSLr0BW0ICi17" Ids="SfvlyXTSGeqOTbUizfgH9V,VmsI71ioEZvOFZeqIQpqfW" IsHidden="true" />
+                <ControlPoint Id="MI2M1hehH2kMuwzHvrr0y1" Bounds="393,430" />
+                <Link Id="Bj8hTua065QLinhf4OxNKK" Ids="MI2M1hehH2kMuwzHvrr0y1,RKMDasdugYTOo8vr2KxiES" />
+                <Pin Id="UeFeBrruyBmMOwn57veigI" Name="Top" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="SVPbz6ktQuGNsY4Xuu6Rd1" Ids="UeFeBrruyBmMOwn57veigI,MI2M1hehH2kMuwzHvrr0y1" IsHidden="true" />
+                <ControlPoint Id="Pxce12L1mVLK91LT84pSDF" Bounds="413,410" />
+                <Link Id="VBXNTmuhnaKLK1mFjYOMNA" Ids="Pxce12L1mVLK91LT84pSDF,BG3tXZJFxQUONqAiRG8Wp1" />
+                <Pin Id="KiuMSgNNeo8NzgZqZM3teS" Name="Right" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="T4mwe3BighjNmzsLEclVwv" Ids="KiuMSgNNeo8NzgZqZM3teS,Pxce12L1mVLK91LT84pSDF" IsHidden="true" />
+                <ControlPoint Id="H3DSBLU5YKjOLNmUbz62rX" Bounds="433,430" />
+                <Link Id="GhU38UCJMRlLLNFzGtMXuY" Ids="H3DSBLU5YKjOLNmUbz62rX,D8tvFKMLQ2MLBGxF5ddHsx" />
+                <Pin Id="Bq62bHipPqoMIWxPYjftRD" Name="Bottom" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="BUWyX4kln9GNr01DSYzSgA" Ids="Bq62bHipPqoMIWxPYjftRD,H3DSBLU5YKjOLNmUbz62rX" IsHidden="true" />
+                <Link Id="JQzB91wwOSXMHnemR0ppqc" Ids="Ik4JRo6OH6vM0hh7FZpHAc,Rh8oRX3Sy2vPAD2hldesFc" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="UxU2i9C80aHOjfqUjdyt32" IsHidden="true">
+            <Fragment Id="J9fzUpfNc1XN6TlQnoAwzg" Patch="P1V2yoCbSiDPya3boWIFhv" />
+            <Fragment Id="Be6BqV7CUYiPjJcoY1dPxk" Patch="OVsgCKnIfzDLtZiJjzEUNa" />
+            <Fragment Id="BfSBxfPcI6wLpgEOLA3tnv" Patch="CVzxQ8SfcPPP7NRqDTJP2A" />
+            <Fragment Id="TUMZ1iAFp28PF31FbanYFR" Patch="FGNGmzCec39Mwr1LcrB6Jk" />
+            <Fragment Id="F7ti5M9q66SN9oUooJbiUa" Patch="GcTUxWGlaqCPIYHK2Aaral" />
+            <Fragment Id="MTnuzoKijejL7VtZ7QbFom" Patch="O71fl6yIJgCMl8tbF3Pyak" />
+            <Fragment Id="SMkteaUv4syN1uQ8gTjQTT" Patch="NRBSKAJugRENsiBas4BFZs" />
+            <Fragment Id="GlEO7L7olP8Nt6837TV4bq" Patch="JGkNjg92QK7LMehWPbSmjY" />
+            <Fragment Id="Dmmu78thKt4MSqICNjgjlp" Patch="HC5DJNnB2giQU1Lg8824kM" />
+            <Fragment Id="HkhMsgXpdblPODikPWQoAl" Patch="H6ASt4xSC3uO0ckRLbWI7K" />
+            <Fragment Id="N5FR6i2ShuMLqW6G7GDqeW" Patch="TOaorsUjUfHNnmXwdDb8qW" />
+            <Fragment Id="FFvbyt38BNuM6pF34gUVjL" Patch="SSLoNv098K5QAnIJ5Ey3J3" />
+            <Fragment Id="VqFUysB3iWaMRX3FA9AT4M" Patch="Ial9nWXLROGNIBEa01LdRV" />
+            <Fragment Id="EjIQITCuH5UONsi40Egxej" Patch="HpzKONUyHjiNGgjvebvB6V" />
+            <Fragment Id="Cvo1egczGUpMVQVV5yHnbX" Patch="KbIwp0PBAO0P5DsSpL1ZSY" />
+            <Fragment Id="CYI7Neq7RVrL1IMDr4OwXa" Patch="F3v4ly0EMxbLHa30u4dD2h" />
+            <Fragment Id="FU6dJZYNe6LNN2ImHwJNR4" Patch="AiIs4dbh9ypQX8TojAoTmW" />
+            <Fragment Id="P7WFPwPmQlWMjrvMdldIiH" Patch="Eqeh9b93zlKM2c1TbhX2Sb" />
+            <Fragment Id="BSjRlfHq8JlOcUQARs7Nrg" Patch="HTdWeBzRNtpO2tWuOCclCo" />
+            <Fragment Id="RL74iU1y2TTOP42YNfVWqJ" Patch="DJpzfYcyMwHPVuFIV0UGxv" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ CornerRadius ************************
+
+-->
+      <Node Name="CornerRadius" Bounds="660,360" Id="DGuqNBsU1E0L84SEtkam9u">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Avalonia" LastDependency="Avalonia.Base.dll">
+          <Choice Kind="TypeFlag" Name="CornerRadius" />
+          <FullNameCategoryReference ID="Avalonia" />
+          <AssemblyReference ID="Avalonia.Base.dll" />
+        </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+        <Patch Id="VxdHOIi9kvaMKXeM6vfjDr">
+          <Canvas Id="GlLV9yNjNw7M6VlU5Cl2Gg" CanvasType="Group">
+            <!--
+
+    ************************ = ************************
+
+-->
+            <Node Name="=" Bounds="1384,129,128,82" Id="FRxeRwefvefNHYZsPBbojB">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Ny2jhdeQJK6OJOyHmJLvEh">
+                <Node Bounds="1412,161,25,19" AutoConnect="true" Id="B7cKh0P2dw6MvppQZsdNyl">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="=" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="RMrMRwPTYNnLkrDAPl0afh" Name="Input" Kind="InputPin" />
+                  <Pin Id="ANnRFqnvOXAMOD58Pc4ETB" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="PWXZ13z5gOeOuOXqS9alpx" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="O5qA6E6WbUQMJuRRajvwX1" Name="Input" Kind="InputPin" />
+                <Pin Id="QCYstzy6cPAPAhxiIKOih7" Name="Input 2" Kind="InputPin" />
+                <Pin Id="LtHN9CovzQYLTcgkXlDDWD" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ != ************************
+
+-->
+            <Node Name="!=" Bounds="1385,279,126,82" Id="Qs9iGDwPwLwMCexQ5XBiWT">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Sfn7QlusS8WPyZzhPxy6K8">
+                <Node Bounds="1412,311,27,19" AutoConnect="true" Id="Fr0TgZZMX7ROHqXLIV98Mu">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="!=" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="QzAvbm61vMxQIPgZs6XIP9" Name="Input" Kind="InputPin" />
+                  <Pin Id="J323sFAgftELQgnJn2Subc" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="IG8wsHE2BS1LyDsKq1PUJl" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="AOsjNf13aBkL2S7COMjCYb" Name="Input" Kind="InputPin" />
+                <Pin Id="MnscYD4KblSMB5lvyodFvv" Name="Input 2" Kind="InputPin" />
+                <Pin Id="BNfPoAaLD3ePqnxJ3nsy82" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Parse ************************
+
+-->
+            <Node Name="Parse" Bounds="1392,429,120,82" Id="NAq0NxtDIeFMe7QBdX2wad">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="DoAY2icJtHkNRWtB3OUUts">
+                <Node Bounds="1412,461,41,19" AutoConnect="true" Id="GEqs2uCzSDCOo37YKfgY48">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="Parse" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="PHv4JBKF2YBO9ijFoe4z2Z" Name="S" Kind="InputPin" />
+                  <Pin Id="AyS2ddj3M98Ov4OlaY2Lnv" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="RekItjmNYMkN0d7JHHh6g7" Name="S" Kind="InputPin" />
+                <Pin Id="RbuMNTSeWUCLn9GV8N1WKU" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BottomLeft ************************
+
+-->
+            <Node Name="BottomLeft" Bounds="1584,150,112,80" Id="KKO5cDLGCwGOJyPtNVl9CF">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="MStakO1aahaLLGYFSpENaA">
+                <Node Bounds="1596,179,66,26" AutoConnect="true" Id="K7s363HT1OfNnZEFDoCp77">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="BottomLeft" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="Th7G9dq4UnKMiWBosagoQP" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="OIjlWw2330zQQTk3uBOchy" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="FcnBhUDpV0xPcmdjUlpvvl" Name="Bottom Left" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Sb7kW8QlgxSQZLJjqzEyoo" Name="Input" Kind="InputPin" />
+                <Pin Id="SHVO0CBg78IMsV6TNIQPft" Name="Bottom Left" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BottomRight ************************
+
+-->
+            <Node Name="BottomRight" Bounds="1864,150,112,80" Id="M4kbG7rhH9hPXGPNy1FvyE">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="LXBOIzwXaD4MIzXdT0Ps9R">
+                <Node Bounds="1876,179,73,26" AutoConnect="true" Id="ACtPjL8AguCQJLIowUbLx0">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="BottomRight" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="UU1kSRcwEv5QDXtDo7vJLh" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MNdt6skL3EGLWdmL9rWVjt" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="Q37bVkzYjlaLGhPI7Q7U9q" Name="Bottom Right" Kind="OutputPin" />
+                </Node>
+                <Pin Id="K69TQqDvvKiOHRFQ9Etznp" Name="Input" Kind="InputPin" />
+                <Pin Id="QtZNOeiFFUjNCmRRHSNzJS" Name="Bottom Right" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ IsUniform ************************
+
+-->
+            <Node Name="IsUniform" Bounds="1584,300,112,80" Id="J9oKsbNvexAPttQkAXSwSb">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="OyFkpt3IGmvNd24Z2AmJpQ">
+                <Node Bounds="1596,329,64,26" AutoConnect="true" Id="VuiBZSh9mEPNRatzRJDamx">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="IsUniform" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="DGB1xCes0vaPrF959tTUQv" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="LitUZUJ9UfROwZONvpAHjO" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="IwYwJlLkvu5OQ5Wq2It16W" Name="Is Uniform" Kind="OutputPin" />
+                </Node>
+                <Pin Id="FxxmE9jcTNrMK5QePOEDcE" Name="Input" Kind="InputPin" />
+                <Pin Id="EO9G28AoepoQP9FckegUxJ" Name="Is Uniform" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ TopLeft ************************
+
+-->
+            <Node Name="TopLeft" Bounds="1864,300,112,80" Id="M3wGCNJnd4PLkP31lRr4Pz">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="BI4XBswwEKILh5YggYTJ6p">
+                <Node Bounds="1876,329,64,26" AutoConnect="true" Id="HJ8DM46K2nyPtBRH0x0Mgz">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="TopLeft" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="MX2tsIx6YRRMOKhVUSjgKp" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Otr2dn0gLasQQQX4Rm1BDY" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="NTR4pYSAUnsOOo9UkqnueZ" Name="Top Left" Kind="OutputPin" />
+                </Node>
+                <Pin Id="NPPSLhEoiVMLhnPRYFV4zV" Name="Input" Kind="InputPin" />
+                <Pin Id="BwIwOJAhkzFLgICYwKdezT" Name="Top Left" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ TopRight ************************
+
+-->
+            <Node Name="TopRight" Bounds="1584,450,112,80" Id="GTJYldfunz3LQnmyKWRwZU">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="IWgsrGc3aT5P9Oo0tIASYj">
+                <Node Bounds="1596,479,64,26" AutoConnect="true" Id="FfFODsIgCB7NvMLyH8jED2">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="TopRight" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="TNZzdGIVf91NM4koFPRiUZ" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NVSgKGZRdAMQRvdVDtab1v" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="THqWS9tvJcnNdX5I4yloIg" Name="Top Right" Kind="OutputPin" />
+                </Node>
+                <Pin Id="JfEbGudD7m2O2a8JUYTJxa" Name="Input" Kind="InputPin" />
+                <Pin Id="P0WRIGy9QMjN8Nn8GZFa9D" Name="Top Right" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Equals ************************
+
+-->
+            <Node Name="Equals" Bounds="1864,480,112,80" Id="A8JpWe6zHtCPdW2WSNzhGV">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="OZYpXocHFSROwycO4BuMV6">
+                <Node Bounds="1876,509,64,26" AutoConnect="true" Id="KxaazkRlhCdLfVIWGciDJW">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="Equals" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                    <PinReference Kind="InputPin" Name="Input" />
+                    <PinReference Kind="InputPin" Name="Other" />
+                  </p:NodeReference>
+                  <Pin Id="BJVNqGfNLuoNEV0dLN4Pm0" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="J5VoUV1l4UNOZQvLVmVqJL" Name="Other" Kind="InputPin" />
+                  <Pin Id="BPX5lnjXEgkNBp4EHB3nNb" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="VsUagwOnUiZLVn9Hi9A6gM" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="N6gLODvvcPbPNQ9Jyg68sn" Name="Input" Kind="InputPin" />
+                <Pin Id="Gf6ONDmD9I7MXkHv8cUSkF" Name="Other" Kind="InputPin" />
+                <Pin Id="UWeUb7NI9acLENkspirCiR" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Equals ************************
+
+-->
+            <Node Name="Equals" Bounds="2144,480,112,80" Id="VmofinA98x9QAb8ThBPNVT">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="VHcuzUR4jdkLa2ae66r6ZI">
+                <Node Bounds="2156,509,64,26" AutoConnect="true" Id="RideQsBZK7OQWdabDVVqaP">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="OperationNode" Name="Equals" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                    <PinReference Kind="InputPin" Name="Input" />
+                    <PinReference Kind="InputPin" Name="Obj" />
+                  </p:NodeReference>
+                  <Pin Id="IUsAM2RKPAIP6jRiU9iNBH" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="RqcKzuAGYM1MbPBE2vCErn" Name="Obj" Kind="InputPin" />
+                  <Pin Id="SZeLllT9imcMjyZYugUR6t" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="H8JNQz6i68iNIb5cOyzhAx" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Q72bDw5sqZiPsjz8IqqAKS" Name="Input" Kind="InputPin" />
+                <Pin Id="VTCuIC3kQcrO7eu4GN3XDb" Name="Obj" Kind="InputPin" />
+                <Pin Id="PNDDwFzfTxKMfuyaTd3jOO" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ GetHashCode ************************
+
+-->
+            <Node Name="GetHashCode" Bounds="1864,630,112,80" Id="GrOsZKemcZcQdtH0RIdCsN">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="RHs3BGVhJw0QGrjVRX6ac1">
+                <Node Bounds="1876,659,78,26" AutoConnect="true" Id="VF1psN5gxAXQEDWYCkTtkj">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="GetHashCode" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="PCYoM6qrfsWNy7Z1lKAiRv" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="L3RQqH2k08IM9qf9xXQZhl" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="H5B69UK1jYyO1yp3VwOoP8" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="FncWkWnJO0WQU6QnW6OvLB" Name="Input" Kind="InputPin" />
+                <Pin Id="AuQTCGVbSFPPenIOqP4Na4" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ToString ************************
+
+-->
+            <Node Name="ToString" Bounds="2144,630,112,80" Id="O2PYhB7kXd0LP5pI1anYQQ">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="IKVUS65y0VhMtaiwjx4iMb">
+                <Node Bounds="2156,659,64,26" AutoConnect="true" Id="NhikLnKbPafOe9NFmnVUgm">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll">
+                    <Choice Kind="OperationNode" Name="ToString" />
+                    <FullNameCategoryReference ID="Avalonia.CornerRadius" />
+                  </p:NodeReference>
+                  <Pin Id="BZqpNSI0vRKOltIkWJAuIa" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="JeaBrxsatvkQbte9PQLy65" Name="Output" Kind="OutputPin" IsHidden="true" />
+                  <Pin Id="Ahz5eTw3btMPFpSDc9UirZ" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="B9Vi1xP5UsHL59S4LfzxMC" Name="Input" Kind="InputPin" />
+                <Pin Id="LGtjlGeez37OaVxa3059wZ" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ CornerRadius (Uniform) ************************
+
+-->
+            <Node Name="CornerRadius (Uniform)" Bounds="772,162,107,93" Id="OjNHBMvstwpOfutIKdNN4e">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="T5xZotASfazLE7getS7Abg">
+                <Node Bounds="784,199,64,26" Id="T45XlR6Sg2DMPbsNhbqFlq">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Avalonia" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CornerRadius" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Uniform Radius" />
+                  </p:NodeReference>
+                  <Pin Id="PqhbZmyhsvcQFSjuiu8HWH" Name="Uniform Radius" Kind="InputPin" />
+                  <Pin Id="Gwvm6F12bJwPQV1iW8pjqX" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <ControlPoint Id="QqOOemNOrjDOKs1es8rdw8" Bounds="786,188" />
+                <Link Id="FrnfKjlgCRwOOFFAgHw3J4" Ids="QqOOemNOrjDOKs1es8rdw8,PqhbZmyhsvcQFSjuiu8HWH" />
+                <Pin Id="CfeRox2EXuoNTJFK7iNEu7" Name="Uniform Radius" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="CAgRAq8AJAoNAWujOOnktB" Ids="CfeRox2EXuoNTJFK7iNEu7,QqOOemNOrjDOKs1es8rdw8" IsHidden="true" />
+                <ControlPoint Id="NLmawnFeX7cNX8Gay2PGuV" Bounds="786,238" />
+                <Link Id="F0PBqU0XvWxNqcj2l2Z9Zd" Ids="Gwvm6F12bJwPQV1iW8pjqX,NLmawnFeX7cNX8Gay2PGuV" />
+                <Pin Id="T4rCIdutWAVNnsvs84kG4J" Name="Output" Kind="OutputPin" />
+                <Link Id="VyzBCqooxnKOWvPcqtDszN" Ids="NLmawnFeX7cNX8Gay2PGuV,T4rCIdutWAVNnsvs84kG4J" IsHidden="true" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ CornerRadius (Top Bottom) ************************
+
+-->
+            <Node Name="CornerRadius (Top Bottom)" Bounds="1010,162,129,84" Id="Fk4doXfQrGcMwQiEvIuHtM">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="U6KNuZSrmEXNXGZy1PCzS2">
+                <ControlPoint Id="MjO8LZPqnWdPE4VaaEffiR" Bounds="1024,229" />
+                <Pin Id="G4Udkv7mT9aPQCIelRYHEO" Name="Output" Kind="OutputPin" />
+                <Link Id="UN9XUtru5RfLQodGr6FSJf" Ids="MjO8LZPqnWdPE4VaaEffiR,G4Udkv7mT9aPQCIelRYHEO" IsHidden="true" />
+                <Node Bounds="1022,190,64,26" Id="NN5gIXQDOIXMVXHJ29a3oC">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Avalonia" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CornerRadius" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Top" />
+                    <PinReference Kind="InputPin" Name="Bottom" />
+                  </p:NodeReference>
+                  <Pin Id="EvobsOlFpb0LWQeOiMl1Jo" Name="Top" Kind="InputPin" />
+                  <Pin Id="E1GK6OllggZLnmo9KNUNC3" Name="Bottom" Kind="InputPin" />
+                  <Pin Id="PniUg5vWbPeMFYENnW5E1w" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <ControlPoint Id="SrWlrGJXtFFLMRx8FBalAW" Bounds="1024,180" />
+                <Link Id="Kh3MFnsSmlkP9oxFcDUZGc" Ids="SrWlrGJXtFFLMRx8FBalAW,EvobsOlFpb0LWQeOiMl1Jo" />
+                <Pin Id="VJOF2ZSt1DiPAKIYUYl7qB" Name="Top" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="JL3jGyDxITeNVCvzThbWL6" Ids="VJOF2ZSt1DiPAKIYUYl7qB,SrWlrGJXtFFLMRx8FBalAW" IsHidden="true" />
+                <ControlPoint Id="Ql6Rdk086DCNFjV5vhdZwt" Bounds="1083,180" />
+                <Link Id="QBeBE01uUMzOZLSuAevIyM" Ids="Ql6Rdk086DCNFjV5vhdZwt,E1GK6OllggZLnmo9KNUNC3" />
+                <Pin Id="KTmD2YQhaDwN17imvWnneC" Name="Bottom" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="NMxWCN4ueP3L3J26yxSqlH" Ids="KTmD2YQhaDwN17imvWnneC,Ql6Rdk086DCNFjV5vhdZwt" IsHidden="true" />
+                <Link Id="NLCXzSmHhCYM5hsLqU9A8Y" Ids="PniUg5vWbPeMFYENnW5E1w,MjO8LZPqnWdPE4VaaEffiR" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ CornerRadius ************************
+
+-->
+            <Node Name="CornerRadius" Bounds="772,303,151,155" Id="Ql0IIrErkl2OtgTIULD8Fs">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="IPlwJqBsnc2Mw9Pk7cH1fC">
+                <ControlPoint Id="HYrM5nzwBE6OwqY8Iyg7lz" Bounds="787,441" />
+                <Pin Id="TfNNfh0nEMkOKLkTxMsnff" Name="Output" Kind="OutputPin" />
+                <Link Id="J1L8pqk82AVQTro6Q0a7Bd" Ids="HYrM5nzwBE6OwqY8Iyg7lz,TfNNfh0nEMkOKLkTxMsnff" IsHidden="true" />
+                <Node Bounds="785,400,65,26" Id="KRACj4m8aTCOT5N6pRyxlO">
+                  <p:NodeReference LastCategoryFullName="Avalonia.CornerRadius" LastDependency="Avalonia.Base.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Avalonia" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CornerRadius" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Top Left" />
+                    <PinReference Kind="InputPin" Name="Top Right" />
+                    <PinReference Kind="InputPin" Name="Bottom Right" />
+                    <PinReference Kind="InputPin" Name="Bottom Left" />
+                  </p:NodeReference>
+                  <Pin Id="PW5MrTokdlkQGCGsAYJsSy" Name="Top Left" Kind="InputPin" />
+                  <Pin Id="PmsgOTTMlHTQR0zQtkaVgH" Name="Top Right" Kind="InputPin" />
+                  <Pin Id="Uomro5CeA0hOI3cV0HnebU" Name="Bottom Right" Kind="InputPin" />
+                  <Pin Id="AMkzuQ0tCivPf0tgazaH7C" Name="Bottom Left" Kind="InputPin" />
+                  <Pin Id="TRENuW66zBrOqQ0pZhVlP2" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <ControlPoint Id="VTSbuRGPQ6uNdHKSPtBNj9" Bounds="787,321" />
+                <Link Id="AjyEP2kqdouPtsZegPFMrH" Ids="VTSbuRGPQ6uNdHKSPtBNj9,PW5MrTokdlkQGCGsAYJsSy" />
+                <Pin Id="RkE2ivfjD0qLP6Oo0B1EWQ" Name="Top Left" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="VmBhy0F7JROPSdXsHzJPyh" Ids="RkE2ivfjD0qLP6Oo0B1EWQ,VTSbuRGPQ6uNdHKSPtBNj9" IsHidden="true" />
+                <ControlPoint Id="Meqv4iT2yC9P1xIDHbINaP" Bounds="807,340" />
+                <Link Id="Gd5hifDh5dVP8TQniZPQC8" Ids="Meqv4iT2yC9P1xIDHbINaP,PmsgOTTMlHTQR0zQtkaVgH" />
+                <Pin Id="Kq9uhlDnQSTOuf1E9abKBW" Name="Top Right" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="NFTtlvkxdmKMWpXwS2HndM" Ids="Kq9uhlDnQSTOuf1E9abKBW,Meqv4iT2yC9P1xIDHbINaP" IsHidden="true" />
+                <ControlPoint Id="SzFVxcT9FTULZnsH3phZ24" Bounds="827,360" />
+                <Link Id="C9hoWiN0r6bMvsk0AAn4NI" Ids="SzFVxcT9FTULZnsH3phZ24,Uomro5CeA0hOI3cV0HnebU" />
+                <Pin Id="LFUJvX5ExTXPWxZnmRxaRx" Name="Bottom Right" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="V376oFbdEY7Px9sxpzkEmE" Ids="LFUJvX5ExTXPWxZnmRxaRx,SzFVxcT9FTULZnsH3phZ24" IsHidden="true" />
+                <ControlPoint Id="FhpwAw2kUPPO811yreVrt6" Bounds="847,381" />
+                <Link Id="NnQ7DZjIfwhNJAZHIJXCmx" Ids="FhpwAw2kUPPO811yreVrt6,AMkzuQ0tCivPf0tgazaH7C" />
+                <Pin Id="OTCm4OzEizVNuqlL617EBz" Name="Bottom Left" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="Jyb4ql81IhwOF490ACBd09" Ids="OTCm4OzEizVNuqlL617EBz,FhpwAw2kUPPO811yreVrt6" IsHidden="true" />
+                <Link Id="UbVruf3dInRPU1CEtF497j" Ids="TRENuW66zBrOqQ0pZhVlP2,HYrM5nzwBE6OwqY8Iyg7lz" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="KWQrqXft3HPNg4fJtrV6tz" IsHidden="true">
+            <Fragment Id="IOXkTXocbecNetHD65YuVY" Patch="FRxeRwefvefNHYZsPBbojB" />
+            <Fragment Id="LIprPDeQWwJPXxYv6e7c10" Patch="Qs9iGDwPwLwMCexQ5XBiWT" />
+            <Fragment Id="PiYZORPZcT3OJtfPS9V7pj" Patch="NAq0NxtDIeFMe7QBdX2wad" />
+            <Fragment Id="Hple98t0es3QPLRfOVt2Le" Patch="KKO5cDLGCwGOJyPtNVl9CF" />
+            <Fragment Id="DVf7WbpjCZXNBVyTg3BSXO" Patch="M4kbG7rhH9hPXGPNy1FvyE" />
+            <Fragment Id="SQX2k4iyHrxPOSvPG1lcEQ" Patch="J9oKsbNvexAPttQkAXSwSb" />
+            <Fragment Id="Ij0P4QLfkCKNkIJwocAahA" Patch="M3wGCNJnd4PLkP31lRr4Pz" />
+            <Fragment Id="DbxXJJLbF0rNSuHYhBZejk" Patch="GTJYldfunz3LQnmyKWRwZU" />
+            <Fragment Id="P6dU0hMjy5rMNN59HRu4ve" Patch="A8JpWe6zHtCPdW2WSNzhGV" />
+            <Fragment Id="DIMPRatCODcLSNc4nODI6T" Patch="VmofinA98x9QAb8ThBPNVT" />
+            <Fragment Id="IVfjahVia0oPAAkBd36xdg" Patch="GrOsZKemcZcQdtH0RIdCsN" />
+            <Fragment Id="GpMdnyiShh1PfIp6G5whBO" Patch="O2PYhB7kXd0LP5pI1anYQQ" />
+            <Fragment Id="JdAiQNZoBnjM6XOoiaytbE" Patch="OjNHBMvstwpOfutIKdNN4e" />
+            <Fragment Id="FMktVBBEsAAPdkfSx7LKhQ" Patch="Fk4doXfQrGcMwQiEvIuHtM" />
+            <Fragment Id="G9PZHhUIYgBPWSEK83Da9J" Patch="Ql0IIrErkl2OtgTIULD8Fs" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
