@@ -44,11 +44,12 @@ public static class Extensions
             color.B
         );
 
-    public static AvaloniaColort ToColor(this Color4 color)
-    {
-        var bytecolor = color.ToColor();
-        return new AvaloniaColort(bytecolor.R, bytecolor.G, bytecolor.B, bytecolor.A);
-    }
+    // TODO: FIX
+    // public static AvaloniaColort ToColor(this Color4 color)
+    // {
+    //     var bytecolor = color.ToColor();
+    //     return new AvaloniaColort(bytecolor.R, bytecolor.G, bytecolor.B, bytecolor.A);
+    // }
 
-    public static SolidColorBrush ToBrush(this Color4 color) => new SolidColorBrush(color.ToColor(), color.A);
+    // public static SolidColorBrush ToBrush(this Color4 color) => new SolidColorBrush(color.ToColor(), color.A);
 }
