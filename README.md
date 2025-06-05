@@ -1,13 +1,13 @@
 # [WIP] VL.Avalonia
-Lorem Ipsum.
 
 # WARNING
 ```sh
 THIS IS WIP, NOT READY FOR PRODUCTION, EXPECT: 
-BREAKING CHANGES, CRASHES, UNEMPLEMENTED FEATURES.
-DEVELOPMENT ONLY.
+BREAKING CHANGES, CRASHES, UNEMPLEMENTED FEATURES,
+NO SUPPORT. DEVELOPMENT ONLY. STATUS: PRE-PRE-ALPHA.
 ```
 
+Lorem Ipsum.
 Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
 
