@@ -20,21 +20,31 @@ public partial class StackPanelSpectralWrapper
     [ImplementStyle]
     protected Optional<IAvaloniaStyle> _style;
 
-    [ImplementChildren]
-    protected Spread<Control>? _children;
+    [ImplementClasses]
+    protected Optional<string> _classes;
 
-    [ImplementOptional<StackPanel>(nameof(StackPanel.OrientationProperty))]
+    [ImplementChildren]
+    protected Spread<Control?> _children;
+
+    [ImplementProperty("StackPanel.NameProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<string> _name;
+
+    [ImplementProperty("StackPanel.OrientationProperty")]
     protected Optional<Orientation> _orientation;
 
-    [ImplementOptional<StackPanel>(nameof(StackPanel.SpacingProperty))]
+    [ImplementProperty("StackPanel.SpacingProperty")]
     protected Optional<int> _spacing;
+
+    [ImplementProperty("StackPanel.HorizontalAlignmentProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<HorizontalAlignment> _horizontalAlignment;
+
+    [ImplementProperty("StackPanel.VerticalAlignmentProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<VerticalAlignment> _verticalAlignment;
 }
 
 [ProcessNode(Name = "StackPanel")]
 public partial class StackPanelWrapper : StackPanelSpectralWrapper
 {
-    public StackPanelWrapper() : base() { }
-
     [ImplementChildren(IsPinGroup = true)]
-    protected Spread<Control>? _children;
+    protected Spread<Control?> _children;
 }

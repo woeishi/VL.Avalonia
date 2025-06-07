@@ -5,10 +5,6 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 {
     public class ChannelAttributeHandler : IAttributeHandler
     {
-
-
-
-
         public bool CanHandle(AttributeData attr)
           => attr.AttributeClass?.Name.StartsWith("ImplementChannel") == true;
 
@@ -47,8 +43,6 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
             return template;
         }
-
-
     }
 }
 

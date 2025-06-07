@@ -25,6 +25,7 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
         new ClassesAttributeHandler(),
         new ContentAttributeHandler(),
         new ChildrenAttributeHandler(),
+        new PropertyAttributeHandler(),
         new OptionalAttributeHandler(),
         new IsEnabledHandler(),
     };
@@ -42,7 +43,7 @@ public class AvaloniaSourceGenerator : IIncrementalGenerator
 #if DEBUG
         if (!Debugger.IsAttached)
         {
-            // Debugger.Launch();
+            //Debugger.Launch();
         }
 #endif 
         var attributesSyntaxProvider = context.SyntaxProvider.CreateSyntaxProvider(

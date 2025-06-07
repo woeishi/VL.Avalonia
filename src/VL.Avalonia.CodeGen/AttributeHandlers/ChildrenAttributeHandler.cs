@@ -10,7 +10,7 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
         public string? GenerateMethod(AttributeData attr, IFieldSymbol fieldSymbol, string fieldName)
         {
-            var argDec = "Spread<Control>? children";
+            var argDec = "Spread<Control?> children";
 
             var isPinGroup = attr.NamedArguments.Where(x => x.Key == "IsPinGroup").FirstOrDefault().Value.Value as bool? ?? false;
 

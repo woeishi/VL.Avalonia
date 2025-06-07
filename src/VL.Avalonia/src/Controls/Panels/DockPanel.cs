@@ -1,4 +1,5 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Layout;
 using VL.Avalonia.Attributes;
 using VL.Core;
 using VL.Core.Import;
@@ -22,14 +23,23 @@ public partial class DockPanelSpectralWrapper
     protected Optional<string> _classes;
 
     [ImplementChildren]
-    protected Spread<Control>? _children;
+    protected Spread<Control?> _children;
+
+    [ImplementProperty("Panel.NameProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<string> _name;
+
+    [ImplementProperty("DockPanel.HorizontalAlignmentProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<HorizontalAlignment> _horizontalAlignment;
+
+    [ImplementProperty("DockPanel.VerticalAlignmentProperty", PinVisibility = Model.PinVisibility.Hidden)]
+    protected Optional<VerticalAlignment> _verticalAlignment;
 }
 
 [ProcessNode(Name = "DockPanel")]
 public partial class DockPanelWrapper : DockPanelSpectralWrapper
 {
     [ImplementChildren(IsPinGroup = true)]
-    protected Spread<Control>? _children;
+    protected Spread<Control?> _children;
 }
 
 [ProcessNode(Name = "DockProperty")]
@@ -63,6 +73,10 @@ public class DockProperty
         if (_input.HasValue)
         {
             _input.Value.SetValue(DockPanel.DockProperty, _dock.Value);
+        }
+        else
+        {
+            _input.Value.ClearValue(DockPanel.DockProperty);
         }
     }
 }
