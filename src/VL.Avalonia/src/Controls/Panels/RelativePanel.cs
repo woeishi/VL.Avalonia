@@ -138,6 +138,47 @@ public partial class RelativePanelProperty
 
     // TODO: https://docs.avaloniaui.net/docs/reference/controls/relativepanel
 
+    private Optional<string> _alignTopWith;
+    /// <summary>
+    /// Attached to a child control to align its top edge with the top edge of the named sibling.
+    /// </summary>
+    /// <param name="alignTopWith">Name of Control</param>
+    public void SetAlignTopWith(Optional<string> alignTopWith)
+    {
+        if (_alignTopWith != alignTopWith)
+        {
+            _alignTopWith = alignTopWith;
+
+            UpdateSetters();
+        }
+    }
+
+    private Optional<string> _alignBottomWith;
+    /// <summary>
+    /// Attached to a child control to align its bottom edge with the bottom edge of the named sibling.
+    /// </summary>
+    /// <param name="alignBottomWith">Name of Control</param>
+    public void SetAlignBottomWith(Optional<string> alignBottomWith)
+    {
+        if (_alignBottomWith != alignBottomWith)
+        {
+            _alignBottomWith = alignBottomWith;
+
+            UpdateSetters();
+        }
+    }
+
+    private Optional<string> _rightOf;
+    public void SetRightOf(Optional<string> rightOf)
+    {
+        if (_rightOf != rightOf)
+        {
+            _rightOf = rightOf;
+
+            UpdateSetters();
+        }
+    }
+
     private void UpdateSetters()
     {
         if (_alignTopWithPanel.HasValue)
@@ -192,6 +233,34 @@ public partial class RelativePanelProperty
         else
         {
             _input.Value.ClearValue(RelativePanel.AlignHorizontalCenterWithPanelProperty);
+        }
+
+        if (_alignTopWith.HasValue)
+        {
+            _input.Value.SetValue(RelativePanel.AlignTopWithProperty, _alignTopWith.Value);
+        }
+        else
+        {
+            _input.Value.ClearValue(RelativePanel.AlignTopWithProperty);
+        }
+
+        if (_alignBottomWith.HasValue)
+        {
+            _input.Value.SetValue(RelativePanel.AlignBottomWithProperty, _alignBottomWith.Value);
+        }
+        else
+        {
+            _input.Value.ClearValue(RelativePanel.AlignBottomWithProperty);
+        }
+
+        if (_rightOf.HasValue)
+        {
+            RelativePanel.SetRightOf(_input.Value, _rightOf.Value);
+
+        }
+        else
+        {
+            _input.Value.ClearValue(RelativePanel.RightOfProperty);
         }
     }
 }

@@ -24,6 +24,9 @@ public partial class BorderWrapper
     [ImplementProperty("Border.ChildProperty", Order = -10)]
     protected Optional<Control> _child;
 
+    [ImplementProperty("Border.NameProperty", PinVisibility = Model.PinVisibility.Optional)]
+    protected Optional<string> _name;
+
     [ImplementProperty("Border.BackgroundProperty", PinVisibility = Model.PinVisibility.Optional)]
     protected Optional<IBrush> _background;
 
