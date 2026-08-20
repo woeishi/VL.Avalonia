@@ -11,7 +11,6 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: write
-      id-token: write # Required for GitHub OIDC token generation
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
@@ -36,9 +35,9 @@ jobs:
         run: |
           $version = "${{ github.ref_name }}"
           $cleanVersion = $version.Substring(1)
-          
+
           $isPrerelease = $cleanVersion -match "[\-+]"
-          
+
           echo "VERSION=$cleanVersion" >> $env:GITHUB_ENV
           echo "IS_PRERELEASE=$isPrerelease" >> $env:GITHUB_ENV
 
@@ -49,18 +48,12 @@ jobs:
           nuget pack .nuget\VL.Avalonia.Custom.nuspec -Version ${{ env.VERSION }} -OutputDirectory .\packages
           nuget pack .nuget\VL.Avalonia.Stride.nuspec -Version ${{ env.VERSION }} -OutputDirectory .\packages
 
-      - name: NuGet login (OIDC)
-        id: nuget-login
-        uses: NuGet/login@v1
-        with:
-          user: antokhio
-
       - name: Publish to NuGet.org
         run: |
           Write-Host "Publishing to NuGet.org..."
           foreach ($package in Get-ChildItem -Path ./packages -Filter *.nupkg) {
             dotnet nuget push $package.FullName `
-              --api-key ${{ steps.nuget-login.outputs.NUGET_API_KEY }} `
+              --api-key ${{ secrets.NUGET_KEY }} `
               --source https://api.nuget.org/v3/index.json `
               --skip-duplicate
           }
