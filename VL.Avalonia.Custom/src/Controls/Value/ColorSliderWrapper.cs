@@ -16,7 +16,8 @@ namespace VL.Avalonia.Custom.Controls.Value
     [ProcessNode(Name = "ColorSlider")]
     public partial class ColorSliderWrapper : RangeBaseNodeBase<ColorSlider>
     {
-        public ColorSliderWrapper()
+        [Fragment]
+        public ColorSliderWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _hsvColorBinding = new ChannelTwoWayBinding<HsvColor>(
                 _output,

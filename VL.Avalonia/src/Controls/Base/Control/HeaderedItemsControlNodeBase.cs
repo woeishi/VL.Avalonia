@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
         : ItemsControlNodeBase<TControl, TValue>
         where TControl : HeaderedItemsControl, new()
     {
+        [Fragment]
+        public HeaderedItemsControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the content of the control's header.</summary>
         [ImplementProperty(
             typeof(HeaderedItemsControl),

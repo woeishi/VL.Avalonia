@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class ViewboxNodeBase<T> : ControlNodeBase<T>
         where T : Viewbox, new()
     {
+        [Fragment]
+        public ViewboxNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [ImplementProperty(typeof(Viewbox), nameof(Viewbox.ChildProperty), Order = PinOrder.Main)]
         private Optional<Control> _child;
 
@@ -35,5 +38,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="Viewbox"/>
     /// </summary>
     [ProcessNode(Name = "Viewbox")]
-    public class ViewboxNode : ViewboxNodeBase<Viewbox> { }
+    public class ViewboxNode : ViewboxNodeBase<Viewbox>
+    {
+        [Fragment]
+        public ViewboxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

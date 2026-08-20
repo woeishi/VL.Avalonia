@@ -13,6 +13,7 @@ using VL.Avalonia.Attributes;
 using VL.Avalonia.Styles;
 using VL.Core;
 using VL.Core.Import;
+using VL.Model;
 using Matrix = Stride.Core.Mathematics.Matrix;
 
 namespace VL.Avalonia.Controls
@@ -222,7 +223,8 @@ namespace VL.Avalonia.Controls
     /// </summary>
     [ProcessNode]
     public abstract class InteractiveNodeBase<T> : LayoutableNodeBase<T>
-        where T : Interactive, new() { }
+        where T : Interactive, new()
+    { }
 
     /// <summary>
     /// Base wrapper for <see cref="InputElement"/>
@@ -257,6 +259,13 @@ namespace VL.Avalonia.Controls
     public abstract partial class ControlNodeBase<T> : InputElementNodeBase<T>
         where T : Control, new()
     {
+
+        protected readonly NodeContext NodeContext;
+        public ControlNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext)
+        {
+            NodeContext = nodeContext;
+        }
+
         /// <summary>Sets the focus adorner for the control.</summary>
         [ImplementProperty(
             typeof(Control),

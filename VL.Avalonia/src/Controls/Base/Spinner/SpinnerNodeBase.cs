@@ -21,7 +21,8 @@ namespace VL.Avalonia.Controls
 
         private readonly IDisposable _subscription;
 
-        public SpinnerNodeBase()
+        [Fragment]
+        public SpinnerNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _subscription = Observable
                 .FromEventPattern<SpinEventArgs>(h => _output.Spin += h, h => _output.Spin -= h)

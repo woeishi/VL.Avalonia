@@ -20,7 +20,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly UnitCommandBinding _commandBinding;
 
-        public ButtonNodeBase()
+        [Fragment]
+        public ButtonNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _commandBinding = new UnitCommandBinding(_output, Button.CommandProperty);
         }
@@ -96,5 +97,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="Button"/>
     /// </summary>
     [ProcessNode(Name = "Button")]
-    public class ButtonNode : ButtonNodeBase<Button> { }
+    public class ButtonNode : ButtonNodeBase<Button>
+    {
+        [Fragment]
+        public ButtonNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

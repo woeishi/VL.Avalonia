@@ -16,6 +16,9 @@ namespace VL.Avalonia.Controls;
 public abstract partial class SliderNodeBase<T> : RangeBaseNodeBase<T>
     where T : Slider, new()
 {
+    [Fragment]
+    public SliderNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     /// <summary>Sets the orientation of a Slider.</summary>
     [ImplementProperty(
         typeof(Slider),
@@ -94,4 +97,8 @@ public abstract partial class SliderNodeBase<T> : RangeBaseNodeBase<T>
 /// <br/>TemplateParts: PART_DecreaseButton, PART_IncreaseButton, PART_Track
 /// </summary>
 [ProcessNode(Name = "Slider")]
-public class SliderNode : SliderNodeBase<Slider> { }
+public class SliderNode : SliderNodeBase<Slider>
+{
+    [Fragment]
+    public SliderNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+}

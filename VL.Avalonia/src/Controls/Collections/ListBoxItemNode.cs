@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using VL.Avalonia.Data;
+using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
 
@@ -14,7 +15,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly TwoWayBinding<bool> _isSelectedBinding;
 
-        public ListBoxItemNodeBase()
+        [Fragment]
+        public ListBoxItemNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isSelectedBinding = new TwoWayBinding<bool>(_output, ListBoxItem.IsSelectedProperty);
         }
@@ -35,5 +37,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="ListBoxItem"/>
     /// </summary>
     [ProcessNode(Name = "ListBoxItem")]
-    public class ListBoxItemNode : ListBoxItemNodeBase<ListBoxItem> { }
+    public class ListBoxItemNode : ListBoxItemNodeBase<ListBoxItem>
+    {
+        [Fragment]
+        public ListBoxItemNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

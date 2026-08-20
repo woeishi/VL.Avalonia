@@ -17,7 +17,9 @@ public abstract partial class RangeBaseNodeBase<T> : ControlNodeBase<T>, IDispos
 {
     private TwoWayBinding<float, double> _valueBinding;
 
-    protected RangeBaseNodeBase()
+    [Fragment]
+    protected RangeBaseNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+        : base(nodeContext)
     {
         _valueBinding = new TwoWayBinding<float, double>(
             _output,

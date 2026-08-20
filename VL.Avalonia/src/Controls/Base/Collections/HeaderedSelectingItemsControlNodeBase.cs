@@ -15,6 +15,9 @@ namespace VL.Avalonia.Controls
         : SelectingItemsControlNodeBase<TControl, TValue>
         where TControl : HeaderedSelectingItemsControl, new()
     {
+        [Fragment]
+        public HeaderedSelectingItemsControlNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the content of the control's header.</summary>
         [ImplementProperty(
             typeof(HeaderedItemsControl),

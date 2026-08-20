@@ -19,7 +19,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly TwoWayBinding<TValue?, object?> _selectedItemBinding;
 
-        public SelectingItemsControlNodeBase()
+        [Fragment]
+        public SelectingItemsControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _selectedItemBinding = new TwoWayBinding<TValue?, object?>(
                 _output,

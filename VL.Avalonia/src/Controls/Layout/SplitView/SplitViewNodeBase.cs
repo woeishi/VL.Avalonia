@@ -19,7 +19,8 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<bool> _isPaneOpenBinding;
 
-        public SplitViewNodeBase()
+        [Fragment]
+        public SplitViewNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isPaneOpenBinding = new TwoWayBinding<bool>(_output, SplitView.IsPaneOpenProperty);
         }

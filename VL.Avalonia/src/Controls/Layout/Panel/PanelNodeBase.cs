@@ -1,6 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media;
 using VL.Avalonia.Attributes;
+using VL.Avalonia.Helpers;
 using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Collections;
@@ -18,7 +19,7 @@ namespace VL.Avalonia.Controls
         private IReadOnlyList<Control>? _children;
 
         [Fragment]
-        public PanelNodeBase() { }
+        public PanelNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
         /// <param name="children">Set children of <see cref="Panel"/></param>
         public virtual void SetChildren(IReadOnlyList<Control> children)
@@ -35,6 +36,7 @@ namespace VL.Avalonia.Controls
             {
                 if (child is Control control)
                 {
+                    ReparentingHelper.DetachFromParent(NodeContext, control);
                     collection.Add(control);
                 }
             }

@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class LayoutTransformControlNodeBase<T> : DecoratorNodeBase<T>
         where T : LayoutTransformControl, new()
     {
+        [Fragment]
+        public LayoutTransformControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets a graphics transformation that should apply to this element when layout is performed.</summary>
         [ImplementProperty(
             typeof(LayoutTransformControl),
@@ -36,5 +39,9 @@ namespace VL.Avalonia.Controls
     /// </summary>
     [ProcessNode(Name = "LayoutTransformControl")]
     public class LayoutTransformControlNode
-        : LayoutTransformControlNodeBase<LayoutTransformControl> { }
+        : LayoutTransformControlNodeBase<LayoutTransformControl>
+    {
+        [Fragment]
+        public LayoutTransformControlNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

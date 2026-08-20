@@ -24,7 +24,7 @@ namespace VL.Avalonia.Controls
         private ISpread? _items;
 
         [Fragment]
-        public ItemsControlNodeBase() { }
+        public ItemsControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
         /// <param name="itemsSource">Binds observable items source.</param>
         public virtual void SetItemsSource(IChannel<IReadOnlyList<TValue>> itemsSource)
@@ -112,6 +112,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ItemsControl")]
     public partial class ItemsControlNode : ItemsControlNodeBase<ItemsControl, object>
     {
+        [Fragment]
+        public ItemsControlNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = Model.PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -126,6 +129,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ItemsControl (Spectral)")]
     public partial class ItemsControlSpectralNode : ItemsControlNodeBase<ItemsControl, object>
     {
+        [Fragment]
+        public ItemsControlSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -139,6 +145,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ItemsControl (Advanced)")]
     public partial class ItemsControlNode<T> : ItemsControlNodeBase<ItemsControl, T>
     {
+        [Fragment]
+        public ItemsControlNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = Model.PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -153,6 +162,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ItemsControl (Advanced Spectral)")]
     public partial class ItemsControlSpectralNode<T> : ItemsControlNodeBase<ItemsControl, T>
     {
+        [Fragment]
+        public ItemsControlSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -164,6 +176,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ItemsControl (Advanced Reactive)")]
     public partial class ItemsControlNodeReactive<T> : ItemsControlNodeBase<ItemsControl, T>
     {
+        [Fragment]
+        public ItemsControlNodeReactive([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {

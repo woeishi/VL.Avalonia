@@ -1,6 +1,8 @@
 ﻿using Avalonia.Controls;
+using VL.Avalonia.Helpers;
 using VL.Avalonia.Styles;
 using VL.Core;
+using VL.Model;
 using VL.Core.Import;
 
 namespace VL.Avalonia.Controls;
@@ -15,6 +17,15 @@ namespace VL.Avalonia.Controls;
 public abstract class ToolTipWrapperBase<T>
     where T : Control
 {
+    [Fragment]
+    public NodeContext NodeContext { get; }
+
+    [Fragment]
+    public ToolTipWrapperBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext)
+    {
+        NodeContext = nodeContext;
+    }
+
     protected readonly ToolTip _output = new ToolTip();
     protected T _input;
 
@@ -111,6 +122,9 @@ public abstract class ToolTipWrapperBase<T>
 public partial class ToolTipWrapper<T> : ToolTipWrapperBase<T>
     where T : Control
 {
+    [Fragment]
+    public ToolTipWrapper([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     protected Optional<object> _content;
 
     [Fragment(Order = -5)]
@@ -122,6 +136,11 @@ public partial class ToolTipWrapper<T> : ToolTipWrapperBase<T>
 
             if (_content.HasValue)
             {
+                if (_content.Value is Control control)
+                {
+                    ReparentingHelper.DetachFromParent(NodeContext, control);
+                }
+
                 _output.SetValue(ToolTip.ContentProperty, content.Value);
             }
             else

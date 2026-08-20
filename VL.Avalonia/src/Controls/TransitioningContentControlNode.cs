@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class TransitioningContentControlNodeBase<T> : ContentControlNodeBase<T>
         where T : TransitioningContentControl, new()
     {
+        [Fragment]
+        public TransitioningContentControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the page transition.</summary>
         [ImplementProperty(
             typeof(TransitioningContentControl),
@@ -38,5 +41,9 @@ namespace VL.Avalonia.Controls
     /// </summary>
     [ProcessNode(Name = "TransitioningContentControl")]
     public class TransitioningContentControlNode
-        : TransitioningContentControlNodeBase<TransitioningContentControl> { }
+        : TransitioningContentControlNodeBase<TransitioningContentControl>
+    {
+        [Fragment]
+        public TransitioningContentControlNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

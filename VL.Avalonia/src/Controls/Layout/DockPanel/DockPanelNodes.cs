@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class DockPanelNodeBase<T> : PanelNodeBase<T>
         where T : DockPanel, new()
     {
+        [Fragment]
+        public DockPanelNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [ImplementProperty(
             typeof(DockPanel),
             nameof(DockPanel.LastChildFillProperty),
@@ -29,6 +32,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "DockPanel")]
     public class DockPanelNode : DockPanelNodeBase<DockPanel>
     {
+        [Fragment]
+        public DockPanelNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetChildren(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -43,6 +49,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "DockPanel (Spectral)")]
     public class DockPanelSpectralNode : DockPanelNodeBase<DockPanel>
     {
+        [Fragment]
+        public DockPanelSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetChildren(IReadOnlyList<Control> children)
         {

@@ -20,7 +20,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly UnitCommandBinding _commandBinding;
 
-        public SplitButtonNodeBase()
+        [Fragment]
+        public SplitButtonNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _commandBinding = new UnitCommandBinding(_output, SplitButton.CommandProperty);
         }
@@ -69,5 +70,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="SplitButton"/>
     /// </summary>
     [ProcessNode(Name = "SplitButton")]
-    public class SplitButtonNode : SplitButtonNodeBase<SplitButton> { }
+    public class SplitButtonNode : SplitButtonNodeBase<SplitButton>
+    {
+        [Fragment]
+        public SplitButtonNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

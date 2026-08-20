@@ -12,6 +12,9 @@ namespace VL.Avalonia.Custom.Controls.Value
     [ProcessNode(Name = "TemplatedSlider")]
     public partial class TemplatedSliderWrapper : RangeBaseNodeBase<TemplatedSlider>
     {
+        [Fragment]
+        public TemplatedSliderWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <param name="content">
         /// Dialog Button. Whether this button is the cancel button (triggered by Escape key)
         /// </param>

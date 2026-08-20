@@ -15,6 +15,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class UniformGridNodeBase<T> : PanelNodeBase<T>
         where T : UniformGrid, new()
     {
+        [Fragment]
+        public UniformGridNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Specifies the row count. If set to 0, row count will be calculated automatically.</summary>
         [ImplementProperty(
             typeof(UniformGrid),
@@ -49,6 +52,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "UniformGrid")]
     public class UniformGridNode : UniformGridNodeBase<UniformGrid>
     {
+        [Fragment]
+        public UniformGridNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetChildren(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -63,6 +69,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "UniformGrid (Spectral)")]
     public class UniformGridSpectralNode : UniformGridNodeBase<UniformGrid>
     {
+        [Fragment]
+        public UniformGridSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetChildren(IReadOnlyList<Control> children)
         {

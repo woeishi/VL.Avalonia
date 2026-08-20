@@ -19,7 +19,9 @@ namespace VL.Avalonia.Custom.Controls.Value
         protected ChannelTwoWayBinding<Color> _colorBinding;
         protected ChannelTwoWayBinding<HsvColor> _hsvColorBinding;
 
-        public ColorSpectrumWrapper()
+        [Fragment]
+        public ColorSpectrumWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _colorBinding = new ChannelTwoWayBinding<Color>(_output, ColorSpectrum.ColorProperty);
             _hsvColorBinding = new ChannelTwoWayBinding<HsvColor>(

@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     public abstract class SkiaMediaControlWrapperBase<T> : ControlNodeBase<T>
         where T : SkiaMediaControlBase, new()
     {
+        [Fragment]
+        public SkiaMediaControlWrapperBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         protected Optional<SizeMode> _mode;
 
         public void SetSizeMode(Optional<SizeMode> mode)
@@ -57,6 +60,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "SkiaImageControl")]
     public partial class SkiaImageControlWrapper : SkiaMediaControlWrapperBase<SkiaImageControl>
     {
+        [Fragment]
+        public SkiaImageControlWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         protected Optional<SKImage> _image;
 
         [Fragment(Order = PinOrder.Main)]
@@ -81,6 +87,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "SkiaPictureControl")]
     public partial class SkiaPictureControlWrapper : SkiaMediaControlWrapperBase<SkiaPictureControl>
     {
+        [Fragment]
+        public SkiaPictureControlWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         protected Optional<SKPicture> _picture;
 
         [Fragment(Order = PinOrder.Main)]
@@ -107,6 +116,9 @@ namespace VL.Avalonia.Controls
         : SkiaMediaControlWrapperBase<SkiaLayerControl>,
             IDisposable
     {
+        [Fragment]
+        public SkiaLayerControlWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         private IDisposable? _notificationsSubscriptions;
         private Optional<IObservable<INotification>> _notificationsSource;
 

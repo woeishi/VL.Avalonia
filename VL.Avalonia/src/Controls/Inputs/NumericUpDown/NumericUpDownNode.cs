@@ -22,7 +22,9 @@ namespace VL.Avalonia.Controls
         private TwoWayBinding<float?, decimal?> _valueBinding;
         private TwoWayBinding<string?, string?> _textBinding;
 
-        public NumericUpDownNodeBase()
+        [Fragment]
+        public NumericUpDownNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _valueBinding = new TwoWayBinding<float?, decimal?>(
                 _output,
@@ -222,5 +224,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="NumericUpDown"/>
     /// </summary>
     [ProcessNode(Name = "NumericUpDown")]
-    public class NumericUpDownNode : NumericUpDownNodeBase<NumericUpDown> { }
+    public class NumericUpDownNode : NumericUpDownNodeBase<NumericUpDown>
+    {
+        [Fragment]
+        public NumericUpDownNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

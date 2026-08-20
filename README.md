@@ -35,6 +35,8 @@ nuget install VL.Avalonia.Custom
 
 | Version | vvvv gamma Version |
 | :--- | :--- |
+| `v0.7.X` | >= `7.4` |
+| `v0.6.X` | >= `7.1` |
 | `v0.4.X` | >= `7.1-0116` |
 | `v0.3.1` - `v0.3.16` | `7.0` |
 | `v0.3.0`| `7.0-xxxx`, `6.9` |

@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     public partial class ButtonSpinnerNode<T> : SpinnerNodeBase<T>
         where T : ButtonSpinner, new()
     {
+        [Fragment]
+        public ButtonSpinnerNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets a value indicating whether the <see cref="ButtonSpinner"/> should allow to spin.</summary>
         [ImplementProperty(
             typeof(ButtonSpinner),

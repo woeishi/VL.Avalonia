@@ -12,6 +12,9 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "SelectableTextBlock")]
 public partial class SelectableTextBlockWrapper : TextBlockWrapperBase<SelectableTextBlock>
 {
+    [Fragment]
+    public SelectableTextBlockWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     #region Selection Properties (Core Functionality)
     /* TODO:
     /// <param name="selectionStart">

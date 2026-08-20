@@ -20,7 +20,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly TwoWayBinding<TValue?, object?> _selectedItemBinding;
 
-        public TreeViewNodeBase()
+        [Fragment]
+        public TreeViewNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _selectedItemBinding = new TwoWayBinding<TValue?, object?>(
                 _output,
@@ -67,6 +68,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TreeView")]
     public class TreeViewNode : TreeViewNodeBase<TreeView, object>
     {
+        [Fragment]
+        public TreeViewNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -81,6 +85,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TreeView (Spectral)")]
     public class TreeViewSpectralNode : TreeViewNodeBase<TreeView, object>
     {
+        [Fragment]
+        public TreeViewSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -94,6 +101,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TreeView (Advanced)")]
     public class TreeViewNode<T> : TreeViewNodeBase<TreeView, T>
     {
+        [Fragment]
+        public TreeViewNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)] Spread<T?> items
@@ -107,6 +117,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TreeView (Advanced Spectral)")]
     public class TreeViewSpectralNode<T> : TreeViewNodeBase<TreeView, T>
     {
+        [Fragment]
+        public TreeViewSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -118,6 +131,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TreeView (Advanced Reactive)")]
     public class TreeViewNodeReactive<T> : TreeViewNodeBase<TreeView, T>
     {
+        [Fragment]
+        public TreeViewNodeReactive([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {
