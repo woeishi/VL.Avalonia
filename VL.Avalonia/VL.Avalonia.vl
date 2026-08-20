@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.1" Version="0.128">
-  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.1" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="UdZsKoLghO3Oihrrgteb4W" LanguageVersion="2025.7.4" Version="0.128">
+  <NugetDependency Id="Fz1g9SnC5AAO0Sv79s4c5b" Location="VL.CoreLib" Version="2025.7.4" />
   <Patch Id="CsQ26EoGhvMOM4U1aQide6">
     <Canvas Id="IhgCT0sDhkhMddI2tTRHCe" DefaultCategory="Avalonia" CanvasType="FullCategory">
       <Canvas Id="EdSDaNRGmemQWQjC87hvqy" Name="Controls" Position="604,230">
@@ -3613,6 +3613,46 @@
           <Patch Id="AsuNWpDy7s6P25wlYGKUKH">
             <Canvas Id="CE7PEJoUgCEO2Z0MVQL704" BordersChecked="false" CanvasType="Group" />
             <ProcessDefinition Id="FX7ukQG2I3pMliRL3tdrAZ" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ StandardCursorType ************************
+
+-->
+        <Node Name="StandardCursorType" Bounds="582,230" Id="JWoBGImntivQQKZPl4n7Ow">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Input" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="StandardCursorType" />
+            <FullNameCategoryReference ID="Avalonia.Input" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MzMzm16OIbILoZhKhY8WIn">
+            <Canvas Id="Gy5PZjdpDeLNrCGzLInR04" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="HvX9pNy7SGlL1bdNHWjkT6" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Cursor ************************
+
+-->
+        <Node Name="Cursor" Bounds="459,220" Id="GKgxXf3orAHPt47dMSVikt">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Avalonia.Input" LastDependency="Avalonia.Base.dll">
+            <Choice Kind="TypeFlag" Name="Cursor" />
+            <FullNameCategoryReference ID="Avalonia.Input" />
+            <AssemblyReference ID="Avalonia.Base.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MaQcpnbONKPNOHArXzB9rJ">
+            <Canvas Id="HI9N0TKzSHtLDW3nOfFIS5" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="H6EL2mxi3RJPE7ns2zHG13" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>

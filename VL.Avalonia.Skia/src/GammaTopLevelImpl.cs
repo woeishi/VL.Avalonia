@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -13,6 +14,9 @@ using Point = Avalonia.Point;
 using Size = Avalonia.Size;
 using TouchDevice = Avalonia.Input.TouchDevice;
 using Vector2 = Stride.Core.Mathematics.Vector2;
+using WinFormsControl = System.Windows.Forms.Control;
+using WinFormsCursor = System.Windows.Forms.Cursor;
+using WinFormsCursors = System.Windows.Forms.Cursors;
 
 namespace VL.Avalonia.Skia
 {
@@ -371,6 +375,8 @@ namespace VL.Avalonia.Skia
 
         public void Dispose()
         {
+            ResetCursor();
+
             // TODO
         }
 
@@ -378,10 +384,97 @@ namespace VL.Avalonia.Skia
 
         public PixelPoint PointToScreen(Point point) => PixelPoint.FromPoint(point, _scaling);
 
+        // The layer has no window of its own, so cursors are applied to the WinForms control that
+        // hosts us (the VL.Skia renderer). We can't take it from the notification sender: upstream
+        // layers such as TransformUpstream replace it with their own space-mapping sender. Instead
+        // we look up the window under the mouse - Avalonia only asks for a cursor while the
+        // pointer is over us, so that window is our host. Hosts that aren't WinForms based (e.g.
+        // Stride) resolve to null and simply don't get cursor changes.
+        private WinFormsControl? _hostControl;
+        private GammaSkiaCursorImpl? _cursor;
+        private bool _cursorHidden;
+
         public void SetCursor(ICursorImpl? cursor)
         {
-            // TODO:
+            var impl = cursor as GammaSkiaCursorImpl;
+            if (ReferenceEquals(_cursor, impl))
+                return;
+
+            _cursor = impl;
+            ApplyCursor();
         }
+
+        private void ApplyCursor()
+        {
+            var control = ResolveHostControl();
+
+            if (!ReferenceEquals(control, _hostControl))
+            {
+                // Hand the previous host back its default cursor before moving on.
+                if (_hostControl is { IsDisposed: false } previous)
+                    previous.Cursor = WinFormsCursors.Default;
+
+                _hostControl = control;
+            }
+
+            if (control is null)
+                return;
+
+            var hidden = _cursor?.IsHidden ?? false;
+            if (hidden != _cursorHidden)
+            {
+                _cursorHidden = hidden;
+                if (hidden)
+                    WinFormsCursor.Hide();
+                else
+                    WinFormsCursor.Show();
+            }
+
+            var target = _cursor?.Cursor ?? WinFormsCursors.Default;
+            if (!ReferenceEquals(control.Cursor, target))
+                control.Cursor = target;
+        }
+
+        private WinFormsControl? ResolveHostControl()
+        {
+            var handle = WindowFromPoint(GetCursorPosition());
+            if (handle == IntPtr.Zero)
+                return null;
+
+            var control = WinFormsControl.FromChildHandle(handle);
+            return control is { IsDisposed: false } ? control : null;
+        }
+
+        private static POINT GetCursorPosition()
+        {
+            var position = WinFormsCursor.Position;
+            return new POINT { X = position.X, Y = position.Y };
+        }
+
+        private void ResetCursor()
+        {
+            if (_cursorHidden)
+            {
+                _cursorHidden = false;
+                WinFormsCursor.Show();
+            }
+
+            if (_hostControl is { IsDisposed: false } control)
+                control.Cursor = WinFormsCursors.Default;
+
+            _cursor = null;
+            _hostControl = null;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct POINT
+        {
+            public int X;
+            public int Y;
+        }
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr WindowFromPoint(POINT point);
 
         public void SetFrameThemeVariant(PlatformThemeVariant themeVariant)
         {
