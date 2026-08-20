@@ -128,13 +128,19 @@ namespace VL.Avalonia.Skia
 
         internal bool HandleNotification(INotification notification, Point position)
         {
-            if (notification is MouseNotification)
+            if (notification is MouseNotification { Kind: not MouseNotificationKind.DeviceLost })
                 TrackHostControl();
 
             if (InputRoot is null || Input is not { } input)
             {
                 return false;
             }
+
+            // The host raises these when the mouse leaves it (VL.Skia turns MouseLeave into a
+            // LostFocusNotification). Handle them before the mouse branch so hover states don't
+            // stick around.
+            if (notification is LostFocusNotification or MouseLostNotification)
+                return HandlePointerLeft(input);
 
             if (notification is MouseNotification mouseNotification)
                 return HandleMouseNotification(mouseNotification, input, position);
@@ -143,6 +149,30 @@ namespace VL.Avalonia.Skia
             if (notification is TouchNotification touchNotification)
                 return HandleTouchNotification(touchNotification, input, position);
             return false;
+        }
+
+        private bool HandlePointerLeft(Action<RawInputEventArgs> input)
+        {
+            // Avalonia doesn't call SetCursor when the pointer-over element becomes null, so the
+            // last cursor would stick to the host. Drop back to the default ourselves.
+            SetCursor(null);
+
+            // Touches don't have a hover state, and the synthetic mouse events they produce would
+            // cancel the pointers we're tracking - see HandleMouseNotification.
+            if (_activeTouchIds.Count > 0)
+                return false;
+
+            var e = new RawPointerEventArgs(
+                MouseDevice,
+                Timestamp,
+                InputRoot,
+                RawPointerEventType.LeaveWindow,
+                new Point(-1, -1),
+                _inputModifiers
+            );
+
+            input(e);
+            return e.Handled;
         }
 
         private bool HandleMouseNotification(
