@@ -12,7 +12,7 @@ namespace VL.Avalonia.Helpers
     /// </summary>
     public static class ReparentingHelper
     {
-        private static readonly TimeSpan MessageLifetime = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan MessageLifetime = TimeSpan.FromSeconds(9);
 
         /// <summary>
         /// Detaches <paramref name="control"/> from its current parent, if any, and raises
