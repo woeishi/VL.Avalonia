@@ -128,6 +128,9 @@ namespace VL.Avalonia.Skia
 
         internal bool HandleNotification(INotification notification, Point position)
         {
+            if (notification is MouseNotification)
+                TrackHostControl();
+
             if (InputRoot is null || Input is not { } input)
             {
                 return false;
@@ -387,62 +390,68 @@ namespace VL.Avalonia.Skia
         // The layer has no window of its own, so cursors are applied to the WinForms control that
         // hosts us (the VL.Skia renderer). We can't take it from the notification sender: upstream
         // layers such as TransformUpstream replace it with their own space-mapping sender. Instead
-        // we look up the window under the mouse - Avalonia only asks for a cursor while the
-        // pointer is over us, so that window is our host. Hosts that aren't WinForms based (e.g.
-        // Stride) resolve to null and simply don't get cursor changes.
+        // we resolve the window under the mouse while handling a mouse notification, where the
+        // pointer is provably over our host. Doing it from SetCursor would be wrong, since that
+        // can also be triggered by focus/layout changes while the mouse sits over a foreign
+        // window. Hosts that aren't WinForms based (e.g. Stride) resolve to null and simply don't
+        // get cursor changes.
         private WinFormsControl? _hostControl;
+        private IntPtr _hostHandle;
         private GammaSkiaCursorImpl? _cursor;
         private bool _cursorHidden;
 
-        public void SetCursor(ICursorImpl? cursor)
+        private void TrackHostControl()
         {
-            var impl = cursor as GammaSkiaCursorImpl;
-            if (ReferenceEquals(_cursor, impl))
+            var handle = WindowFromPoint(GetCursorPosition());
+            if (handle == _hostHandle && _hostControl is { IsDisposed: false })
                 return;
 
-            _cursor = impl;
+            _hostHandle = handle;
+
+            var previous = _hostControl;
+            var control = handle != IntPtr.Zero ? WinFormsControl.FromChildHandle(handle) : null;
+            _hostControl = control is { IsDisposed: false } ? control : null;
+
+            // Hand the control we're leaving back its default cursor.
+            if (previous is { IsDisposed: false } && !ReferenceEquals(previous, _hostControl))
+                previous.Cursor = WinFormsCursors.Default;
+
+            ApplyCursor();
+        }
+
+        public void SetCursor(ICursorImpl? cursor)
+        {
+            _cursor = cursor as GammaSkiaCursorImpl;
             ApplyCursor();
         }
 
         private void ApplyCursor()
         {
-            var control = ResolveHostControl();
-
-            if (!ReferenceEquals(control, _hostControl))
+            if (_hostControl is not { IsDisposed: false } control)
             {
-                // Hand the previous host back its default cursor before moving on.
-                if (_hostControl is { IsDisposed: false } previous)
-                    previous.Cursor = WinFormsCursors.Default;
-
-                _hostControl = control;
-            }
-
-            if (control is null)
+                // Never leave the cursor hidden once we lost track of the host.
+                SetCursorHidden(false);
                 return;
-
-            var hidden = _cursor?.IsHidden ?? false;
-            if (hidden != _cursorHidden)
-            {
-                _cursorHidden = hidden;
-                if (hidden)
-                    WinFormsCursor.Hide();
-                else
-                    WinFormsCursor.Show();
             }
+
+            SetCursorHidden(_cursor?.IsHidden ?? false);
 
             var target = _cursor?.Cursor ?? WinFormsCursors.Default;
             if (!ReferenceEquals(control.Cursor, target))
                 control.Cursor = target;
         }
 
-        private WinFormsControl? ResolveHostControl()
+        // Cursor.Hide/Show are refcounted and process wide, so they must be balanced exactly.
+        private void SetCursorHidden(bool hidden)
         {
-            var handle = WindowFromPoint(GetCursorPosition());
-            if (handle == IntPtr.Zero)
-                return null;
+            if (hidden == _cursorHidden)
+                return;
 
-            var control = WinFormsControl.FromChildHandle(handle);
-            return control is { IsDisposed: false } ? control : null;
+            _cursorHidden = hidden;
+            if (hidden)
+                WinFormsCursor.Hide();
+            else
+                WinFormsCursor.Show();
         }
 
         private static POINT GetCursorPosition()
@@ -453,17 +462,14 @@ namespace VL.Avalonia.Skia
 
         private void ResetCursor()
         {
-            if (_cursorHidden)
-            {
-                _cursorHidden = false;
-                WinFormsCursor.Show();
-            }
+            SetCursorHidden(false);
 
             if (_hostControl is { IsDisposed: false } control)
                 control.Cursor = WinFormsCursors.Default;
 
             _cursor = null;
             _hostControl = null;
+            _hostHandle = IntPtr.Zero;
         }
 
         [StructLayout(LayoutKind.Sequential)]

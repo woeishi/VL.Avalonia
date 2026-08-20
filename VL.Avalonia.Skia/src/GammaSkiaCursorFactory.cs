@@ -16,10 +16,12 @@ namespace VL.Avalonia.Skia
 
         /// <summary>
         /// Custom cursors are not supported: the layer has no window of its own, so all we can do
-        /// is assign one of the host control's cursors. Returning null makes Avalonia fall back to
-        /// the default cursor.
+        /// is assign one of the host control's stock cursors. Bitmap cursors therefore degrade to
+        /// the arrow. We must not return null here - <see cref="Cursor.Dispose"/> dereferences the
+        /// platform impl unconditionally.
         /// </summary>
-        public ICursorImpl? CreateCursor(IBitmapImpl cursor, PixelPoint hotSpot) => null;
+        public ICursorImpl CreateCursor(IBitmapImpl cursor, PixelPoint hotSpot) =>
+            GetCursor(StandardCursorType.Arrow);
 
         public ICursorImpl GetCursor(StandardCursorType cursorType) =>
             _cursors.GetOrAdd(
