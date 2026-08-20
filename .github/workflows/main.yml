@@ -50,17 +50,17 @@ jobs:
           nuget pack .nuget\VL.Avalonia.Stride.nuspec -Version ${{ env.VERSION }} -OutputDirectory .\packages
 
       - name: NuGet login (OIDC)
+        id: nuget-login
         uses: NuGet/login@v1
         with:
-          source: https://api.nuget.org/v3/index.json
           user: antokhio
 
       - name: Publish to NuGet.org
         run: |
           Write-Host "Publishing to NuGet.org..."
           foreach ($package in Get-ChildItem -Path ./packages -Filter *.nupkg) {
-            # Note: --api-key is no longer needed here
             dotnet nuget push $package.FullName `
+              --api-key ${{ steps.nuget-login.outputs.NUGET_API_KEY }} `
               --source https://api.nuget.org/v3/index.json `
               --skip-duplicate
           }
