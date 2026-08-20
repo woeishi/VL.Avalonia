@@ -3,10 +3,10 @@
     "VL.Skia.Avalonia": {
       "commandName": "Project"
     },
-    "Profile 1": {
+    "dev": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_6.7\\vvvv.exe",
-      "commandLineArgs": "--package-repositories C:\\Users\\elias\\source\\repos\\VL.Avalonia\\src --editable-packages *Avalonia*"
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.4-win-x64\\vvvv.exe",
+      "commandLineArgs": "--package-repositories \"$(SolutionDir)\\\"; ^\r\n--nuget-path \"$(SolutionDir)..\\__nugets\" ^\r\n--editable-packages VL.Avalonia*"
     }
   }
 }

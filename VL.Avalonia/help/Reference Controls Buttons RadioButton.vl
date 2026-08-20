@@ -90,6 +90,7 @@
             <Pin Id="KtxkBpKjhEeOg8ay2HxR22" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="UXGXro4vuJhLd0WKBcz6vo" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Ot5GTfTu6X1QavA3V2L7VO" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LEDXdWI0WttNghCVRILhb7" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="PAHFSsV7XpBNg6YU1DuyAy" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="VkYEDDAAHsfLNiWbvJ2QTg" Bounds="14,40,487,21" ShowValueBox="true" isIOBox="true" Value="https://docs.avaloniaui.net/docs/reference/controls/buttons/radiobutton">
@@ -123,6 +124,7 @@
             <Pin Id="Ptz65M1z5USOuDijPX1VGY" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="FgqtBR8Q5SlP6XxwtzlKrG" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Qt1myihhzh9O36wpG78VX6" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="P5q5CLtMDl5MjUMQbEkqC7" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="PiCK8HohfNSQBn07r0A1DJ" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
             <Pin Id="TfnqWDMWtq9NPYud0m1q9R" Name="Font Family" Kind="InputPin" />
             <Pin Id="PBtKP93gSF4LoCHJ8PJcmz" Name="Font Size" Kind="InputPin" />
@@ -168,6 +170,7 @@
             <Pin Id="O4AywHss4xQMMr6yDoDReW" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="M1jku0Tec4HNjkNcZiOrPh" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="VgQUhsS69yoP4jOtkFKot4" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OCA0MWz5yPwQZMdjVXkuAQ" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="GuyBdS3PfWDONU82Z3qmxX" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Node Bounds="143,220,85,19" Id="MOPylW5QLa9NBeur0n1luk">
@@ -205,6 +208,7 @@
             <Pin Id="MxGArgnM8vtPSPqC78OsNb" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="UxXv1OcGUOGQcVcqt4wn5D" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="NI7sOuer1NAOpsS7pJDMGL" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EwIB2bA5aMnNbfR0iojzPt" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="P0ySNcgX2N6Or8mWFNkc1K" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="M6YYZRBVo2POfTPhD3UP9e" Comment="Text" Bounds="252,91,59,15" ShowValueBox="true" isIOBox="true" Value="First Group">
@@ -252,6 +256,7 @@
             <Pin Id="BRrcaqznrefLcc8KkzpCWg" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="H4XjmtwuUxtOCwHsLslwzu" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="NzE11nlSVBdPjuGXgWhAsR" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RLTO4EFUMUWOAvtwTWWmfy" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="MfbNxJq2zDzPHxf7mq7Y3o" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="MXOXAfuURNEOWEBLNhtZ7s" Comment="Content" Bounds="165,271,79,15" ShowValueBox="true" isIOBox="true" Value="Second Option">
@@ -260,7 +265,7 @@
             </p:TypeAnnotation>
           </Pad>
           <ControlPoint Id="DY6wLGcuMkOQPTjSOjZZiY" Bounds="145,125" />
-          <Node Bounds="190,350,105,19" Id="ACKU9aU0jQ8LgNTG66uNmq">
+          <Node Bounds="190,350,125,19" Id="ACKU9aU0jQ8LgNTG66uNmq">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls.Buttons" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="RadioButton" />
@@ -295,7 +300,8 @@
             <Pin Id="Ql4cKTX0g9MO1aEeFKJz4R" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="KiNzk6HmHwTNofQKnaLeeH" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Sb8jhlQyc22LO5hnsr7qEL" Name="Focusable" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Cg9oZsgf3K7Nm5Gq8lunth" Name="Is Enabled" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="TN2NQcZB8kWMWGPYlHg5lO" Name="Cursor" Kind="InputPin" />
+            <Pin Id="Cg9oZsgf3K7Nm5Gq8lunth" Name="Is Enabled" Kind="InputPin" DefaultValue="True" />
           </Node>
           <Pad Id="H3L9k94ymggMvac52Py8LO" Comment="Content" Bounds="192,321,79,15" ShowValueBox="true" isIOBox="true" Value="Third Option">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -324,6 +330,7 @@
             <Pin Id="Jd4OLaAmQj5ONczBe8bYg2" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="Ds65J1nCHbpOKUIv9R2mxe" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Jepkug5KDGNOvWTUvVCF8w" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KTjybXNlXu4M9uDicf4Fdt" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="KKk6HHIulwnQZsM0NEvvcf" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
             <Pin Id="V2vAFtJcDD2PqMEH1gWwLB" Name="Font Family" Kind="InputPin" />
             <Pin Id="JDcIsW0SWUrOy8RLT2AloA" Name="Font Size" Kind="InputPin" />
@@ -368,6 +375,7 @@
             <Pin Id="EvnaISHfEMRLYwEemhSdRc" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="B80zBUBsAmkMObOCmu2hij" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Nf8RZQ8co51PpJBiGTVXug" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DzcxQJKhsGlNIPYDpfBkBf" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="O7VmOl0Nqo1Og85dVK6SvF" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Node Bounds="166,590,85,19" Id="FvRYjrjCxc5N9m9RoA1Pgm">
@@ -405,6 +413,7 @@
             <Pin Id="IDVUgSlRtATNUx3ODxAnoY" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="CBaIbd4biUgLNOIEp64K1K" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="Uvxgtm62g3HLWshhtH62AT" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UmV3V26GtyLP77Cs9qLmZu" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="U3rvQitifoiOLYnr4FsGBO" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="MKzBYCZaEl9LcVgA2TlGen" Comment="Text" Bounds="272,440,82,15" ShowValueBox="true" isIOBox="true" Value="Second Group">
@@ -452,6 +461,7 @@
             <Pin Id="L9C3oDSCBEXP3CBtWI9Tua" Name="Is Visible" Kind="InputPin" IsHidden="true" />
             <Pin Id="VZIJn31JBkiOfk2VyDIAeO" Name="Effect" Kind="InputPin" IsHidden="true" />
             <Pin Id="RBXEiojH8kpL20JnCFXRvV" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KTEmUNryXWYMj0ZPpfFRV9" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="VNJGlfzeSFxM2WDaPvM74X" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="UI6AMuexjhsOOmSqGaAbXf" Comment="Content" Bounds="193,621,79,15" ShowValueBox="true" isIOBox="true" Value="Second Option">

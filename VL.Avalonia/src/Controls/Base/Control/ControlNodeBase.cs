@@ -242,6 +242,16 @@ namespace VL.Avalonia.Controls
         )]
         private Optional<bool> _focusable;
 
+
+        /// <summary>Sets the cursor for this input element.</summary>
+        [ImplementProperty(
+            typeof(InputElement),
+            nameof(InputElement.CursorProperty),
+            Order = PinOrder.InputElement,
+            PinVisibility = Model.PinVisibility.Optional
+        )]
+        private Optional<Cursor> _cursor;
+
         /// <summary>Sets a value indicating whether this input element is enabled.</summary>
         [ImplementProperty(
             typeof(InputElement),
