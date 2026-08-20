@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using Avalonia.Layout;
 using VL.Avalonia.Attributes;
+using VL.Avalonia.Helpers;
 using VL.Core;
 using VL.Core.Import;
 using VL.Model;
@@ -19,13 +20,32 @@ namespace VL.Avalonia.Controls
         [Fragment]
         public ContentControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
-        /// <summary>Sets the content to display.</summary>
-        [ImplementProperty(
-            typeof(ContentControl),
-            nameof(ContentControl.ContentProperty),
-            Order = PinOrder.Main
-        )]
         private Optional<object> _content;
+
+        /// <summary>Sets the content to display.</summary>
+        [Fragment(Order = PinOrder.Main)]
+        public void SetContent([Pin(Visibility = PinVisibility.Visible)] Optional<object> content)
+        {
+            if (_content == content)
+                return;
+
+            _content = content;
+
+            if (content.HasValue)
+            {
+                if (content.Value is Control control)
+                {
+                    ReparentingHelper.DetachFromParent(NodeContext, control);
+                }
+
+                _output.SetValue(ContentControl.ContentProperty, content.Value);
+            }
+            else
+            {
+                _output.ClearValue(ContentControl.ContentProperty);
+            }
+        }
+
 
         /// <summary>Sets the data template used to display the content of the control.</summary>
         [ImplementProperty(

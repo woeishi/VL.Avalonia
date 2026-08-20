@@ -1,7 +1,7 @@
 ﻿using Avalonia.Controls;
-using Avalonia.Controls.Presenters;
 using Avalonia.Media;
 using VL.Avalonia.Attributes;
+using VL.Avalonia.Helpers;
 using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Collections;
@@ -36,40 +36,11 @@ namespace VL.Avalonia.Controls
             {
                 if (child is Control control)
                 {
-                    DetachFromParent(control);
+                    ReparentingHelper.DetachFromParent(NodeContext, control);
                     collection.Add(control);
                 }
             }
         }
-
-        /// <summary>
-        /// Removes the control from its current parent so it can be re-parented.
-        /// </summary>
-        private static void DetachFromParent(Control control)
-        {
-            switch (control.Parent)
-            {
-                case Panel panel:
-                    panel.Children.Remove(control);
-                    break;
-                case ContentControl contentControl when ReferenceEquals(contentControl.Content, control):
-                    contentControl.Content = null;
-                    break;
-                case ContentPresenter contentPresenter when ReferenceEquals(contentPresenter.Content, control):
-                    contentPresenter.Content = null;
-                    break;
-                case Decorator decorator when ReferenceEquals(decorator.Child, control):
-                    decorator.Child = null;
-                    break;
-                case ItemsControl itemsControl:
-                    itemsControl.Items.Remove(control);
-                    break;
-            }
-
-
-        }
-
-
 
         /// <param name="children"><inheritdoc cref="SetChildren(IReadOnlyList{Control})"/></param>
         public virtual void SetChildren(Spread<Control> children) =>
