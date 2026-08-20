@@ -57,6 +57,7 @@ Demos are available via the Help Browser!
 - [azeno](https://github.com/azeno)
 - [bj-rn](https://github.com/bj-rn)
 - [cloneproduction](https://github.com/cloneproduction)
+- [kopffarben](https://github.com/kopffarben)
 
 Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
