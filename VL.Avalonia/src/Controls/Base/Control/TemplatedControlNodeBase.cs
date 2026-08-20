@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class TemplatedControlNodeBase<T> : ControlNodeBase<T>
         where T : TemplatedControl, new()
     {
+        [Fragment]
+        public TemplatedControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /*
          * DESIGN NOTE:
          * The following StyledProperties are intentionally omitted from the main node

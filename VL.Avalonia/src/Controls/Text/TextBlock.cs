@@ -20,7 +20,9 @@ public abstract partial class TextBlockWrapperBase<T> : ControlNodeBase<T>, IDis
 {
     private readonly ChannelOptionalBinding<string?> _textBinding;
 
-    public TextBlockWrapperBase()
+    [Fragment]
+    public TextBlockWrapperBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+        : base(nodeContext)
     {
         _textBinding = new ChannelOptionalBinding<string?>(_output, TextBlock.TextProperty);
     }
@@ -193,5 +195,9 @@ public abstract partial class TextBlockWrapperBase<T> : ControlNodeBase<T>, IDis
 /// More advanced text styling can be performed using Style properties.
 /// </summary>
 [ProcessNode(Name = "TextBlock")]
-public partial class TextBlockWrapper : TextBlockWrapperBase<TextBlock> { }
+public partial class TextBlockWrapper : TextBlockWrapperBase<TextBlock>
+{
+    [Fragment]
+    public TextBlockWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] VL.Core.NodeContext nodeContext) : base(nodeContext) { }
+}
 

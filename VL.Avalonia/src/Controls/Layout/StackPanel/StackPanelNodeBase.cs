@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class StackPanelNodeBase<T> : PanelNodeBase<T>
         where T : StackPanel, new()
     {
+        [Fragment]
+        public StackPanelNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the size of the spacing to place between child controls.</summary>
         [ImplementProperty(
             typeof(StackPanel),

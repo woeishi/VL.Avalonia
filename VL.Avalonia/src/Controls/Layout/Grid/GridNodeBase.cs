@@ -15,6 +15,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class GridNodeBase<T> : PanelNodeBase<T>
         where T : Grid, new()
     {
+        [Fragment]
+        public GridNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         private IReadOnlyList<ColumnDefinition> _columnDefinitions = Spread<ColumnDefinition>.Empty;
         private IReadOnlyList<RowDefinition> _rowDefinitions = Spread<RowDefinition>.Empty;
 

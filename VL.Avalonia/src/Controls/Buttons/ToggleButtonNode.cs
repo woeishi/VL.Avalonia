@@ -16,7 +16,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly TwoWayBinding<bool, bool?> _isCheckedBinding;
 
-        public ToggleButtonNodeBase()
+        [Fragment]
+        public ToggleButtonNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isCheckedBinding = new TwoWayBinding<bool, bool?>(
                 _output,
@@ -51,5 +52,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="ToggleButton"/>
     /// </summary>
     [ProcessNode(Name = "ToggleButton")]
-    public partial class ToggleButtonNode : ToggleButtonNodeBase<ToggleButton> { }
+    public partial class ToggleButtonNode : ToggleButtonNodeBase<ToggleButton>
+    {
+        [Fragment]
+        public ToggleButtonNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

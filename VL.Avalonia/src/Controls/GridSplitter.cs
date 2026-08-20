@@ -9,6 +9,9 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "GridSplitter")]
 public partial class GridSplitterWrapper : ControlNodeBase<GridSplitter>
 {
+    [Fragment]
+    public GridSplitterWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     [ImplementProperty("GridSplitter.BackgroundProperty")]
     private Optional<IBrush> _background;
 

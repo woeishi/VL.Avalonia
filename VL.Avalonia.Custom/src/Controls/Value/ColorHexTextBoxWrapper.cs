@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Media;
 using VL.Avalonia.Controls;
 using VL.Avalonia.Helpers;
+using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
 
@@ -17,7 +18,9 @@ namespace VL.Avalonia.Custom.Controls.Value
         protected ChannelTwoWayBinding<HsvColor> _hsvBinding;
         protected ChannelTwoWayBinding<Color> _color;
 
-        public ColorHexTextBoxWrapper()
+        [Fragment]
+        public ColorHexTextBoxWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _hsvBinding = new ChannelTwoWayBinding<HsvColor>(_output, ColorView.HsvColorProperty);
             _color = new ChannelTwoWayBinding<Color>(_output, ColorView.ColorProperty);

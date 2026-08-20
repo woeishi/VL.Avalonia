@@ -17,7 +17,8 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<bool> _isExpandedBinding;
 
-        public ExpanderNodeBase()
+        [Fragment]
+        public ExpanderNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isExpandedBinding = new TwoWayBinding<bool>(_output, Expander.IsExpandedProperty);
         }
@@ -56,5 +57,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="Expander"/>
     /// </summary>
     [ProcessNode(Name = "Expander")]
-    public class ExpanderNode : ExpanderNodeBase<Expander> { }
+    public class ExpanderNode : ExpanderNodeBase<Expander>
+    {
+        [Fragment]
+        public ExpanderNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class MaskedTextBoxNodeBase<T> : TextBoxNodeBase<T>
         where T : MaskedTextBox, new()
     {
+        [Fragment]
+        public MaskedTextBoxNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the input mask pattern that defines allowed input format (e.g., "000-000-0000" for phone numbers).</summary>
         [ImplementProperty(
             typeof(MaskedTextBox),
@@ -80,5 +83,9 @@ namespace VL.Avalonia.Controls
     /// The <see href="https://docs.avaloniaui.net/docs/reference/controls/maskedtextbox">MaskedTextBox</see> presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
     /// </summary>
     [ProcessNode(Name = "MaskedTextBox")]
-    public class MaskedTextBoxNode : MaskedTextBoxNodeBase<MaskedTextBox> { }
+    public class MaskedTextBoxNode : MaskedTextBoxNodeBase<MaskedTextBox>
+    {
+        [Fragment]
+        public MaskedTextBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

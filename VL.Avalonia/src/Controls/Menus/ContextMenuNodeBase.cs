@@ -11,6 +11,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode]
     public abstract partial class ContextMenuNodeBase<T> : MenuBaseNode<ContextMenu, T>
     {
+        [Fragment]
+        public ContextMenuNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the Horizontal offset of the popup in relation to the <see cref="Popup.PlacementTarget"/>.</summary>
         [ImplementProperty(
             typeof(ContextMenu),

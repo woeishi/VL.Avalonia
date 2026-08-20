@@ -28,7 +28,8 @@ namespace VL.Avalonia.Controls
         private ISpread? _items;
 
         [Fragment]
-        public AutoCompleteBoxNodeBase()
+        public AutoCompleteBoxNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _textBinding = new TwoWayBinding<string, string>(_output, AutoCompleteBox.TextProperty);
             _selectedItemBinding = new TwoWayBinding<TValue?, object?>(
@@ -230,6 +231,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "AutoCompleteBox")]
     public class AutoCompleteBoxNode : AutoCompleteBoxNodeBase<AutoCompleteBox, object>
     {
+        [Fragment]
+        public AutoCompleteBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -244,6 +248,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "AutoCompleteBox (Spectral)")]
     public class AutoCompleteBoxSpectralNode : AutoCompleteBoxNodeBase<AutoCompleteBox, object>
     {
+        [Fragment]
+        public AutoCompleteBoxSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -257,6 +264,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "AutoCompleteBox (Advanced)")]
     public class AutoCompleteBoxNode<T> : AutoCompleteBoxNodeBase<AutoCompleteBox, T>
     {
+        [Fragment]
+        public AutoCompleteBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)] Spread<T?> items
@@ -270,6 +280,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "AutoCompleteBox (Advanced Spectral)")]
     public class AutoCompleteBoxSpectralNode<T> : AutoCompleteBoxNodeBase<AutoCompleteBox, T>
     {
+        [Fragment]
+        public AutoCompleteBoxSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -281,6 +294,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "AutoCompleteBox (Advanced Reactive)")]
     public class AutoCompleteBoxReactiveNode<T> : AutoCompleteBoxNodeBase<AutoCompleteBox, T>
     {
+        [Fragment]
+        public AutoCompleteBoxReactiveNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {

@@ -17,7 +17,9 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<DateTime?, DateTimeOffset?> _selectedDateBinding;
 
-        public DatePickerNodeBase()
+        [Fragment]
+        public DatePickerNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _selectedDateBinding = new TwoWayBinding<DateTime?, DateTimeOffset?>(
                 _output,
@@ -155,5 +157,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="DatePicker"/>.
     /// </summary>
     [ProcessNode(Name = "DatePicker")]
-    public class DatePickerNode : DatePickerNodeBase<DatePicker> { }
+    public class DatePickerNode : DatePickerNodeBase<DatePicker>
+    {
+        [Fragment]
+        public DatePickerNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

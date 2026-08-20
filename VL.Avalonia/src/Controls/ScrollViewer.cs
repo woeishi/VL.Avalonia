@@ -24,7 +24,8 @@ namespace VL.Avalonia.Controls
         /// <summary>
         /// Initializes a new instance of the <see cref="ScrollViewerNodeBase{T}"/> class.
         /// </summary>
-        public ScrollViewerNodeBase()
+        [Fragment]
+        public ScrollViewerNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _offsetBinding = new TwoWayBinding<Vector2, Vector>(
                 _output,
@@ -151,5 +152,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="ScrollViewer"/>
     /// </summary>
     [ProcessNode(Name = "ScrollViewer")]
-    public class ScrollViewerNode : ScrollViewerNodeBase<ScrollViewer> { }
+    public class ScrollViewerNode : ScrollViewerNodeBase<ScrollViewer>
+    {
+        [Fragment]
+        public ScrollViewerNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class HeaderedControlNodeBase<T> : ContentControlNodeBase<T>
         where T : HeaderedContentControl, new()
     {
+        [Fragment]
+        public HeaderedControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the header content (can be a string, UI element, or any object).</summary>
         [ImplementProperty(
             typeof(HeaderedContentControl),

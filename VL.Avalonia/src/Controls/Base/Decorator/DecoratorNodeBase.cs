@@ -14,6 +14,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class DecoratorNodeBase<T> : ControlNodeBase<T>
         where T : Decorator, new()
     {
+        [Fragment]
+        public DecoratorNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the decorated control.</summary>
         [ImplementProperty(
             typeof(Decorator),

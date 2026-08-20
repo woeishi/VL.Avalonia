@@ -23,7 +23,8 @@ namespace VL.Avalonia.Controls
         private TwoWayBinding<bool> _isSubMenuOpenBinding;
         private TwoWayBinding<bool> _isCheckedBinding;
 
-        public MenuItemNodeBase()
+        [Fragment]
+        public MenuItemNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _commandBinding = new UnitCommandBinding(_output, MenuItem.CommandProperty);
             _isSelectedBinding = new TwoWayBinding<bool>(_output, MenuItem.IsSelectedProperty);

@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using VL.Avalonia.Data;
+using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
 using VL.Model;
@@ -17,7 +18,8 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<bool> _isOpenBinding;
 
-        public MenuBaseNode()
+        [Fragment]
+        public MenuBaseNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isOpenBinding = new TwoWayBinding<bool>(_output, MenuBase.IsOpenProperty);
         }

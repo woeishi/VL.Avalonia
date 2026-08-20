@@ -9,6 +9,9 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "Rectangle")]
 public partial class RectangleWrapper : ControlNodeBase<Rectangle>
 {
+    [Fragment]
+    public RectangleWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     [ImplementProperty("Rectangle.FillProperty")]
     protected Optional<IBrush> _fill;
 

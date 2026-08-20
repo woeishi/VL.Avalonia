@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "PathIcon")]
 public partial class PathIconWrapper : ControlNodeBase<PathIcon>
 {
+    [Fragment]
+    public PathIconWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     /// <param name="data">
     /// Sets geometry for the icon.
     /// </param>

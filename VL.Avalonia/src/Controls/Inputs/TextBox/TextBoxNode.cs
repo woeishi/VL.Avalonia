@@ -18,7 +18,9 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<string, string> _textBinding;
 
-        public TextBoxNodeBase()
+        [Fragment]
+        public TextBoxNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _textBinding = new TwoWayBinding<string, string>(_output, TextBox.TextProperty);
         }
@@ -259,5 +261,9 @@ namespace VL.Avalonia.Controls
     /// The <b>TextBox</b> presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
     /// </summary>
     [ProcessNode(Name = "TextBox")]
-    public class TextBoxNode : TextBoxNodeBase<TextBox> { }
+    public class TextBoxNode : TextBoxNodeBase<TextBox>
+    {
+        [Fragment]
+        public TextBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

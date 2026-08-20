@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <VLVersion>2025.7.1</VLVersion>
+        <VLVersion>2025.7.4</VLVersion>
         <AvaloniaVersion>11.2.1</AvaloniaVersion>
         <StrideVersion>4.2.1.2487</StrideVersion>
     </PropertyGroup>

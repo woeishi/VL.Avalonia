@@ -22,8 +22,9 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<bool, bool> _isDropDownOpenBinding;
 
-        public ComboBoxNodeBase()
-            : base()
+        [Fragment]
+        public ComboBoxNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _isDropDownOpenBinding = new TwoWayBinding<bool, bool>(
                 _output,
@@ -108,6 +109,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ComboBox")]
     public class ComboBoxNode : ComboBoxNodeBase<object>
     {
+        [Fragment]
+        public ComboBoxNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -122,6 +126,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ComboBox (Spectral)")]
     public class ComboBoxSpectralNode : ComboBoxNodeBase<object>
     {
+        [Fragment]
+        public ComboBoxSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -135,6 +142,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ComboBox (Advanced)")]
     public class ComboBoxNode<T> : ComboBoxNodeBase<T>
     {
+        [Fragment]
+        public ComboBoxNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -149,6 +159,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ComboBox (Advanced Spectral)")]
     public class ComboBoxSpectralNode<T> : ComboBoxNodeBase<T>
     {
+        [Fragment]
+        public ComboBoxSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -160,6 +173,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ComboBox (Advanced Reactive)")]
     public class ComboBoxReactiveNode<T> : ComboBoxNodeBase<T>
     {
+        [Fragment]
+        public ComboBoxReactiveNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {

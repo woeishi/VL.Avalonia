@@ -16,6 +16,9 @@ namespace VL.Avalonia.Controls
         : TemplatedControlNodeBase<TControl>
         where TControl : ContentControl, new()
     {
+        [Fragment]
+        public ContentControlNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the content to display.</summary>
         [ImplementProperty(
             typeof(ContentControl),

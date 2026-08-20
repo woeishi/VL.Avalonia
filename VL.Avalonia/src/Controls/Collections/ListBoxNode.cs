@@ -13,6 +13,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode]
     public abstract partial class ListBoxNodeBase<T> : SelectingItemsControlNodeBase<ListBox, T>
     {
+        [Fragment]
+        public ListBoxNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the selection mode.</summary>
         [ImplementProperty(
             typeof(ListBox),
@@ -28,6 +31,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ListBox")]
     public class ListBoxNode : ListBoxNodeBase<object>
     {
+        [Fragment]
+        public ListBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = Model.PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -42,6 +48,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ListBox (Spectral)")]
     public class ListBoxSpectralNode : ListBoxNodeBase<object>
     {
+        [Fragment]
+        public ListBoxSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -55,6 +64,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ListBox (Advanced)")]
     public class ListBoxNode<T> : ListBoxNodeBase<T>
     {
+        [Fragment]
+        public ListBoxNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = Model.PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -69,6 +81,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ListBox (Advanced Spectral)")]
     public class ListBoxSpectralNode<T> : ListBoxNodeBase<T>
     {
+        [Fragment]
+        public ListBoxSpectralNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -80,6 +95,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "ListBox (Advanced Reactive)")]
     public class ListBoxReactiveNode<T> : ListBoxNodeBase<T>
     {
+        [Fragment]
+        public ListBoxReactiveNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {

@@ -16,6 +16,9 @@ namespace VL.Avalonia.Controls;
 [ProcessNode(Name = "Image")]
 public partial class ImageWrapper : ControlNodeBase<Image>
 {
+    [Fragment]
+    public ImageWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
     protected Optional<Path> _source;
 
     /// <param name="source">

@@ -2,16 +2,16 @@
   "profiles": {
     "VL.Avalonia": {
       "commandName": "Project",
-      "commandLineArgs": "start \"\" \"C:\\Program Files\\vvvv\\vvvv_gamma_7.1-win-x64\\vvvv.exe\" ^\r\n--nuget-path D:\\VVVV\\__avalonia\\_nugets ^ \r\n--nocache ^ \r\n--debug"
+      "commandLineArgs": ""
     },
     "dev/antokhio": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.1-win-x64\\vvvv.exe",
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.4-win-x64\\vvvv.exe",
       "commandLineArgs": "--package-repositories \"$(SolutionDir)\\\"; ^\r\n--nuget-path \"$(SolutionDir)..\\__nugets\" ^\r\n--editable-packages VL.Avalonia;VL.Avalonia.Skia;VL.Avalonia.Stride;VL.Avalonia.Custom; ^\r\n--debug"
     },
     "dev/lecloneur": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.1-win-x64\\vvvv.exe",
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.4-win-x64\\vvvv.exe",
       "commandLineArgs": "--package-repositories D:\\GitHub\\VL.Avalonia; ^\r\n--nuget-path D:\\VVVV\\__nugets ^\r\n--editable-packages VL.Avalonia;VL.Avalonia.Skia;VL.Avalonia.Stride;VL.Avalonia.Custom; ^\r\n--nocache ^\r\n--debug"
     }
   }

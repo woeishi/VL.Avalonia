@@ -17,7 +17,9 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<TimeSpan?, TimeSpan?> _selectedTimeBinding;
 
-        public TimePickerNodeBase()
+        [Fragment]
+        public TimePickerNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+            : base(nodeContext)
         {
             _selectedTimeBinding = new TwoWayBinding<TimeSpan?, TimeSpan?>(
                 _output,
@@ -81,5 +83,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="TimePicker"/>
     /// </summary>
     [ProcessNode(Name = "TimePicker")]
-    public class TimePickerNode : TimePickerNodeBase<TimePicker> { }
+    public class TimePickerNode : TimePickerNodeBase<TimePicker>
+    {
+        [Fragment]
+        public TimePickerNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

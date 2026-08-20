@@ -17,7 +17,8 @@ namespace VL.Avalonia.Controls
     {
         private TwoWayBinding<bool> _isSelectedBinding;
 
-        public TabItemNodeBase()
+        [Fragment]
+        public TabItemNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isSelectedBinding = new TwoWayBinding<bool>(_output, TabItem.IsSelectedProperty);
         }
@@ -48,5 +49,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="TabItem"/>
     /// </summary>
     [ProcessNode(Name = "TabItem")]
-    public class TabItemNode : TabItemNodeBase<TabItem> { }
+    public class TabItemNode : TabItemNodeBase<TabItem>
+    {
+        [Fragment]
+        public TabItemNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

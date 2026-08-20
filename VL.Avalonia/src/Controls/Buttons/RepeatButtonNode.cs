@@ -12,6 +12,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class RepeatButtonNodeBase<T> : ButtonNodeBase<T>
         where T : RepeatButton, new()
     {
+        [Fragment]
+        public RepeatButtonNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the amount of time, in milliseconds, of repeating clicks.</summary>
         [ImplementProperty(
             typeof(RepeatButton),
@@ -35,5 +38,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="RepeatButton"/>
     /// </summary>
     [ProcessNode(Name = "RepeatButton")]
-    public class RepeatButtonNode : RepeatButtonNodeBase<RepeatButton> { }
+    public class RepeatButtonNode : RepeatButtonNodeBase<RepeatButton>
+    {
+        [Fragment]
+        public RepeatButtonNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

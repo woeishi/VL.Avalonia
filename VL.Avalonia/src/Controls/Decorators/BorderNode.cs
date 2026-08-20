@@ -16,6 +16,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class BorderNodeBase<T> : DecoratorNodeBase<T>
         where T : Border, new()
     {
+        [Fragment]
+        public BorderNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets a brush with which to paint the background.</summary>
         [ImplementProperty(
             typeof(Border),
@@ -75,5 +78,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="Border"/>
     /// </summary>
     [ProcessNode(Name = "Border")]
-    public class BorderNode : BorderNodeBase<Border> { }
+    public class BorderNode : BorderNodeBase<Border>
+    {
+        [Fragment]
+        public BorderNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

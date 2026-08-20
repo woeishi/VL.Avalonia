@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using VL.Avalonia.Data;
+using VL.Core;
 using VL.Core.Import;
 using VL.Lib.Reactive;
 
@@ -14,7 +15,8 @@ namespace VL.Avalonia.Controls
     {
         private readonly TwoWayBinding<bool> _isCheckedBinding;
 
-        public ToggleSplitButtonNodeBase()
+        [Fragment]
+        public ToggleSplitButtonNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _isCheckedBinding = new TwoWayBinding<bool>(
                 _output,
@@ -38,5 +40,9 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="ToggleSplitButton"/>
     /// </summary>
     [ProcessNode(Name = "ToggleSplitButton")]
-    public class ToggleSplitButtonNode : ToggleSplitButtonNodeBase<ToggleSplitButton> { }
+    public class ToggleSplitButtonNode : ToggleSplitButtonNodeBase<ToggleSplitButton>
+    {
+        [Fragment]
+        public ToggleSplitButtonNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    }
 }

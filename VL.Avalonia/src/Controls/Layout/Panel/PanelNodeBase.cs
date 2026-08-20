@@ -19,7 +19,7 @@ namespace VL.Avalonia.Controls
         private IReadOnlyList<Control>? _children;
 
         [Fragment]
-        public PanelNodeBase() { }
+        public PanelNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
         /// <param name="children">Set children of <see cref="Panel"/></param>
         public virtual void SetChildren(IReadOnlyList<Control> children)
@@ -65,7 +65,11 @@ namespace VL.Avalonia.Controls
                     itemsControl.Items.Remove(control);
                     break;
             }
+
+
         }
+
+
 
         /// <param name="children"><inheritdoc cref="SetChildren(IReadOnlyList{Control})"/></param>
         public virtual void SetChildren(Spread<Control> children) =>

@@ -17,6 +17,9 @@ namespace VL.Avalonia.Controls
     public abstract partial class TabControlNodeBase<T>
         : SelectingItemsControlNodeBase<TabControl, T>
     {
+        [Fragment]
+        public TabControlNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         /// <summary>Sets the position of the tab strip.</summary>
         [ImplementProperty(typeof(TabControl), nameof(TabControl.TabStripPlacementProperty))]
         private Optional<Dock> _tabStripPlacement;
@@ -52,6 +55,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TabControl")]
     public partial class TabControlNode : TabControlNodeBase<object>
     {
+        [Fragment]
+        public TabControlNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)]
@@ -68,6 +74,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TabControl (Spectral)")]
     public partial class TabControlSpectralNode : TabControlNodeBase<object>
     {
+        [Fragment]
+        public TabControlSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<object?> items)
         {
@@ -81,6 +90,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TabControl (Advanced)")]
     public partial class TabControlAdvancedNode<T> : TabControlNodeBase<T>
     {
+        [Fragment]
+        public TabControlAdvancedNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(
             [Pin(PinGroupKind = PinGroupKind.Collection, PinGroupDefaultCount = 1)] Spread<T?> items
@@ -96,6 +108,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TabControl (Advanced Spectral)")]
     public partial class TabControlAdvancedSpectralNode<T> : TabControlNodeBase<T>
     {
+        [Fragment]
+        public TabControlAdvancedSpectralNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItems(Spread<T?> items)
         {
@@ -109,6 +124,9 @@ namespace VL.Avalonia.Controls
     [ProcessNode(Name = "TabControl (Advanced Reactive)")]
     public partial class TabControlReactiveNode<T> : TabControlNodeBase<T>
     {
+        [Fragment]
+        public TabControlReactiveNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+
         [Fragment(Order = PinOrder.Main)]
         public override void SetItemsSource(IChannel<IReadOnlyList<T>> itemsSource)
         {
