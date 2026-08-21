@@ -12,20 +12,30 @@ namespace VL.Avalonia.Controls;
 /// Base wrapper for <see cref="RangeBase"/>
 /// </summary>
 [ProcessNode]
-public abstract partial class RangeBaseNodeBase<T> : ControlNodeBase<T>, IDisposable
-    where T : RangeBase, new()
+public abstract partial class RangeBaseNodeBase<TControl, TValue> : ControlNodeBase<TControl>, IDisposable
+    where TControl : RangeBase, new()
 {
-    private TwoWayBinding<float, double> _valueBinding;
+    private TwoWayBinding<TValue, double> _valueBinding;
+
+    /// <summary>
+    /// Converts a value of the node's value type into the <see cref="double"/> the control expects.
+    /// </summary>
+    protected abstract double ToProperty(TValue value);
+
+    /// <summary>
+    /// Converts the <see cref="double"/> reported by the control back into the node's value type.
+    /// </summary>
+    protected abstract TValue ToValue(double value);
 
     [Fragment]
     protected RangeBaseNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
         : base(nodeContext)
     {
-        _valueBinding = new TwoWayBinding<float, double>(
+        _valueBinding = new TwoWayBinding<TValue, double>(
             _output,
             RangeBase.ValueProperty,
-            (x) => (double)x,
-            (x) => (float)x
+            ToProperty,
+            ToValue
         );
     }
 
@@ -33,45 +43,65 @@ public abstract partial class RangeBaseNodeBase<T> : ControlNodeBase<T>, IDispos
     /// Gets or sets the current value
     /// </param>
     [Fragment(Order = PinOrder.Main)]
-    public void SetValueChannel(IChannel<float> valueChannel) => _valueBinding.Bind(valueChannel);
+    public void SetValueChannel(IChannel<TValue> valueChannel) => _valueBinding.Bind(valueChannel);
 
     /// <summary>Sets the minimum possible value.</summary>
     [ImplementProperty(
         typeof(RangeBase),
         nameof(RangeBase.MinimumProperty),
+        Converter = nameof(ToProperty),
         Order = PinOrder.Style
     )]
-    private Optional<float> _minimum;
+    private Optional<TValue> _minimum;
 
     /// <summary>Sets the maximum possible value.</summary>
     [ImplementProperty(
         typeof(RangeBase),
         nameof(RangeBase.MaximumProperty),
+        Converter = nameof(ToProperty),
         Order = PinOrder.Style
     )]
-    private Optional<float> _maximum;
+    private Optional<TValue> _maximum;
 
     /// <summary>Sets the small increment value added or subtracted from.</summary>
     [ImplementProperty(
         typeof(RangeBase),
         nameof(RangeBase.SmallChangeProperty),
+        Converter = nameof(ToProperty),
         Order = PinOrder.Style,
         PinVisibility = PinVisibility.Optional
     )]
-    private Optional<float> _smallChange;
+    private Optional<TValue> _smallChange;
 
     /// <summary>Sets the large increment value added or subtracted from.</summary>
     [ImplementProperty(
         typeof(RangeBase),
         nameof(RangeBase.LargeChangeProperty),
+        Converter = nameof(ToProperty),
         Order = PinOrder.Style,
         PinVisibility = PinVisibility.Optional
     )]
-    private Optional<float> _largeChange;
+    private Optional<TValue> _largeChange;
 
     public override void Dispose()
     {
         _valueBinding?.Dispose();
         base.Dispose();
     }
+}
+
+/// <summary>
+/// Base wrapper for <see cref="RangeBase"/> working on <see cref="float"/> values.
+/// </summary>
+[ProcessNode]
+public abstract class RangeBaseNodeBase<TControl> : RangeBaseNodeBase<TControl, float>
+    where TControl : RangeBase, new()
+{
+    [Fragment]
+    protected RangeBaseNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+        : base(nodeContext) { }
+
+    protected override double ToProperty(float value) => value;
+
+    protected override float ToValue(double value) => (float)value;
 }

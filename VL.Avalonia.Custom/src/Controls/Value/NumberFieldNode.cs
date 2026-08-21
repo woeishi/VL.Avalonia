@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using System.Globalization;
 using VL.Avalonia.Controls;
 using VL.Avalonia.Data;
 using VL.Core;
@@ -79,10 +80,46 @@ namespace VL.Avalonia.Custom.Controls.Value
     // [ProcessNode(Name = "NumberField (Advanced Experimental)")]
     public class NumberFieldAdvancedExperimentalNode<TValue> : NumericUpDownNodeBase<NumberField, TValue>
     {
-        protected static Func<decimal?, TValue> DefaultToValueConverter =
-            (x) => x is null ? default! : (TValue)Convert.ChangeType(x, typeof(TValue));
-        protected static Func<TValue, decimal?> DefaultFromValueConverter =
-            (x) => x is null ? null : (decimal?)Convert.ChangeType(x, typeof(decimal));
+        private static readonly Type ValueType = Nullable.GetUnderlyingType(typeof(TValue)) ?? typeof(TValue);
+        private static readonly bool IsConvertible = typeof(IConvertible).IsAssignableFrom(ValueType);
+
+        /// <summary>
+        /// Fallback used until <see cref="SetToValueConverter"/> supplies a converter. Yields
+        /// <c>default</c> for types that cannot be converted, so the node never throws while unwired.
+        /// </summary>
+        protected static Func<decimal?, TValue> DefaultToValueConverter = static (x) =>
+        {
+            if (x is null || !IsConvertible)
+                return default!;
+
+            try
+            {
+                return (TValue)Convert.ChangeType(x, ValueType, CultureInfo.InvariantCulture);
+            }
+            catch (Exception e) when (e is InvalidCastException or FormatException or OverflowException)
+            {
+                return default!;
+            }
+        };
+
+        /// <summary>
+        /// Fallback used until <see cref="SetFromValueConverter"/> supplies a converter. Yields
+        /// <c>null</c> for types that cannot be converted, so the node never throws while unwired.
+        /// </summary>
+        protected static Func<TValue, decimal?> DefaultFromValueConverter = static (x) =>
+        {
+            if (x is null || !IsConvertible)
+                return null;
+
+            try
+            {
+                return Convert.ToDecimal(x, CultureInfo.InvariantCulture);
+            }
+            catch (Exception e) when (e is InvalidCastException or FormatException or OverflowException)
+            {
+                return null;
+            }
+        };
 
         protected override decimal? ToProperty(TValue value) => _fromValueConverter(value);
         protected override TValue ToValue(decimal? value) => _toValueConverter(value);
