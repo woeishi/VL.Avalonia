@@ -1,8 +1,8 @@
-using System.Globalization;
 using Avalonia.Controls;
 using Avalonia.Data.Converters;
 using Avalonia.Layout;
 using Avalonia.Media;
+using System.Globalization;
 using VL.Avalonia.Attributes;
 using VL.Avalonia.Data;
 using VL.Core;
@@ -16,22 +16,28 @@ namespace VL.Avalonia.Controls
     /// Base wrapper for <see cref="NumericUpDown"/>
     /// </summary>
     [ProcessNode]
-    public abstract partial class NumericUpDownNodeBase<T> : ControlNodeBase<T>, IDisposable
-        where T : NumericUpDown, new()
+    public abstract partial class NumericUpDownNodeBase<TControl, TValue> : ControlNodeBase<TControl>, IDisposable
+        where TControl : NumericUpDown, new()
     {
-        private TwoWayBinding<float?, decimal?> _valueBinding;
+        protected abstract TwoWayBinding<TValue, decimal?> ValueBinding { get; }
+
+        /// <summary>
+        /// Converts a value of the node's value type into the <see cref="decimal"/> the control
+        /// expects. Returning <c>null</c> resets the target property to its default.
+        /// </summary>
+        protected abstract decimal? ToProperty(TValue value);
+
+        /// <summary>
+        /// Converts the <see cref="decimal"/> reported by the control back into the node's value type.
+        /// </summary>
+        protected abstract TValue ToValue(decimal? value);
+
         private TwoWayBinding<string?, string?> _textBinding;
 
         [Fragment]
-        public NumericUpDownNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext)
+        public NumericUpDownNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext)
             : base(nodeContext)
         {
-            _valueBinding = new TwoWayBinding<float?, decimal?>(
-                _output,
-                NumericUpDown.ValueProperty,
-                (x) => (decimal?)x,
-                (x) => (float?)x
-            );
             _textBinding = new TwoWayBinding<string?, string?>(_output, NumericUpDown.TextProperty);
         }
 
@@ -39,8 +45,8 @@ namespace VL.Avalonia.Controls
         /// The current numeric value of the control
         /// </param>
         [Fragment(Order = PinOrder.Main)]
-        public void SetValueChannel(IChannel<float?> valueChannel) =>
-            _valueBinding.Bind(valueChannel);
+        public void SetValueChannel(IChannel<TValue> valueChannel) =>
+            ValueBinding.Bind(valueChannel);
 
         /// <param name="textChannel">
         /// The formatted string representation of the value
@@ -60,31 +66,34 @@ namespace VL.Avalonia.Controls
         private Optional<string> _watermark;
 
         /// <summary>Sets the minimum allowed value.</summary>
-        [ImplementProperty<float, decimal>(
+        [ImplementProperty(
             typeof(NumericUpDown),
             nameof(NumericUpDown.MinimumProperty),
+            Converter = nameof(ToProperty),
             Order = PinOrder.Style,
             PinVisibility = PinVisibility.Optional
         )]
-        private Optional<float> _minimum;
+        private Optional<TValue> _minimum;
 
         /// <summary>Sets the maximum allowed value.</summary>
-        [ImplementProperty<float, decimal>(
+        [ImplementProperty(
             typeof(NumericUpDown),
             nameof(NumericUpDown.MaximumProperty),
+            Converter = nameof(ToProperty),
             Order = PinOrder.Style,
             PinVisibility = PinVisibility.Optional
         )]
-        private Optional<float> _maximum;
+        private Optional<TValue> _maximum;
 
         /// <summary>Sets the amount by which to increment or decrement the value.</summary>
-        [ImplementProperty<float, decimal>(
+        [ImplementProperty(
             typeof(NumericUpDown),
             nameof(NumericUpDown.IncrementProperty),
+            Converter = nameof(ToProperty),
             Order = PinOrder.Style,
             PinVisibility = PinVisibility.Optional
         )]
-        private Optional<float> _increment;
+        private Optional<TValue> _increment;
 
         /// <summary>Sets whether the value should be automatically clipped to the min/max range.</summary>
         [ImplementProperty(
@@ -214,7 +223,7 @@ namespace VL.Avalonia.Controls
 
         public override void Dispose()
         {
-            _valueBinding?.Dispose();
+            ValueBinding?.Dispose();
             _textBinding?.Dispose();
             base.Dispose();
         }
@@ -224,9 +233,143 @@ namespace VL.Avalonia.Controls
     /// Wrapper for <see cref="NumericUpDown"/>
     /// </summary>
     [ProcessNode(Name = "NumericUpDown")]
-    public class NumericUpDownNode : NumericUpDownNodeBase<NumericUpDown>
+    public class NumericUpDownNode : NumericUpDownNodeBase<NumericUpDown, float?>
     {
-        [Fragment]
-        public NumericUpDownNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+        protected override TwoWayBinding<float?, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(float? value) => (decimal?)value;
+        protected override float? ToValue(decimal? value) => (float?)value;
+
+        public NumericUpDownNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
+        {
+            ValueBinding = new TwoWayBinding<float?, decimal?>(
+                _output,
+                NumericUpDown.ValueProperty,
+                ToProperty,
+                ToValue
+            );
+        }
+    }
+
+    /// <summary>
+    /// Wrapper for <see cref="NumericUpDown"/>
+    /// </summary>
+    [ProcessNode(Name = "NumericUpDown (Float)")]
+    public class NumericUpDownFloatNode : NumericUpDownNodeBase<NumericUpDown, float>
+    {
+        protected override TwoWayBinding<float, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(float value) => (decimal)value;
+        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
+
+        public NumericUpDownFloatNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
+        {
+            ValueBinding = new TwoWayBinding<float, decimal?>(
+                _output,
+                NumericUpDown.ValueProperty,
+                ToProperty,
+                ToValue
+            );
+        }
+    }
+
+    /// <summary>
+    /// Wrapper for <see cref="NumericUpDown"/>
+    /// </summary>
+    [ProcessNode(Name = "NumericUpDown (Integer)")]
+    public class NumericUpDownInteger32Node : NumericUpDownNodeBase<NumericUpDown, int>
+    {
+        protected override TwoWayBinding<int, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(int value) => value;
+        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
+        public NumericUpDownInteger32Node([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
+        {
+            _output.SetFormatString("0");
+
+            ValueBinding = new TwoWayBinding<int, decimal?>(
+                _output,
+                NumericUpDown.ValueProperty,
+                ToProperty,
+                ToValue
+            );
+        }
+
+
+    }
+
+    /// <summary>
+    /// Generic wrapper for <see cref="NumericUpDown"/>, allows to provide converters for value.
+    /// </summary>
+    // BLCOKED BY: https://forum.vvvv.org/t/bug-crash-with-nullable-decimal/25230
+    // [ProcessNode(Name = "NumericUpDown (Advanced Experimental)")]
+    public class NumericUpDownAdvancedExperimentalNode<TValue> : NumericUpDownNodeBase<NumericUpDown, TValue>
+    {
+        private static readonly Type ValueType = Nullable.GetUnderlyingType(typeof(TValue)) ?? typeof(TValue);
+        private static readonly bool IsConvertible = typeof(IConvertible).IsAssignableFrom(ValueType);
+
+        /// <summary>
+        /// Fallback used until <see cref="SetToValueConverter"/> supplies a converter. Yields
+        /// <c>default</c> for types that cannot be converted, so the node never throws while unwired.
+        /// </summary>
+        protected static Func<decimal?, TValue> DefaultToValueConverter = static (x) =>
+        {
+            if (x is null || !IsConvertible)
+                return default!;
+
+            try
+            {
+                return (TValue)Convert.ChangeType(x, ValueType, CultureInfo.InvariantCulture);
+            }
+            catch (Exception e) when (e is InvalidCastException or FormatException or OverflowException)
+            {
+                return default!;
+            }
+        };
+
+        /// <summary>
+        /// Fallback used until <see cref="SetFromValueConverter"/> supplies a converter. Yields
+        /// <c>null</c> for types that cannot be converted, so the node never throws while unwired.
+        /// </summary>
+        protected static Func<TValue, decimal?> DefaultFromValueConverter = static (x) =>
+        {
+            if (x is null || !IsConvertible)
+                return null;
+
+            try
+            {
+                return Convert.ToDecimal(x, CultureInfo.InvariantCulture);
+            }
+            catch (Exception e) when (e is InvalidCastException or FormatException or OverflowException)
+            {
+                return null;
+            }
+        };
+
+        protected override decimal? ToProperty(TValue value) => _fromValueConverter(value);
+
+        protected override TValue ToValue(decimal? value) => _toValueConverter(value);
+
+        private Func<decimal?, TValue> _toValueConverter = DefaultToValueConverter;
+        private Func<TValue, decimal?> _fromValueConverter = DefaultFromValueConverter;
+
+        protected override TwoWayBinding<TValue, decimal?> ValueBinding { get; }
+
+        public NumericUpDownAdvancedExperimentalNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
+        {
+            ValueBinding = new TwoWayBinding<TValue, decimal?>(
+                _output,
+                NumericUpDown.ValueProperty,
+                ToProperty,
+                ToValue
+            );
+        }
+
+        public void SetToValueConverter([Pin(Visibility = PinVisibility.Optional)] Func<decimal?, TValue> toValueConverter)
+        {
+            _toValueConverter = toValueConverter ?? DefaultToValueConverter;
+        }
+
+        public void SetFromValueConverter([Pin(Visibility = PinVisibility.Optional)] Func<TValue, decimal?> fromValueConverter)
+        {
+            _fromValueConverter = fromValueConverter ?? DefaultFromValueConverter;
+        }
     }
 }
