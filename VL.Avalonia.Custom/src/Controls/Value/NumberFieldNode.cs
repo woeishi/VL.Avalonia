@@ -15,7 +15,8 @@ namespace VL.Avalonia.Custom.Controls.Value
     public class NumberFieldNode : NumericUpDownNodeBase<NumberField, float?>
     {
         protected override TwoWayBinding<float?, decimal?> ValueBinding { get; }
-
+        protected override decimal? ToProperty(float? value) => (decimal?)value;
+        protected override float? ToValue(decimal? value) => (float?)value;
         public NumberFieldNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             ValueBinding = new TwoWayBinding<float?, decimal?>(
@@ -25,10 +26,6 @@ namespace VL.Avalonia.Custom.Controls.Value
                 ToValue
             );
         }
-
-        protected override decimal? ToProperty(float? value) => (decimal?)value;
-
-        protected override float? ToValue(decimal? value) => (float?)value;
     }
 
     /// <summary>
@@ -38,6 +35,8 @@ namespace VL.Avalonia.Custom.Controls.Value
     public class NumberFieldFloatNode : NumericUpDownNodeBase<NumberField, float>
     {
         protected override TwoWayBinding<float, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(float value) => (decimal)value;
+        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
 
         public NumberFieldFloatNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
@@ -48,10 +47,6 @@ namespace VL.Avalonia.Custom.Controls.Value
                 ToValue
             );
         }
-
-        protected override decimal? ToProperty(float value) => (decimal)value;
-
-        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
     }
 
     /// <summary>
@@ -61,6 +56,8 @@ namespace VL.Avalonia.Custom.Controls.Value
     public class NumberFieldIntegerNode : NumericUpDownNodeBase<NumberField, int>
     {
         protected override TwoWayBinding<int, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(int value) => value;
+        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
 
         public NumberFieldIntegerNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
@@ -72,9 +69,7 @@ namespace VL.Avalonia.Custom.Controls.Value
             );
         }
 
-        protected override decimal? ToProperty(int value) => value;
 
-        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
     }
 
     /// <summary>
@@ -88,6 +83,9 @@ namespace VL.Avalonia.Custom.Controls.Value
             (x) => x is null ? default! : (TValue)Convert.ChangeType(x, typeof(TValue));
         protected static Func<TValue, decimal?> DefaultFromValueConverter =
             (x) => x is null ? null : (decimal?)Convert.ChangeType(x, typeof(decimal));
+
+        protected override decimal? ToProperty(TValue value) => _fromValueConverter(value);
+        protected override TValue ToValue(decimal? value) => _toValueConverter(value);
 
         private Func<decimal?, TValue> _toValueConverter = DefaultToValueConverter;
         private Func<TValue, decimal?> _fromValueConverter = DefaultFromValueConverter;
@@ -104,9 +102,7 @@ namespace VL.Avalonia.Custom.Controls.Value
             );
         }
 
-        protected override decimal? ToProperty(TValue value) => _fromValueConverter(value);
 
-        protected override TValue ToValue(decimal? value) => _toValueConverter(value);
 
         public void SetToValueConverter([Pin(Visibility = PinVisibility.Optional)] Func<decimal?, TValue> toValueConverter)
         {

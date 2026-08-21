@@ -236,6 +236,8 @@ namespace VL.Avalonia.Controls
     public class NumericUpDownNode : NumericUpDownNodeBase<NumericUpDown, float?>
     {
         protected override TwoWayBinding<float?, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(float? value) => (decimal?)value;
+        protected override float? ToValue(decimal? value) => (float?)value;
 
         public NumericUpDownNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
@@ -246,10 +248,6 @@ namespace VL.Avalonia.Controls
                 ToValue
             );
         }
-
-        protected override decimal? ToProperty(float? value) => (decimal?)value;
-
-        protected override float? ToValue(decimal? value) => (float?)value;
     }
 
     /// <summary>
@@ -259,6 +257,8 @@ namespace VL.Avalonia.Controls
     public class NumericUpDownFloatNode : NumericUpDownNodeBase<NumericUpDown, float>
     {
         protected override TwoWayBinding<float, decimal?> ValueBinding { get; }
+        protected override decimal? ToProperty(float value) => (decimal)value;
+        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
 
         public NumericUpDownFloatNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
@@ -269,10 +269,6 @@ namespace VL.Avalonia.Controls
                 ToValue
             );
         }
-
-        protected override decimal? ToProperty(float value) => (decimal)value;
-
-        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
     }
 
     /// <summary>
@@ -282,7 +278,8 @@ namespace VL.Avalonia.Controls
     public class NumericUpDownInteger32Node : NumericUpDownNodeBase<NumericUpDown, int>
     {
         protected override TwoWayBinding<int, decimal?> ValueBinding { get; }
-
+        protected override decimal? ToProperty(int value) => value;
+        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
         public NumericUpDownInteger32Node([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             _output.SetFormatString("0");
@@ -295,9 +292,7 @@ namespace VL.Avalonia.Controls
             );
         }
 
-        protected override decimal? ToProperty(int value) => value;
 
-        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
     }
 
     /// <summary>
