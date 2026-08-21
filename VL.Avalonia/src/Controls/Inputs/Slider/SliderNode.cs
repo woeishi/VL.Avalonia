@@ -17,7 +17,7 @@ public abstract partial class SliderNodeBase<T> : RangeBaseNodeBase<T>
     where T : Slider, new()
 {
     [Fragment]
-    public SliderNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    public SliderNodeBase([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
     /// <summary>Sets the orientation of a Slider.</summary>
     [ImplementProperty(
