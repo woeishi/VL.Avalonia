@@ -21,10 +21,14 @@ namespace VL.Avalonia.Custom.Controls.Value
             ValueBinding = new TwoWayBinding<float?, decimal?>(
                 _output,
                 NumericUpDown.ValueProperty,
-                (x) => (decimal?)x,
-                (x) => (float?)x
+                ToProperty,
+                ToValue
             );
         }
+
+        protected override decimal? ToProperty(float? value) => (decimal?)value;
+
+        protected override float? ToValue(decimal? value) => (float?)value;
     }
 
     /// <summary>
@@ -34,15 +38,20 @@ namespace VL.Avalonia.Custom.Controls.Value
     public class NumberFieldFloatNode : NumericUpDownNodeBase<NumberField, float>
     {
         protected override TwoWayBinding<float, decimal?> ValueBinding { get; }
+
         public NumberFieldFloatNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             ValueBinding = new TwoWayBinding<float, decimal?>(
                 _output,
                 NumericUpDown.ValueProperty,
-                (x) => (decimal?)x,
-                (x) => x == null ? 0f : (float)x.Value
+                ToProperty,
+                ToValue
             );
         }
+
+        protected override decimal? ToProperty(float value) => (decimal)value;
+
+        protected override float ToValue(decimal? value) => value is null ? 0f : (float)value.Value;
     }
 
     /// <summary>
@@ -52,20 +61,26 @@ namespace VL.Avalonia.Custom.Controls.Value
     public class NumberFieldIntegerNode : NumericUpDownNodeBase<NumberField, int>
     {
         protected override TwoWayBinding<int, decimal?> ValueBinding { get; }
+
         public NumberFieldIntegerNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             ValueBinding = new TwoWayBinding<int, decimal?>(
                 _output,
                 NumericUpDown.ValueProperty,
-                (x) => (decimal?)x,
-                (x) => x == null ? 0 : (int)Math.Round(x.Value)
+                ToProperty,
+                ToValue
             );
         }
+
+        protected override decimal? ToProperty(int value) => value;
+
+        protected override int ToValue(decimal? value) => value is null ? 0 : (int)Math.Round(value.Value);
     }
 
     /// <summary>
     /// Generic wrapper for <see cref="NumberField"/>, allows to provide converters for value.
     /// </summary>
+    // BLCOKED BY: https://forum.vvvv.org/t/bug-crash-with-nullable-decimal/25230
     // [ProcessNode(Name = "NumberField (Advanced Experimental)")]
     public class NumberFieldAdvancedExperimentalNode<TValue> : NumericUpDownNodeBase<NumberField, TValue>
     {
@@ -78,22 +93,27 @@ namespace VL.Avalonia.Custom.Controls.Value
         private Func<TValue, decimal?> _fromValueConverter = DefaultFromValueConverter;
 
         protected override TwoWayBinding<TValue, decimal?> ValueBinding { get; }
+
         public NumberFieldAdvancedExperimentalNode([Pin(Visibility = PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext)
         {
             ValueBinding = new TwoWayBinding<TValue, decimal?>(
                 _output,
-                NumericUpDown.ValueProperty,
-                (x) => _fromValueConverter(x),
-                (x) => _toValueConverter(x)
+                NumberField.ValueProperty,
+                ToProperty,
+                ToValue
             );
         }
 
-        public void SetToValueConverter(Func<decimal?, TValue> toValueConverter)
+        protected override decimal? ToProperty(TValue value) => _fromValueConverter(value);
+
+        protected override TValue ToValue(decimal? value) => _toValueConverter(value);
+
+        public void SetToValueConverter([Pin(Visibility = PinVisibility.Optional)] Func<decimal?, TValue> toValueConverter)
         {
             _toValueConverter = toValueConverter ?? DefaultToValueConverter;
         }
 
-        public void SetFromValueConverter(Func<TValue, decimal?> fromValueConverter)
+        public void SetFromValueConverter([Pin(Visibility = PinVisibility.Optional)] Func<TValue, decimal?> fromValueConverter)
         {
             _fromValueConverter = fromValueConverter ?? DefaultFromValueConverter;
         }

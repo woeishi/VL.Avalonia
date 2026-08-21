@@ -21,7 +21,7 @@
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
             <Pin Id="EMAaVQMVNf2MIIhNQanTL4" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="IP7Iro64gNDNN8POA18lhR" Name="Bounds" Kind="InputPin" DefaultValue="562, 390, 466, 794" IsHidden="true" />
+            <Pin Id="IP7Iro64gNDNN8POA18lhR" Name="Bounds" Kind="InputPin" DefaultValue="1573, 302, 466, 794" IsHidden="true" />
             <Pin Id="OhUk0lcXRfZPS1pGZZQXFi" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="Crih6r1mjYkP4zxje5Ginm" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="EyUbJWQNM3mPPTWltTE2st" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
@@ -113,6 +113,7 @@
             <Pin Id="IGWlkpH8qTQQOovLFjUlDZ" Name="Children 2" Kind="InputPin" />
             <Pin Id="O9pp5xQxo8FPB7sc45m73N" Name="Children 3" Kind="InputPin" />
             <Pin Id="IxCPZue0aKtMzLQLxgxI2I" Name="Children 4" Kind="InputPin" />
+            <Pin Id="BBzd52UBpF2PoLOaOkbtjW" Name="Children 5" Kind="InputPin" />
             <Pin Id="OOv49vh11wGPlx0HAlEDpH" Name="Style" Kind="InputPin" />
             <Pin Id="EI7PfzByqudQDDghTR0mSb" Name="Classes" Kind="InputPin" IsHidden="true" />
             <Pin Id="QtV9mHdoSqlPQmKKYnYgl8" Name="Name" Kind="InputPin" IsHidden="true" />
@@ -205,7 +206,7 @@
             <Pin Id="QXFE6PoqJqgNQ9IXYsEfND" Name="Letter Spacing" Kind="InputPin" IsHidden="true" />
             <Pin Id="MTchYcKwqOcPTNLOBs0wGw" Name="Baseline Offset" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="ToiDDDRgkb3NevTzN0raeM" Comment="Text" Bounds="167,170,70,15" ShowValueBox="true" isIOBox="true" Value="Default:">
+          <Pad Id="ToiDDDRgkb3NevTzN0raeM" Comment="Text" Bounds="167,170,70,15" ShowValueBox="true" isIOBox="true" Value="Integer:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -267,7 +268,7 @@
             <Pin Id="VLRu8sWv9xMOxADqzIbSws" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="TzquQYt9YYpNcopEzEMSFn" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="370,370,85,19" Id="ULP2HN8iu4qOCNePwFwnV3">
+          <Node Bounds="503,380,85,19" Id="ULP2HN8iu4qOCNePwFwnV3">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StackPanel" />
@@ -298,7 +299,7 @@
             <Pin Id="SeX0OBzP7BHPCDytU8dBeK" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="NcagSxAIOgxOholrw7qxPi" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="370,170,61,19" Id="O6rMwBUIqkHMUhiRf3UKHB">
+          <Node Bounds="503,180,61,19" Id="O6rMwBUIqkHMUhiRf3UKHB">
             <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TextBlock" />
@@ -336,7 +337,7 @@
             <Pin Id="PNRY9qZlZe9ME8Wcwdf581" Name="Letter Spacing" Kind="InputPin" IsHidden="true" />
             <Pin Id="AmUUx4ttX20MgWFzVRCpKy" Name="Baseline Offset" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="434,260,53,19" Id="Mt5ePL8BPICQP3FwQCuimf">
+          <Node Bounds="567,270,53,19" Id="Mt5ePL8BPICQP3FwQCuimf">
             <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -349,7 +350,7 @@
             <Pin Id="KyHg8Oe0O4AQZALImPiCCF" Name="Value" Kind="OutputPin" />
             <Pin Id="JWfJchR4Ea4Pdu29VcKCDY" Name="Author" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="390,320,92,19" Id="QLxhoAuEQ47PQBokoj5M5n">
+          <Node Bounds="523,330,92,19" Id="QLxhoAuEQ47PQBokoj5M5n">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls.Text" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="NumericUpDown" />
@@ -393,13 +394,13 @@
             <Pin Id="BZy8D4c6qgqM0J5OEG1SnP" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="LezEeWWIdMTP5KYhjFssqF" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="RV9ArfTmAvJNskmR8f0gkn" Comment="Text" Bounds="372,140,70,15" ShowValueBox="true" isIOBox="true" Value="With value and text bound:">
+          <Pad Id="RV9ArfTmAvJNskmR8f0gkn" Comment="Text" Bounds="505,150,70,15" ShowValueBox="true" isIOBox="true" Value="With value and text bound:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="MVuofb7gM6DMNPolgSKjcn" Comment="" Bounds="484,300,35,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="390,210,53,19" Id="Ss5dA1UxxUWMdCjmjFbIpk">
+          <Pad Id="MVuofb7gM6DMNPolgSKjcn" Comment="" Bounds="617,310,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="523,220,53,19" Id="Ss5dA1UxxUWMdCjmjFbIpk">
             <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -412,7 +413,7 @@
             <Pin Id="M7WEK0fRQr8MA5GDA10BDX" Name="Value" Kind="OutputPin" />
             <Pin Id="GiMr0tKCFoZOef4z4kPGa3" Name="Author" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="782,440,85,19" Id="H38ANmclyvDL3v9q9HZguI">
+          <Node Bounds="915,450,85,19" Id="H38ANmclyvDL3v9q9HZguI">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StackPanel" />
@@ -443,7 +444,7 @@
             <Pin Id="VjYZfsg3doiNH5oNVuc7EY" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="F5Q29V1ONKhPToLH4ppII3" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="782,270,61,19" Id="EmPV5vgAQRCNtAaQr0xlJF">
+          <Node Bounds="915,280,61,19" Id="EmPV5vgAQRCNtAaQr0xlJF">
             <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TextBlock" />
@@ -481,12 +482,12 @@
             <Pin Id="VgrFIpoRWfZNseR0QfhB6t" Name="Letter Spacing" Kind="InputPin" IsHidden="true" />
             <Pin Id="FeZQgBEO8CtPgbvsP1w0ye" Name="Baseline Offset" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="Ds4MNTF9LgXQTOzqsDrD4o" Comment="Text" Bounds="784,240,122,15" ShowValueBox="true" isIOBox="true" Value="With LeftContent:">
+          <Pad Id="Ds4MNTF9LgXQTOzqsDrD4o" Comment="Text" Bounds="917,250,122,15" ShowValueBox="true" isIOBox="true" Value="With LeftContent:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="802,350,53,19" Id="AtRPEij9MbILDoXQfx1bnj">
+          <Node Bounds="935,360,53,19" Id="AtRPEij9MbILDoXQfx1bnj">
             <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -499,7 +500,7 @@
             <Pin Id="DINCGcIa90GOKt7NqG5KAL" Name="Value" Kind="OutputPin" />
             <Pin Id="SP0tOeDKdXaPof6AYvJClx" Name="Author" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="Ieu98sBCTMSOHsOPgwvGbM" Comment="" Bounds="804,320,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="Ieu98sBCTMSOHsOPgwvGbM" Comment="" Bounds="937,330,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Nullable" />
               <p:TypeArguments>
@@ -509,7 +510,7 @@
               </p:TypeArguments>
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="802,390,92,19" Id="MfNw6P3I8vjOK8tBDnfXHO">
+          <Node Bounds="935,400,92,19" Id="MfNw6P3I8vjOK8tBDnfXHO">
             <p:NodeReference LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="NumericUpDown" />
@@ -553,7 +554,7 @@
             <Pin Id="BFqLIHlWPsmMIq3MjxcYPk" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="HuknKx2krrVLkmj0SovPvq" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="554,430,85,19" Id="DjzTObZSkpqMMmC3w5IdMw">
+          <Node Bounds="687,440,85,19" Id="DjzTObZSkpqMMmC3w5IdMw">
             <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StackPanel" />
@@ -584,7 +585,7 @@
             <Pin Id="SY8pH7bfWBXL5uONoyp1kc" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="RPQEiVH2q5wPtgCmy6WwPk" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="554,260,61,19" Id="RAy65F5fxBOLngHYjjC2nI">
+          <Node Bounds="687,270,61,19" Id="RAy65F5fxBOLngHYjjC2nI">
             <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TextBlock" />
@@ -622,12 +623,12 @@
             <Pin Id="CXB651XXa33OTCLqcnsMxQ" Name="Letter Spacing" Kind="InputPin" IsHidden="true" />
             <Pin Id="Dwtf9VAB5iMMfSCSeHuO4Q" Name="Baseline Offset" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="Bqis9eadQHaOaAjPTRCmuv" Comment="Text" Bounds="556,230,70,15" ShowValueBox="true" isIOBox="true" Value="With Format String:">
+          <Pad Id="Bqis9eadQHaOaAjPTRCmuv" Comment="Text" Bounds="689,240,70,15" ShowValueBox="true" isIOBox="true" Value="With Format String:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="574,340,53,19" Id="AAP0c3qdYATPGdTEyP4dE4">
+          <Node Bounds="707,350,53,19" Id="AAP0c3qdYATPGdTEyP4dE4">
             <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -640,7 +641,7 @@
             <Pin Id="MFqqsR21ppgOoFKZSDBdxm" Name="Value" Kind="OutputPin" />
             <Pin Id="QYAee9czOMkL6pAsw7QgJU" Name="Author" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="574,380,125,19" Id="VGePmfDbj6yOcGOhZbUrwy">
+          <Node Bounds="707,390,125,19" Id="VGePmfDbj6yOcGOhZbUrwy">
             <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="NumericUpDown (Float)" />
@@ -684,27 +685,27 @@
             <Pin Id="CBnuhCAV99zMysoJnnH1lp" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="BmNQ6bOsRisLO4RyCHOcJs" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="DwETaArAd6QLYOSw9JUjZ9" Comment="Minimum" Bounds="636,331,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="DwETaArAd6QLYOSw9JUjZ9" Comment="Minimum" Bounds="769,341,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="HktaxAv2dzBNMlJzQtoaZk" Comment="Maximum" Bounds="656,360,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+          <Pad Id="HktaxAv2dzBNMlJzQtoaZk" Comment="Maximum" Bounds="789,370,35,15" ShowValueBox="true" isIOBox="true" Value="1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NPr62QPsf0pNTGFJG1IDu8" Comment="Increment" Bounds="676,300,35,15" ShowValueBox="true" isIOBox="true" Value="0.25">
+          <Pad Id="NPr62QPsf0pNTGFJG1IDu8" Comment="Increment" Bounds="809,310,35,15" ShowValueBox="true" isIOBox="true" Value="0.25">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="IrT5Kc4tfyfNLsi3QAHEx5" Comment="Format String" Bounds="696,181,35,15" ShowValueBox="true" isIOBox="true" Value="0.00 $">
+          <Pad Id="IrT5Kc4tfyfNLsi3QAHEx5" Comment="Format String" Bounds="829,191,35,15" ShowValueBox="true" isIOBox="true" Value="0.00 $">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="909,320,46,19" Id="Jc54k4sP8hZNmAzuT8N630">
+          <Node Bounds="1042,330,46,19" Id="Jc54k4sP8hZNmAzuT8N630">
             <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Controls" NeedsToBeDirectParent="true">
@@ -742,12 +743,12 @@
             <Pin Id="NZg1VuVWycQMZt0CwvirCm" Name="Cursor" Kind="InputPin" IsHidden="true" />
             <Pin Id="J98JuUMW5cNNu9U7RieFMo" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Pad Id="FJPxzPjcyTzPICDLA57ZNV" Comment="Content" Bounds="911,300,35,15" ShowValueBox="true" isIOBox="true" Value="X">
+          <Pad Id="FJPxzPjcyTzPICDLA57ZNV" Comment="Content" Bounds="1044,310,35,15" ShowValueBox="true" isIOBox="true" Value="X">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="950,230,53,19" Id="CFJPsm3qWU0PqxnpflMR6n">
+          <Node Bounds="1083,240,53,19" Id="CFJPsm3qWU0PqxnpflMR6n">
             <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -806,7 +807,7 @@
             <Pin Id="AHUWofnT8aQM9VU3cKHxJg" Name="Value" Kind="InputPin" DefaultValue="Stretch" />
             <Pin Id="VbmJodgf6SjLg51Mpym2i5" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="K6UfVPr1FupPjoXBbQS6fD" Bounds="576,320,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="K6UfVPr1FupPjoXBbQS6fD" Bounds="709,330,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -814,6 +815,142 @@
           <Pad Id="BYTbUCYgaIpMBuWntGS56N" Comment="" Bounds="187,251,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="334,370,85,19" Id="UXIsK3KujxQLC3L7AhyVnx">
+            <p:NodeReference LastCategoryFullName="Avalonia.Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="StackPanel" />
+            </p:NodeReference>
+            <Pin Id="NlOpj3ag2i0NPajr0VT1lY" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PxDKTqLxuHwLS0txZ9H93J" Name="Children" Kind="InputPin" />
+            <Pin Id="BoIy7qrvwYCPQ7CT25CIKh" Name="Children 2" Kind="InputPin" />
+            <Pin Id="L7xzstSp8rvPQUG2HK2TYA" Name="Style" Kind="InputPin" />
+            <Pin Id="IC6OdbpRj00PYTuS5pTYz4" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CmfRFA54409PHM2P7N4oZX" Name="Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ABOU1z7F7MSLcb1hBeveqg" Name="Background" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RsRju9igthSNYuWr1s94cw" Name="Spacing" Kind="InputPin" DefaultValue="12" />
+            <Pin Id="IVrsneXUqLmNwgtoRzCUaE" Name="Output" Kind="OutputPin" />
+            <Pin Id="RZpjR0vNkMHL1BkmtGF0mg" Name="Orientation" Kind="InputPin" />
+            <Pin Id="N3nCZm73GG9NPNiBAbfdWh" Name="Are Horizontal Snap Points Regular" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LPjPfbuHkdtO0RCit1e8Vf" Name="Are Vertical Snap Points Regular" Kind="InputPin" IsHidden="true" />
+            <Pin Id="T7rOrMoo2MFLCu2QXJHD4S" Name="Transitions" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HD1uy2ABhY0OUEosy8NTKx" Name="Margin" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Uvu4YnvFIVwPcyC0xkb7Nn" Name="Horizontal Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="F7FC3eCmNZdOzsFF4VJVxK" Name="Vertical Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="H5bVIHIgsGJLlsM19fmWBP" Name="Focus Adorner" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MmqHOq0WgvWNCuwjc7TXgm" Name="Context Menu" Kind="InputPin" IsHidden="true" />
+            <Pin Id="V4uKk3W8TaQPBmBzIlw3ti" Name="Context Flyout" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ExPCZgtzkBFOwW2Ax60VJK" Name="Render Transform" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VNIxck7rqurLLmb7UJPQty" Name="Is Visible" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IKrVPPpFlL9N1NlKXTqM5e" Name="Effect" Kind="InputPin" IsHidden="true" />
+            <Pin Id="U5QouYn9CuNL17P2jcYnxk" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HlreIyJsJZoOoAXtoOmz05" Name="Cursor" Kind="InputPin" IsHidden="true" />
+            <Pin Id="C3X33cTRsdkMJJxiPGjniD" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="334,200,61,19" Id="RPANa49tTjYOhPE3bFIYQj">
+            <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="TextBlock" />
+            </p:NodeReference>
+            <Pin Id="PERPQHQMmarM1gnAbLY3XT" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JCGxDPLZM9QQHsRwJYKAyb" Name="Text" Kind="InputPin" />
+            <Pin Id="LxgziAkhPsxLHkPji38hf6" Name="Text Channel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OJcIpBIC90kO61l9GMBUAX" Name="Style" Kind="InputPin" />
+            <Pin Id="SeyWsHBp5WiOcWgQ1mELYj" Name="Output" Kind="OutputPin" />
+            <Pin Id="VIfiw6vbHqpORfNpfbsBhu" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="A6ZRwzqIYaYLR9M1RbMi8Z" Name="Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CCTSwKAfzXjLsJjJakBcgy" Name="Transitions" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Kg09EPU2PklNCgx0Ce3Mti" Name="Margin" Kind="InputPin" IsHidden="true" />
+            <Pin Id="K9TnC0lAvPaMTm1M0AGuRE" Name="Horizontal Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HyJ1zxDclJSOJw11OlkGED" Name="Vertical Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HlLbagPhg5PMF5qfZyA2Xe" Name="Focus Adorner" Kind="InputPin" IsHidden="true" />
+            <Pin Id="R6edDTdXhPrNQcK85DZxie" Name="Context Menu" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PJ8bkjSdyuGLN9cWROhhhu" Name="Context Flyout" Kind="InputPin" IsHidden="true" />
+            <Pin Id="AEjOsHm2Gu3M5EY0jqtUux" Name="Render Transform" Kind="InputPin" IsHidden="true" />
+            <Pin Id="C7vTZcUTLl9OQ40idT5dCP" Name="Is Visible" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UvjYJ5P8PUKMVBOp6aHg77" Name="Effect" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Kw6SiUjS8wXOHRrEZjUTH6" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TT8Vxqi1K6hOX5g3wrX3T3" Name="Cursor" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PgvyJxwniHjMb19v443Jpu" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PHHeGVCKD79Pcpdg7Q9F4N" Name="Font Family" Kind="InputPin" IsHidden="true" />
+            <Pin Id="R3c2jX9yEttK96EV2UH3mg" Name="Font Size" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IHjDL0d2wXaNSUkM8XMBbM" Name="Font Weight" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LGlHB6RsqapPh62jqVtP1d" Name="Font Style" Kind="InputPin" IsHidden="true" />
+            <Pin Id="COUGLV4JDxMNbx1TX12pQo" Name="Font Stretch" Kind="InputPin" IsHidden="true" />
+            <Pin Id="QX3YGG25KHaMa8cQFxf2Rb" Name="Text Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PYUCF7YYOrDM9uwYT4kpCo" Name="Text Wrapping" Kind="InputPin" IsHidden="true" />
+            <Pin Id="In6e9cMXXuHOMMJAmNrSIT" Name="Max Lines" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CuzPHRvOiAnP7L8OthCRLD" Name="Line Height" Kind="InputPin" IsHidden="true" />
+            <Pin Id="N6Oreq6IprYLBdqtKjiOnh" Name="Line Spacing" Kind="InputPin" IsHidden="true" />
+            <Pin Id="AaZUHOK6FBmL0i80YJrCFJ" Name="Letter Spacing" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GyoGXrsgFQuNVLUkJEDSZk" Name="Baseline Offset" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="EUEdCLSlD4XLzyopDUXhPk" Comment="Text" Bounds="336,170,70,15" ShowValueBox="true" isIOBox="true" Value="Float:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="354,280,53,19" Id="AaDiHBqnfDEQdqWf57gSYG">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Channel" />
+            </p:NodeReference>
+            <Pin Id="HXowGZVamHhMhST7Ab7CTn" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GfQxoNM2v4KNwix3OUMBlE" Name="Initial Value" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JHAEoQeI1w3PRnDFfO9VKk" Name="Value" Kind="InputPin" />
+            <Pin Id="QUJK6wV4OpQPOLowmCXIir" Name="Output" Kind="OutputPin" />
+            <Pin Id="B3tmnoN2a94PueF1Kprj3Q" Name="Value" Kind="OutputPin" />
+            <Pin Id="Bxt6MKtLtFhPe8PHvR1Ehe" Name="Author" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="354,320,92,19" Id="RP7afpTuxAmQCb8eH9fuVo">
+            <p:NodeReference LastCategoryFullName="Avalonia.Controls" LastDependency="VL.Avalonia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="NumericUpDown (Float)" />
+            </p:NodeReference>
+            <Pin Id="D1Z9Z1YGaadMMr6oiVg0KC" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="E3xgDNe8SLyK9zLWeDwW7j" Name="Value Channel" Kind="InputPin" />
+            <Pin Id="ACCvW132DVJLEiXhyROQhY" Name="Style" Kind="InputPin" />
+            <Pin Id="Nek0Ecea4P3Lo1ywGMyXXd" Name="Text Channel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="NRocE3jqFNSOu87uS3JlA9" Name="Classes" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EIa2ok0JyESQGZrSzwTrqQ" Name="Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="M5B0dAWgOacQH8SMc0Njbn" Name="Watermark" Kind="InputPin" />
+            <Pin Id="KTzaUXsQ5YyOb9YLwheXAm" Name="Output" Kind="OutputPin" />
+            <Pin Id="LC3J9qJ8ZfuNFJZ2WzJdJI" Name="Minimum" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Pt1ONYFUGufP4Pz9OSFFoU" Name="Maximum" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Febh7otWx6XOYOp0wYG0Vd" Name="Increment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="BayrEYt14PbOOCbdOOsRUt" Name="Clip Value To Min Max" Kind="InputPin" IsHidden="true" />
+            <Pin Id="U6tpwT94YTaP7EPc9gEJAR" Name="Allow Spin" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KSFytbewQwgOeDqvID0DdK" Name="Show Button Spinner" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GXrdMiwDIQYMQWRI1pJEST" Name="Button Spinner Location" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LY5SIJ8e0HdMiOAo7fX7hu" Name="Is Read Only" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MsTtNjmhDnNLfpIIVP66bx" Name="Format String" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ReFhVLfJf9FLmOdoRTK1fX" Name="Number Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MOVyLoIw8z9O8gPEhA0f9y" Name="Parsing Number Style" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TMGhEeT3l3lOMVthStJfGz" Name="Text Converter" Kind="InputPin" IsHidden="true" />
+            <Pin Id="NwnQxZ7t51mOeSGKKnAq1p" Name="Horizontal Content Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PFWiKL0P1SzPYY0jXyjR21" Name="Vertical Content Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GkjZoSvcoaLQWgxWUo8T15" Name="Text Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TYNt80E5liAQKC6eIpNm1G" Name="Inner Left Content" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OonAqbDQE7ZO36U8KHlIaf" Name="Inner Right Content" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MTPfGqOOnvSQR2P9Ds9TH5" Name="Transitions" Kind="InputPin" IsHidden="true" />
+            <Pin Id="BZVAq1KHxZrMjBq1mKfHq2" Name="Margin" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Ka3fcNgNsAmNWOJ0zW9AE6" Name="Horizontal Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HI29NGC2ol9LVd5jtHQaSf" Name="Vertical Alignment" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Szs3lskaFCKQHSZMFiuL0u" Name="Focus Adorner" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RaaVQliAXtJN3ALYa6HYrE" Name="Context Menu" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UM0ZuqDlyC0OodvSAyf3yU" Name="Context Flyout" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DC68ikS1BwrN55tH6ljAUP" Name="Render Transform" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HrcbWhGtmcXMhSOFFUTbxD" Name="Is Visible" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EEnJLz8Ko3FN4OzhIc1a59" Name="Effect" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CS4Y795NuiHLiBRgfK9Hr5" Name="Focusable" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TwpcwkojK2mLaVa3v7cV7F" Name="Cursor" Kind="InputPin" IsHidden="true" />
+            <Pin Id="R1Hn9i33v3INskZilFnclE" Name="Is Enabled" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="KrZgIr1BxfdO70pHFKBW0r" Comment="" Bounds="356,251,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
         </Canvas>
@@ -834,7 +971,6 @@
         <Link Id="DdC3WiXpokFMuvZ5pnWF0y" Ids="VN6lT00uEwMQWX2ZPsy9DI,GUqmsS8o9ZLMWC0Y2oGxyl" />
         <Link Id="RO4m5lKrUEUP1AmXOTqj8I" Ids="LyDCf7kxojXONyGsmhqeag,KTIp3kLtENCMqI6btq2Jox" />
         <Link Id="QJZYgqCZ9A6OykbYkDz8Ct" Ids="Pl3091NktNbOkmqqJNXhWN,GNdcspzUuAcL2RbDBAWcoL" />
-        <Link Id="PK1bdvZmhKTPwNVuuCwGYb" Ids="U2VNLem7jwQMVgtQjlxaK9,IGWlkpH8qTQQOovLFjUlDZ" />
         <Link Id="RshDoZcEKlqQG6zGIuu6nI" Ids="RV9ArfTmAvJNskmR8f0gkn,EwYCI7kujeDPmm1ZIqAkpD" />
         <Link Id="PMGr6pt5qHMQNpnXlJh2HY" Ids="KyHg8Oe0O4AQZALImPiCCF,MVuofb7gM6DMNPolgSKjcn" />
         <Link Id="L90cEfcdeP6NrIZkS5a3FI" Ids="SXdj4D29vMQM7xkoJ3n26X,HNvWiBHesHDNIqzRMMnOjh" />
@@ -848,12 +984,10 @@
         <Link Id="NSlS2l2uHedOUmzYdg7ZW8" Ids="Bqis9eadQHaOaAjPTRCmuv,Lcgtz1JTvxaMPPaLtYn4MS" />
         <Link Id="RaOjNOSb7QsOu0uiy6fUGh" Ids="GYZy0AXvnsHOc5VpoPVoDY,VDgGSWfW6R8LCjvNp5PmfG" />
         <Link Id="VR4I2WK4POJOz5DqYQoEg1" Ids="UNeJ2sobvSJOXyRKEilzjm,Jz3rTTPaPIiMHn0HooGpBA" />
-        <Link Id="PsdtFaN2AGsLhPZHCFowrd" Ids="DetM6YS3QEmPdJU1TEdwyM,O9pp5xQxo8FPB7sc45m73N" />
         <Link Id="UNpMjsr3VsZLrVcDGWlQmC" Ids="DwETaArAd6QLYOSw9JUjZ9,MZlZcueeQeWOnfxmBZJYzG" />
         <Link Id="G4a5bFTiCKMPESK3odQ91v" Ids="HktaxAv2dzBNMlJzQtoaZk,O4I9LTht7w0NfOQHDhSTuD" />
         <Link Id="NMKLu3Du7B9MI5PX6arF3M" Ids="NPr62QPsf0pNTGFJG1IDu8,ROrmYlpY5qMLhDx3cmzh8A" />
         <Link Id="Piu086m8G9qPEfYbSjvP6V" Ids="IrT5Kc4tfyfNLsi3QAHEx5,NYe6AtHu61jLWDWnPR0Dxq" />
-        <Link Id="AtOWb4QkpxtOrEUe3AYsFV" Ids="SZ3uBa6WNyEP2OtDhTv5aT,IxCPZue0aKtMzLQLxgxI2I" />
         <Link Id="Ve2lP07HU84Lj4SSr3ayS3" Ids="CQAif5Gm7bIP0xog8eS0qN,NMwzCSSCwLLNPyPhGv214e" />
         <Link Id="A5zP9jJSu2gMvcPfXOE9q5" Ids="FJPxzPjcyTzPICDLA57ZNV,Otef0DkJk8WL33oQlL1Lx2" />
         <Link Id="IoPb2Xan8oiPikuz7kHE3u" Ids="D7GFQoZC4q4OmbzWS2hyeF,MURPEYNQkxJM9kIswjPg5U" />
@@ -862,6 +996,15 @@
         <Link Id="NrHlTs95ZAVPNNxxgvwAow" Ids="VbmJodgf6SjLg51Mpym2i5,H99Ad8oZIfyOOXahIQ3DO7" />
         <Link Id="SsKWpWPkdOjN8tAIBzThB5" Ids="K6UfVPr1FupPjoXBbQS6fD,F8irk4V4fb0PO8oIUAKV7G" />
         <Link Id="CCEZJqQ870cPQas8qcFstf" Ids="BYTbUCYgaIpMBuWntGS56N,ICMFxDYp7HTQYHWMlIK55v" />
+        <Link Id="JuA2kgFxdAQOycumge8V18" Ids="U2VNLem7jwQMVgtQjlxaK9,O9pp5xQxo8FPB7sc45m73N" />
+        <Link Id="CGcB6Pui0zoOFViu4xxGJt" Ids="DetM6YS3QEmPdJU1TEdwyM,IxCPZue0aKtMzLQLxgxI2I" />
+        <Link Id="PVxwB2hzhoXPP52AqRtumP" Ids="SZ3uBa6WNyEP2OtDhTv5aT,BBzd52UBpF2PoLOaOkbtjW" />
+        <Link Id="QVDrbzg2gO7MODzCY1mCVD" Ids="SeyWsHBp5WiOcWgQ1mELYj,PxDKTqLxuHwLS0txZ9H93J" />
+        <Link Id="GcF7MW3hM1VNEDQmerJaJj" Ids="EUEdCLSlD4XLzyopDUXhPk,JCGxDPLZM9QQHsRwJYKAyb" />
+        <Link Id="U6GkVMH846RNzXNlsnNMGf" Ids="KTzaUXsQ5YyOb9YLwheXAm,BoIy7qrvwYCPQ7CT25CIKh" />
+        <Link Id="He8dCJP9NZYOiFtzvovj17" Ids="QUJK6wV4OpQPOLowmCXIir,E3xgDNe8SLyK9zLWeDwW7j" />
+        <Link Id="RP7fFBoq9GKPEEo1AOb54y" Ids="KrZgIr1BxfdO70pHFKBW0r,JHAEoQeI1w3PRnDFfO9VKk" />
+        <Link Id="SxjykQNoFfhMxAkwO3jBMa" Ids="IVrsneXUqLmNwgtoRzCUaE,IGWlkpH8qTQQOovLFjUlDZ" />
       </Patch>
     </Node>
   </Patch>

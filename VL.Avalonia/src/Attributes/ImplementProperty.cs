@@ -14,6 +14,16 @@
         public int Order { get; set; }
         public Model.PinVisibility PinVisibility { get; set; }
 
+        /// <summary>
+        /// Name of a method on the declaring type used to convert the pin value into the value
+        /// the Avalonia property expects, for example <c>Converter = nameof(ToProperty)</c>.
+        /// <br/>
+        /// Required whenever the field type is built on an open generic type parameter, since a
+        /// static cast is not available there. When the method returns a nullable value type and
+        /// the property is not nullable, a <c>null</c> result clears the property.
+        /// </summary>
+        public string? Converter { get; set; }
+
         [Obsolete(
             "Use ImplementProperty(string propertyPath) or ImplementProperty(Type ownerType, string propertyName) instead."
         )]

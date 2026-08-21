@@ -36,6 +36,32 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
             var typeCast = tProperty == null ? "" : $"({tProperty})";
 
+            // A converter is required when the field is built on an open generic type parameter,
+            // because a static cast is not available from a type parameter.
+            var converterName = attr
+                .NamedArguments.FirstOrDefault(x => x.Key == "Converter")
+                .Value.Value?.ToString();
+
+            var converterReturnsNullable = false;
+            if (!string.IsNullOrEmpty(converterName))
+            {
+                IMethodSymbol? converterMethod = null;
+                var declaringType = fieldSymbol.ContainingType;
+                while (declaringType != null && converterMethod == null)
+                {
+                    converterMethod = declaringType
+                        .GetMembers(converterName!)
+                        .OfType<IMethodSymbol>()
+                        .FirstOrDefault(m => m.Parameters.Length == 1);
+                    declaringType = declaringType.BaseType;
+                }
+
+                converterReturnsNullable =
+                    converterMethod?.ReturnType is INamedTypeSymbol converterReturnType
+                    && converterReturnType.OriginalDefinition.SpecialType
+                        == SpecialType.System_Nullable_T;
+            }
+
             var order = int.Parse(
                 attr.NamedArguments.FirstOrDefault(x => x.Key == "Order").Value.Value?.ToString()
                 ?? "0"
@@ -182,7 +208,32 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
                     $"/// <summary>Sets the {paramBase} property.</summary>\r\n        /// <param name=\"{paramBase}\">{paramDocText}</param>";
             }
 
-            // 6. Generate the final template
+            // 6. Build the assignment body
+            var valueExpression = string.IsNullOrEmpty(converterName)
+                ? $"{typeCast} {paramBase}.Value"
+                : $"{converterName}({paramBase}.Value)";
+
+            var assignment = converterReturnsNullable
+                ? $@"var __converted = {paramBase}.HasValue ? {valueExpression} : null;
+
+            if (__converted.HasValue)
+            {{
+                _output.SetValue({propertyPath}, __converted.Value);
+            }}
+            else 
+            {{
+                _output.ClearValue({propertyPath});
+            }}"
+                : $@"if ({paramBase}.HasValue)
+            {{
+                _output.SetValue({propertyPath}, {valueExpression});
+            }}
+            else 
+            {{
+                _output.ClearValue({propertyPath});
+            }}";
+
+            // 7. Generate the final template
             var template =
                 $@"
         {finalParamDoc}
@@ -194,14 +245,7 @@ namespace VL.Avalonia.CodeGen.AttributeHandlers
 
             {fieldName} = {paramBase};
 
-            if ({paramBase}.HasValue)
-            {{
-                _output.SetValue({propertyPath}, {typeCast} {paramBase}.Value);
-            }}
-            else 
-            {{
-                _output.ClearValue({propertyPath});
-            }}
+            {assignment}
         }}";
 
             return template;
