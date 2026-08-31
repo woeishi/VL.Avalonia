@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using VL.Avalonia.Attributes;
+using VL.Avalonia.Helpers;
 using VL.Core;
 using VL.Core.Import;
 using VL.Model;
@@ -17,14 +18,31 @@ namespace VL.Avalonia.Controls
         [Fragment]
         public DecoratorNodeBase([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
-        /// <summary>Sets the decorated control.</summary>
-        [ImplementProperty(
-            typeof(Decorator),
-            nameof(Decorator.ChildProperty),
-            Order = PinOrder.Main,
-            PinVisibility = PinVisibility.Visible
-        )]
         private Optional<Control> _child;
+
+        /// <summary>Sets the decorated control.</summary>
+        [Fragment(Order = PinOrder.Main)]
+        public void SetChild([Pin(Visibility = PinVisibility.Visible)] Optional<Control> child)
+        {
+            if (_child == child)
+                return;
+
+            _child = child;
+
+            if (child.HasValue)
+            {
+                if (child.Value is Control control)
+                {
+                    ReparentingHelper.DetachFromParent(NodeContext, control);
+                }
+
+                _output.SetValue(Decorator.ChildProperty, child.Value);
+            }
+            else
+            {
+                _output.ClearValue(Decorator.ChildProperty);
+            }
+        }
 
         /// <summary>Sets the padding to place around the child control.</summary>
         [ImplementProperty(

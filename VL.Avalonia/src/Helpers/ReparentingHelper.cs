@@ -38,6 +38,9 @@ namespace VL.Avalonia.Helpers
                 case Decorator decorator when ReferenceEquals(decorator.Child, control):
                     decorator.Child = null;
                     break;
+                case Viewbox viewbox when ReferenceEquals(viewbox.Child, control):
+                    viewbox.Child = null;
+                    break;
                 case ItemsControl itemsControl:
                     itemsControl.Items.Remove(control);
                     break;
