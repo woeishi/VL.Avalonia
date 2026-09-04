@@ -11,15 +11,15 @@ namespace VL.Avalonia.Controls;
 /// <br/><br/><see href="https://docs.avaloniaui.net/docs/reference/controls/path-icon">Slider</see>
 /// </summary>
 [ProcessNode(Name = "PathIcon")]
-public partial class PathIconWrapper : ControlNodeBase<PathIcon>
+public partial class PathIconNode : ControlNodeBase<PathIcon>
 {
     [Fragment]
-    public PathIconWrapper([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
+    public PathIconNode([Pin(Visibility = VL.Model.PinVisibility.Hidden)] NodeContext nodeContext) : base(nodeContext) { }
 
     /// <param name="data">
     /// Sets geometry for the icon.
     /// </param>
-    [ImplementProperty("PathIcon.DataProperty", Order = PinOrder.Main)]
-    protected Optional<Geometry> _data;
+    [ImplementProperty(typeof(PathIcon), nameof(PathIcon.DataProperty), Order = PinOrder.Main)]
+    private Optional<Geometry> _data;
 }
 
