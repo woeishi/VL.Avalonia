@@ -1,10 +1,8 @@
 ﻿using System.Reactive.Disposables;
-using System.Reactive.Linq;
 using Avalonia;
+using Avalonia.Data;
 using VL.Core.Import;
 using VL.Lib.Reactive;
-
-// TODO: REFACTOR
 
 namespace VL.Avalonia.Data
 {
@@ -25,13 +23,17 @@ namespace VL.Avalonia.Data
         ControlToChannel,
     }
 
-    [ProcessNode(Name = "Binding", FragmentSelection = FragmentSelection.Explicit)]
-    public abstract class BindingNode<TControl, TProp, TValue> : IDisposable
+    /// <summary>
+    /// Binds an <see cref="IChannel{TValue}"/> to an Avalonia property of type <typeparamref name="TProperty"/>,
+    /// optionally converting between the channel value type and the property value type.
+    /// </summary>
+    [ProcessNode(Name = "Binding (Converters)", FragmentSelection = FragmentSelection.Explicit)]
+    public class BindingNode<TControl, TAvaloniaProperty, TValue, TProperty> : IDisposable
         where TControl : AvaloniaObject
-        where TProp : AvaloniaProperty
+        where TAvaloniaProperty : AvaloniaProperty
     {
         protected TControl? _input;
-        protected TProp? _property;
+        protected TAvaloniaProperty? _property;
         protected SupprotedBindingInitialValueHandling _initialValueHandling =
             SupprotedBindingInitialValueHandling.ChannelToControl;
         protected IChannel<TValue>? _channel;
@@ -39,10 +41,22 @@ namespace VL.Avalonia.Data
 
         protected SupportedBindingMode _mode = SupportedBindingMode.OneWay;
 
-        private CompositeDisposable _subscriptions = new();
+        protected readonly Func<TValue?, TProperty?>? _valueToProperty;
+        protected readonly Func<TProperty?, TValue?>? _propertyToValue;
+
+        private readonly CompositeDisposable _subscriptions = new();
 
         [Fragment]
-        public BindingNode() { }
+        public BindingNode(
+            [Pin(Visibility = Model.PinVisibility.Optional)]
+                Func<TValue?, TProperty?>? valueToProperty,
+            [Pin(Visibility = Model.PinVisibility.Optional)]
+                Func<TProperty?, TValue?>? propertyToValue
+        )
+        {
+            _valueToProperty = valueToProperty;
+            _propertyToValue = propertyToValue;
+        }
 
         [Fragment(Order = PinOrder.Main)]
         public void SetInput(TControl? input)
@@ -52,13 +66,13 @@ namespace VL.Avalonia.Data
 
             _input = input;
 
-            if (_input is not null)
-            {
-                Bind();
-            }
+            OnInputChanged();
+
+            // Rebind unconditionally so a null input detaches the previous control.
+            Bind();
         }
 
-        public void SetProperty(TProp property)
+        public void SetProperty(TAvaloniaProperty? property)
         {
             if (_property != property)
             {
@@ -104,68 +118,49 @@ namespace VL.Avalonia.Data
             }
         }
 
+        /// <summary>
+        /// Called after <see cref="_input"/> changed and before the binding is re-established.
+        /// </summary>
+        protected virtual void OnInputChanged() { }
+
         protected virtual void Bind()
         {
-            _subscriptions?.Clear();
+            _subscriptions.Clear();
 
-            if (_input != null && _property != null)
-            {
-                var channel = (_channel ?? _internalChannel);
-
-                if (channel != null)
-                {
-                    // Initial value handling
-
-                    if (
-                        _initialValueHandling
-                        is SupprotedBindingInitialValueHandling.ChannelToControl
-                    )
-                    {
-                        // Set from channel to control
-                        _input.SetValue(_property, channel.Value);
-                    }
-                    if (
-                        _initialValueHandling
-                        is SupprotedBindingInitialValueHandling.ControlToChannel
-                    )
-                    {
-                        var pv = _input.GetValue(_property);
-                        //  Set from control to channel
-                        channel.SetValue((TValue?)pv);
-                    }
-
-                    var channelToBind = channel.Select(x => (object?)x);
-
-                    _subscriptions?.Add(_input.Bind(_property, channelToBind));
-
-                    switch (_mode)
-                    {
-                        case SupportedBindingMode.TwoWay:
-                            var observable = _input.GetObservable(_property).Skip(1);
-
-                            _subscriptions?.Add(
-                                observable.Subscribe(x =>
-                                {
-                                    if (x is TValue v)
-                                        channel.OnNext(v);
-                                    else if (x is null)
-                                        channel.OnNext(default!);
-                                })
-                            );
-
-                            return;
-                        case SupportedBindingMode.OneWay:
-                        default:
-                            return;
-                    }
-                }
-            }
+            _subscriptions.Add(
+                BindingHelpers.Bind(
+                    _input,
+                    _property,
+                    _channel ?? _internalChannel,
+                    _mode is SupportedBindingMode.TwoWay
+                        ? BindingMode.TwoWay
+                        : BindingMode.OneWay,
+                    _valueToProperty,
+                    _propertyToValue,
+                    _initialValueHandling
+                )
+            );
         }
 
         public void Dispose()
         {
-            _subscriptions?.Clear();
+            _subscriptions.Dispose();
             _internalChannel?.Dispose();
         }
+    }
+
+    /// <summary>
+    /// A <see cref="BindingNode{TControl, TAvaloniaProperty, TValue, TProperty}"/> for the common case
+    /// where the Avalonia property value type and the channel value type are the same.
+    /// </summary>
+    [ProcessNode(Name = "Binding", FragmentSelection = FragmentSelection.Explicit)]
+    public class BindingNode<TControl, TAvaloniaProperty, TValue>
+        : BindingNode<TControl, TAvaloniaProperty, TValue, TValue>
+        where TControl : AvaloniaObject
+        where TAvaloniaProperty : AvaloniaProperty
+    {
+        [Fragment]
+        public BindingNode()
+            : base(null, null) { }
     }
 }
